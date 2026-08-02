@@ -3,20 +3,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-ivory: #FAF8F5;
-  --color-bg-paper: #F3EEE4;
-  --color-bg-limestone: #EFECE6;
-  --color-bg-sandstone: #EAE6DF;
+  --color-bg-ivory: #FFFFFF;
+  --color-bg-paper: #F9F9F9;
+  --color-bg-limestone: #F5F4F0;
+  --color-bg-sandstone: #EFEFEF;
 
-  --color-text-charcoal: #1D1D1B;
-  --color-text-muted-black: #111110;
-  --color-text-stone-grey: #5E5B55;
+  --color-text-charcoal: #2A2A2A;
+  --color-text-muted-black: #1A1A1A;
+  --color-text-stone-grey: #737373;
 
-  --color-accent-bronze: #8A6A45;
-  --color-accent-gold: #B58A44;
-  --color-accent-indigo: #21283B;
+  --color-accent-bronze: #9A8C78;
+  --color-accent-gold: #C2B59B;
+  --color-accent-indigo: #4A5568;
   
-  --color-border-stone: #DED8CD;
+  --color-border-stone: #EBEBEB;
 
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", sans-serif;
