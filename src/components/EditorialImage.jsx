@@ -24,7 +24,7 @@ export const EditorialImage = ({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 1.2, delay, ease: 'easeOut' }}
-          className={`w-full h-full object-cover filter grayscale contrast-[1.05] group-hover:grayscale-0 transition-all duration-[1200ms] ease-out ${imageClassName}`}
+          className={`w-full h-full object-cover filter contrast-[1.05] transition-all duration-[1200ms] ease-out ${imageClassName}`}
         />
         
         {/* Subtle architectural amber-bronze tone overlay */}

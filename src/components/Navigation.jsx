@@ -5,16 +5,10 @@ import { Menu, X } from 'lucide-react';
 import { Caption } from './Typography';
 
 const NAV_ITEMS = [
-  { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Our Approach', path: '/approach' },
-  { name: 'Mentors', path: '/mentors' },
   { name: 'Programmes', path: '/programmes' },
-  { name: 'Publications', path: '/library' },
-  { name: 'Gallery', path: '/gallery' },
-  { name: 'News', path: '/news' },
-  { name: 'Associate', path: '/associate' },
-  { name: 'Contact', path: '/contact' }
+  { name: 'Mentors', path: '/mentors' },
+  { name: 'Gallery', path: '/gallery' }
 ];
 
 export const Navigation = () => {

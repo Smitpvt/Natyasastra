@@ -27,7 +27,7 @@ const PROGRAMME_AREAS = [
     title: 'Pedagogy',
     subtitle: 'Gurukulam Teaching Systems',
     description: 'Transmission of knowledge through traditional methods where learning is customized to the intellectual capacity of the student.',
-    image: '/assets/images/banyan_clean.png',
+    image: '/assets/images/banyan.png',
     gridClass: 'lg:col-span-4',
     aspect: 'aspect-[4/3]'
   },
@@ -83,7 +83,7 @@ export const Programmes = () => {
                   src={area.image}
                   alt={area.title}
                   loading="lazy"
-                  className="w-full h-full object-cover filter grayscale contrast-[1.05] group-hover:grayscale-0 group-hover:scale-[1.01] transition-all duration-[1200ms] ease-out"
+                  className="w-full h-full object-cover filter contrast-[1.05] group-hover:scale-[1.01] transition-all duration-[1200ms] ease-out"
                 />
                 <div className="absolute inset-0 bg-accent-bronze/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 transition-opacity duration-1000" />
               </div>

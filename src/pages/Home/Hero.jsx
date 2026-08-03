@@ -1,19 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HeadingXL, BodyLG } from '../../components/Typography';
 
 export const Hero = () => {
   return (
     <section className="relative w-full h-screen bg-bg-ivory flex items-center justify-center overflow-hidden border-b border-border-stone/20 select-none">
-      {/* Crisp Full-screen Background Image displaying daylight architecture */}
+      {/* Cinematic Full-screen Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
         <img
           src="/assets/images/corridor_clean.png"
           alt="Ancient Temple Mandapa Corridor with Carved Pillars"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover filter grayscale contrast-[1.03] sepia-[0.08]"
         />
-        {/* 15% Warm Ivory Overlay for a soft, warm atmosphere */}
-        <div className="absolute inset-0 bg-[#FAF8F5]/15 mix-blend-normal" />
+        {/* 15% Warm Amber Overlay */}
+        <div className="absolute inset-0 bg-accent-bronze/15 mix-blend-multiply" />
+        {/* Subtle Darkening Overlay for Text Contrast */}
+        <div className="absolute inset-0 bg-black/25" />
       </div>
 
       {/* Centered Editorial Branding */}
@@ -22,23 +23,16 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="space-y-4"
+          className="max-w-xl"
         >
-          {/* Reduced by 20% to ~58px, styled in warm white with a soft text shadow for high contrast */}
-          <h1 
-            className="font-serif text-4xl md:text-5xl lg:text-[58px] font-light tracking-[0.03em] text-[#F8F6F1] leading-[1.1]"
-            style={{ textShadow: '0 3px 12px rgba(29, 29, 27, 0.45)' }}
-          >
+          <HeadingXL className="text-bg-ivory tracking-[0.03em] font-light">
             Nāṭyaśāstra Gurukulam
-          </h1>
+          </HeadingXL>
           
-          {/* Thin gold separator line */}
-          <div className="w-16 h-[1px] bg-accent-gold/50 mx-auto my-4" />
+          {/* Thin separator line */}
+          <div className="w-16 h-[1px] bg-accent-gold/40 mx-auto my-4" />
           
-          <p 
-            className="font-serif italic text-[#F8F6F1]/95 text-lg md:text-xl tracking-wide max-w-2xl mx-auto leading-relaxed"
-            style={{ textShadow: '0 2px 8px rgba(29, 29, 27, 0.45)' }}
-          >
+          <p className="font-serif italic text-bg-ivory/85 text-lg md:text-2xl tracking-wide max-w-2xl mx-auto leading-relaxed">
             A Gurukulam for Śāstra, Sādhanā, and Civilisational Renewal.
           </p>
         </motion.div>
@@ -46,19 +40,17 @@ export const Hero = () => {
 
       {/* Minimal Scroll to Enter Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
-        <span 
-          className="font-sans text-[10px] uppercase tracking-[0.3em] text-[#F8F6F1]/90 font-light"
-          style={{ textShadow: '0 1px 4px rgba(29, 29, 27, 0.4)' }}
-        >
+        <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-bg-ivory/70 font-light">
           Scroll to Enter
         </span>
         <motion.div
           initial={{ height: 0, opacity: 0 }}
-          animate={{ height: 32, opacity: 0.6 }}
+          animate={{ height: 32, opacity: 0.5 }}
           transition={{ delay: 1.0, duration: 1.5, ease: "easeOut" }}
-          className="w-[1px] bg-[#F8F6F1]/60"
+          className="w-[1px] bg-bg-ivory"
         />
       </div>
+
     </section>
   );
 };
