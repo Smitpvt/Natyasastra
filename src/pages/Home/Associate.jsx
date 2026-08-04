@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../../components/Section';
-import { HeadingLG, BodyLG, Body, Caption } from '../../components/Typography';
+import { HeadingLG, BodyLG, Body } from '../../components/Typography';
 
 export const Associate = () => {
   return (

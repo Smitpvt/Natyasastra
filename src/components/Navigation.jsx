@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Caption } from './Typography';
+
 
 const NAV_ITEMS = [
   { name: 'About', path: '/about' },
@@ -31,22 +31,22 @@ export const Navigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-700 ease-in-out border-b border-border-stone/20 ${
+        className={`fixed top-0 left-0 w-full z-40 transition-all duration-500 ease-in-out border-b border-border-stone/20 flex items-center ${
           isScrolled
-            ? 'bg-bg-ivory/95 backdrop-blur-md py-4 shadow-sm'
-            : 'bg-transparent py-8 lg:py-10'
+            ? 'bg-bg-ivory/95 backdrop-blur-md h-16 shadow-sm'
+            : 'bg-transparent h-24'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-8 md:px-16 flex justify-between items-center">
-          {/* Logo - More prominent, larger, wider tracking */}
-          <Link to="/" className="flex flex-col group">
-            <span className="font-serif text-2xl md:text-3xl font-light tracking-[0.05em] text-text-charcoal transition-colors duration-300">
+        <div className="max-w-[1520px] mx-auto px-8 md:px-16 w-full flex justify-between items-center">
+          {/* Logo - Visually dominant, larger, high-contrast */}
+          <Link to="/" className="flex flex-col group select-none">
+            <span className="font-serif text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] font-light tracking-[0.05em] text-text-muted-black hover:text-accent-bronze transition-colors duration-500">
               Nāṭyaśāstra Gurukulam
             </span>
           </Link>
 
-          {/* Desktop Links - Reduced weight, wider tracking, improved spacing */}
-          <div className="hidden xl:flex items-center gap-8 lg:gap-10">
+          {/* Desktop Links - Improved spacing, high contrast, medium weight */}
+          <div className="hidden xl:flex items-center gap-10">
             {NAV_ITEMS.map((item) => {
               const isActive = location.pathname === item.path;
               return (
@@ -55,8 +55,8 @@ export const Navigation = () => {
                   to={item.path}
                   className="relative py-1.5 group"
                 >
-                  <span className={`font-sans text-[11px] uppercase tracking-[0.25em] font-light transition-colors duration-500 ${
-                    isActive ? 'text-accent-bronze font-normal' : 'text-text-stone-grey hover:text-text-charcoal'
+                  <span className={`font-sans text-[11.5px] uppercase tracking-[0.25em] font-medium transition-colors duration-500 ${
+                    isActive ? 'text-accent-bronze' : 'text-text-charcoal hover:text-accent-bronze'
                   }`}>
                     {item.name}
                   </span>
@@ -68,11 +68,11 @@ export const Navigation = () => {
             })}
           </div>
 
-          {/* CTA Inquire Button - Thin border, gold hover */}
+          {/* CTA Inquire Button - Increased padding, higher border contrast */}
           <div className="hidden xl:block">
             <Link
               to="/contact"
-              className="px-8 py-3 border border-accent-bronze/40 text-accent-bronze font-sans text-[11px] uppercase tracking-[0.2em] hover:bg-accent-bronze hover:text-bg-ivory hover:border-accent-bronze transition-all duration-700 ease-out"
+              className="px-9 py-3.5 border border-accent-bronze/70 text-accent-bronze font-sans text-[11px] uppercase tracking-[0.2em] font-medium hover:bg-accent-bronze hover:text-bg-ivory hover:border-accent-bronze transition-all duration-500 ease-in-out"
             >
               Inquire
             </Link>
@@ -131,7 +131,7 @@ export const Navigation = () => {
               >
                 <Link
                   to="/contact"
-                  className="inline-block w-full text-center px-8 py-4 border border-accent-bronze/40 text-accent-bronze font-sans text-xs uppercase tracking-widest hover:bg-accent-bronze hover:text-bg-ivory transition-colors duration-700"
+                  className="inline-block w-full text-center px-8 py-4 border border-accent-bronze/70 text-accent-bronze font-sans text-xs uppercase tracking-[0.2em] font-medium hover:bg-accent-bronze hover:text-bg-ivory transition-colors duration-500"
                 >
                   Register Interest / Inquire
                 </Link>

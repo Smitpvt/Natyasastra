@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../../components/Section';
-import { HeadingLG, HeadingMD, Caption, Body } from '../../components/Typography';
+import { HeadingLG, Caption } from '../../components/Typography';
 
 const MONOGRAPHS = [
   {

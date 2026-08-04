@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from '../components/Section';
-import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { HeadingLG, HeadingMD, Body, Caption } from '../components/Typography';
 
 const CURRICULA = [
   {

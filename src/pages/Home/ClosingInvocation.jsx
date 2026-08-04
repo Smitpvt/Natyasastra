@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BodyLG, Caption } from '../../components/Typography';
+import { Caption } from '../../components/Typography';
 
 export const ClosingInvocation = () => {
   return (
