@@ -1,84 +1,85 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Section from '../../components/Section';
-import EditorialImage from '../../components/EditorialImage';
-import { HeadingLG, HeadingMD, Caption, Body } from '../../components/Typography';
+import { HeadingLG, HeadingMD, Caption, Body, EditorialLink } from '../../components/Typography';
 
 const MENTORS = [
   {
     name: 'Acharya V. Sastri',
-    role: 'Mahopadhyaya',
-    bio: "A legendary custodian of Abhinavagupta's aesthetic philosophy, Acharya Sastri has spent four decades decoding the esoteric meanings of the Tantrāloka in relation to performative arts.",
+    role: 'Mahopadhyaya — Aesthetic Metaphysics',
+    bio: "A renowned scholar of Abhinavagupta's aesthetic philosophy, Acharya Sastri has spent four decades decoding the esoteric meanings of the Tantrāloka and Nāṭyaśāstra in relation to performance, sound, and consciousness.",
     image: '/assets/images/sastri_clean.png',
+    caption: 'Acharya V. Sastri during a palm-leaf manuscript recitation'
   },
   {
     name: 'Guru Meera Devi',
-    role: 'Nritya-Kalanidhi',
-    bio: 'Specializing in the somatic reconstruction of Karanas, Guru Meera Devi bridges the gap between sculptural evidence and kinetic practice with peerless precision and grace.',
+    role: 'Nritya-Kalanidhi — Somatic Karaṇas',
+    bio: 'Specializing in the somatic reconstruction of the 108 Karaṇas, Guru Meera Devi bridges sculptural evidence and kinetic practice with peerless precision, discipline, and spiritual depth.',
     image: '/assets/images/meera_clean.png',
+    caption: 'Guru Meera Devi demonstrating posture alignment'
   }
 ];
 
 export const Mentors = () => {
   return (
-    <Section id="mentors" className="bg-bg-ivory border-b border-border-stone/20">
-      <div className="space-y-16">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-baseline gap-6 border-b border-border-stone pb-8">
-          <div className="space-y-3">
+    <Section id="mentors" background="parchment" divider={true}>
+      <div className="space-y-20">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-border-linen/80 pb-6">
+          <div className="space-y-3 max-w-2xl">
             <Caption>Living Lineages</Caption>
             <HeadingLG>Acharyas & Gurus</HeadingLG>
           </div>
-          <Link
-            to="/mentors"
-            className="font-sans text-[11px] uppercase tracking-[0.2em] text-accent-bronze hover:text-accent-gold transition-colors border-b border-accent-bronze/20 hover:border-accent-gold pb-1.5 duration-500"
-          >
-            Read Biography Details →
-          </Link>
+          <EditorialLink to="/mentors">
+            Read Full Biographies
+          </EditorialLink>
         </div>
 
-        {/* Profiles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
-          {MENTORS.map((mentor, idx) => (
-            <div
-              key={mentor.name}
-              className={`flex flex-col md:flex-row gap-8 items-start border border-border-stone/40 bg-bg-paper/30 p-6 md:p-8 hover:border-accent-bronze/35 transition-all duration-700 ease-out ${
-                idx % 2 === 1 ? 'md:translate-y-12' : ''
-              }`}
-            >
-              {/* Image Frame */}
-              <div className="w-full md:w-1/2 max-w-[220px] md:max-w-none mx-auto shrink-0">
-                <EditorialImage
-                  src={mentor.image}
-                  alt={mentor.name}
-                  aspectRatio="aspect-[3/4]"
-                  copyright="Gurukulam Portrait"
-                  caption={mentor.name}
-                />
-              </div>
+        {/* Profiles Layout */}
+        <div className="space-y-24">
+          {MENTORS.map((mentor, index) => {
+            const isReversed = index % 2 !== 0;
+            return (
+              <div
+                key={mentor.name}
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center ${
+                  isReversed ? 'lg:flex-row-reverse' : ''
+                }`}
+              >
+                {/* Large Portrait Image */}
+                <div className={`lg:col-span-5 ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}>
+                  <div className="aspect-[3/4] w-full overflow-hidden border border-border-linen/50">
+                    <img
+                      src={mentor.image}
+                      alt={mentor.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover filter contrast-[0.98] brightness-[1.02]"
+                    />
+                  </div>
+                  <figcaption className="mt-2 font-sans text-xs uppercase tracking-[0.2em] text-text-secondary">
+                    {mentor.caption}
+                  </figcaption>
+                </div>
 
-              {/* Text Details */}
-              <div className="w-full md:w-1/2 flex flex-col justify-between space-y-6 pt-2">
-                <div className="space-y-1">
-                  <Caption className="text-[10px] text-accent-bronze/70">{mentor.role}</Caption>
-                  <HeadingMD className="text-xl md:text-[24px] text-text-charcoal">{mentor.name}</HeadingMD>
-                </div>
-                
-                <Body className="text-sm font-light text-text-stone-grey leading-relaxed">
-                  {mentor.bio}
-                </Body>
-                
-                <div className="pt-2 border-t border-border-stone/20">
-                  <Link
-                    to="/mentors"
-                    className="font-sans text-[10px] uppercase tracking-[0.2em] text-accent-bronze hover:text-accent-gold transition-colors duration-500"
-                  >
-                    View Lineage →
-                  </Link>
+                {/* Biography Details */}
+                <div className={`lg:col-span-7 space-y-6 ${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className="space-y-2">
+                    <Caption>{mentor.role}</Caption>
+                    <HeadingMD className="text-3xl font-serif">{mentor.name}</HeadingMD>
+                  </div>
+
+                  <Body className="text-[18px] leading-[1.85]">
+                    {mentor.bio}
+                  </Body>
+
+                  <div className="pt-2">
+                    <EditorialLink to="/mentors">
+                      Explore Lineage & Teaching Philosophy
+                    </EditorialLink>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </Section>
@@ -86,3 +87,4 @@ export const Mentors = () => {
 };
 
 export default Mentors;
+

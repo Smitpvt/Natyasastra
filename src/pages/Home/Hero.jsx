@@ -1,71 +1,126 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { EditorialLink } from '../../components/Typography';
+import apsaraImage from '../../images/apasara-Photoroom.png';
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[92vh] bg-bg-ivory border-b border-border-stone/20 select-none flex items-center py-20 lg:py-0">
-      
-      {/* 12-Column Layout Grid Container */}
-      <div className="max-w-[1520px] mx-auto px-8 md:px-16 w-full grid grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        {/* Left Column - 5 cols */}
-        <div className="col-span-12 lg:col-span-5 flex flex-col justify-center">
+    <section className="w-full bg-[#FCFAF7] relative overflow-hidden select-none min-h-screen lg:min-h-[calc(100vh-88px)] pt-[88px]">
+
+      {/* CSS Grid Container (560px Left Column + 1fr Right, Max-Width 1440px, Padding 80px) */}
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px] min-h-[calc(100vh-88px)] relative grid grid-cols-1 lg:grid-cols-[560px_1fr] items-center">
+
+        {/* Left Content Column (Fixed 560px Width, Vertically & Optically Centered) */}
+        <div className="z-20 flex flex-col justify-center max-w-[560px] pt-8 lg:pt-[48px] pb-12">
+
+          {/* 1. Eyebrow */}
+          <motion.span
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1.0] }}
+            className="font-sans text-[12px] uppercase tracking-[0.25em] text-[#8A6A45] font-medium block mb-5"
+          >
+            NĀṬYAŚĀSTRA GURUKULAM
+          </motion.span>
+
+          {/* 2. Heading (560px Max-Width, 0.94 Line Height, Impactful & Concise) */}
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, delay: 0.1, ease: [0.25, 0.1, 0.25, 1.0] }}
+            className="font-serif text-[40px] sm:text-[48px] lg:text-[52px] xl:text-[56px] font-light leading-[0.94] text-[#1F1F1D] tracking-normal max-w-[560px] mb-8"
+          >
+            A Gurukulam for<br />
+            Śāstra,<br />
+            Sādhanā,<br />
+            and Civilisational<br />
+            Renewal.
+          </motion.h1>
+
+          {/* 3. Concise Editorial Description (21 Words, 480px Max-Width) */}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, delay: 0.18, ease: [0.25, 0.1, 0.25, 1.0] }}
+            className="font-sans text-[17px] md:text-[18px] font-light text-[#6B6863] leading-[1.75] max-w-[480px] mb-8"
+          >
+            A contemporary gurukulam rooted in India's timeless knowledge traditions, bringing together study, practice, and meaningful learning.
+          </motion.p>
+
+          {/* 4. Concise CTA Buttons (Single Baseline, 32px Gap) */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="space-y-10"
+            transition={{ duration: 1.0, delay: 0.24, ease: [0.25, 0.1, 0.25, 1.0] }}
+            className="flex flex-wrap items-center gap-8"
           >
-            {/* Heading Composition */}
-            <div className="space-y-6">
-              <h1 className="font-serif text-[34px] md:text-[42px] lg:text-[48px] font-light leading-[1.15] text-text-charcoal tracking-tight">
-                Nāṭyaśāstra<br />
-                Gurukulam
-              </h1>
-              <div className="w-12 h-[1px] bg-accent-bronze/50" />
-            </div>
-            
-            {/* Subtitle & Paragraph Content */}
-            <div className="space-y-6 max-w-[420px]">
-              <h2 className="font-serif italic text-text-charcoal/90 text-lg md:text-xl tracking-wide leading-relaxed">
-                A Gurukulam for Śāstra, Sādhanā, and Civilisational Renewal.
-              </h2>
-              
-              <p className="font-sans text-sm font-light text-text-stone-grey leading-[1.7] max-w-[380px]">
-                We bridge the chasm between ancient Indian wisdom and contemporary intellectual rigor. Here, the Nāṭyaśāstra is not merely a text, but a living ecosystem of body, sound, and consciousness.
-              </p>
+            <a
+              href="/about"
+              className="px-8 py-3.5 border border-[#8A6A45] text-[#8A6A45] font-sans text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-[#8A6A45] hover:text-[#FAF8F5] transition-all duration-500 ease-out text-center inline-block"
+            >
+              EXPLORE
+            </a>
 
-              <div className="pt-2">
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-accent-bronze hover:text-text-charcoal font-medium transition-colors duration-500"
-                >
-                  Read More <span className="text-[10px]">→</span>
-                </Link>
-              </div>
-            </div>
+            <EditorialLink to="/programmes" className="!text-[12px] !tracking-[0.2em]">
+              OUR PROGRAMMES
+            </EditorialLink>
           </motion.div>
         </div>
 
-        {/* Right Column - 7 cols with Boxed Image Frame */}
-        <div className="col-span-12 lg:col-span-7 flex justify-end overflow-hidden">
-          <div className="relative aspect-[4/3] md:aspect-[3/2] lg:aspect-[4/3] w-full max-w-[640px] bg-bg-limestone overflow-hidden border border-border-stone/40 shadow-sm">
-            {/* Authentic Architectural Temple Background Image */}
-            <img
-              src="/assets/images/corridor_clean.png"
-              alt="Ancient Temple Mandapa Corridor with Carved Pillars"
-              className="w-full h-full object-cover brightness-[1.02] contrast-[0.98] sepia-[0.02]"
-            />
-            {/* Warm ivory sunlit overlay */}
-            <div className="absolute inset-0 bg-[#FAF8F5]/10 mix-blend-soft-light" />
-          </div>
-        </div>
+        {/* Independent Sculpture Overlay - Centered Properly */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.4,
+            delay: 0.15,
+            ease: [0.25, 0.1, 0.25, 1],
+          }}
+          className="absolute right-0 lg:right-6 xl:right-12 top-1/2 -translate-y-1/2 z-10 pointer-events-none hidden lg:block"
+        >
+          <img
+            src={apsaraImage}
+            alt="11th-Century Apsara Dancing Sculpture"
+            className="
+              h-[640px]
+              xl:h-[720px]
+              2xl:h-[780px]
+              max-h-[82vh]
+              w-auto
+              object-contain
+              object-center
+              select-none
+              drop-shadow-[0_20px_40px_rgba(138,106,69,0.06)]
+            "
+          />
+        </motion.div>
+
+        {/* Mobile / Tablet Responsive Statue Fallback */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.4, delay: 0.15, ease: [0.25, 0.1, 0.25, 1.0] }}
+          className="lg:hidden w-full flex justify-end items-end z-10 pointer-events-none mt-4"
+        >
+          <img
+            src={apsaraImage}
+            alt="11th-Century Apsara Dancing Sculpture"
+            className="max-h-[420px] w-auto object-contain object-bottom-right filter contrast-[1.02] brightness-[0.98]"
+          />
+        </motion.div>
 
       </div>
-
     </section>
   );
 };
 
 export default Hero;
+
+
+
+
+
+
+
+
+

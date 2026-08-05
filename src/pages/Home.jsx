@@ -3,6 +3,7 @@ import Hero from './Home/Hero';
 import Welcome from './Home/Welcome';
 import Philosophy from './Home/Philosophy';
 import Programmes from './Home/Programmes';
+import QuoteSection from './Home/QuoteSection';
 import Library from './Home/Library';
 import Mentors from './Home/Mentors';
 import Gallery from './Home/Gallery';
@@ -11,35 +12,39 @@ import ClosingInvocation from './Home/ClosingInvocation';
 
 export const Home = () => {
   return (
-    <div className="flex flex-col w-full">
-      {/* 1. Full Screen Hero */}
+    <div className="flex flex-col w-full bg-bg-ivory selection:bg-accent-bronze/20 selection:text-text-primary">
+      {/* 1. Arrival (Full-screen Threshold Hero) */}
       <Hero />
 
-      {/* 2. Welcome Story ("Architecture of Stillness") */}
+      {/* 2. Orientation (Narrative Welcome) */}
       <Welcome />
 
-      {/* 3. Three Pillars (Śāstra, Sādhanā, Saṃvāda) */}
+      {/* 3. Philosophy (The Three Pillars & Architectural Interlude) */}
       <Philosophy />
 
-      {/* 4. Programmes Areas (Study, Practice, Pedagogy, Archive, Saṃvāda) */}
+      {/* 4. Practice (Editorial Curricula Blocks) */}
       <Programmes />
 
-      {/* 5. Publications monographs */}
+      {/* 5. Transition (Quiet Sanskrit Verse) */}
+      <QuoteSection />
+
+      {/* 6. Knowledge (Academic Museum Archive) */}
       <Library />
 
-      {/* 6. Mentors biographies */}
+      {/* 7. People (Living Lineages & Acharyas) */}
       <Mentors />
 
-      {/* 7. Gallery Grid preview */}
+      {/* 8. Environment (Documentary Photography Gallery) */}
       <Gallery />
 
-      {/* 8. Associate invitations */}
+      {/* 9. Invitation (Quiet Alignment & Associate) */}
       <Associate />
 
-      {/* 9. Closing Sanskrit Invocation CTA */}
+      {/* 10. Closing Invocation */}
       <ClosingInvocation />
     </div>
   );
 };
 
 export default Home;
+
