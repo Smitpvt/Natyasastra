@@ -10,19 +10,29 @@ export const Section = ({
   background = 'ivory', // 'ivory' | 'parchment' | 'none'
   divider = false,
   container = true,
+  spacing = 'large', // 'large' | 'medium' | 'compact' | 'none'
   ...props
 }) => {
   const bgClass =
     background === 'parchment'
-      ? 'bg-bg-parchment'
+      ? 'bg-[#F4F0EA]'
       : background === 'ivory'
-      ? 'bg-bg-ivory'
+      ? 'bg-[#FAF8F5]'
       : '';
 
-  const borderClass = divider ? 'border-t border-border-linen/60' : '';
+  const borderClass = divider ? 'border-t border-[#DDD6C8]/60' : '';
+
+  const spacingClass = 
+    spacing === 'medium'
+      ? 'section-medium'
+      : spacing === 'compact'
+      ? 'section-compact'
+      : spacing === 'none'
+      ? 'py-0'
+      : 'section-large'; // default large spacing
 
   return (
-    <section id={id} className={`w-full ${bgClass} ${borderClass} py-24 md:py-36 relative select-none`} {...props}>
+    <section id={id} className={`w-full ${bgClass} ${borderClass} ${spacingClass} relative select-none`} {...props}>
       <motion.div
         initial={{ opacity: 0, y: yOffset }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,4 +47,3 @@ export const Section = ({
 };
 
 export default Section;
-

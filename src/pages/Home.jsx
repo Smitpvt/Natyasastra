@@ -1,50 +1,33 @@
 import React from 'react';
 import Hero from './Home/Hero';
-import Welcome from './Home/Welcome';
-import Philosophy from './Home/Philosophy';
-import Programmes from './Home/Programmes';
 import QuoteSection from './Home/QuoteSection';
-import Library from './Home/Library';
+import Approaches from './Home/Approaches';
+import Publications from './Home/Publications';
 import Mentors from './Home/Mentors';
-import Gallery from './Home/Gallery';
-import Associate from './Home/Associate';
-import ClosingInvocation from './Home/ClosingInvocation';
+import CTASection from './Home/CTASection';
 
 export const Home = () => {
   return (
-    <div className="flex flex-col w-full bg-bg-ivory selection:bg-accent-bronze/20 selection:text-text-primary">
-      {/* 1. Arrival (Full-screen Threshold Hero) */}
+    <div className="flex flex-col w-full bg-[#FAF8F5] selection:bg-[#8A6A45]/20 selection:text-[#1F1F1D]">
+      {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Orientation (Narrative Welcome) */}
-      <Welcome />
-
-      {/* 3. Philosophy (The Three Pillars & Architectural Interlude) */}
-      <Philosophy />
-
-      {/* 4. Practice (Editorial Curricula Blocks) */}
-      <Programmes />
-
-      {/* 5. Transition (Quiet Sanskrit Verse) */}
+      {/* 2. Sanskrit Quote Section */}
       <QuoteSection />
 
-      {/* 6. Knowledge (Academic Museum Archive) */}
-      <Library />
+      {/* 3. Our Approaches */}
+      <Approaches />
 
-      {/* 7. People (Living Lineages & Acharyas) */}
+      {/* 4. Our Publications */}
+      <Publications />
+
+      {/* 5. Mentors */}
       <Mentors />
 
-      {/* 8. Environment (Documentary Photography Gallery) */}
-      <Gallery />
-
-      {/* 9. Invitation (Quiet Alignment & Associate) */}
-      <Associate />
-
-      {/* 10. Closing Invocation */}
-      <ClosingInvocation />
+      {/* 6. CTA Section */}
+      <CTASection />
     </div>
   );
 };
 
 export default Home;
-

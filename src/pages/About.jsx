@@ -7,7 +7,7 @@ export const About = () => {
   return (
     <div className="bg-bg-ivory pt-24">
       {/* Editorial Header */}
-      <Section className="pb-12">
+      <Section spacing="compact" className="pb-12">
         <div className="max-w-3xl space-y-6">
           <Caption>Our Roots & Lineage</Caption>
           <HeadingLG as="h1" className="text-4xl md:text-6xl font-light">

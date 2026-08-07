@@ -50,7 +50,7 @@ export const Gallery = () => {
   return (
     <div className="bg-bg-ivory pt-24 min-h-screen">
       {/* Header */}
-      <Section className="pb-12 border-b border-accent-bronze/10">
+      <Section spacing="compact" className="pb-12 border-b border-accent-bronze/10">
         <div className="max-w-3xl space-y-4">
           <Caption>Documentary Archives</Caption>
           <HeadingLG as="h1" className="text-4xl md:text-5xl font-light">

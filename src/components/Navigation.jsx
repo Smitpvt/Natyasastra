@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { OutlinedButton } from './Typography';
 
 const NAV_ITEMS = [
+  { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Programmes', path: '/programmes' },
-  { name: 'Mentors', path: '/mentors' },
+  { name: 'Approaches', path: '/approach' },
+  { name: 'Publications', path: '/library' },
   { name: 'Gallery', path: '/gallery' }
 ];
 
@@ -28,59 +28,89 @@ export const Navigation = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  const isHeroPage = location.pathname === '/';
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-40 transition-all duration-700 ease-in-out flex items-center h-[88px] ${
+        className={`fixed top-0 left-0 w-full z-45 transition-all duration-700 ease-in-out flex items-center h-[96px] ${
           isScrolled
-            ? 'bg-[#FCFAF7]/95 backdrop-blur-md border-b border-[#DDD6C8]/40 shadow-[0_4px_20px_rgba(0,0,0,0.02)]'
+            ? 'bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#DDD6C8]/40 shadow-[0_4px_30px_rgba(0,0,0,0.015)]'
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px] w-full flex justify-between items-center">
-          {/* Logo - Left Aligned */}
-          <Link to="/" className="flex flex-col group select-none">
-            <span className="font-serif text-[22px] md:text-[26px] font-light tracking-[0.03em] text-[#1F1F1D] hover:text-[#8A6A45] transition-colors duration-500">
-              Nāṭyaśāstra Gurukulam
-            </span>
-          </Link>
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px] w-full flex justify-between items-center xl:grid xl:grid-cols-3">
+          {/* Logo - Left */}
+          <div className="flex justify-start">
+            <Link to="/" className="flex flex-col group select-none">
+              <span className={`font-serif text-[20px] md:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
+                isScrolled ? 'text-[#1F1F1D] hover:text-[#8A6A45]' : isHeroPage ? 'text-white hover:text-[#DDD6C8]' : 'text-[#1F1F1D] hover:text-[#8A6A45]'
+              }`}>
+                Nāṭyaśāstra Gurukulam
+              </span>
+            </Link>
+          </div>
 
-          {/* Desktop Links & Action - Right Aligned */}
-          <div className="hidden xl:flex items-center gap-12">
-            <div className="flex items-center gap-10">
-              {NAV_ITEMS.map((item) => {
-                const isActive = location.pathname === item.path;
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    className="relative py-1 group"
-                  >
-                    <span className={`font-sans text-[13px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 ${
-                      isActive ? 'text-accent-bronze' : 'text-text-primary hover:text-accent-bronze'
-                    }`}>
-                      {item.name}
-                    </span>
-                    <span className={`absolute bottom-0 left-0 h-[1px] bg-accent-bronze transition-all duration-500 ease-out ${
-                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                    }`} />
-                  </Link>
-                );
-              })}
-            </div>
+          {/* Links - Center */}
+          <div className="hidden xl:flex justify-center items-center gap-10">
+            {NAV_ITEMS.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="relative py-1 group"
+                >
+                  <span className={`font-sans text-[12px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 ${
+                    isActive
+                      ? 'text-[#8A6A45]'
+                      : isScrolled
+                      ? 'text-[#1F1F1D] hover:text-[#8A6A45]'
+                      : isHeroPage
+                      ? 'text-white/80 hover:text-white'
+                      : 'text-[#1F1F1D] hover:text-[#8A6A45]'
+                  }`}>
+                    {item.name}
+                  </span>
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[1px] bg-[#8A6A45] transition-all duration-500 ease-out ${
+                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
+                </Link>
+              );
+            })}
+          </div>
 
-            <OutlinedButton to="/contact" className="!px-6 !py-2.5">
-              Inquire
-            </OutlinedButton>
+          {/* Action - Right */}
+          <div className="hidden xl:flex justify-end items-center">
+            <Link
+              to="/contact"
+              className={`inline-block px-6 py-2.5 rounded-full border font-sans text-[11px] uppercase tracking-[0.2em] font-semibold transition-all duration-500 ease-out text-center ${
+                isScrolled
+                  ? 'border-[#1F1F1D] text-[#1F1F1D] hover:bg-[#1F1F1D] hover:text-[#FAF8F5]'
+                  : isHeroPage
+                  ? 'border-white/80 text-white hover:bg-white hover:text-[#1F1F1D]'
+                  : 'border-[#1F1F1D] text-[#1F1F1D] hover:bg-[#1F1F1D] hover:text-[#FAF8F5]'
+              }`}
+            >
+              Inquire Now
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2 text-text-primary hover:text-accent-bronze transition-colors focus:outline-none"
+            className="xl:hidden p-2 transition-colors focus:outline-none z-50"
             aria-label="Toggle navigation menu"
           >
-            {isOpen ? <X size={24} strokeWidth={1.2} /> : <Menu size={24} strokeWidth={1.2} />}
+            {isOpen ? (
+              <X size={24} strokeWidth={1.2} className="text-[#1F1F1D]" />
+            ) : (
+              <Menu
+                size={24}
+                strokeWidth={1.2}
+                className={isScrolled ? 'text-[#1F1F1D]' : isHeroPage ? 'text-white' : 'text-[#1F1F1D]'}
+              />
+            )}
           </button>
         </div>
       </nav>
@@ -93,7 +123,7 @@ export const Navigation = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-35 bg-bg-ivory flex flex-col justify-center px-8 md:px-16"
+            className="fixed inset-0 z-40 bg-[#FAF8F5] flex flex-col justify-center px-8 md:px-16"
           >
             <div className="flex flex-col gap-8 max-w-lg mx-auto w-full text-center">
               {NAV_ITEMS.map((item, idx) => {
@@ -109,8 +139,8 @@ export const Navigation = () => {
                       to={item.path}
                       className="inline-block py-2 relative group"
                     >
-                      <span className={`font-serif text-3xl font-light tracking-wide ${
-                        isActive ? 'text-accent-bronze' : 'text-text-primary hover:text-accent-bronze'
+                      <span className={`font-serif text-3xl font-light tracking-wide transition-colors ${
+                        isActive ? 'text-[#8A6A45]' : 'text-[#1F1F1D] hover:text-[#8A6A45]'
                       }`}>
                         {item.name}
                       </span>
@@ -118,16 +148,19 @@ export const Navigation = () => {
                   </motion.div>
                 );
               })}
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: NAV_ITEMS.length * 0.05, duration: 0.5 }}
-                className="mt-8 pt-8 border-t border-border-linen/60"
+                className="mt-8 pt-8 border-t border-[#DDD6C8]/60 flex flex-col items-center"
               >
-                <OutlinedButton to="/contact" className="w-full">
-                  Register Interest / Inquire
-                </OutlinedButton>
+                <Link
+                  to="/contact"
+                  className="px-8 py-3 rounded-full border border-[#1F1F1D] text-[#1F1F1D] hover:bg-[#1F1F1D] hover:text-[#FAF8F5] font-sans text-[12px] uppercase tracking-[0.2em] font-medium transition-all duration-500 text-center w-full max-w-xs"
+                >
+                  Inquire Now
+                </Link>
               </motion.div>
             </div>
           </motion.div>
@@ -138,4 +171,3 @@ export const Navigation = () => {
 };
 
 export default Navigation;
-
