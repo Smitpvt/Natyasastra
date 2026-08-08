@@ -8,18 +8,18 @@ import CTASection from './Home/CTASection';
 
 export const Home = () => {
   return (
-    <div className="flex flex-col w-full bg-[#FAF8F5] selection:bg-[#8A6A45]/20 selection:text-[#1F1F1D]">
+    <div className="flex flex-col w-full bg-[#F3EEE6] selection:bg-[#8B0000]/20 selection:text-[#211F1D]">
       {/* 1. Hero Section */}
       <Hero />
 
       {/* 2. Sanskrit Quote Section */}
       <QuoteSection />
 
-      {/* 3. Our Approaches */}
-      <Approaches />
-
-      {/* 4. Our Publications */}
+      {/* 3. Our Publications */}
       <Publications />
+
+      {/* 4. Our Approaches */}
+      <Approaches />
 
       {/* 5. Mentors */}
       <Mentors />

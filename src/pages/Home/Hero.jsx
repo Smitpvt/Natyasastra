@@ -59,7 +59,7 @@ export const Hero = () => {
           {/* Small Editorial Label with increased opacity - 20px spacing underneath */}
           <motion.span
             variants={itemVariants}
-            className="font-sans text-[12px] md:text-[13px] uppercase tracking-[0.3em] text-[#8A6A45] font-bold opacity-90 mb-[20px]"
+            className="font-sans text-[12px] md:text-[13px] uppercase tracking-[0.3em] text-[#8B0000] font-bold opacity-90 mb-[20px]"
           >
             Śāstra • Sādhanā • Saṃvāda
           </motion.span>
@@ -67,24 +67,20 @@ export const Hero = () => {
           {/* Major Serifed Headings */}
           <motion.div variants={itemVariants} className="flex flex-col items-center">
             <h1 
-              className="font-serif text-[42px] xs:text-[54px] sm:text-[76px] md:text-[96px] lg:text-[104px] font-light leading-none tracking-wide text-white"
-              style={{ textShadow: '0 6px 24px rgba(0,0,0,0.35)' }}
+              className="font-serif text-[64px] xs:text-[80px] sm:text-[100px] md:text-[130px] lg:text-[160px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#8B0000] to-[#590000] pb-2"
+              style={{ filter: 'drop-shadow(0px 10px 15px rgba(0,0,0,0.8))' }}
             >
-              Nāṭyaśāstra
+              नाट्यशास्त्र
             </h1>
             {/* Subtitle - 12px spacing from heading */}
-            <p className="font-serif text-[20px] xs:text-[24px] sm:text-[32px] md:text-[38px] lg:text-[42px] font-semibold italic text-[#DDD6C8] tracking-widest mt-[12px]">
-              Gurukulam
+            <p 
+              className="font-serif text-[32px] xs:text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-medium text-[#8B0000] tracking-[0.2em] mt-[8px]"
+              style={{ textShadow: '0 6px 20px rgba(0,0,0,0.8)' }}
+            >
+              गुरुकुलम्
             </p>
           </motion.div>
 
-          {/* Short introduction paragraph with warm white and line height - 32px spacing from subtitle */}
-          <motion.p
-            variants={itemVariants}
-            className="font-sans text-[15px] sm:text-[17px] leading-[1.8] text-[rgba(255,255,255,0.92)] max-w-[680px] font-light tracking-wide mt-[32px]"
-          >
-            A contemporary heritage foundation and archive dedicated to the preservation, study, and somatic reconstruction of classical Indian performing arts.
-          </motion.p>
 
           {/* Two Elegant Outline Buttons - 40px spacing from description, subtle rounding and compact width */}
           <motion.div
@@ -93,13 +89,13 @@ export const Hero = () => {
           >
             <Link
               to="/about"
-              className="w-56 py-3.5 border border-white/80 text-white font-sans text-[12px] uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-56 py-3.5 border border-[#8B0000]/80 text-[#8B0000] font-sans text-[12px] uppercase tracking-[0.2em] font-semibold hover:bg-[#8B0000] hover:text-white transition-all duration-300 text-center bg-transparent rounded-[6px]"
             >
               Explore Gurukulam
             </Link>
             <Link
               to="/library"
-              className="w-56 py-3.5 border border-white/80 text-white font-sans text-[12px] uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-56 py-3.5 border border-[#8B0000]/80 text-[#8B0000] font-sans text-[12px] uppercase tracking-[0.2em] font-semibold hover:bg-[#8B0000] hover:text-white transition-all duration-300 text-center bg-transparent rounded-[6px]"
             >
               Publications
             </Link>

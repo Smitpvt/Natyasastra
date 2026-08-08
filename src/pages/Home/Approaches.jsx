@@ -36,15 +36,15 @@ const APPROACHES = {
 
 export const Approaches = () => {
   return (
-    <section className="w-full bg-[#FAF8F5] section-medium border-t border-[#DDD6C8]/40 overflow-hidden">
+    <section className="w-full bg-[#F3EEE6] section-medium border-t border-[#E0D8CE]/40 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px] space-y-12">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <span className="font-sans text-[12px] uppercase tracking-[0.25em] text-[#8A6A45] font-semibold block">
+          <span className="font-sans text-[12px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold block">
             Pedagogical Systems
           </span>
-          <h2 className="font-serif text-[30px] sm:text-[38px] md:text-[44px] font-light text-[#1F1F1D] tracking-normal">
+          <h2 className="font-serif text-[30px] sm:text-[38px] md:text-[44px] font-light text-[#211F1D] tracking-normal">
             Our Approaches
           </h2>
         </div>
@@ -58,7 +58,7 @@ export const Approaches = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1.0] }}
-            className="group relative w-full aspect-[16/10] md:aspect-[21/9] rounded-2xl overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.01)] border border-[#DDD6C8]/30"
+            className="group relative w-full aspect-[16/10] md:aspect-[21/9] rounded-2xl overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.01)] border border-[#E0D8CE]/30"
           >
             {/* Background Image */}
             <div
@@ -69,18 +69,18 @@ export const Approaches = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-700 group-hover:from-black/90" />
 
             {/* Content Container */}
-            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 text-[#FAF8F5]">
+            <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 text-[#F3EEE6]">
               <div className="max-w-xl space-y-3 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#8A6A45] font-semibold">
+                <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold">
                   Featured Approach
                 </span>
                 <h3 className="font-serif text-2xl md:text-3xl font-light">
                   {APPROACHES.featured.title}
                 </h3>
-                <p className="font-sans text-[13px] md:text-[14px] text-[#DDD6C8]/75 uppercase tracking-wider">
+                <p className="font-sans text-[13px] md:text-[14px] text-[#E0D8CE]/75 uppercase tracking-wider">
                   {APPROACHES.featured.subtitle}
                 </p>
-                <p className="font-sans text-[14px] leading-relaxed text-[#DDD6C8]/90 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 max-w-lg">
+                <p className="font-sans text-[14px] leading-relaxed text-[#E0D8CE]/90 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 max-w-lg">
                   {APPROACHES.featured.description}
                 </p>
               </div>
@@ -96,7 +96,7 @@ export const Approaches = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.9, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1.0] }}
-                className="snap-start w-[280px] sm:w-[320px] md:w-auto shrink-0 md:shrink md:flex-grow group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.01)] border border-[#DDD6C8]/30"
+                className="snap-start w-[280px] sm:w-[320px] md:w-auto shrink-0 md:shrink md:flex-grow group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer shadow-[0_8px_30px_rgba(0,0,0,0.01)] border border-[#E0D8CE]/30"
               >
                 {/* Background Image */}
                 <div
@@ -107,15 +107,15 @@ export const Approaches = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-700 group-hover:from-black/95" />
 
                 {/* Content Container */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-[#FAF8F5]">
+                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-[#F3EEE6]">
                   <div className="space-y-2 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                     <h3 className="font-serif text-xl md:text-2xl font-light">
                       {approach.title}
                     </h3>
-                    <p className="font-sans text-[11px] text-[#DDD6C8]/70 uppercase tracking-wider">
+                    <p className="font-sans text-[11px] text-[#E0D8CE]/70 uppercase tracking-wider">
                       {approach.subtitle}
                     </p>
-                    <p className="font-sans text-[13px] leading-relaxed text-[#DDD6C8]/85 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                    <p className="font-sans text-[13px] leading-relaxed text-[#E0D8CE]/85 font-light opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                       {approach.description}
                     </p>
                   </div>

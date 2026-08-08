@@ -15,21 +15,15 @@ export const Section = ({
 }) => {
   const bgClass =
     background === 'parchment'
-      ? 'bg-[#F4F0EA]'
+      ? 'bg-[#EAE4D9]'
       : background === 'ivory'
-      ? 'bg-[#FAF8F5]'
+      ? 'bg-[#F3EEE6]'
       : '';
 
-  const borderClass = divider ? 'border-t border-[#DDD6C8]/60' : '';
+  const borderClass = divider ? 'border-t border-[#E0D8CE]/60' : '';
 
-  const spacingClass = 
-    spacing === 'medium'
-      ? 'section-medium'
-      : spacing === 'compact'
-      ? 'section-compact'
-      : spacing === 'none'
-      ? 'py-0'
-      : 'section-large'; // default large spacing
+  // Disabled massive default paddings to rely on manual Tailwind classes
+  const spacingClass = '';
 
   return (
     <section id={id} className={`w-full ${bgClass} ${borderClass} ${spacingClass} relative select-none`} {...props}>
