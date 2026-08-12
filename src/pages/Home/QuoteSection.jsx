@@ -16,11 +16,11 @@ export const QuoteSection = () => {
         >
           {/* Top Flourish */}
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-8 h-[1px] bg-[#8B0000]/30"></span>
+            <span className="w-8 h-[1px] bg-accent-bronze/30"></span>
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 0L8 4L12 6L8 8L6 12L4 8L0 6L4 4L6 0Z" fill="#8B0000"/>
+              <path d="M6 0L8 4L12 6L8 8L6 12L4 8L0 6L4 4L6 0Z" fill="var(--color-accent-bronze)"/>
             </svg>
-            <span className="w-8 h-[1px] bg-[#8B0000]/30"></span>
+            <span className="w-8 h-[1px] bg-accent-bronze/30"></span>
           </div>
 
           {/* Devanagari Sanskrit Quote - Responsive Font Size, Centered perfectly */}
@@ -33,7 +33,7 @@ export const QuoteSection = () => {
           </h2>
 
           {/* Transliteration - Responsive Font Size */}
-          <p className="font-serif text-[14px] sm:text-[16px] md:text-[18px] text-[#8B0000] tracking-[0.05em] mb-6 font-medium px-2 max-w-2xl">
+          <p className="font-serif text-[14px] sm:text-[16px] md:text-[18px] text-accent-bronze tracking-[0.05em] mb-6 font-medium px-2 max-w-2xl">
             *Yato hastas tato dṛṣṭir yato dṛṣṭis tato manaḥ | yato manas tato bhāvo yato bhāvas tato rasaḥ*
           </p>
 
@@ -44,7 +44,7 @@ export const QuoteSection = () => {
           </p>
 
           {/* Citation Source with arrows */}
-          <span className="block mt-10 font-sans text-[11px] uppercase tracking-[0.3em] text-[#8B0000] font-bold">
+          <span className="block mt-10 font-sans text-[11px] uppercase tracking-[0.3em] text-accent-bronze font-bold">
             — NĀṬYAŚĀSTRA, CHAPTER VI, VERSE 36 —
           </span>
         </motion.div>

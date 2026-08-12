@@ -8,7 +8,7 @@ const RECENT_PUBLICATIONS = [
     type: 'Working Paper I',
     title: 'The Dharma of Middle Powers',
     desc: 'As the international system becomes increasingly multipolar, this paper explores how restraint, proportion...',
-    theme: 'bg-gradient-to-br from-[#8B0000] to-[#5A0000] text-[#F3EEE6] border border-[#3A0000] shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
+    theme: 'bg-gradient-to-br from-accent-bronze to-[#462814] text-[#F3EEE6] border border-[#462814]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
     link: '/library'
   },
   {
@@ -16,7 +16,7 @@ const RECENT_PUBLICATIONS = [
     type: 'CG-01',
     title: 'The Dharma Doctrine of Disciplined Equilibrium',
     desc: 'Introduces the foundational governance doctrine underpinning the Gurukulam\'s research programme...',
-    theme: 'bg-gradient-to-br from-[#8B0000] to-[#5A0000] text-[#F3EEE6] border border-[#3A0000] shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
+    theme: 'bg-gradient-to-br from-accent-bronze to-[#462814] text-[#F3EEE6] border border-[#462814]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
     link: '/library'
   },
   {
@@ -24,7 +24,7 @@ const RECENT_PUBLICATIONS = [
     type: 'Working Paper I',
     title: 'The Return of Nāṭya',
     desc: 'Examines Nāṭya as a civilisational knowledge system and argues that the challenge before our time...',
-    theme: 'bg-gradient-to-br from-[#8B0000] to-[#5A0000] text-[#F3EEE6] border border-[#3A0000] shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
+    theme: 'bg-gradient-to-br from-accent-bronze to-[#462814] text-[#F3EEE6] border border-[#462814]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
     link: '/library'
   },
   {
@@ -32,7 +32,7 @@ const RECENT_PUBLICATIONS = [
     type: 'Reflection I',
     title: 'From Entitlement to Embodiment',
     desc: 'Reflects on the movement from consumption to cultivation, exploring how Nāṭya reshapes desire...',
-    theme: 'bg-gradient-to-br from-[#8B0000] to-[#5A0000] text-[#F3EEE6] border border-[#3A0000] shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
+    theme: 'bg-gradient-to-br from-accent-bronze to-[#462814] text-[#F3EEE6] border border-[#462814]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]',
     link: '/library'
   }
 ];
@@ -103,10 +103,10 @@ export const Publications = () => {
 
                 {/* Publication Details below image */}
                 <div className="pt-6 flex flex-col flex-grow">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#8B0000] font-semibold block mb-2 shrink-0">
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze font-semibold block mb-2 shrink-0">
                     {pub.series}
                   </span>
-                  <h3 className="font-serif text-[18px] leading-snug text-[#211F1D] group-hover:text-[#8B0000] transition-colors line-clamp-2 min-h-[48px] shrink-0">
+                  <h3 className="font-serif text-[18px] leading-snug text-[#211F1D] group-hover:text-accent-bronze transition-colors line-clamp-2 min-h-[48px] shrink-0">
                     {pub.title}
                   </h3>
                   <p className="font-sans text-[13px] text-[#757069] mt-3 line-clamp-3 font-light leading-relaxed">

@@ -19,21 +19,21 @@ export const Footer = () => {
 
           {/* Column 2: Navigation Links */}
           <div className="flex flex-col gap-4">
-            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold">
+            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold">
               Navigation
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069]">
-              <Link to="/" className="hover:text-[#8B0000] transition-colors duration-300">Home</Link>
-              <Link to="/about" className="hover:text-[#8B0000] transition-colors duration-300">About</Link>
-              <Link to="/approach" className="hover:text-[#8B0000] transition-colors duration-300">Approaches</Link>
-              <Link to="/library" className="hover:text-[#8B0000] transition-colors duration-300">Publications</Link>
-              <Link to="/gallery" className="hover:text-[#8B0000] transition-colors duration-300">Gallery</Link>
+              <Link to="/" className="hover:text-accent-bronze transition-colors duration-300">Home</Link>
+              <Link to="/about" className="hover:text-accent-bronze transition-colors duration-300">About</Link>
+              <Link to="/approach" className="hover:text-accent-bronze transition-colors duration-300">Approaches</Link>
+              <Link to="/library" className="hover:text-accent-bronze transition-colors duration-300">Publications</Link>
+              <Link to="/gallery" className="hover:text-accent-bronze transition-colors duration-300">Gallery</Link>
             </div>
           </div>
 
           {/* Column 3: Contact Information */}
           <div className="flex flex-col gap-4">
-            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold">
+            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold">
               Contact Us
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069] font-light">
@@ -48,14 +48,14 @@ export const Footer = () => {
 
           {/* Column 4: Social Links */}
           <div className="flex flex-col gap-4">
-            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold">
+            <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold">
               Social Links
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069]">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B0000] transition-colors duration-300">Instagram</a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B0000] transition-colors duration-300">YouTube</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B0000] transition-colors duration-300">Twitter / X</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#8B0000] transition-colors duration-300">LinkedIn</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Instagram</a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">YouTube</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Twitter / X</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">LinkedIn</a>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export const Footer = () => {
           <span className="font-sans text-[11px] text-[#757069]/60 uppercase tracking-widest">
             © {new Date().getFullYear()} Nāṭyaśāstra Gurukulam. All rights reserved.
           </span>
-          <span className="font-serif text-[12px] text-[#8B0000]/70 italic tracking-widest">
+          <span className="font-serif text-[12px] text-accent-bronze/70 italic tracking-widest">
             Śāstra • Sādhanā • Saṃvāda
           </span>
         </div>
