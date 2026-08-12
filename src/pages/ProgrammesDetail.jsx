@@ -723,17 +723,22 @@ export const ProgrammesDetail = () => {
             </BodyLG>
           </div>
 
-          {/* Programme Formats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {DIRECT_ENGAGEMENTS.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.6 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-black/5 hover:shadow-xl transition-all duration-500 flex flex-col justify-between group hover:border-accent-bronze/40"
-              >
+          {/* Programme Formats Grid: Horizontal auto-scroll on mobile, 3-col grid on md+ */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between md:hidden text-[10px] uppercase tracking-widest text-[#757069]">
+              <span>Programme Formats</span>
+              <span className="text-accent-bronze font-semibold">Auto-scrolling • Swipe →</span>
+            </div>
+            <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 pb-3 md:pb-0">
+              {DIRECT_ENGAGEMENTS.map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.6 }}
+                  className="flex-none w-[85%] md:w-auto snap-start bg-white rounded-2xl overflow-hidden shadow-sm border border-black/5 hover:shadow-xl transition-all duration-500 flex flex-col justify-between group hover:border-accent-bronze/40"
+                >
                 {/* Thumbnail Header */}
                 <div className="relative h-48 sm:h-52 overflow-hidden bg-[#1E1C1A]">
                   <img
@@ -774,6 +779,7 @@ export const ProgrammesDetail = () => {
                 </div>
               </motion.div>
             ))}
+            </AutoScrollContainer>
           </div>
 
         </div>
@@ -793,46 +799,52 @@ export const ProgrammesDetail = () => {
             </BodyLG>
           </div>
 
-          {/* 3 Concentric Widening Impact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {REALMS_OF_IMPACT.map((realm, idx) => (
-              <motion.div
-                key={realm.realm}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.15, duration: 0.6 }}
-                className="bg-white p-8 rounded-xl shadow-md border border-accent-bronze/30 flex flex-col justify-between relative overflow-hidden group hover:border-accent-bronze hover:shadow-xl transition-all duration-500"
-              >
-                <div className="space-y-4 relative z-10">
-                  <div className="flex justify-between items-center">
-                    <span className="font-serif text-3xl text-accent-bronze/50 font-light">
-                      {realm.num}
-                    </span>
-                    <span className="font-serif text-base text-accent-bronze/80 font-medium">
-                      {realm.sanskrit}
-                    </span>
-                  </div>
+          {/* 3 Concentric Widening Impact Cards: Horizontal auto-scroll on mobile */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between md:hidden text-[10px] uppercase tracking-widest text-[#757069]">
+              <span>Realms of Impact</span>
+              <span className="text-accent-bronze font-semibold">Auto-scrolling • Swipe →</span>
+            </div>
+            <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-8 pb-3 md:pb-0">
+              {REALMS_OF_IMPACT.map((realm, idx) => (
+                <motion.div
+                  key={realm.realm}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.15, duration: 0.6 }}
+                  className="flex-none w-[85%] md:w-auto snap-start bg-white p-6 sm:p-8 rounded-xl shadow-md border border-accent-bronze/30 flex flex-col justify-between relative overflow-hidden group hover:border-accent-bronze hover:shadow-xl transition-all duration-500"
+                >
+                  <div className="space-y-4 relative z-10">
+                    <div className="flex justify-between items-center">
+                      <span className="font-serif text-3xl text-accent-bronze/50 font-light">
+                        {realm.num}
+                      </span>
+                      <span className="font-serif text-base text-accent-bronze/80 font-medium">
+                        {realm.sanskrit}
+                      </span>
+                    </div>
 
-                  <div>
-                    <h3 className="font-serif text-2xl font-semibold text-[#211F1D]">
-                      {realm.realm}
-                    </h3>
-                    <p className="font-sans text-xs text-accent-bronze uppercase tracking-wider font-semibold mt-1">
-                      {realm.title}
+                    <div>
+                      <h3 className="font-serif text-2xl font-semibold text-[#211F1D]">
+                        {realm.realm}
+                      </h3>
+                      <p className="font-sans text-xs text-accent-bronze uppercase tracking-wider font-semibold mt-1">
+                        {realm.title}
+                      </p>
+                    </div>
+
+                    <p className="font-sans text-xs text-text-stone-grey leading-relaxed font-light pt-3 border-t border-black/5">
+                      {realm.desc}
                     </p>
                   </div>
 
-                  <p className="font-sans text-xs text-text-stone-grey leading-relaxed font-light pt-3 border-t border-black/5">
-                    {realm.desc}
-                  </p>
-                </div>
-
-                <div className="mt-6 pt-3 border-t border-black/5 text-[11px] font-sans uppercase tracking-widest text-[#757069] font-medium">
-                  Realm: {realm.scope}
-                </div>
-              </motion.div>
-            ))}
+                  <div className="mt-6 pt-3 border-t border-black/5 text-[11px] font-sans uppercase tracking-widest text-[#757069] font-medium">
+                    Realm: {realm.scope}
+                  </div>
+                </motion.div>
+              ))}
+            </AutoScrollContainer>
           </div>
 
           {/* Rāma Rājyam Quote Box */}

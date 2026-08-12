@@ -36,12 +36,12 @@ export const Library = () => {
 
       {/* Filter Tabs */}
       <Section spacing="none" className="pt-6 pb-2 border-b border-accent-bronze/10">
-        <div className="flex gap-8 overflow-x-auto no-scrollbar py-2">
+        <div className="flex gap-6 sm:gap-8 overflow-x-auto scrollbar-none py-2 px-4 sm:px-8 max-w-[1440px] mx-auto">
           {SERIES_TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setFilter(tab)}
-              className={`font-sans text-[11px] uppercase tracking-widest pb-2 border-b transition-colors whitespace-nowrap ${
+              className={`font-sans text-[11px] uppercase tracking-widest pb-2 border-b transition-colors whitespace-nowrap shrink-0 ${
                 filter === tab
                   ? 'text-accent-bronze border-accent-bronze font-bold'
                   : 'text-text-stone-grey border-transparent hover:text-text-charcoal'

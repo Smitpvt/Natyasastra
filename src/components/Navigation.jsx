@@ -39,11 +39,11 @@ export const Navigation = () => {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px] w-full flex justify-between items-center xl:grid xl:grid-cols-3">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[80px] w-full flex justify-between items-center xl:grid xl:grid-cols-3">
           {/* Logo - Left */}
           <div className="flex justify-start">
             <Link to="/" className="flex flex-col group select-none">
-              <span className={`font-serif text-[20px] md:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
+              <span className={`font-serif text-[18px] xs:text-[20px] md:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
                 isScrolled ? 'text-[#211F1D] hover:text-accent-bronze' : isHeroPage ? 'text-white hover:text-[#E0D8CE]' : 'text-[#211F1D] hover:text-accent-bronze'
               }`}>
                 Nāṭyaśāstra Gurukulam
@@ -122,24 +122,24 @@ export const Navigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 z-40 bg-[#F3EEE6] flex flex-col justify-center px-8 md:px-16"
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-[#F3EEE6] flex flex-col justify-center px-6 sm:px-12 overflow-y-auto pt-20 pb-10"
           >
-            <div className="flex flex-col gap-8 max-w-lg mx-auto w-full text-center">
+            <div className="flex flex-col gap-6 max-w-lg mx-auto w-full text-center">
               {NAV_ITEMS.map((item, idx) => {
                 const isActive = location.pathname === item.path;
                 return (
                   <motion.div
                     key={item.name}
-                    initial={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.05, duration: 0.5, ease: "easeOut" }}
+                    transition={{ delay: idx * 0.04, duration: 0.4, ease: "easeOut" }}
                   >
                     <Link
                       to={item.path}
-                      className="inline-block py-2 relative group"
+                      className="inline-block py-1.5 relative group"
                     >
-                      <span className={`font-serif text-3xl font-light tracking-wide transition-colors ${
+                      <span className={`font-serif text-2xl sm:text-3xl font-light tracking-wide transition-colors ${
                         isActive ? 'text-accent-bronze' : 'text-[#211F1D] hover:text-accent-bronze'
                       }`}>
                         {item.name}
@@ -150,10 +150,10 @@ export const Navigation = () => {
               })}
 
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: NAV_ITEMS.length * 0.05, duration: 0.5 }}
-                className="mt-8 pt-8 border-t border-[#E0D8CE]/60 flex flex-col items-center"
+                transition={{ delay: NAV_ITEMS.length * 0.04, duration: 0.4 }}
+                className="mt-6 pt-6 border-t border-[#E0D8CE]/60 flex flex-col items-center"
               >
                 <Link
                   to="/contact"

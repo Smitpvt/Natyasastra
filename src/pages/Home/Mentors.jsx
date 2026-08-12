@@ -124,15 +124,15 @@ export const Mentors = () => {
             <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto my-2" />
           </div>
 
-          {/* Clean Single-Line Interactive Navigation Tabs */}
-          <div className="flex flex-wrap sm:flex-nowrap justify-center items-center gap-2.5 sm:gap-4 max-w-4xl mx-auto">
+          {/* Clean Interactive Navigation Tabs (Horizontal scroll on mobile, centered flex on sm+) */}
+          <div className="flex overflow-x-auto snap-x scrollbar-none justify-start sm:justify-center items-center gap-2.5 sm:gap-4 max-w-4xl mx-auto px-4 sm:px-0 py-1 -mx-6 sm:mx-auto">
             {MENTORS.map((m, idx) => (
               <button
                 key={m.id}
                 onClick={() => setActiveTab(idx)}
-                className={`px-5 py-2.5 rounded-full text-xs font-sans uppercase tracking-[0.15em] font-semibold transition-all duration-300 whitespace-nowrap ${
+                className={`flex-none snap-start px-4 sm:px-5 py-2.5 rounded-full text-xs font-sans uppercase tracking-[0.15em] font-semibold transition-all duration-300 whitespace-nowrap ${
                   activeTab === idx
-                    ? 'bg-accent-bronze text-white shadow-md transform -translate-y-0.5 ring-1 ring-accent-bronze'
+                    ? 'bg-accent-bronze text-white shadow-md ring-1 ring-accent-bronze'
                     : 'bg-white/90 text-text-stone-grey border border-black/10 hover:border-accent-bronze/50 hover:bg-white'
                 }`}
               >

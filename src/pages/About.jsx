@@ -300,80 +300,86 @@ export const About = () => {
             <HeadingLG className="text-3xl md:text-4xl font-light">Anchors of the Tradition</HeadingLG>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            
-            {/* Mentor 1 */}
-            <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
-                <img
-                  src="/assets/images/dr_athreya.jpg"
-                  alt="Padma Bhushan Dr. M. B. Athreya"
-                  className="w-full h-full object-cover filter contrast-[1.02]"
-                  loading="lazy"
-                />
+          {/* Guiding Influences: Horizontal scroll on mobile, 4-col grid on sm+ */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between sm:hidden text-[10px] uppercase tracking-widest text-[#757069]">
+              <span>Mentors & Lineage</span>
+              <span className="text-accent-bronze font-semibold">Swipe →</span>
+            </div>
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 pb-3 sm:pb-0">
+              
+              {/* Mentor 1 */}
+              <div className="flex-none w-[82%] sm:w-auto snap-start flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/10 rounded-xl">
+                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+                  <img
+                    src="/assets/images/dr_athreya.jpg"
+                    alt="Padma Bhushan Dr. M. B. Athreya"
+                    className="w-full h-full object-cover filter contrast-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-serif text-lg leading-tight text-text-primary">Padma Bhushan Dr. M. B. Athreya</h4>
+                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                    Pioneer of the Indian Management Movement. A distinguished thinker who seeks to integrate modern organisational systems with Dhārmic vision.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <h4 className="font-serif text-lg leading-tight text-text-primary">Padma Bhushan Dr. M. B. Athreya</h4>
-                <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                  Pioneer of the Indian Management Movement. A distinguished thinker who seeks to integrate modern organisational systems with Dhārmic vision.
-                </p>
+
+              {/* Mentor 2 */}
+              <div className="flex-none w-[82%] sm:w-auto snap-start flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/10 rounded-xl">
+                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+                  <img
+                    src="/assets/images/dr_padmaja_suresh.jpg"
+                    alt="Karnataka Kalashri Dr. Padmaja Suresh"
+                    className="w-full h-full object-cover filter contrast-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-serif text-lg leading-tight text-text-primary">Karnataka Kalashri Dr. Padmaja Suresh</h4>
+                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                    Acclaimed danseuse, scholar, and author whose life's work bridges classical training with deep research into the relationship between Nāṭya and Sādhanā.
+                  </p>
+                </div>
+              </div>
+
+              {/* Mentor 3 */}
+              <div className="flex-none w-[82%] sm:w-auto snap-start flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/10 rounded-xl">
+                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+                  <img
+                    src="/assets/images/sri_kv_subrahmonyam.jpg"
+                    alt="Śrī K. V. Subrahmoṇyan"
+                    className="w-full h-full object-cover filter contrast-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-serif text-lg leading-tight text-text-primary">Śrī K. V. Subrahmoṇyan</h4>
+                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                    Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi. Offers Vedāntic clarity, gentle witnessing presence, and spiritual anchoring.
+                  </p>
+                </div>
+              </div>
+
+              {/* Mentor 4 */}
+              <div className="flex-none w-[82%] sm:w-auto snap-start flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/10 rounded-xl">
+                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+                  <img
+                    src="/assets/images/rohit_viswanath.png"
+                    alt="Rohit Viswanath"
+                    className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-serif text-lg leading-tight text-text-primary">Rohit Viswanath</h4>
+                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                    Yajamāna & Yojaka of the Gurukulam. Serves as custodian of the consecrated saṅkalpa, facilitating institutional form with fidelity and humility.
+                  </p>
+                </div>
               </div>
             </div>
-
-            {/* Mentor 2 */}
-            <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
-                <img
-                  src="/assets/images/dr_padmaja_suresh.jpg"
-                  alt="Karnataka Kalashri Dr. Padmaja Suresh"
-                  className="w-full h-full object-cover filter contrast-[1.02]"
-                  loading="lazy"
-                />
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-serif text-lg leading-tight text-text-primary">Karnataka Kalashri Dr. Padmaja Suresh</h4>
-                <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                  Acclaimed danseuse, scholar, and author whose life's work bridges classical training with deep research into the relationship between Nāṭya and Sādhanā.
-                </p>
-              </div>
-            </div>
-
-            {/* Mentor 3 */}
-            <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
-                <img
-                  src="/assets/images/sri_kv_subrahmonyam.jpg"
-                  alt="Śrī K. V. Subrahmoṇyan"
-                  className="w-full h-full object-cover filter contrast-[1.02]"
-                  loading="lazy"
-                />
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-serif text-lg leading-tight text-text-primary">Śrī K. V. Subrahmoṇyan</h4>
-                <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                  Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi. Offers Vedāntic clarity, gentle witnessing presence, and spiritual anchoring.
-                </p>
-              </div>
-            </div>
-
-            {/* Mentor 4 */}
-            <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
-                <img
-                  src="/assets/images/rohit_viswanath.png"
-                  alt="Rohit Viswanath"
-                  className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
-                  loading="lazy"
-                />
-              </div>
-              <div className="space-y-2">
-                <h4 className="font-serif text-lg leading-tight text-text-primary">Rohit Viswanath</h4>
-                <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                  Yajamāna & Yojaka of the Gurukulam. Serves as custodian of the consecrated saṅkalpa, facilitating institutional form with fidelity and humility.
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
       </Section>
@@ -384,8 +390,9 @@ export const About = () => {
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Foundational Framework</Caption>
             <HeadingLG className="text-3xl md:text-4xl font-light">The Six Pillars of Nāṭya</HeadingLG>
-            <p className="font-sans text-xs uppercase tracking-wider text-text-secondary/70 hidden md:block">
-              Hover or click nodes to explore the dimensions
+            <p className="font-sans text-xs uppercase tracking-wider text-text-secondary/70">
+              <span className="hidden md:inline">Hover or click nodes to explore the dimensions</span>
+              <span className="md:hidden text-accent-bronze font-semibold">Swipe horizontal to explore →</span>
             </p>
           </div>
 
@@ -533,12 +540,12 @@ export const About = () => {
               </AnimatePresence>
             </div>
 
-            {/* Mobile Fallback */}
-            <div className="block md:hidden w-full space-y-8">
+            {/* Mobile Touch-Swipeable Horizontal Carousel */}
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 -mx-4 px-4 md:hidden pb-3">
               {PILLARS.map((pillar, i) => (
-                <div key={pillar.title} className="p-6 bg-bg-ivory border border-accent-bronze/10 rounded-sm space-y-3">
+                <div key={pillar.title} className="flex-none w-[82%] snap-start p-6 bg-white border border-accent-bronze/20 rounded-xl space-y-3 shadow-md">
                   <div className="flex justify-between items-baseline">
-                    <span className="font-serif italic text-accent-bronze text-xl block">
+                    <span className="font-serif italic text-accent-bronze text-xl font-medium block">
                       {i + 1}. {pillar.title}
                     </span>
                     <span
@@ -561,128 +568,146 @@ export const About = () => {
 
       {/* 9. WHAT MAKES THE GURUKULAM DISTINCTIVE */}
       <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
-        <div className="max-w-5xl mx-auto space-y-16">
+        <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="space-y-4">
             <Caption className="text-accent-bronze/70">What Makes Us Distinctive</Caption>
             <HeadingLG className="text-3xl md:text-4xl font-light max-w-2xl">
               An Enduring Contribution to Cultural Renewal
             </HeadingLG>
-            <div className="w-16 h-[1px] bg-accent-bronze/25 mt-6" />
+            <div className="w-16 h-[1px] bg-accent-bronze/25 mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 pt-8">
-            
-            {/* Block 1 */}
-            <div className="space-y-4">
-              <span className="font-serif italic text-accent-bronze text-4xl font-light block leading-none">01</span>
-              <HeadingMD className="text-xl font-light">Nāṭya as Civilisational Knowledge</HeadingMD>
-              <Body className="text-text-secondary text-sm md:text-base leading-relaxed font-sans font-light">
-                Approaching performance not as mere entertainment or choreographic technique, but as a complete system of aesthetics, psychology, and public ethics.
-              </Body>
+          <div className="space-y-2">
+            <div className="flex items-center justify-between md:hidden text-[10px] uppercase tracking-widest text-[#757069]">
+              <span>Distinctive Pillars</span>
+              <span className="text-accent-bronze font-semibold">Swipe →</span>
             </div>
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-16 pb-3 md:pb-0">
+              
+              {/* Block 1 */}
+              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+                <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">01</span>
+                <HeadingMD className="text-lg md:text-xl font-light">Nāṭya as Civilisational Knowledge</HeadingMD>
+                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                  Approaching performance not as mere entertainment or choreographic technique, but as a complete system of aesthetics, psychology, and public ethics.
+                </Body>
+              </div>
 
-            {/* Block 2 */}
-            <div className="space-y-4">
-              <span className="font-serif italic text-accent-bronze text-4xl font-light block leading-none">02</span>
-              <HeadingMD className="text-xl font-light">Research & Publications</HeadingMD>
-              <Body className="text-text-secondary text-sm md:text-base leading-relaxed font-sans font-light">
-                Focusing on translating, annotating, and publishing critical commentaries on commentarial traditions like Abhinavabhāratī.
-              </Body>
+              {/* Block 2 */}
+              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+                <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">02</span>
+                <HeadingMD className="text-lg md:text-xl font-light">Research & Publications</HeadingMD>
+                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                  Focusing on translating, annotating, and publishing critical commentaries on commentarial traditions like Abhinavabhāratī.
+                </Body>
+              </div>
+
+              {/* Block 3 */}
+              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+                <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">03</span>
+                <HeadingMD className="text-lg md:text-xl font-light">Pedagogy & Curriculum</HeadingMD>
+                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                  Designing academic structures where transmission of artistic form and theoretical framework happens in a living relationship context.
+                </Body>
+              </div>
+
+              {/* Block 4 */}
+              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+                <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">04</span>
+                <HeadingMD className="text-lg md:text-xl font-light">Archives & Custodianship</HeadingMD>
+                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                  Collecting and digitizing manuscripts, oral records, and traditional performance blueprints to preserve civilisational lineage for posterity.
+                </Body>
+              </div>
+
+              {/* Block 5 */}
+              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+                <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">05</span>
+                <HeadingMD className="text-lg md:text-xl font-light">Civilisational Dialogue</HeadingMD>
+                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                  Hosting Saṃvāda circles between traditional masters, contemporary artists, philosophers, and policy makers to bridge ancient ideas with public life.
+                </Body>
+              </div>
+
+              {/* Block 6 */}
+              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+                <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">06</span>
+                <HeadingMD className="text-lg md:text-xl font-light">Leadership Formation</HeadingMD>
+                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                  Providing institutional mentoring to guide future leaders, anchoring executive behavior in character, inner order, and responsibility.
+                </Body>
+              </div>
+
             </div>
-
-            {/* Block 3 */}
-            <div className="space-y-4">
-              <span className="font-serif italic text-accent-bronze text-4xl font-light block leading-none">03</span>
-              <HeadingMD className="text-xl font-light">Pedagogy & Curriculum</HeadingMD>
-              <Body className="text-text-secondary text-sm md:text-base leading-relaxed font-sans font-light">
-                Designing academic structures where transmission of artistic form and theoretical framework happens in a living relationship context.
-              </Body>
-            </div>
-
-            {/* Block 4 */}
-            <div className="space-y-4">
-              <span className="font-serif italic text-accent-bronze text-4xl font-light block leading-none">04</span>
-              <HeadingMD className="text-xl font-light">Archives & Custodianship</HeadingMD>
-              <Body className="text-text-secondary text-sm md:text-base leading-relaxed font-sans font-light">
-                Collecting and digitizing manuscripts, oral records, and traditional performance blueprints to preserve civilisational lineage for posterity.
-              </Body>
-            </div>
-
-            {/* Block 5 */}
-            <div className="space-y-4">
-              <span className="font-serif italic text-accent-bronze text-4xl font-light block leading-none">05</span>
-              <HeadingMD className="text-xl font-light">Civilisational Dialogue</HeadingMD>
-              <Body className="text-text-secondary text-sm md:text-base leading-relaxed font-sans font-light">
-                Hosting Saṃvāda circles between traditional masters, contemporary artists, philosophers, and policy makers to bridge ancient ideas with public life.
-              </Body>
-            </div>
-
-            {/* Block 6 */}
-            <div className="space-y-4">
-              <span className="font-serif italic text-accent-bronze text-4xl font-light block leading-none">06</span>
-              <HeadingMD className="text-xl font-light">Leadership Formation</HeadingMD>
-              <Body className="text-text-secondary text-sm md:text-base leading-relaxed font-sans font-light">
-                Providing institutional mentoring to guide future leaders, anchoring executive behavior in character, inner order, and responsibility.
-              </Body>
-            </div>
-
           </div>
         </div>
       </Section>
 
       {/* 10. AREAS OF ENGAGEMENT */}
       <Section className="py-24 md:py-36 bg-bg-parchment/10 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
-        <div className="max-w-5xl mx-auto space-y-16">
+        <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Areas of Engagement</Caption>
             <HeadingLG className="text-3xl md:text-4xl font-light">Institutional Stewardship</HeadingLG>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-            {[
-              { id: 'I.', title: 'Study of Nāṭyaśāstra', desc: 'Rigorous study of the Nāṭyaśāstra text and its commentarial traditions, particularly Abhinavabhāratī.' },
-              { id: 'II.', title: 'Embodied Practice', desc: 'Embodied practice and Nāṭya as a path of inner spiritual refinement and conscious movement.' },
-              { id: 'III.', title: 'Pedagogy', desc: 'Designing educational methodologies that treat artistic transmission as character formation.' },
-              { id: 'IV.', title: 'Research & Publications', desc: 'Publishing academic journals, commentaries, and research monographs on classical Indian aesthetics.' },
-              { id: 'V.', title: 'Archives', desc: 'Collecting, preserving, and providing stewardship for manuscripts, audio-visual archives, and treatises.' },
-              { id: 'VI.', title: 'Dialogue', desc: 'Fostering Saṃvāda (dialogue) among scholars, educators, institutions, and contemporary performers.' },
-              { id: 'VII.', title: 'Leadership & Consulting', desc: 'Applying Dhārmic principles of alignment and rhythm to institutional design and leadership mentoring.' }
-            ].map((item) => (
-              <div key={item.id} className="flex gap-4 items-start">
-                <span className="font-serif italic text-accent-bronze text-sm font-semibold tracking-wider pt-1">{item.id}</span>
-                <div className="space-y-1.5">
-                  <h4 className="font-serif text-lg text-text-primary leading-snug">{item.title}</h4>
-                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">{item.desc}</p>
+          <div className="space-y-2">
+            <div className="flex items-center justify-between md:hidden text-[10px] uppercase tracking-widest text-[#757069]">
+              <span>Engagement Areas</span>
+              <span className="text-accent-bronze font-semibold">Swipe →</span>
+            </div>
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-10 pb-3 md:pb-0">
+              {[
+                { id: 'I.', title: 'Study of Nāṭyaśāstra', desc: 'Rigorous study of the Nāṭyaśāstra text and its commentarial traditions, particularly Abhinavabhāratī.' },
+                { id: 'II.', title: 'Embodied Practice', desc: 'Embodied practice and Nāṭya as a path of inner spiritual refinement and conscious movement.' },
+                { id: 'III.', title: 'Pedagogy', desc: 'Designing educational methodologies that treat artistic transmission as character formation.' },
+                { id: 'IV.', title: 'Research & Publications', desc: 'Publishing academic journals, commentaries, and research monographs on classical Indian aesthetics.' },
+                { id: 'V.', title: 'Archives', desc: 'Collecting, preserving, and providing stewardship for manuscripts, audio-visual archives, and treatises.' },
+                { id: 'VI.', title: 'Dialogue', desc: 'Fostering Saṃvāda (dialogue) among scholars, educators, institutions, and contemporary performers.' },
+                { id: 'VII.', title: 'Leadership & Consulting', desc: 'Applying Dhārmic principles of alignment and rhythm to institutional design and leadership mentoring.' }
+              ].map((item) => (
+                <div key={item.id} className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl flex gap-3.5 items-start">
+                  <span className="font-serif italic text-accent-bronze text-sm font-semibold tracking-wider pt-1">{item.id}</span>
+                  <div className="space-y-1.5">
+                    <h4 className="font-serif text-base sm:text-lg text-text-primary leading-snug">{item.title}</h4>
+                    <p className="font-sans text-xs sm:text-[13px] text-text-secondary leading-relaxed font-light">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </Section>
 
       {/* 11. OUR ETHOS */}
       <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
-        <div className="max-w-5xl mx-auto space-y-16">
+        <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Our Ethos</Caption>
             <HeadingLG className="text-3xl md:text-4xl font-light">Enduring Principles</HeadingLG>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: 'Inner Order before Outer Achievement', desc: 'Lasting excellence begins with inner discipline.' },
-              { title: 'Truthfulness as Practice', desc: 'Learning begins with honest perception, careful discernment, and intellectual integrity.' },
-              { title: 'Depth before Display', desc: 'Refinement precedes recognition.' },
-              { title: 'Silence and Listening', desc: 'Deep attention is the foundation of learning.' },
-              { title: 'Reverence for Lineage', desc: 'Knowledge is received with gratitude and transmitted with responsibility.' },
-              { title: 'Patience before Expansion', desc: 'Growth follows readiness rather than urgency.' },
-              { title: 'Education for Custodianship', desc: 'Students are formed not merely as practitioners, but as future custodians of Nāṭya and Dharma.' }
-            ].map((ethos) => (
-              <div key={ethos.title} className="p-6 border border-accent-bronze/10 rounded-sm bg-bg-parchment/10 space-y-3">
-                <h4 className="font-serif text-lg text-text-primary font-light leading-snug">{ethos.title}</h4>
-                <p className="font-sans text-xs text-text-secondary leading-relaxed font-light">{ethos.desc}</p>
-              </div>
-            ))}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between md:hidden text-[10px] uppercase tracking-widest text-[#757069]">
+              <span>Enduring Principles</span>
+              <span className="text-accent-bronze font-semibold">Swipe →</span>
+            </div>
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 pb-3 md:pb-0">
+              {[
+                { title: 'Inner Order before Outer Achievement', desc: 'Lasting excellence begins with inner discipline.' },
+                { title: 'Truthfulness as Practice', desc: 'Learning begins with honest perception, careful discernment, and intellectual integrity.' },
+                { title: 'Depth before Display', desc: 'Refinement precedes recognition.' },
+                { title: 'Silence and Listening', desc: 'Deep attention is the foundation of learning.' },
+                { title: 'Reverence for Lineage', desc: 'Knowledge is received with gratitude and transmitted with responsibility.' },
+                { title: 'Patience before Expansion', desc: 'Growth follows readiness rather than urgency.' },
+                { title: 'Education for Custodianship', desc: 'Students are formed not merely as practitioners, but as future custodians of Nāṭya and Dharma.' }
+              ].map((ethos) => (
+                <div key={ethos.title} className="flex-none w-[82%] md:w-auto snap-start p-5 sm:p-6 border border-accent-bronze/15 rounded-xl bg-white md:bg-bg-parchment/10 space-y-2.5 shadow-sm md:shadow-none">
+                  <h4 className="font-serif text-base sm:text-lg text-text-primary font-light leading-snug">{ethos.title}</h4>
+                  <p className="font-sans text-xs text-text-secondary leading-relaxed font-light">{ethos.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Section>

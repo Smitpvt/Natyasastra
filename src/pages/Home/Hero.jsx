@@ -85,17 +85,17 @@ export const Hero = () => {
           {/* Two Elegant Outline Buttons - 40px spacing from description, subtle rounding and compact width */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-[40px] w-full"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-[32px] sm:mt-[40px] w-full px-4"
           >
             <Link
               to="/about"
-              className="w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-full max-w-[240px] sm:w-56 py-3 sm:py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
             >
               Explore Gurukulam
             </Link>
             <Link
               to="/library"
-              className="w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-full max-w-[240px] sm:w-56 py-3 sm:py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
             >
               Publications
             </Link>
