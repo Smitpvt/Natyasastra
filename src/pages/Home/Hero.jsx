@@ -56,26 +56,26 @@ export const Hero = () => {
           animate="visible"
           className="max-w-[800px] w-full px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center"
         >
-          {/* Small Editorial Label with increased opacity - 20px spacing underneath */}
+          {/* Small Editorial Label with increased opacity - 16px spacing underneath */}
           <motion.span
             variants={itemVariants}
-            className="font-sans text-[12px] md:text-[13px] uppercase tracking-[0.3em] text-[#8B0000] font-bold opacity-90 mb-[20px]"
+            className="font-sans text-[11px] md:text-[12px] uppercase tracking-[0.25em] text-[#C4B39C] font-semibold opacity-90 mb-[16px]"
           >
             Śāstra • Sādhanā • Saṃvāda
           </motion.span>
 
-          {/* Major Serifed Headings */}
+          {/* Major Serifed Headings - Muted Sandstone & Ivory */}
           <motion.div variants={itemVariants} className="flex flex-col items-center">
             <h1 
-              className="font-serif text-[64px] xs:text-[80px] sm:text-[100px] md:text-[130px] lg:text-[160px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#8B0000] to-[#590000] pb-2"
-              style={{ filter: 'drop-shadow(0px 10px 15px rgba(0,0,0,0.8))' }}
+              className="font-serif text-[42px] xs:text-[52px] sm:text-[68px] md:text-[80px] lg:text-[96px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FAF8F5] to-[#C4B39C] pb-2"
+              style={{ filter: 'drop-shadow(0px 8px 12px rgba(0,0,0,0.6))' }}
             >
               नाट्यशास्त्र
             </h1>
-            {/* Subtitle - 12px spacing from heading */}
+            {/* Subtitle - 12px spacing from heading, refined size */}
             <p 
-              className="font-serif text-[32px] xs:text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] font-medium text-[#8B0000] tracking-[0.2em] mt-[8px]"
-              style={{ textShadow: '0 6px 20px rgba(0,0,0,0.8)' }}
+              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#C4B39C] tracking-[0.25em] mt-[12px]"
+              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.7)' }}
             >
               गुरुकुलम्
             </p>
@@ -89,13 +89,13 @@ export const Hero = () => {
           >
             <Link
               to="/about"
-              className="w-56 py-3.5 border border-[#8B0000]/80 text-[#8B0000] font-sans text-[12px] uppercase tracking-[0.2em] font-semibold hover:bg-[#8B0000] hover:text-white transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
             >
               Explore Gurukulam
             </Link>
             <Link
               to="/library"
-              className="w-56 py-3.5 border border-[#8B0000]/80 text-[#8B0000] font-sans text-[12px] uppercase tracking-[0.2em] font-semibold hover:bg-[#8B0000] hover:text-white transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
             >
               Publications
             </Link>

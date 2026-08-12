@@ -20,7 +20,7 @@ export const CTASection = () => {
         transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1.0] }}
         className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6 flex flex-col items-center justify-center"
       >
-        <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#8B0000] font-semibold">
+        <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-accent-bronze font-semibold">
           Begin Your Sādhanā
         </span>
 

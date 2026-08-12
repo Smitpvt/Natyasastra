@@ -5,11 +5,11 @@
 @theme {
   --color-bg-ivory: #F3EEE6;
   --color-bg-parchment: #EAE4D9;
-  
+
   --color-text-primary: #211F1D;
   --color-text-secondary: #757069;
-  
-  --color-accent-bronze: #8B0000;
+
+  --color-accent-bronze: #805335;
   --color-border-linen: #E0D8CE;
 
   --font-serif: "Playfair Display", "Noto Serif Devanagari", Georgia, serif;
@@ -54,9 +54,11 @@
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-bg-ivory);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-border-linen);
 }
@@ -65,6 +67,7 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -75,6 +78,7 @@
   padding-top: 5rem;
   padding-bottom: 7rem;
 }
+
 @media (min-width: 768px) {
   .section-large {
     padding-top: 7rem;
@@ -86,6 +90,7 @@
   padding-top: 4.5rem;
   padding-bottom: 5.5rem;
 }
+
 @media (min-width: 768px) {
   .section-medium {
     padding-top: 5.5rem;
@@ -97,11 +102,10 @@
   padding-top: 3.5rem;
   padding-bottom: 4rem;
 }
+
 @media (min-width: 768px) {
   .section-compact {
     padding-top: 4rem;
     padding-bottom: 5rem;
   }
 }
-
-

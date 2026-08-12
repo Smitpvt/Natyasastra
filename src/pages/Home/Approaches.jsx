@@ -41,7 +41,7 @@ export const Approaches = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-2">
-          <span className="font-sans text-[12px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold block">
+          <span className="font-sans text-[12px] uppercase tracking-[0.25em] text-accent-bronze font-semibold block">
             Pedagogical Systems
           </span>
           <h2 className="font-serif text-[30px] sm:text-[38px] md:text-[44px] font-light text-[#211F1D] tracking-normal">
@@ -71,7 +71,7 @@ export const Approaches = () => {
             {/* Content Container */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 text-[#F3EEE6]">
               <div className="max-w-xl space-y-3 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#8B0000] font-semibold">
+                <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold">
                   Featured Approach
                 </span>
                 <h3 className="font-serif text-2xl md:text-3xl font-light">

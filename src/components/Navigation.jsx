@@ -44,7 +44,7 @@ export const Navigation = () => {
           <div className="flex justify-start">
             <Link to="/" className="flex flex-col group select-none">
               <span className={`font-serif text-[20px] md:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
-                isScrolled ? 'text-[#211F1D] hover:text-[#8B0000]' : isHeroPage ? 'text-white hover:text-[#E0D8CE]' : 'text-[#211F1D] hover:text-[#8B0000]'
+                isScrolled ? 'text-[#211F1D] hover:text-accent-bronze' : isHeroPage ? 'text-white hover:text-[#E0D8CE]' : 'text-[#211F1D] hover:text-accent-bronze'
               }`}>
                 Nāṭyaśāstra Gurukulam
               </span>
@@ -63,16 +63,16 @@ export const Navigation = () => {
                 >
                   <span className={`font-sans text-[12px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 ${
                     isActive
-                      ? 'text-[#8B0000]'
+                      ? 'text-accent-bronze'
                       : isScrolled
-                      ? 'text-[#211F1D] hover:text-[#8B0000]'
+                      ? 'text-[#211F1D] hover:text-accent-bronze'
                       : isHeroPage
                       ? 'text-white/80 hover:text-white'
-                      : 'text-[#211F1D] hover:text-[#8B0000]'
+                      : 'text-[#211F1D] hover:text-accent-bronze'
                   }`}>
                     {item.name}
                   </span>
-                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[1px] bg-[#8B0000] transition-all duration-500 ease-out ${
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[1px] bg-accent-bronze transition-all duration-500 ease-out ${
                     isActive ? 'w-full' : 'w-0 group-hover:w-full'
                   }`} />
                 </Link>
@@ -140,7 +140,7 @@ export const Navigation = () => {
                       className="inline-block py-2 relative group"
                     >
                       <span className={`font-serif text-3xl font-light tracking-wide transition-colors ${
-                        isActive ? 'text-[#8B0000]' : 'text-[#211F1D] hover:text-[#8B0000]'
+                        isActive ? 'text-accent-bronze' : 'text-[#211F1D] hover:text-accent-bronze'
                       }`}>
                         {item.name}
                       </span>
