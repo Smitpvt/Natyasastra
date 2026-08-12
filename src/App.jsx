@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import About from './pages/About';
-import Approach from './pages/Approach';
 import ProgrammesDetail from './pages/ProgrammesDetail';
 import MentorsDetail from './pages/MentorsDetail';
 import Library from './pages/Library';
@@ -31,7 +30,6 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/approach" element={<Approach />} />
           <Route path="/programmes" element={<ProgrammesDetail />} />
           <Route path="/mentors" element={<MentorsDetail />} />
           <Route path="/library" element={<Library />} />
@@ -46,3 +44,4 @@ function App() {
 }
 
 export default App;
+

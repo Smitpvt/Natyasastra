@@ -60,19 +60,19 @@ export const About = () => {
     <div className="bg-bg-ivory pt-24 min-h-screen text-text-primary selection:bg-accent-bronze/10 selection:text-text-primary overflow-x-hidden">
       
       {/* 1. HERO SECTION */}
-      <Section className="min-h-[85vh] flex flex-col justify-center py-20 relative border-b border-accent-bronze/10" background="none" container={true} yOffset={0}>
-        <div className="max-w-5xl mx-auto text-center space-y-8 relative z-10 px-4">
-          <Caption className="text-accent-bronze/80 tracking-[0.3em] text-xs md:text-sm">
+      <Section className="min-h-[65vh] flex flex-col justify-start pt-8 pb-16 md:pt-12 md:pb-20 relative border-b border-accent-bronze/10" background="none" container={true} yOffset={0}>
+        <div className="max-w-5xl mx-auto text-center space-y-8 relative z-10 px-4 pt-4 md:pt-6">
+          <Caption className="text-accent-bronze tracking-[0.35em] text-sm md:text-base font-semibold uppercase">
             ABOUT THE GURUKULAM
           </Caption>
           
-          <HeadingXL as="h1" className="text-4xl md:text-6xl lg:text-[68px] font-light leading-[1.1] tracking-tight">
+          <HeadingXL as="h1" className="text-4xl md:text-6xl lg:text-[74px] font-light leading-[1.08] tracking-tight">
             A Gurukulam for Śāstra, Sādhanā, and Civilisational Renewal
           </HeadingXL>
           
-          <div className="w-12 h-[1px] bg-accent-bronze/20 mx-auto my-6" />
+          <div className="w-16 h-[1px] bg-accent-bronze/30 mx-auto my-6" />
           
-          <BodyLG className="max-w-3xl mx-auto text-base md:text-xl text-text-secondary leading-relaxed font-sans font-light">
+          <BodyLG className="max-w-3xl mx-auto text-lg md:text-2xl text-text-secondary leading-relaxed font-sans font-light">
             Dedicated to the study, practice, and transmission of the Nāṭyaśāstra and its allied knowledge traditions.
           </BodyLG>
         </div>
@@ -304,11 +304,11 @@ export const About = () => {
             
             {/* Mentor 1 */}
             <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10">
+              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
                 <img
-                  src="/assets/images/mentors.png"
+                  src="/assets/images/dr_athreya.jpg"
                   alt="Padma Bhushan Dr. M. B. Athreya"
-                  className="w-full h-full object-cover filter grayscale contrast-[1.05]"
+                  className="w-full h-full object-cover filter contrast-[1.02]"
                   loading="lazy"
                 />
               </div>
@@ -322,11 +322,11 @@ export const About = () => {
 
             {/* Mentor 2 */}
             <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10">
+              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
                 <img
-                  src="/assets/images/meera_clean.png"
+                  src="/assets/images/dr_padmaja_suresh.jpg"
                   alt="Karnataka Kalashri Dr. Padmaja Suresh"
-                  className="w-full h-full object-cover filter grayscale contrast-[1.05]"
+                  className="w-full h-full object-cover filter contrast-[1.02]"
                   loading="lazy"
                 />
               </div>
@@ -340,11 +340,11 @@ export const About = () => {
 
             {/* Mentor 3 */}
             <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10">
+              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
                 <img
-                  src="/assets/images/sastri_clean.png"
+                  src="/assets/images/sri_kv_subrahmonyam.jpg"
                   alt="Śrī K. V. Subrahmoṇyan"
-                  className="w-full h-full object-cover filter grayscale contrast-[1.05]"
+                  className="w-full h-full object-cover filter contrast-[1.02]"
                   loading="lazy"
                 />
               </div>
@@ -358,11 +358,11 @@ export const About = () => {
 
             {/* Mentor 4 */}
             <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-5 border border-accent-bronze/5 rounded-sm">
-              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10">
+              <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A]">
                 <img
-                  src="/assets/images/corridor_clean.png"
+                  src="/assets/images/rohit_viswanath.png"
                   alt="Rohit Viswanath"
-                  className="w-full h-full object-cover filter grayscale contrast-[1.05]"
+                  className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                   loading="lazy"
                 />
               </div>

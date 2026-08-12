@@ -25,8 +25,8 @@ export const Footer = () => {
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069]">
               <Link to="/" className="hover:text-accent-bronze transition-colors duration-300">Home</Link>
               <Link to="/about" className="hover:text-accent-bronze transition-colors duration-300">About</Link>
-              <Link to="/approach" className="hover:text-accent-bronze transition-colors duration-300">Approaches</Link>
               <Link to="/library" className="hover:text-accent-bronze transition-colors duration-300">Publications</Link>
+              <Link to="/programmes" className="hover:text-accent-bronze transition-colors duration-300">Programmes</Link>
               <Link to="/gallery" className="hover:text-accent-bronze transition-colors duration-300">Gallery</Link>
             </div>
           </div>
@@ -37,11 +37,15 @@ export const Footer = () => {
               Contact Us
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069] font-light">
-              <p>Email: academic@natyasastra.org</p>
-              <p>Phone: +91 44 2491 0000</p>
+              <a href="mailto:info.natyasastra@gmail.com" className="hover:text-accent-bronze transition-colors duration-300">
+                Email: info.natyasastra@gmail.com
+              </a>
+              <a href="tel:+917715969599" className="hover:text-accent-bronze transition-colors duration-300">
+                Phone: +91 77159 69599
+              </a>
               <p className="leading-relaxed">
-                Gurukulam Road, Near Banyan Temple,<br />
-                Vellore District, Tamil Nadu, India
+                F7, 2/2, Aishwarya, Sector 7,<br />
+                Sanpada, Navi Mumbai 400705
               </p>
             </div>
           </div>

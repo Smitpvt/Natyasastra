@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from './Home/Hero';
 import QuoteSection from './Home/QuoteSection';
-import Approaches from './Home/Approaches';
 import Publications from './Home/Publications';
 import Mentors from './Home/Mentors';
 import CTASection from './Home/CTASection';
@@ -18,16 +17,14 @@ export const Home = () => {
       {/* 3. Our Publications */}
       <Publications />
 
-      {/* 4. Our Approaches */}
-      <Approaches />
-
-      {/* 5. Mentors */}
+      {/* 4. Mentors */}
       <Mentors />
 
-      {/* 6. CTA Section */}
+      {/* 5. CTA Section */}
       <CTASection />
     </div>
   );
 };
 
 export default Home;
+

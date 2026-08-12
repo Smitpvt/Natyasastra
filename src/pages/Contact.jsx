@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Section from '../components/Section';
-import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { HeadingLG, HeadingMD, BodyLG, Caption } from '../components/Typography';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,147 +20,156 @@ export const Contact = () => {
   };
 
   return (
-    <div className="bg-bg-ivory pt-24 min-h-screen">
-      {/* Header */}
-      <Section className="pb-12 border-b border-accent-bronze/10">
-        <div className="max-w-3xl space-y-4">
-          <Caption>Initiate a Dialogue</Caption>
-          <HeadingLG as="h1" className="text-4xl md:text-5xl font-light">
+    <div className="bg-[#F8F6F1] pt-24 min-h-screen text-[#211F1D] selection:bg-accent-bronze/20 selection:text-[#211F1D]">
+      
+      {/* HERO HEADER SECTION */}
+      <Section spacing="compact" className="pt-12 pb-14 border-b border-accent-bronze/10 bg-[#F3EEE6] relative overflow-hidden">
+        {/* Background Decorative Geometry */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] select-none">
+          <svg width="600" height="600" viewBox="0 0 600 600" fill="none" className="text-accent-bronze">
+            <circle cx="300" cy="300" r="260" stroke="currentColor" strokeWidth="1" />
+            <circle cx="300" cy="300" r="180" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+          </svg>
+        </div>
+
+        <div className="max-w-3xl mx-auto space-y-4 text-center relative z-10">
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/80 border border-accent-bronze/20 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-accent-bronze animate-pulse" />
+            <Caption className="text-accent-bronze tracking-[0.25em] text-[11px] font-semibold">Initiate a Dialogue</Caption>
+          </div>
+
+          <HeadingLG as="h1" className="text-4xl sm:text-5xl lg:text-6xl font-serif font-light leading-tight">
             Contact & Inquiry
           </HeadingLG>
-          <div className="w-16 h-[1px] bg-accent-bronze/30" />
-          <BodyLG>
-            We welcome inquiries from researchers, artists, and patrons who align with our mission.
+
+          <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto my-2" />
+
+          <BodyLG className="text-text-stone-grey font-light leading-relaxed max-w-xl mx-auto">
+            We welcome inquiries from researchers, artists, educators, scholars, and patrons who align with our mission.
           </BodyLG>
         </div>
       </Section>
 
-      {/* Grid: Details & Form */}
-      <Section className="py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
-          
-          {/* Left Column: Contact details */}
-          <div className="lg:col-span-5 space-y-10">
-            <div className="space-y-4">
-              <HeadingMD className="text-accent-bronze">Gurukulam Space</HeadingMD>
-              <div className="space-y-2">
-                <Caption className="text-[10px] text-text-stone-grey/70">Location</Caption>
-                <Body className="text-sm font-light text-text-stone-grey leading-relaxed">
-                  Near Brihadīśvara Temple Area,<br />
-                  Tanjavur, Tamil Nadu, India
-                </Body>
-              </div>
-              <div className="space-y-2">
-                <Caption className="text-[10px] text-text-stone-grey/70">Visiting Hours</Caption>
-                <Body className="text-sm font-light text-text-stone-grey leading-relaxed italic">
-                  Visits are strictly by prior appointment only to maintain the contemplative silence of our research and practice spaces.
-                </Body>
-              </div>
-            </div>
+      {/* CENTERED INQUIRY FORM */}
+      <Section className="py-14 sm:py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white p-8 sm:p-12 md:p-14 rounded-2xl shadow-xl border border-accent-bronze/25 relative overflow-hidden"
+          >
+            {/* Corner flourishes */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-bronze/40" />
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-accent-bronze/40" />
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-accent-bronze/40" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-bronze/40" />
 
-            <div className="space-y-4">
-              <HeadingMD className="text-accent-bronze">Electronic Dialogue</HeadingMD>
-              <div className="space-y-2">
-                <Caption className="text-[10px] text-text-stone-grey/70">Email Address</Caption>
-                <Body className="text-sm font-light text-text-stone-grey font-mono">
-                  dialogue@natyasastragurukulam.org
-                </Body>
+            <div className="space-y-8 relative z-10">
+              <div className="text-center space-y-2">
+                <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-bold block">
+                  ALIGNMENT & INQUIRY
+                </span>
+                <HeadingMD className="text-3xl sm:text-4xl font-serif font-light text-[#211F1D]">
+                  Register Interest
+                </HeadingMD>
+                <p className="font-serif italic text-sm text-[#757069]">
+                  Submit your statement of intent to engage with the Gurukulam
+                </p>
               </div>
-              <div className="space-y-2">
-                <Caption className="text-[10px] text-text-stone-grey/70">Sanskrit Library Registry</Caption>
-                <Body className="text-sm font-light text-text-stone-grey font-mono">
-                  library@natyasastragurukulam.org
-                </Body>
-              </div>
-            </div>
-          </div>
 
-          {/* Right Column: Register Interest Form */}
-          <div className="lg:col-span-7 bg-bg-paper p-8 md:p-12 border border-accent-bronze/10 relative">
-            {/* Paper texture overlay */}
-            <div className="absolute inset-0 bg-black/[0.01] pointer-events-none" />
+              <div className="w-16 h-[1px] bg-accent-bronze/30 mx-auto" />
 
-            <div className="space-y-6 relative z-10">
-              <HeadingMD>Register Interest</HeadingMD>
-              <div className="w-12 h-[1px] bg-accent-bronze/30" />
-              
               {submitted ? (
-                <div className="py-12 text-center space-y-4">
-                  <span className="font-serif italic text-lg text-accent-bronze">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="py-12 px-6 text-center space-y-4 rounded-xl bg-[#F8F6F1] border border-accent-bronze/30"
+                >
+                  <span className="font-serif italic text-xl text-accent-bronze block">
                     "Samyak vicāritam — We have received your intent."
                   </span>
-                  <Body className="text-sm text-text-stone-grey/90 font-light max-w-md mx-auto">
+                  <p className="font-sans text-sm text-text-stone-grey font-light max-w-md mx-auto leading-relaxed">
                     Your inquiry has been logged in our archives. We will review your background and statement of intent, and reply within seven days.
-                  </Body>
-                </div>
+                  </p>
+                </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  {/* Name field */}
-                  <div className="flex flex-col gap-2">
-                    <label className="font-sans text-[10px] uppercase tracking-widest text-text-stone-grey">Full Name</label>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  
+                  {/* Full Name */}
+                  <div className="space-y-2">
+                    <label className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-accent-bronze block">
+                      Full Name *
+                    </label>
                     <input
                       type="text"
                       required
                       placeholder="e.g., Devendra Sastri"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="bg-transparent border-b border-accent-bronze/20 focus:border-accent-bronze pb-2 outline-none font-serif text-base text-text-charcoal placeholder-text-stone-grey/40 transition-colors"
+                      className="w-full bg-[#F8F6F1] border border-black/10 focus:border-accent-bronze focus:bg-white rounded-xl px-4 py-3.5 outline-none font-serif text-base text-[#211F1D] placeholder:text-[#757069]/40 transition-all duration-300 shadow-inner"
                     />
                   </div>
 
-                  {/* Email field */}
-                  <div className="flex flex-col gap-2">
-                    <label className="font-sans text-[10px] uppercase tracking-widest text-text-stone-grey">Email Address</label>
+                  {/* Email Address */}
+                  <div className="space-y-2">
+                    <label className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-accent-bronze block">
+                      Email Address *
+                    </label>
                     <input
                       type="email"
                       required
                       placeholder="e.g., devendra@academy.edu"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="bg-transparent border-b border-accent-bronze/20 focus:border-accent-bronze pb-2 outline-none font-serif text-base text-text-charcoal placeholder-text-stone-grey/40 transition-colors"
+                      className="w-full bg-[#F8F6F1] border border-black/10 focus:border-accent-bronze focus:bg-white rounded-xl px-4 py-3.5 outline-none font-serif text-base text-[#211F1D] placeholder:text-[#757069]/40 transition-all duration-300 shadow-inner"
                     />
                   </div>
 
                   {/* Focus Domain */}
-                  <div className="flex flex-col gap-2">
-                    <label className="font-sans text-[10px] uppercase tracking-widest text-text-stone-grey">Focus Domain</label>
+                  <div className="space-y-2">
+                    <label className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-accent-bronze block">
+                      Focus Domain
+                    </label>
                     <select
                       value={formData.domain}
                       onChange={(e) => setFormData({ ...formData, domain: e.target.value })}
-                      className="bg-transparent border-b border-accent-bronze/20 focus:border-accent-bronze pb-2 outline-none font-serif text-sm text-text-charcoal transition-colors cursor-pointer"
+                      className="w-full bg-[#F8F6F1] border border-black/10 focus:border-accent-bronze focus:bg-white rounded-xl px-4 py-3.5 outline-none font-serif text-sm sm:text-base text-[#211F1D] transition-all duration-300 cursor-pointer shadow-inner"
                     >
-                      <option value="study" className="bg-bg-paper text-text-charcoal">Study (Textual Geometry)</option>
-                      <option value="practice" className="bg-bg-paper text-text-charcoal">Practice (Karana Reconstruction)</option>
-                      <option value="pedagogy" className="bg-bg-paper text-text-charcoal">Pedagogy (Teaching Transmission)</option>
-                      <option value="archive" className="bg-bg-paper text-text-charcoal">Archive (Manuscript Preservation)</option>
-                      <option value="samvada" className="bg-bg-paper text-text-charcoal">Saṃvāda (Intellectual Patrons)</option>
+                      <option value="study">Study (Textual Geometry & Śāstra)</option>
+                      <option value="practice">Practice (Karaṇa Reconstruction & Sādhanā)</option>
+                      <option value="pedagogy">Pedagogy (Teaching Transmission & Yātri)</option>
+                      <option value="archive">Archive (Manuscript Preservation & Digital Library)</option>
+                      <option value="samvada">Saṃvāda (Civilisational Statecraft & Patrons)</option>
                     </select>
                   </div>
 
                   {/* Statement of Intent */}
-                  <div className="flex flex-col gap-2">
-                    <label className="font-sans text-[10px] uppercase tracking-widest text-text-stone-grey">Statement of Intent</label>
+                  <div className="space-y-2">
+                    <label className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-accent-bronze block">
+                      Statement of Intent *
+                    </label>
                     <textarea
                       rows="4"
                       required
                       placeholder="Detail your background, your study interests, and why you wish to align with the Gurukulam..."
                       value={formData.intent}
                       onChange={(e) => setFormData({ ...formData, intent: e.target.value })}
-                      className="bg-transparent border-b border-accent-bronze/20 focus:border-accent-bronze pb-2 outline-none font-serif text-sm text-text-charcoal placeholder-text-stone-grey/40 transition-colors resize-none leading-relaxed"
+                      className="w-full bg-[#F8F6F1] border border-black/10 focus:border-accent-bronze focus:bg-white rounded-xl px-4 py-3.5 outline-none font-serif text-sm sm:text-base text-[#211F1D] placeholder:text-[#757069]/40 transition-all duration-300 resize-none leading-relaxed shadow-inner"
                     />
                   </div>
 
+                  {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full py-4 bg-accent-bronze text-bg-ivory font-sans text-xs uppercase tracking-widest font-semibold hover:bg-text-muted-black transition-colors duration-500 ease-out cursor-pointer"
+                    className="w-full py-4 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.25em] font-bold hover:bg-[#211F1D] hover:shadow-lg transition-all duration-300 shadow-md cursor-pointer transform hover:-translate-y-0.5"
                   >
-                    Submit Intention
+                    Submit Enquiry →
                   </button>
                 </form>
               )}
             </div>
-          </div>
-
+          </motion.div>
         </div>
       </Section>
     </div>
