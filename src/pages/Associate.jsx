@@ -2,82 +2,159 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { LotusIcon, LotusDivider, ProspectusFrame, BrassDiyaIcon } from '../components/LotusOrnament';
 
 export const Associate = () => {
   return (
-    <div className="bg-bg-ivory pt-24 min-h-screen">
-      {/* Header */}
-      <Section className="pb-12 border-b border-accent-bronze/10">
-        <div className="max-w-3xl space-y-4">
-          <Caption>Patronage & Fellowship</Caption>
-          <HeadingLG as="h1" className="text-4xl md:text-5xl font-light">
-            Associate With Us
+    <div className="bg-[#F5F0E6] pt-24 min-h-screen text-[#211F1D] selection:bg-[#9E743B]/20">
+      
+      {/* 1. HEADER & INTRO (Inspired by PDF Page 11) */}
+      <Section className="pb-12 border-b border-[#9E743B]/20">
+        <div className="max-w-4xl mx-auto text-center space-y-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#FAF6F0] border border-[#9E743B]/30 text-[#9E743B] font-sans text-xs uppercase tracking-[0.3em] font-semibold">
+            AN INVITATION TO STEWARDSHIP
+          </span>
+          <HeadingLG as="h1" className="text-4xl md:text-5xl font-light text-[#6B1D1E]">
+            Becoming a Founding Patron
           </HeadingLG>
-          <div className="w-16 h-[1px] bg-accent-bronze/30" />
-          <BodyLG>
-            Sustaining a living tradition requires alignment of vision and quiet, uninterrupted support.
-          </BodyLG>
+          <LotusDivider />
+          <p className="font-serif italic text-base sm:text-lg text-[#7A5428] max-w-2xl mx-auto leading-relaxed">
+            Every enduring institution begins with a small circle of people who recognise that some forms of wealth acquire their highest meaning when placed in service of future generations.
+          </p>
         </div>
       </Section>
 
-      {/* Pathways */}
-      <Section className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-          {/* Pathway 1 */}
-          <div className="border border-accent-bronze/10 bg-bg-paper p-8 flex flex-col justify-between h-[360px] relative">
-            <div className="absolute inset-0 bg-black/[0.01] pointer-events-none" />
-            <div className="space-y-4">
-              <span className="font-serif text-3xl text-accent-bronze/40 block">01</span>
-              <HeadingMD className="text-xl">Scholarly Fellowship</HeadingMD>
-              <Body className="text-xs text-text-stone-grey leading-relaxed font-light">
-                For researchers in Sanskrit classics, Dravidian temple architecture, or movement archaeology. We offer fully funded residential fellowships to translate texts and compile somatic research papers.
-              </Body>
-            </div>
-            <Link
-              to="/contact"
-              className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze hover:text-text-muted-black transition-colors"
-            >
-              Submit Proposal →
-            </Link>
-          </div>
+      {/* 2. THE CIRCLES OF PERMANENCE & 5 FLAME LEVELS (PDF Page 11 Inspiration) */}
+      <Section className="py-16 border-b border-[#9E743B]/20 bg-[#FAF6F0]">
+        <div className="max-w-6xl mx-auto space-y-16">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            {/* Left: Concentric Circles of Permanence Visual */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="space-y-2 text-center lg:text-left">
+                <Caption className="text-[#9E743B]">Foundational Endowments</Caption>
+                <HeadingMD className="text-2xl text-[#6B1D1E]">The Circles of Permanence</HeadingMD>
+                <p className="font-sans text-xs text-[#4A423B] font-light leading-relaxed">
+                  Five concentric spheres of custodianship sustaining the Gurukulam in perpetuity.
+                </p>
+              </div>
 
-          {/* Pathway 2 */}
-          <div className="border border-accent-bronze/10 bg-bg-paper p-8 flex flex-col justify-between h-[360px] relative">
-            <div className="absolute inset-0 bg-black/[0.01] pointer-events-none" />
-            <div className="space-y-4">
-              <span className="font-serif text-3xl text-accent-bronze/40 block">02</span>
-              <HeadingMD className="text-xl">Manuscript Patronage</HeadingMD>
-              <Body className="text-xs text-text-stone-grey leading-relaxed font-light">
-                Directly sponsor the digitisation, chemical preservation, and cataloging of palm-leaf bundles. Patrons receive monograph prints and high-resolution facsimile updates on sponsored scriptures.
-              </Body>
+              {/* Concentric Spheres Diagram */}
+              <div className="space-y-3 pt-2">
+                {[
+                  { num: 'I.', title: 'PERPETUITY FUND', desc: 'Sustaining the institution that makes all this possible.' },
+                  { num: 'II.', title: 'CUSTODIAN SCHOLARSHIP FUND', desc: 'Sustaining the people who carry the tradition forward.' },
+                  { num: 'III.', title: 'CIVILISATIONAL INQUIRY FUND', desc: 'Sustaining ideas that inform leadership and public life.' },
+                  { num: 'IV.', title: 'NĀṬYĀLOKA FUND', desc: 'Sustaining the voice that preserves and shares our inheritance.' },
+                  { num: 'V.', title: 'INSTITUTIONAL ENDOWMENT FUND', desc: 'Enabling the Gurukulam’s perpetual continuity and expansion.' }
+                ].map((circle, i) => (
+                  <div 
+                    key={circle.title}
+                    className="p-4 rounded-xl border border-[#9E743B]/30 bg-white/80 flex items-start gap-4 hover:border-[#6B1D1E] shadow-2xs transition-all"
+                  >
+                    <span className="font-serif text-sm font-semibold text-[#6B1D1E] pt-0.5">{circle.num}</span>
+                    <div className="space-y-0.5">
+                      <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-[#6B1D1E]">{circle.title}</h4>
+                      <p className="font-sans text-xs text-[#4A423B] font-light leading-relaxed">{circle.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <Link
-              to="/contact"
-              className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze hover:text-text-muted-black transition-colors"
-            >
-              Inquire for Sponsorship →
-            </Link>
-          </div>
 
-          {/* Pathway 3 */}
-          <div className="border border-accent-bronze/10 bg-bg-paper p-8 flex flex-col justify-between h-[360px] relative">
-            <div className="absolute inset-0 bg-black/[0.01] pointer-events-none" />
-            <div className="space-y-4">
-              <span className="font-serif text-3xl text-accent-bronze/40 block">03</span>
-              <HeadingMD className="text-xl">Residency Cohorts</HeadingMD>
-              <Body className="text-xs text-text-stone-grey leading-relaxed font-light">
-                Participate in intensive, silent study cohorts of 3 or 6 months. Designed for active practitioners and teachers who wish to deconstruct and reformulate their training methods from the root.
-              </Body>
+            {/* Right: Founding Patron Guide (5 Flame Tiers) */}
+            <div className="lg:col-span-6 space-y-6">
+              <ProspectusFrame innerClassName="p-6 sm:p-8 space-y-6">
+                <div className="text-center space-y-2 border-b border-[#9E743B]/20 pb-4">
+                  <span className="font-serif text-xs uppercase tracking-widest text-[#9E743B] font-bold block">
+                    FOUNDING PATRON GUIDE
+                  </span>
+                  <p className="font-serif italic text-sm text-[#7A5428]">
+                    There are many ways to become a founding custodian of this institution.
+                  </p>
+                </div>
+
+                {/* 5 Flame Levels */}
+                <div className="space-y-5">
+                  {[
+                    { flame: 'I. THE FIRST FLAME', area: 'Scholarships', desc: 'Enables scholarships for promising practitioners with financial need.' },
+                    { flame: 'II. THE SHARED FLAME', area: 'Research & Publications', desc: 'Supports research, white papers, publications, and institutional knowledge.' },
+                    { flame: 'III. THE GUIDING FLAME', area: 'Residential Immersions', desc: 'Enables residential immersions and programmes that shape practitioners.' },
+                    { flame: 'IV. THE ENDURING FLAME', area: 'Faculty Chairs & Archives', desc: 'Supports faculty chairs, documentation, and preservation of intellectual heritage.' },
+                    { flame: 'V. THE ETERNAL FLAME', area: 'Institutional Endowment', desc: 'Builds the endowment corpus ensuring perpetual continuity across generations.' }
+                  ].map((tier) => (
+                    <div key={tier.flame} className="flex gap-4 items-start">
+                      <BrassDiyaIcon className="w-7 h-7 shrink-0" glow={true} />
+                      <div className="space-y-0.5">
+                        <div className="flex items-baseline justify-between flex-wrap gap-2">
+                          <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-[#6B1D1E]">{tier.flame}</h4>
+                          <span className="font-serif italic text-xs text-[#9E743B] font-medium">{tier.area}</span>
+                        </div>
+                        <p className="font-sans text-xs text-[#4A423B] font-light leading-relaxed">{tier.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-4 border-t border-[#9E743B]/20 text-center">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#6B1D1E] text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#211F1D] transition-colors shadow-md"
+                  >
+                    Inquire for Patron Prospectus →
+                  </Link>
+                </div>
+              </ProspectusFrame>
             </div>
-            <Link
-              to="/contact"
-              className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze hover:text-text-muted-black transition-colors"
-            >
-              Register Interest →
-            </Link>
+
           </div>
         </div>
       </Section>
+
+      {/* 3. ŚUBHAM CEREMONIAL CLOSING (Inspired by PDF Page 13) */}
+      <Section className="py-24 bg-[#F5F0E6] relative border-t border-[#9E743B]/20">
+        <div className="max-w-3xl mx-auto text-center space-y-8 px-6 relative z-10">
+          
+          <div className="space-y-2">
+            <span className="font-serif italic text-3xl sm:text-4xl text-[#6B1D1E] font-medium block">
+              Śubham
+            </span>
+            <LotusDivider className="my-3" />
+          </div>
+
+          {/* Central Glowing Diya */}
+          <div className="py-4 flex justify-center">
+            <div className="relative p-6 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B]/40 shadow-xl">
+              <BrassDiyaIcon className="w-16 h-16" glow={true} />
+            </div>
+          </div>
+
+          {/* Ceremonial Text from PDF Page 13 */}
+          <div className="space-y-4 font-serif text-lg sm:text-xl md:text-2xl text-[#4A423B] font-light leading-relaxed max-w-xl mx-auto">
+            <p className="m-0">Some institutions are built for a generation.</p>
+            <p className="m-0 font-medium text-[#6B1D1E]">Others are entrusted to generations.</p>
+            <p className="m-0 italic text-base sm:text-lg pt-2 text-[#7A5428]">Nāṭyaśāstra Gurukulam has been founded in that spirit.</p>
+          </div>
+
+          <div className="pt-6">
+            <p className="font-serif italic text-sm sm:text-base text-[#9E743B] font-medium m-0">
+              May the lamp continue to light another.
+            </p>
+          </div>
+
+          <div className="pt-8 border-t border-[#9E743B]/20 max-w-xs mx-auto text-center space-y-1">
+            <span className="font-serif text-xs uppercase tracking-[0.2em] font-bold text-[#6B1D1E] block">
+              NĀṬYAŚĀSTRA GURUKULAM
+            </span>
+            <span className="font-sans text-[10px] uppercase tracking-widest text-[#7A5428] block">
+              A Centre for Civilisational Statecraft
+            </span>
+          </div>
+
+        </div>
+      </Section>
+
     </div>
   );
 };

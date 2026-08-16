@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { LotusIcon, LotusDivider, BrassDiyaIcon, ProspectusFrame } from '../components/LotusOrnament';
 
 // The Pedagogical Mandala Nodes Data
 const MARGA_MANDALA_NODES = [
@@ -303,7 +304,7 @@ export const ProgrammesDetail = () => {
                 <img
                   src="/assets/images/dance_offering.jpg"
                   alt="Nāṭya Seva offering by sishyas"
-                  className="w-full h-[320px] sm:h-[360px] lg:h-[380px] object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[320px] sm:h-[360px] lg:h-[380px] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
                 <div className="absolute bottom-5 left-5 right-5 text-white space-y-0.5">
@@ -621,13 +622,92 @@ export const ProgrammesDetail = () => {
                 </span>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-white hover:text-[#1E1C1A] transition-all duration-300 shadow-md text-center"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-[#9E743B] text-white font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-white hover:text-[#1E1C1A] transition-all duration-300 shadow-md text-center"
                 >
                   Explore Yātri Pathway →
                 </Link>
               </div>
             </div>
           </motion.div>
+
+          {/* NEW: THE YĀTRI NETWORK DIYA RADIAL DIAGRAM (Inspired by PDF Page 8) */}
+          <div className="my-12">
+            <ProspectusFrame innerClassName="p-8 sm:p-12 text-center bg-[#FAF6F0]">
+              <div className="space-y-3 max-w-2xl mx-auto">
+                <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block">
+                  DISTRIBUTED TRANSMISSION
+                </span>
+                <h3 className="font-serif text-2xl sm:text-4xl font-light text-[#6B1D1E]">
+                  The Yātri Network
+                </h3>
+                <p className="font-serif italic text-sm sm:text-base text-[#7A5428]">
+                  A living tradition grows not by replication, but by transmission.
+                </p>
+                <LotusDivider className="my-2" />
+              </div>
+
+              {/* Radial Lamp Visualizer */}
+              <div className="relative w-full max-w-[500px] aspect-square mx-auto my-8 flex items-center justify-center">
+                {/* Connecting Ray Lines */}
+                <div className="absolute inset-8 rounded-full border border-[#9E743B]/20 stroke-dasharray-[3_3]" />
+                
+                {/* Central Diya: NĀṬYAŚĀSTRA GURUKULAM */}
+                <div className="relative z-20 w-36 h-36 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-3">
+                  <BrassDiyaIcon className="w-9 h-9" />
+                  <span className="font-serif text-xs font-semibold text-[#6B1D1E] tracking-wider uppercase mt-1">
+                    Nāṭyaśāstra<br />Gurukulam
+                  </span>
+                </div>
+
+                {/* 10 Orbiting Lamps */}
+                {[
+                  { name: 'Dharma', angle: 0 },
+                  { name: 'Sevā', angle: 36 },
+                  { name: 'Śraddhā', angle: 72 },
+                  { name: 'Tyāga', angle: 108 },
+                  { name: 'Saṃvāda', angle: 144 },
+                  { name: 'Karuṇā', angle: 180 },
+                  { name: 'Maitrī', angle: 216 },
+                  { name: 'Viveka', angle: 252 },
+                  { name: 'Rasa', angle: 288 },
+                  { name: 'Sādhanā', angle: 324 }
+                ].map((lamp, i) => {
+                  const radius = 175; // px radius
+                  const rad = (lamp.angle - 90) * (Math.PI / 180);
+                  const x = Math.round(radius * Math.cos(rad));
+                  const y = Math.round(radius * Math.sin(rad));
+
+                  return (
+                    <div
+                      key={lamp.name}
+                      style={{
+                        transform: `translate(${x}px, ${y}px)`
+                      }}
+                      className="absolute z-20 flex flex-col items-center justify-center group cursor-pointer"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-white border border-[#9E743B]/40 shadow-md flex items-center justify-center group-hover:border-[#6B1D1E] group-hover:scale-110 transition-all">
+                        <BrassDiyaIcon className="w-6 h-6" glow={true} />
+                      </div>
+                      <span className="font-serif italic text-xs font-medium text-[#6B1D1E] mt-1 bg-white/80 px-2 py-0.5 rounded shadow-2xs border border-[#9E743B]/20">
+                        {lamp.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Bottom Quote Banner from PDF Page 8 */}
+              <div className="pt-6 border-t border-[#9E743B]/20 max-w-2xl mx-auto space-y-2">
+                <h4 className="font-serif text-lg sm:text-xl text-[#6B1D1E] tracking-wide uppercase font-light">
+                  ONE LAMP LIGHTS ANOTHER WITHOUT DIMINISHING ITS OWN FLAME.
+                </h4>
+                <p className="font-serif italic text-xs sm:text-sm text-[#7A5428]">
+                  The measure of a lamp is not its brilliance, but the light it awakens in another.
+                </p>
+              </div>
+
+            </ProspectusFrame>
+          </div>
 
           {/* SHOWCASE 2: CENTRE FOR CIVILISATIONAL STATECRAFT */}
           <motion.div
@@ -744,7 +824,7 @@ export const ProgrammesDetail = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className={`w-full h-full object-cover ${item.objectPos || 'object-center'} transform group-hover:scale-105 transition-transform duration-700 opacity-95 group-hover:opacity-100`}
+                    className={`w-full h-full object-cover ${item.objectPos || 'object-center'} opacity-95 group-hover:opacity-100`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute top-3.5 left-3.5">
@@ -944,6 +1024,109 @@ export const ProgrammesDetail = () => {
             >
               Inquire About Upcoming Programmes <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
+          </div>
+
+        </div>
+      </Section>
+
+      {/* 7. CONCLUDING SECTION: ASSOCIATE WITH US */}
+      <Section className="py-24 bg-[#1E1C1A] text-[#F3EEE6] relative border-t border-accent-bronze/20">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-16">
+          
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-accent-bronze/30 text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
+              JOIN THE JOURNEY
+            </span>
+            <HeadingLG className="text-3xl sm:text-5xl font-serif font-light text-white">
+              Associate With Us
+            </HeadingLG>
+            <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto my-3" />
+            <p className="font-sans text-base sm:text-lg text-[#E0D8CE]/90 font-light leading-relaxed">
+              We warmly welcome scholars, artistes, educators, institutions, patrons, collaborators, seekers, and practitioners who wish to engage with the Gurukulam across research, sādhanā, pedagogy, and Dhārmic public life.
+            </p>
+          </div>
+
+          {/* Association Pathways Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            
+            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 hover:border-accent-bronze/50 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="font-serif text-2xl text-accent-bronze">01</span>
+                <h4 className="font-serif text-xl font-normal text-white">Scholars & Researchers</h4>
+                <p className="font-sans text-xs text-[#E0D8CE]/75 font-light leading-relaxed">
+                  Collaborate on textual translation, commentarial research, civilisational statecraft papers, and aesthetic knowledge traditions.
+                </p>
+              </div>
+              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
+                Engage in Research →
+              </Link>
+            </div>
+
+            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 hover:border-accent-bronze/50 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="font-serif text-2xl text-accent-bronze">02</span>
+                <h4 className="font-serif text-xl font-normal text-white">Artistes & Seekers</h4>
+                <p className="font-sans text-xs text-[#E0D8CE]/75 font-light leading-relaxed">
+                  Participate in residential immersions, study circles, workshops, and the Yātri pathway for somatic and spiritual refinement.
+                </p>
+              </div>
+              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
+                Join Immersions →
+              </Link>
+            </div>
+
+            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 hover:border-accent-bronze/50 transition-all duration-300 flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="font-serif text-2xl text-accent-bronze">03</span>
+                <h4 className="font-serif text-xl font-normal text-white">Educators & Institutions</h4>
+                <p className="font-sans text-xs text-[#E0D8CE]/75 font-light leading-relaxed">
+                  Partner on curriculum development, bespoke institutional workshops, lecture series, and leadership mentoring rooted in Dharma.
+                </p>
+              </div>
+              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
+                Institutional Partnership →
+              </Link>
+            </div>
+
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#2A2623] border border-accent-bronze/40 space-y-4 hover:border-accent-bronze transition-all duration-300 flex flex-col justify-between shadow-lg">
+              <div className="space-y-3">
+                <span className="font-serif text-2xl text-accent-bronze">04</span>
+                <h4 className="font-serif text-xl font-normal text-white">Founding Patronage</h4>
+                <p className="font-sans text-xs text-[#E0D8CE]/85 font-light leading-relaxed">
+                  Anchor the Gurukulam's long-term saṅkalpa, library archives, and residential facilities through quiet, dedicated patronage.
+                </p>
+              </div>
+              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
+                Patron Prospectus →
+              </Link>
+            </div>
+
+          </div>
+
+          {/* Special Dedicated Box for Founding Patronage */}
+          <div className="bg-gradient-to-r from-[#282421] via-[#211F1D] to-[#282421] p-8 sm:p-12 rounded-2xl border border-accent-bronze/30 text-center max-w-4xl mx-auto space-y-6 shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent-bronze/10 rounded-full blur-2xl pointer-events-none" />
+            
+            <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-accent-bronze font-bold block">
+              SUPPORT THE GURUKULAM
+            </span>
+
+            <h3 className="font-serif text-2xl sm:text-3xl font-light text-white">
+              Founding Patronage & Endowments
+            </h3>
+
+            <p className="font-sans text-sm sm:text-base text-[#E0D8CE]/85 leading-relaxed font-light max-w-2xl mx-auto">
+              We invite visionary patrons to support the establishment of the Gurukulam's physical, academic, and archival foundations. A detailed <em>Founding Patron Prospectus</em> is available upon request.
+            </p>
+
+            <div className="pt-2">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[#1E1C1A] transition-all duration-300 shadow-md"
+              >
+                Inquire for Founding Patronage →
+              </Link>
+            </div>
           </div>
 
         </div>

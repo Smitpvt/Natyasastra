@@ -49,7 +49,7 @@ export const MentorsDetail = () => {
                   <img
                     src="/assets/images/dr_athreya.jpg"
                     alt="Padma Bhushan Dr. M. B. Athreya"
-                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 filter contrast-[1.02]"
+                    className="w-full h-full object-cover object-top filter contrast-[1.02]"
                     loading="lazy"
                   />
                 </div>
@@ -142,7 +142,7 @@ export const MentorsDetail = () => {
                   <img
                     src="/assets/images/dr_padmaja_suresh.jpg"
                     alt="Karnataka Kalashri Dr. Padmaja Suresh"
-                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 filter contrast-[1.02]"
+                    className="w-full h-full object-cover object-top filter contrast-[1.02]"
                     loading="lazy"
                   />
                 </div>
@@ -179,7 +179,7 @@ export const MentorsDetail = () => {
                   <img
                     src="/assets/images/sri_kv_subrahmonyam.jpg"
                     alt="Śrī K. V. Subrahmoṇyan"
-                    className="w-full h-full object-cover object-bottom transform group-hover:scale-105 transition-transform duration-700 filter contrast-[1.02]"
+                    className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
                   />
                 </div>
@@ -275,7 +275,7 @@ export const MentorsDetail = () => {
                   <img
                     src="/assets/images/rohit_viswanath.png"
                     alt="Rohit Viswanath - Yajamāna & Yojaka"
-                    className="w-full h-full object-cover object-bottom transform group-hover:scale-105 transition-transform duration-700 filter contrast-[1.02]"
+                    className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
                   />
                 </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import Hero from './Home/Hero';
 import QuoteSection from './Home/QuoteSection';
+import PillarsMandala from './Home/PillarsMandala';
 import Publications from './Home/Publications';
 import Mentors from './Home/Mentors';
+import PratishthaSection from './Home/PratishthaSection';
 import CTASection from './Home/CTASection';
 
 export const Home = () => {
@@ -14,13 +16,19 @@ export const Home = () => {
       {/* 2. Sanskrit Quote Section */}
       <QuoteSection />
 
-      {/* 3. Our Publications */}
+      {/* 3. Foundational Pillars Mandala */}
+      <PillarsMandala />
+
+      {/* 4. Our Publications */}
       <Publications />
 
-      {/* 4. Mentors */}
+      {/* 5. Mentors & Living Lineages */}
       <Mentors />
 
-      {/* 5. CTA Section */}
+      {/* 6. Consecration Highlights */}
+      <PratishthaSection />
+
+      {/* 7. CTA Section */}
       <CTASection />
     </div>
   );

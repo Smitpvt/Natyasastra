@@ -3,11 +3,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PUBLICATIONS } from '../../data/publications';
 
-// Select representative publications for the homepage
-const RECENT_PUBLICATIONS = PUBLICATIONS.slice(0, 4).map(pub => ({
-  ...pub,
-  link: '/library'
-}));
+// Select the two CCS-AKS papers and the two Rasa Reflections for the homepage
+const FEATURED_SERIES = ['Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
+const RECENT_PUBLICATIONS = PUBLICATIONS
+  .filter(pub => FEATURED_SERIES.includes(pub.series))
+  .map(pub => ({
+    ...pub,
+    link: '/library'
+  }));
 
 export const Publications = () => {
   return (
@@ -24,7 +27,7 @@ export const Publications = () => {
           </div>
           <div className="md:w-1/3 flex items-start md:pt-4">
             <p className="font-sans text-[14px] md:text-[15px] text-[#757069] leading-[1.6] max-w-[280px]">
-              A curated collection of foundational texts, research journals, and somatic reconstruction manuals.
+              A curated collection of foundational texts, research journals, and articles.
             </p>
           </div>
           <div className="md:w-1/3 flex items-start justify-start md:justify-end md:pt-4">
@@ -61,7 +64,7 @@ export const Publications = () => {
                     <img
                       src={pub.cover}
                       alt={pub.title}
-                      className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover object-center"
                       loading="lazy"
                     />
                     {/* Subtle Book Spine overlay effect */}

@@ -8,6 +8,7 @@ export const Library = () => {
 
   const SERIES_TABS = [
     'All',
+    'Flagship Treatise',
     'Civilisational Statecraft Series',
     'Civilisational Governance',
     'Aesthetic Knowledge Systems',
@@ -73,7 +74,7 @@ export const Library = () => {
                   <img
                     src={pub.cover}
                     alt={pub.title}
-                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center"
                     loading="lazy"
                   />
                   {/* Subtle Book Spine overlay effect */}

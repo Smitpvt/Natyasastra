@@ -20,19 +20,19 @@ export const CTASection = () => {
         transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1.0] }}
         className="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6 flex flex-col items-center justify-center"
       >
-        <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-accent-bronze font-semibold">
-          Begin Your Sādhanā
+        <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-semibold">
+          BEGIN YOUR SĀDHANĀ
         </span>
 
         <h2 className="font-serif text-[28px] xs:text-[34px] sm:text-[44px] md:text-[56px] font-light leading-tight text-white tracking-wide max-w-3xl">
-          Initiate a Dialogue with the Gurukulam
+          Enter into Saṃvāda with the Gurukulam
         </h2>
 
-        <p className="font-sans text-[15px] sm:text-[16px] leading-[1.8] text-[#E0D8CE]/80 max-w-[600px] font-light">
-          We invite practitioners of performing arts, Sanskrit scholars, and patrons of culture who share a vision for aesthetic and somatic reconstruction.
+        <p className="font-sans text-[15px] sm:text-[16px] leading-[1.8] text-[#E0D8CE]/90 max-w-[650px] font-light">
+          We welcome practitioners, scholars, educators, and patrons who seek to explore Nāṭya as a path of sādhanā, cultural renewal, and Dhārmic public life.
         </p>
 
-        <div className="pt-4">
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             to="/contact"
             className="inline-block px-10 py-4 rounded-full border border-white text-white hover:bg-white hover:text-[#211F1D] font-sans text-[11px] uppercase tracking-[0.2em] font-bold transition-all duration-300 text-center shadow-lg"
@@ -46,3 +46,4 @@ export const CTASection = () => {
 };
 
 export default CTASection;
+

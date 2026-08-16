@@ -22,9 +22,44 @@ function ScrollToTop() {
   return null;
 }
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error("Uncaught error:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-[#F3EEE6] flex items-center justify-center p-6 text-center font-serif">
+          <div className="max-w-md p-8 bg-white/80 rounded-xl shadow-lg border border-[#9E743B]/30">
+            <h2 className="text-2xl text-[#805335] font-semibold mb-3">Nāṭyaśāstra Gurukulam</h2>
+            <p className="text-[#757069] text-sm mb-6">An unexpected error occurred while loading this page.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-6 py-2.5 bg-[#805335] text-white text-xs uppercase tracking-widest rounded-md hover:bg-[#6E4A19] transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 function App() {
   return (
-    <>
+    <ErrorBoundary>
       <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
@@ -39,9 +74,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
-    </>
+    </ErrorBoundary>
   );
 }
 
 export default App;
+
 

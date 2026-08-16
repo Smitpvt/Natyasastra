@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 import heroBg from '../../assets/temple-corridor-hero.jpg';
+import { LotusDivider } from '../../components/LotusOrnament';
 
 export const Hero = () => {
   // Fade-up variants for Framer Motion
@@ -29,81 +31,107 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen flex flex-col overflow-hidden bg-[#1F1F1D]">
-      {/* Background Image with Scale Animation */}
+    <section className="relative w-full h-screen flex flex-col overflow-hidden bg-[#1A1817]">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-10000 ease-out scale-105"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       
-      {/* 68% Dark Overlay */}
-      <div className="absolute inset-0 bg-black/68" />
+      {/* 68% Dark Overlay with Warm Amber Tone */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
       
-      {/* Soft Radial Gradient behind text */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.2)_50%,transparent_100%)] pointer-events-none" />
+      {/* Soft Radial Glow behind text */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(158,116,59,0.15)_0%,rgba(0,0,0,0.3)_50%,transparent_100%)] pointer-events-none" />
 
       {/* Subtle Vignette on edges */}
-      <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.7)] pointer-events-none" />
+      <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.85)] pointer-events-none" />
 
       {/* Spacer to clear the fixed navigation bar (96px height) */}
       <div className="h-[96px] w-full shrink-0" />
 
       {/* Content Container - Flexbox centering in the remaining viewport space */}
-      <div className="flex-grow flex items-center justify-center pb-[4vh] relative z-10">
+      <div className="flex-grow flex items-center justify-center pb-[80px] relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-[800px] w-full px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center"
+          className="max-w-[900px] w-full px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center"
         >
-          {/* Small Editorial Label with increased opacity - 16px spacing underneath */}
-          <motion.span
-            variants={itemVariants}
-            className="font-sans text-[11px] md:text-[12px] uppercase tracking-[0.25em] text-[#C4B39C] font-semibold opacity-90 mb-[16px]"
-          >
-            Śāstra • Sādhanā • Saṃvāda
-          </motion.span>
+          {/* Devanagari Invocation */}
+          <motion.div variants={itemVariants} className="space-y-2 mb-[16px] flex flex-col items-center">
+            <span className="font-serif text-sm sm:text-base text-[#D4AF37] tracking-[0.2em] font-medium" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
+              नाट्यशास्त्रप्रवर्तकं भरतमुनिं वन्दे।
+            </span>
+            <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C4B39C] font-semibold opacity-95 block">
+              Custodians of Rasa, Rhythm & Dhārmic Responsibility
+            </span>
+          </motion.div>
 
-          {/* Major Serifed Headings - Muted Sandstone & Ivory */}
+          {/* Major Serifed Headings - Gold Foil & Ivory Shimmer */}
           <motion.div variants={itemVariants} className="flex flex-col items-center">
             <h1 
-              className="font-serif text-[42px] xs:text-[52px] sm:text-[68px] md:text-[80px] lg:text-[96px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FAF8F5] to-[#C4B39C] pb-2"
-              style={{ filter: 'drop-shadow(0px 8px 12px rgba(0,0,0,0.6))' }}
+              className="font-serif text-[44px] xs:text-[54px] sm:text-[72px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2"
+              style={{ filter: 'drop-shadow(0px 8px 16px rgba(0,0,0,0.75))' }}
             >
               नाट्यशास्त्र
             </h1>
-            {/* Subtitle - 12px spacing from heading, refined size */}
+            
+            {/* Subtitle */}
             <p 
-              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#C4B39C] tracking-[0.25em] mt-[12px]"
-              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.7)' }}
+              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.3em] mt-[8px]"
+              style={{ textShadow: '0 4px 14px rgba(0,0,0,0.8)' }}
             >
               गुरुकुलम्
             </p>
+
+            <LotusDivider className="my-3" />
+
+            <p className="font-serif italic text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-xl leading-relaxed">
+              A Dhārmic Stream For The Renewal Of Public Life Through Aesthetic Leadership
+            </p>
           </motion.div>
 
-
-          {/* Two Elegant Outline Buttons - 40px spacing from description, subtle rounding and compact width */}
+          {/* Two Elegant Gold & Ivory CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-[32px] sm:mt-[40px] w-full px-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-[28px] sm:mt-[36px] w-full px-4"
           >
             <Link
               to="/about"
-              className="w-full max-w-[240px] sm:w-56 py-3 sm:py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-full max-w-[240px] sm:w-56 py-3.5 border-2 border-[#D4AF37]/60 text-[#F5F0E6] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold bg-[#805335]/30 backdrop-blur-xs hover:bg-[#D4AF37] hover:text-[#1A1817] hover:border-[#D4AF37] transition-all duration-300 text-center rounded-lg shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]"
             >
               Explore Gurukulam
             </Link>
             <Link
               to="/library"
-              className="w-full max-w-[240px] sm:w-56 py-3 sm:py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[#C4B39C] hover:text-[#1F1F1D] transition-all duration-300 text-center bg-transparent rounded-[6px]"
+              className="w-full max-w-[240px] sm:w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold hover:bg-white/10 hover:text-white transition-all duration-300 text-center bg-transparent rounded-lg backdrop-blur-xs"
             >
               Publications
             </Link>
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Pinned Visible Animated Scroll Down Arrow */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer group select-none"
+        onClick={() => window.scrollTo({ top: window.innerHeight - 80, behavior: 'smooth' })}
+      >
+        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-[#D4AF37] opacity-90 group-hover:opacity-100 transition-opacity font-semibold">
+          Scroll to Discover
+        </span>
+        <div className="mt-1 p-1 rounded-full border border-[#D4AF37]/40 group-hover:border-[#D4AF37] bg-black/40 backdrop-blur-xs transition-all animate-bounce">
+          <ChevronDown className="w-4 h-4 text-[#D4AF37]" />
+        </div>
+      </motion.div>
+
     </section>
   );
 };
 
 export default Hero;
+

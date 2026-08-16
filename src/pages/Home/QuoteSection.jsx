@@ -1,52 +1,107 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { ProspectusFrame, LotusDivider, BrassDiyaIcon } from '../../components/LotusOrnament';
 
 export const QuoteSection = () => {
+  const [activeVerse, setActiveVerse] = useState(0);
+
+  const VERSES = [
+    {
+      title: 'AESTHETIC EMBODIMENT',
+      sanskrit: 'यतो हस्तस्ततो दृष्टिर्यतो दृष्टिस्ततो मनः ।\nयतो मनस्ततो भावो यतो भावस्ततो रसः ॥',
+      translit: 'Yato hastas tato dṛṣṭir yato dṛṣṭis tato manaḥ | yato manas tato bhāvo yato bhāvas tato rasaḥ ||',
+      english: 'Where the hand goes, the eyes follow; where the eyes go, the mind follows;\nwhere the mind goes, bhāva arises; where bhāva arises, rasa unfolds.',
+      commentary: 'Nāṭya gathers attention, and attention ripens into rasa.',
+      citation: 'ABHINAYADARPAṆA • VERSE 37'
+    },
+    {
+      title: 'THE ALL-ENCOMPASSING CANON',
+      sanskrit: 'न तज्ज्ञानं न तच्छिल्पं न सा विद्या न सा कला ।\nनासौ योगो न तत्कर्म नाट्येऽस्मिन् यन्न दृश्यते ॥',
+      translit: 'Na tajjñānaṁ na tacchilpaṁ na sā vidyā na sā kalā | nāsau yogo na tatkarma nāṭye’smin yanna dṛśyate ||',
+      english: 'There is no wisdom, art, learning, craft, device, yoga or action\nthat is not found in Nāṭya.',
+      commentary: 'Nāṭya is the complete synthesis of civilisational knowledge.',
+      citation: 'NĀṬYAŚĀSTRA • CHAPTER 1 ★ VERSE 116'
+    }
+  ];
+
+  const current = VERSES[activeVerse];
+
   return (
-    <section className="w-full bg-[#F3EEE6] relative z-20 py-16 md:py-24 flex justify-center items-center">
-      <div className="max-w-[750px] w-full px-6 mx-auto">
+    <section className="w-full bg-[#FAF6F0] relative z-20 py-20 md:py-28 flex justify-center items-center border-t border-[#9E743B]/20">
+      <div className="max-w-[920px] w-full px-6 mx-auto">
         
-        {/* Transparent Animated Container aligning perfectly with page background */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1.0] }}
-          className="relative flex flex-col justify-center items-center text-center"
         >
-          {/* Top Flourish */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-8 h-[1px] bg-accent-bronze/30"></span>
-            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 0L8 4L12 6L8 8L6 12L4 8L0 6L4 4L6 0Z" fill="var(--color-accent-bronze)"/>
-            </svg>
-            <span className="w-8 h-[1px] bg-accent-bronze/30"></span>
-          </div>
+          <ProspectusFrame innerClassName="p-8 sm:p-14 text-center space-y-6">
+            
+            <div className="flex items-center justify-center gap-3">
+              <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#9E743B] font-bold">
+                ŚĀSTRA PRATIṢṬHĀ
+              </span>
+              <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
+            </div>
 
-          {/* Devanagari Sanskrit Quote - Responsive Font Size, Centered perfectly */}
-          <h2 
-            className="font-serif text-[24px] xs:text-[28px] sm:text-[36px] md:text-[44px] leading-relaxed text-[#1A1817] tracking-wide mb-8 font-medium max-w-3xl"
-            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.05)' }}
-          >
-            यतो हस्तस्ततो दृष्टिर्यतो दृष्टिस्ततो मनः ।<br />
-            यतो मनस्ततो भावो यतो भावस्ततो रसः ॥
-          </h2>
+            {/* Verse Selector Tabs */}
+            <div className="flex justify-center items-center gap-3 pt-2">
+              {VERSES.map((v, i) => (
+                <button
+                  key={v.title}
+                  onClick={() => setActiveVerse(i)}
+                  className={`px-4 py-1.5 rounded-full font-sans text-[11px] uppercase tracking-widest transition-all ${
+                    activeVerse === i
+                      ? 'bg-[#6B1D1E] text-white shadow-sm font-semibold'
+                      : 'bg-[#F3EEE6] text-[#757069] border border-[#9E743B]/20 hover:border-[#9E743B]/60'
+                  }`}
+                >
+                  {v.title}
+                </button>
+              ))}
+            </div>
 
-          {/* Transliteration - Responsive Font Size */}
-          <p className="font-serif text-[14px] sm:text-[16px] md:text-[18px] text-accent-bronze tracking-[0.05em] mb-6 font-medium px-2 max-w-2xl">
-            *Yato hastas tato dṛṣṭir yato dṛṣṭis tato manaḥ | yato manas tato bhāvo yato bhāvas tato rasaḥ*
-          </p>
+            <LotusDivider className="my-3" />
 
-          {/* English Translation - Responsive Font Size */}
-          <p className="font-serif text-[16px] sm:text-[18px] md:text-[22px] italic text-[#5C564D] leading-relaxed max-w-3xl font-normal px-2">
-            Where the hand goes, the eyes follow; where the eyes go, the mind follows;<br />
-            where the mind goes, expression arises; where expression arises, aesthetic bliss is born.
-          </p>
+            {/* Primary Devanagari Verse */}
+            <motion.div
+              key={activeVerse}
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              className="space-y-6"
+            >
+              <h2 
+                className="font-serif text-[24px] xs:text-[28px] sm:text-[34px] md:text-[40px] leading-relaxed text-[#6B1D1E] tracking-wide font-medium max-w-3xl mx-auto whitespace-pre-line"
+                style={{ fontFamily: '"Noto Serif Devanagari", serif' }}
+              >
+                {current.sanskrit}
+              </h2>
 
-          {/* Citation Source with arrows */}
-          <span className="block mt-10 font-sans text-[11px] uppercase tracking-[0.3em] text-accent-bronze font-bold">
-            — NĀṬYAŚĀSTRA, CHAPTER VI, VERSE 36 —
-          </span>
+              {/* Transliteration */}
+              <p className="font-serif text-[13px] sm:text-[15px] md:text-[16px] text-[#9E743B] tracking-[0.05em] font-medium px-2 max-w-2xl mx-auto">
+                {current.translit}
+              </p>
+
+              <div className="w-16 h-[1px] bg-[#9E743B]/30 mx-auto my-4" />
+
+              {/* English Translation */}
+              <div className="font-serif text-[16px] sm:text-[18px] md:text-[20px] italic text-[#4A423B] leading-relaxed max-w-3xl font-normal px-2 space-y-2 mx-auto whitespace-pre-line">
+                <p>{current.english}</p>
+                <p className="not-italic font-semibold text-[#6B1D1E] pt-3 text-[15px] sm:text-[17px] md:text-[18px]">
+                  {current.commentary}
+                </p>
+              </div>
+
+              {/* Citation Source */}
+              <span className="block pt-4 font-sans text-[10px] uppercase tracking-[0.3em] text-[#9E743B] font-bold">
+                — {current.citation} —
+              </span>
+            </motion.div>
+
+          </ProspectusFrame>
         </motion.div>
       </div>
     </section>
@@ -54,3 +109,4 @@ export const QuoteSection = () => {
 };
 
 export default QuoteSection;
+

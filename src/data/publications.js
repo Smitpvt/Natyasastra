@@ -1,4 +1,15 @@
 export const PUBLICATIONS = [
+  // 0. Flagship Treatise
+  {
+    isFlagship: true,
+    series: 'Flagship Treatise',
+    type: 'Monograph / Treatise',
+    title: 'The Flagship Treatise of Nāṭyaśāstra Gurukulam',
+    desc: 'The foundational treatise articulating the comprehensive philosophy, aesthetics, pedagogy, and civilisational statecraft of the Gurukulam. (Detailed monograph forthcoming).',
+    file: '/assets/publications/WP I-The Dharma of the Middle Powers.pdf',
+    cover: '/assets/publications/covers/The Return of Natya.png',
+    theme: 'bg-gradient-to-br from-accent-bronze to-[#462814] text-[#F3EEE6] border border-[#462814]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]'
+  },
   // I. Civilisational Statecraft Series
   {
     series: 'Civilisational Statecraft Series',
