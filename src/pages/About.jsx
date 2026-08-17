@@ -414,35 +414,36 @@ export const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7 flex justify-center">
-              <div className="relative w-full max-w-[440px] aspect-square flex items-center justify-center p-4">
-                
-                {/* Outer decorative ring */}
-                <div className="absolute inset-4 rounded-full border border-[#9E743B]/25 stroke-dasharray-[4_4]" />
-                <div className="absolute inset-16 rounded-full border border-[#9E743B]/15" />
+              <div className="relative w-full max-w-[440px] aspect-square flex items-center justify-center p-4 overflow-hidden">
+                <div className="w-full h-full relative flex items-center justify-center scale-[0.72] xs:scale-[0.85] sm:scale-100 origin-center transition-transform duration-500">
+                  {/* Outer decorative ring */}
+                  <div className="absolute inset-4 rounded-full border border-[#9E743B]/25 stroke-dasharray-[4_4]" />
+                  <div className="absolute inset-16 rounded-full border border-[#9E743B]/15" />
 
-                {/* Center Circle: NĀṬYAŚĀSTRA */}
-                <div className="relative z-20 w-32 h-32 rounded-full bg-[#6B1D1E] text-white flex flex-col items-center justify-center text-center p-2 shadow-xl border-2 border-[#9E743B]">
-                  <LotusIcon className="w-6 h-6 text-[#9E743B] mb-0.5" fill="currentColor" />
-                  <span className="font-serif text-sm font-semibold tracking-wider">Nāṭyaśāstra</span>
-                </div>
-
-                {/* 6 Orbiting Nodes */}
-                {[
-                  { title: 'ETHICS', sans: 'Dharma', pos: 'top-2 left-1/2 -translate-x-1/2' },
-                  { title: 'AESTHETICS', sans: 'Rasa', pos: 'top-16 right-2' },
-                  { title: 'PEDAGOGY', sans: 'Śikṣā', pos: 'bottom-16 right-2' },
-                  { title: 'PHILOSOPHY', sans: 'Darśana', pos: 'bottom-2 left-1/2 -translate-x-1/2' },
-                  { title: 'LEADERSHIP', sans: 'Nīti', pos: 'bottom-16 left-2' },
-                  { title: 'COMMUNITY', sans: 'Saṅgha', pos: 'top-16 left-2' }
-                ].map((node) => (
-                  <div
-                    key={node.title}
-                    className={`absolute ${node.pos} z-20 w-24 h-24 rounded-full bg-[#FAF6F0] border border-[#9E743B]/40 shadow-md flex flex-col items-center justify-center text-center p-2 hover:border-[#6B1D1E] transition-all`}
-                  >
-                    <span className="font-sans text-[9px] uppercase tracking-wider font-bold text-[#6B1D1E]">{node.title}</span>
-                    <span className="font-serif italic text-xs text-[#9E743B]">({node.sans})</span>
+                  {/* Center Circle: NĀṬYAŚĀSTRA */}
+                  <div className="relative z-20 w-32 h-32 rounded-full bg-[#6B1D1E] text-white flex flex-col items-center justify-center text-center p-2 shadow-xl border-2 border-[#9E743B]">
+                    <LotusIcon className="w-6 h-6 text-[#9E743B] mb-0.5" fill="currentColor" />
+                    <span className="font-serif text-sm font-semibold tracking-wider">Nāṭyaśāstra</span>
                   </div>
-                ))}
+
+                  {/* 6 Orbiting Nodes */}
+                  {[
+                    { title: 'ETHICS', sans: 'Dharma', pos: 'top-2 left-1/2 -translate-x-1/2' },
+                    { title: 'AESTHETICS', sans: 'Rasa', pos: 'top-16 right-2' },
+                    { title: 'PEDAGOGY', sans: 'Śikṣā', pos: 'bottom-16 right-2' },
+                    { title: 'PHILOSOPHY', sans: 'Darśana', pos: 'bottom-2 left-1/2 -translate-x-1/2' },
+                    { title: 'LEADERSHIP', sans: 'Nīti', pos: 'bottom-16 left-2' },
+                    { title: 'COMMUNITY', sans: 'Saṅgha', pos: 'top-16 left-2' }
+                  ].map((node) => (
+                    <div
+                      key={node.title}
+                      className={`absolute ${node.pos} z-20 w-24 h-24 rounded-full bg-[#FAF6F0] border border-[#9E743B]/40 shadow-md flex flex-col items-center justify-center text-center p-2 hover:border-[#6B1D1E] transition-all`}
+                    >
+                      <span className="font-sans text-[9px] uppercase tracking-wider font-bold text-[#6B1D1E]">{node.title}</span>
+                      <span className="font-serif italic text-xs text-[#9E743B]">({node.sans})</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
