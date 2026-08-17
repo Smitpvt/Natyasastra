@@ -2,8 +2,62 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { useSEO } from '../hooks/useSEO';
 
 export const MentorsDetail = () => {
+  useSEO({
+    title: 'Mārga Darśaks & Mentors',
+    description: 'Meet the mentors, spiritual elders, and Ācāryās guiding the pedagogical roadmap and spiritual axis of the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'Gurukulam Mentors & Acharyas',
+      'description': 'A list of spiritual elders and guides of the Nāṭyaśāstra Gurukulam.',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'item': {
+            '@type': 'Person',
+            'name': 'Padma Bhushan Dr. M. B. Athreya',
+            'jobTitle': 'Mārga Darśak',
+            'description': 'Pioneer of the Indian Management Movement. Anchors the larger civilisational horizon at the Gurukulam.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'item': {
+            '@type': 'Person',
+            'name': 'Karnataka Kalashri Dr. Padmaja Suresh',
+            'jobTitle': 'Ācāryā for Nāṭya Pedagogy',
+            'description': 'Acclaimed danseuse, scholar, teacher, and author whose pedagogy understands Nāṭya as Sādhanā.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'item': {
+            '@type': 'Person',
+            'name': 'Śrī K. V. Subrahmoṇyan',
+            'jobTitle': 'Spiritual Elder',
+            'description': 'Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi, serving as a spiritual axis.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'item': {
+            '@type': 'Person',
+            'name': 'Rohit Viswanath',
+            'jobTitle': 'Yajamāna & Yojaka',
+            'description': 'Stewards the Gurukulam’s consecrated saṅkalpa and institutional form.'
+          }
+        }
+      ]
+    }
+  });
+
   return (
     <div className="bg-bg-ivory pt-24 min-h-screen text-[#211F1D] selection:bg-accent-bronze/20 selection:text-[#211F1D]">
       
@@ -47,10 +101,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/dr_athreya.jpg"
+                    src="/assets/images/dr_athreya_thumb.webp"
                     alt="Padma Bhushan Dr. M. B. Athreya"
                     className="w-full h-full object-cover object-top filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
@@ -140,10 +195,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/dr_padmaja_suresh.jpg"
+                    src="/assets/images/dr_padmaja_suresh_thumb.webp"
                     alt="Karnataka Kalashri Dr. Padmaja Suresh"
                     className="w-full h-full object-cover object-top filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
@@ -177,10 +233,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/sri_kv_subrahmonyam.jpg"
+                    src="/assets/images/sri_kv_subrahmonyam_thumb.webp"
                     alt="Śrī K. V. Subrahmoṇyan"
                     className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
@@ -273,10 +330,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/rohit_viswanath.png"
+                    src="/assets/images/rohit_viswanath_thumb.webp"
                     alt="Rohit Viswanath - Yajamāna & Yojaka"
                     className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">

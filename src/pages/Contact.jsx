@@ -2,8 +2,21 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Caption } from '../components/Typography';
+import { useSEO } from '../hooks/useSEO';
 
 export const Contact = () => {
+  useSEO({
+    title: 'Inquire Now - Contact Us',
+    description: 'Initiate a dialogue, register your interest, or submit a statement of intent to engage with the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      'name': 'Contact & Inquiry',
+      'description': 'Contact page to register interest and submit statement of intent to engage with the Nāṭyaśāstra Gurukulam.',
+      'url': typeof window !== 'undefined' ? window.location.origin + '/contact' : ''
+    }
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

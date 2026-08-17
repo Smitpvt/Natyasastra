@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { LotusIcon, LotusDivider, BrassDiyaIcon, ProspectusFrame } from '../components/LotusOrnament';
+import { useSEO } from '../hooks/useSEO';
+import AutoScrollContainer from '../components/AutoScrollContainer';
 
 // The Pedagogical Mandala Nodes Data
 const MARGA_MANDALA_NODES = [
@@ -127,49 +129,14 @@ const STATECRAFT_AREAS = [
   }
 ];
 
-// Reusable Auto-Scrolling Horizontal Container for Mobile
-const AutoScrollContainer = ({ children, interval = 3200, className = "" }) => {
-  const scrollRef = React.useRef(null);
-  const [isPaused, setIsPaused] = React.useState(false);
 
-  React.useEffect(() => {
-    if (isPaused) return;
-
-    const timer = setInterval(() => {
-      if (!scrollRef.current) return;
-      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      // Loop back to start if near end
-      if (scrollLeft + clientWidth >= scrollWidth - 20) {
-        scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        const scrollStep = clientWidth * 0.85;
-        scrollRef.current.scrollBy({ left: scrollStep, behavior: 'smooth' });
-      }
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, [isPaused, interval]);
-
-  return (
-    <div
-      ref={scrollRef}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => setTimeout(() => setIsPaused(false), 3000)}
-      className={className}
-    >
-      {children}
-    </div>
-  );
-};
 const DIRECT_ENGAGEMENTS = [
   {
     title: 'Residential Immersions',
     subtitle: 'Stepping into the rhythm of the Gurukulam',
     desc: 'Intensive residential encounters combining study, practice, reflection, silence, and shared time. Participants include practitioners, educators, scholars, and serious seekers brought together around a focused theme or inquiry.',
     mode: 'Residential • In Person',
-    image: '/assets/images/corridor.png',
+    image: '/assets/images/corridor_thumb.webp',
     objectPos: 'object-center'
   },
   {
@@ -177,7 +144,7 @@ const DIRECT_ENGAGEMENTS = [
     subtitle: 'Sustained inquiry into Śāstra',
     desc: 'Small-group engagements with selected texts, concepts, and questions through listening, reflection, questioning, and dialogue. Areas include the Nāṭyaśāstra, Abhinavabhāratī, rasa, bhāva, and Indian aesthetics.',
     mode: 'In Person',
-    image: '/assets/images/sthapatya.png',
+    image: '/assets/images/sthapatya_thumb.webp',
     objectPos: 'object-center'
   },
   {
@@ -185,7 +152,7 @@ const DIRECT_ENGAGEMENTS = [
     subtitle: 'From knowledge to embodied understanding',
     desc: 'Focused engagements bringing selected principles of Nāṭya into practice through movement, abhinaya, rasa, rhythm, aesthetic perception, contemplative practice, and pedagogy.',
     mode: 'In Person',
-    image: '/assets/images/yajna.png',
+    image: '/assets/images/yajna_thumb.webp',
     objectPos: 'object-center'
   },
   {
@@ -193,7 +160,7 @@ const DIRECT_ENGAGEMENTS = [
     subtitle: 'The Sabhā as a space for inquiry',
     desc: 'Encounters with artistes, scholars, teachers, thinkers, and knowledge holders addressing Nāṭyaśāstra, aesthetics, pedagogy, culture, civilisational thought, ethics, and leadership.',
     mode: 'In Person',
-    image: '/assets/images/prof_ramasubramanian.jpg',
+    image: '/assets/images/prof_ramasubramanian_thumb.webp',
     objectPos: 'object-[center_20%]'
   },
   {
@@ -201,7 +168,7 @@ const DIRECT_ENGAGEMENTS = [
     subtitle: 'Where Śāstra, practice, and inquiry meet',
     desc: 'Curated conversations and working sessions bringing scholars and practitioners together around focused questions at the intersection of civilisational knowledge and artistic practice.',
     mode: 'By Invitation / Curated',
-    image: '/assets/images/group_pratishtha.jpg',
+    image: '/assets/images/group_pratishtha_thumb.webp',
     objectPos: 'object-[center_15%]'
   },
   {
@@ -209,7 +176,7 @@ const DIRECT_ENGAGEMENTS = [
     subtitle: 'Bringing the inquiry into institutional life',
     desc: 'Bespoke engagements with educational, cultural, corporate, and other institutions exploring aesthetic leadership, embodied learning, ethical formation, and Dhārmic approaches to organisational life.',
     mode: 'Bespoke • In Person',
-    image: '/assets/images/brochure_release.jpg',
+    image: '/assets/images/brochure_release_thumb.webp',
     objectPos: 'object-[center_20%]'
   }
 ];
@@ -243,6 +210,46 @@ const REALMS_OF_IMPACT = [
 ];
 
 export const ProgrammesDetail = () => {
+  useSEO({
+    title: 'Programmes - Residential Immersions & Study Circles',
+    description: 'Explore the educational offerings of the Nāṭyaśāstra Gurukulam, including residential immersions, textual study circles, movement reconstruction workshops, and civilisational statecraft seminars.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'Pedagogical & Research Programmes',
+      'description': 'A list of academic, practical, and research programmes offered by the Nāṭyaśāstra Gurukulam.',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'item': {
+            '@type': 'Course',
+            'name': 'Residential Immersions',
+            'description': 'Intensive residential encounters combining study, practice, reflection, silence, and shared time focused on classical Indian performing arts and aesthetic systems.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'item': {
+            '@type': 'Course',
+            'name': 'Study Circles',
+            'description': 'Small-group engagements with selected texts (Nāṭyaśāstra, Abhinavabhāratī) exploring Indian aesthetics, rasa, and bhāva.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'item': {
+            '@type': 'Course',
+            'name': 'Workshops',
+            'description': 'Focused physical workshops translating theoretical principles of Nāṭya into movements, karaṇa transitions, and abhinaya.'
+          }
+        }
+      ]
+    }
+  });
+
   const [activeStep, setActiveStep] = useState(0);
 
   return (
@@ -302,8 +309,10 @@ export const ProgrammesDetail = () => {
                 className="relative rounded-xl overflow-hidden shadow-xl border-4 border-white group"
               >
                 <img
-                  src="/assets/images/dance_offering.jpg"
+                  src="/assets/images/dance_offering.webp"
                   alt="Nāṭya Seva offering by sishyas"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[320px] sm:h-[360px] lg:h-[380px] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
@@ -553,8 +562,10 @@ export const ProgrammesDetail = () => {
             {/* Left Photo & Highlight */}
             <div className="lg:col-span-5 relative h-56 sm:h-72 lg:h-full min-h-[220px] lg:min-h-[380px] overflow-hidden">
               <img
-                src="/assets/images/sishyas_natya_seva.jpg"
+                src="/assets/images/sishyas_natya_seva_thumb.webp"
                 alt="The Yātri Initiative - Cultural Transmission"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top filter brightness-[0.95] contrast-[1.02]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1E1C1A] via-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#1E1C1A]" />
@@ -770,8 +781,10 @@ export const ProgrammesDetail = () => {
             {/* Right Photo */}
             <div className="lg:col-span-5 relative h-56 sm:h-72 lg:h-full min-h-[220px] lg:min-h-[380px] overflow-hidden order-1 lg:order-2">
               <img
-                src="/assets/images/brochure_release.jpg"
+                src="/assets/images/brochure_release_thumb.webp"
                 alt="Centre for Civilisational Statecraft - Consecration & Brochure Release"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top filter brightness-[0.98] contrast-[1.02]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-white/20" />
@@ -824,6 +837,8 @@ export const ProgrammesDetail = () => {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover ${item.objectPos || 'object-center'} opacity-95 group-hover:opacity-100`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />

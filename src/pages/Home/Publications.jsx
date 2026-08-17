@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PUBLICATIONS } from '../../data/publications';
+import AutoScrollContainer from '../../components/AutoScrollContainer';
 
 // Select the two CCS-AKS papers and the two Rasa Reflections for the homepage
 const FEATURED_SERIES = ['Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
@@ -40,8 +41,11 @@ export const Publications = () => {
           </div>
         </div>
 
-        {/* Publications Carousel Grid */}
-        <div className="flex overflow-x-auto gap-6 md:gap-8 pb-8 no-scrollbar snap-x">
+        {/* Publications Carousel Grid with Mobile Auto-Scrolling Slider */}
+        <AutoScrollContainer
+          interval={3500}
+          className="flex overflow-x-auto gap-6 md:gap-8 pb-8 scrollbar-none snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0"
+        >
           {RECENT_PUBLICATIONS.map((pub, index) => (
             <a
               href={pub.file}
@@ -49,14 +53,14 @@ export const Publications = () => {
               rel="noopener noreferrer"
               key={pub.title}
               title={`Open PDF for ${pub.title}`}
-              className="snap-start shrink-0 group block"
+              className="snap-start flex-none w-[82vw] xs:w-[280px] group block"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1.0] }}
-                className="w-[260px] md:w-[280px] flex flex-col h-full"
+                className="w-full flex flex-col h-full"
               >
                 {/* Publication Cover Image */}
                 {pub.cover ? (
@@ -114,7 +118,7 @@ export const Publications = () => {
               </motion.div>
             </a>
           ))}
-        </div>
+        </AutoScrollContainer>
 
       </div>
     </section>

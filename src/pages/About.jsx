@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import EditorialImage from '../components/EditorialImage';
 import { HeadingXL, HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { LotusIcon, LotusDivider, ProspectusFrame } from '../components/LotusOrnament';
+import { useSEO } from '../hooks/useSEO';
 
 const PILLARS = [
   {
@@ -46,6 +47,22 @@ const PILLARS = [
 ];
 
 export const About = () => {
+  useSEO({
+    title: 'About the Gurukulam - Lineage & Vision',
+    description: 'Learn about the foundations of the Nāṭyaśāstra Gurukulam, our spiritual lineage, Ācāryās, and our vision of Śāstra, Sādhanā, and Saṃvāda.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      'name': 'About the Gurukulam',
+      'description': 'Foundational history, spiritual lineage, and pedagogical vision of the Nāṭyaśāstra Gurukulam.',
+      'mainEntity': {
+        '@type': 'EducationalOrganization',
+        'name': 'Nāṭyaśāstra Gurukulam',
+        'description': 'An institution dedicated to the study, practice, and transmission of the Nāṭyaśāstra and its allied knowledge traditions.'
+      }
+    }
+  });
+
   const [activePillar, setActivePillar] = useState(0);
 
   // SVG Mandala node calculations (Center: 210, 210, R: 135)
@@ -225,10 +242,11 @@ export const About = () => {
                       23 November 2025 | Navi Mumbai
                     </div>
                     <img
-                      src="/assets/images/yajna.png"
+                      src="/assets/images/yajna_thumb.webp"
                       alt="Pratiṣṭhā Consecration Ceremony"
                       className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border border-accent-bronze/10 rounded-md"
                       loading="lazy"
+                      decoding="async"
                     />
                     <Body className="text-text-secondary text-xs md:text-sm leading-relaxed mt-3 mb-0">
                       The Nāṭyaśāstra Gurukulam was consecrated at Śrī Subrahmaṇya Sevā Samāj, Navi Mumbai, through a sacred gathering of Vedic invocation, consecratory rites, dance, music, reflection, and dialogue. The Pratiṣṭhā Samāroham marked not merely an inauguration, but the formal consecration of the Gurukulam's saṅkalpa.
@@ -356,8 +374,10 @@ export const About = () => {
             <div className="lg:col-span-5 max-w-md mx-auto w-full">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-[#9E743B]/30 bg-[#1E1C1A]">
                 <img
-                  src="/assets/images/sishyas_natya_seva.jpg"
+                  src="/assets/images/sishyas_natya_seva_thumb.webp"
                   alt="Practitioner by lamp"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[400px] object-cover object-top filter brightness-[0.95] contrast-[1.03]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -454,7 +474,7 @@ export const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-5 w-full max-w-md mx-auto order-2 lg:order-1">
               <EditorialImage
-                src="/assets/images/sishyas_natya_seva.jpg"
+                src="/assets/images/sishyas_natya_seva_thumb.webp"
                 alt="Nāṭya practitioners undergoing immersion and training"
                 aspectRatio="aspect-[4/5]"
                 caption="Nāṭya practitioners being trained in a temple Gurukulam"
@@ -494,10 +514,11 @@ export const About = () => {
               <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-6 border border-accent-bronze/10 rounded-xl">
                 <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
                   <img
-                    src="/assets/images/dr_athreya.jpg"
+                    src="/assets/images/dr_athreya_thumb.webp"
                     alt="Padma Bhushan Dr. M. B. Athreya"
                     className="w-full h-full object-cover filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="space-y-2">
@@ -512,10 +533,11 @@ export const About = () => {
               <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-6 border border-accent-bronze/10 rounded-xl">
                 <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
                   <img
-                    src="/assets/images/dr_padmaja_suresh.jpg"
+                    src="/assets/images/dr_padmaja_suresh_thumb.webp"
                     alt="Karnataka Kalashri Dr. Padmaja Suresh"
                     className="w-full h-full object-cover filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="space-y-2">
@@ -530,10 +552,11 @@ export const About = () => {
               <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-6 border border-accent-bronze/10 rounded-xl">
                 <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
                   <img
-                    src="/assets/images/sri_kv_subrahmonyam.jpg"
+                    src="/assets/images/sri_kv_subrahmonyam_thumb.webp"
                     alt="Śrī K. V. Subrahmoṇyan"
                     className="w-full h-full object-cover filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="space-y-2">
@@ -551,10 +574,11 @@ export const About = () => {
               <div className="bg-bg-parchment/20 p-6 sm:p-8 rounded-xl border border-accent-bronze/20 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
                 <div className="w-28 h-36 shrink-0 rounded-lg overflow-hidden border border-accent-bronze/20 bg-[#1E1C1A]">
                   <img
-                    src="/assets/images/rohit_viswanath.png"
+                    src="/assets/images/rohit_viswanath_thumb.webp"
                     alt="Rohit Viswanath - Yajamāna & Yojaka"
                     className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="space-y-2 text-center sm:text-left">

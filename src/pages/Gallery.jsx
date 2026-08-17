@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Section from '../components/Section';
 import { HeadingLG, BodyLG, Caption } from '../components/Typography';
+import { useSEO } from '../hooks/useSEO';
 
 const GALLERY_ITEMS = [
   // --- PRATIṢṬHĀ SAMĀROHAM (23 NOVEMBER 2025) ---
   {
     id: 1,
-    src: '/assets/images/dance_offering.jpg',
+    src: '/assets/images/dance_offering.webp',
+    srcThumb: '/assets/images/dance_offering_thumb.webp',
     alt: 'Nāṭya Seva Dance Offering during Pratiṣṭhā Samāroham',
     category: 'Pratiṣṭhā Samāroham',
     title: 'Nāṭya Seva Sacred Performance',
@@ -19,7 +21,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 2,
-    src: '/assets/images/group_pratishtha.jpg',
+    src: '/assets/images/group_pratishtha.webp',
+    srcThumb: '/assets/images/group_pratishtha_thumb.webp',
     alt: 'Group Consecration Assembly with Mukhyātithi Prof. K. Ramasubramanian',
     category: 'Pratiṣṭhā Samāroham',
     title: 'Consecration Assembly & Dignitaries',
@@ -31,7 +34,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 3,
-    src: '/assets/images/prof_ramasubramanian.jpg',
+    src: '/assets/images/prof_ramasubramanian.webp',
+    srcThumb: '/assets/images/prof_ramasubramanian_thumb.webp',
     alt: 'Prof. K. Ramasubramanian with Dr. Padmaja Suresh',
     category: 'Pratiṣṭhā Samāroham',
     title: 'Scholarly Address & Dialogue',
@@ -43,7 +47,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 4,
-    src: '/assets/images/sishyas_natya_seva.jpg',
+    src: '/assets/images/sishyas_natya_seva.webp',
+    srcThumb: '/assets/images/sishyas_natya_seva_thumb.webp',
     alt: 'Sishyas of Smt. Charanya Gurusathya offering Nāṭya Seva',
     category: 'Pratiṣṭhā Samāroham',
     title: 'Sishyas of the Lineage',
@@ -55,7 +60,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 5,
-    src: '/assets/images/vision_statement.jpg',
+    src: '/assets/images/vision_statement.webp',
+    srcThumb: '/assets/images/vision_statement_thumb.webp',
     alt: 'The Consecrated Vision Statement of Nāṭyaśāstra Gurukulam',
     category: 'Pratiṣṭhā Samāroham',
     title: 'Consecrated Vision Statement',
@@ -67,7 +73,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 6,
-    src: '/assets/images/brochure_release.jpg',
+    src: '/assets/images/brochure_release.webp',
+    srcThumb: '/assets/images/brochure_release_thumb.webp',
     alt: 'Release of the inaugural Gurukulam brochure',
     category: 'Pratiṣṭhā Samāroham',
     title: 'Release of Inaugural Vision Brochure',
@@ -81,7 +88,8 @@ const GALLERY_ITEMS = [
   // --- RESEARCH & HERITAGE ARCHIVES ---
   {
     id: 7,
-    src: '/assets/images/yajna.png',
+    src: '/assets/images/yajna.webp',
+    srcThumb: '/assets/images/yajna_thumb.webp',
     alt: 'Sacred Consecration Fire Ritual',
     category: 'Research & Lineage',
     title: 'Sacred Yajna & Consecration',
@@ -93,7 +101,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 8,
-    src: '/assets/images/corridor.png',
+    src: '/assets/images/corridor.webp',
+    srcThumb: '/assets/images/corridor_thumb.webp',
     alt: 'Temple Corridor Pillars',
     category: 'Research & Lineage',
     title: 'Brihadīśvara Sabha Corridors',
@@ -105,7 +114,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 9,
-    src: '/assets/images/sthapatya.png',
+    src: '/assets/images/sthapatya.webp',
+    srcThumb: '/assets/images/sthapatya_thumb.webp',
     alt: 'Classical Sculpture & Sacred Geometry',
     category: 'Research & Lineage',
     title: 'Karana Stone Friezes & Somatics',
@@ -117,7 +127,8 @@ const GALLERY_ITEMS = [
   },
   {
     id: 10,
-    src: '/assets/images/banyan.png',
+    src: '/assets/images/banyan.webp',
+    srcThumb: '/assets/images/banyan_thumb.webp',
     alt: 'Traditional Banyan Tree Teaching Circle',
     category: 'Research & Lineage',
     title: 'Sabha Under the Sacred Banyan',
@@ -132,6 +143,18 @@ const GALLERY_ITEMS = [
 const CATEGORIES = ['All', 'Pratiṣṭhā Samāroham', 'Research & Lineage'];
 
 export const Gallery = () => {
+  useSEO({
+    title: 'Visual Archives & Photographic Journal',
+    description: 'Explore the photographic journal and visual archives documenting the inaugural Pratiṣṭhā Samāroham, somatic research residencies, and living lineage transmission.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ImageGallery',
+      'name': 'Visual Archives & Photographic Journal',
+      'description': 'Photographic records of the consecration ceremony and aesthetic archives of the Nāṭyaśāstra Gurukulam.',
+      'url': typeof window !== 'undefined' ? window.location.origin + '/gallery' : ''
+    }
+  });
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [lightboxImage, setLightboxImage] = useState(null);
 
@@ -201,8 +224,10 @@ export const Gallery = () => {
                   {/* Photo Header */}
                   <div className="relative h-60 sm:h-64 overflow-hidden bg-[#1E1C1A]">
                     <img
-                      src={item.src}
+                      src={item.srcThumb}
                       alt={item.alt}
+                      loading="lazy"
+                      decoding="async"
                       className={`w-full h-full object-cover ${item.objectPos} opacity-95 group-hover:opacity-100`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

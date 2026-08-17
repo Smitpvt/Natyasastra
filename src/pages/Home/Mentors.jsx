@@ -12,7 +12,7 @@ const MENTORS = [
     tagline: 'Civilisational & Ethical Guidance',
     quote: 'Providing Dhārmic, civilisational, and ethical guidance to the Gurukulam’s vision and public orientation.',
     bio: 'Dr. M. B. Athreya is widely regarded as the pioneer of the Indian Management Movement and a distinguished thinker who has consistently sought to integrate modern organisational thought with Dhārmic vision. Awarded the Padma Bhushan by the Government of India, his presence anchors the larger civilisational horizon at the Gurukulam.',
-    image: '/assets/images/dr_athreya.jpg',
+    image: '/assets/images/dr_athreya_thumb.webp',
     objectPos: 'object-top',
     pillarDevanagari: 'दृष्टि',
     pillarEnglish: 'VISION'
@@ -25,7 +25,7 @@ const MENTORS = [
     tagline: 'Nāṭya as Sādhanā & Pedagogy',
     quote: 'Shaping the Gurukulam’s pedagogic vision through Nāṭya as Sādhanā.',
     bio: 'Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life’s work bridges rigorous classical training with deep philosophical inquiry. Her pedagogy understands Nāṭya not merely as performance, but as Sādhanā, a path of inner refinement, ethical sensitivity, and contemplative awareness.',
-    image: '/assets/images/dr_padmaja_suresh.jpg',
+    image: '/assets/images/dr_padmaja_suresh_thumb.webp',
     objectPos: 'object-top',
     pillarDevanagari: 'साधना',
     pillarEnglish: 'PRACTICE'
@@ -38,7 +38,7 @@ const MENTORS = [
     tagline: 'Sākṣitva & Vedāntic Anchoring',
     quote: 'A presence of sākṣitva and Vedāntic anchoring, offering blessings, inner orientation, and lived wisdom.',
     bio: 'Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi. His life reflects quiet abidance, simplicity, discernment, and lived Vedāntic clarity, serving as a spiritual axis for the Gurukulam.',
-    image: '/assets/images/sri_kv_subrahmonyam.jpg',
+    image: '/assets/images/sri_kv_subrahmonyam_thumb.webp',
     objectPos: 'object-bottom',
     pillarDevanagari: 'मौन',
     pillarEnglish: 'SILENCE'
@@ -115,6 +115,8 @@ export const Mentors = () => {
                       <img
                         src={MENTORS[activeTab].image}
                         alt={MENTORS[activeTab].name}
+                        loading="lazy"
+                        decoding="async"
                         className={`w-full h-full object-cover ${MENTORS[activeTab].objectPos} filter contrast-[1.02]`}
                       />
                     </div>

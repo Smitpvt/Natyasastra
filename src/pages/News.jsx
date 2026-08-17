@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { useSEO } from '../hooks/useSEO';
 
 const LETTERS = [
   {
@@ -24,6 +25,18 @@ const LETTERS = [
 ];
 
 export const News = () => {
+  useSEO({
+    title: 'News & Chronicles',
+    description: 'Read the latest letters from the Sabhā, manuscript archive updates, and somatic research announcements from the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      'name': 'News & Chronicles',
+      'description': 'Latest updates and newsletters from the Nāṭyaśāstra Gurukulam.',
+      'url': typeof window !== 'undefined' ? window.location.origin + '/news' : ''
+    }
+  });
+
   return (
     <div className="bg-bg-ivory pt-24 min-h-screen">
       {/* Header */}

@@ -3,8 +3,21 @@ import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { LotusIcon, LotusDivider, ProspectusFrame, BrassDiyaIcon } from '../components/LotusOrnament';
+import { useSEO } from '../hooks/useSEO';
 
 export const Associate = () => {
+  useSEO({
+    title: 'Associate & Support',
+    description: 'Learn how to support and associate with the Nāṭyaśāstra Gurukulam through research fellowships, library building, and institutional endowment funds.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      'name': 'Associate & Support',
+      'description': 'Enable the perpetuity and expansion of the Gurukulam through our key funding circles.',
+      'url': typeof window !== 'undefined' ? window.location.origin + '/associate' : ''
+    }
+  });
+
   return (
     <div className="bg-[#F5F0E6] pt-24 min-h-screen text-[#211F1D] selection:bg-[#9E743B]/20">
       

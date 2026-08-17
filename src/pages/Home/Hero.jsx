@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import heroBg from '../../assets/temple-corridor-hero.jpg';
+import heroBg from '../../assets/temple-corridor-hero.webp';
 import { LotusDivider } from '../../components/LotusOrnament';
 
 export const Hero = () => {

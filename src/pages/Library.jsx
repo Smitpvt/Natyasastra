@@ -2,8 +2,34 @@ import React, { useState } from 'react';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { PUBLICATIONS } from '../data/publications';
+import { useSEO } from '../hooks/useSEO';
 
 export const Library = () => {
+  useSEO({
+    title: 'Publications & Research Archives',
+    description: 'Access the flagship treatises, civilisational statecraft working papers, and Rasa reflection monographs published by the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Publications and Research Archives',
+      'description': 'Treatises, working papers, and research documents on civilisational statecraft, governance, and aesthetic knowledge systems.',
+      'mainEntity': {
+        '@type': 'ItemList',
+        'itemListElement': PUBLICATIONS.slice(0, 5).map((pub, idx) => ({
+          '@type': 'ListItem',
+          'position': idx + 1,
+          'item': {
+            '@type': 'ScholarlyArticle',
+            'name': pub.title,
+            'description': pub.desc,
+            'genre': pub.series,
+            'url': typeof window !== 'undefined' ? `${window.location.origin}${pub.file}` : pub.file
+          }
+        }))
+      }
+    }
+  });
+
   const [filter, setFilter] = useState('All');
 
   const SERIES_TABS = [
