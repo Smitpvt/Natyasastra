@@ -9,40 +9,40 @@ import { useSEO } from '../hooks/useSEO';
 
 const PILLARS = [
   {
-    title: 'Śāstra',
+    title: <span><em className="italic">Śāstra</em></span>,
     sanskrit: 'शास्त्र',
     syllable: 'शा',
-    desc: 'Rigorous study of the Nāṭyaśāstra, the Abhinavabhāratī commentary, and allied civilisational knowledge traditions. It provides the intellectual framework, preserving textual integrity and commentarial lineage.'
+    desc: <span>Rigorous study of the <em className="italic">Nāṭyaśāstra</em>, the <em className="italic">Abhinavabhāratī</em> commentary, and allied civilisational knowledge traditions. It provides the intellectual framework, preserving textual integrity and commentarial lineage.</span>
   },
   {
-    title: 'Sādhanā',
+    title: <span><em className="italic">Sādhanā</em></span>,
     sanskrit: 'साधना',
     syllable: 'सा',
-    desc: 'Embodied learning through disciplined daily practice, movement, breath, and the refinement of perception. The physical body becomes the laboratory where theoretical knowledge is transformed into lived experience.'
+    desc: <span>Embodied learning through disciplined daily practice, movement, breath, and the refinement of perception. The physical body becomes the laboratory where theoretical knowledge is transformed into lived experience.</span>
   },
   {
-    title: 'Saṃvāda',
+    title: <span><em className="italic">Saṃvāda</em></span>,
     sanskrit: 'संवाद',
     syllable: 'सं',
-    desc: 'Dialogue rooted in humility, quiet listening, and a collective search for understanding rather than assertion. It fosters a space where scholars, practitioners, and students gather to refine their perception.'
+    desc: <span>Dialogue rooted in humility, quiet listening, and a collective search for understanding rather than assertion. It fosters a space where scholars, practitioners, and students gather to refine their perception.</span>
   },
   {
-    title: 'Paramparā',
+    title: <span><em className="italic">Paramparā</em></span>,
     sanskrit: 'परम्परा',
     syllable: 'प',
-    desc: 'Transmission of wisdom through living lineages and relationships. Rather than an academic transaction, learning is nurtured in the presence of teachers who embody the values they transmit.'
+    desc: <span>Transmission of wisdom through living lineages and relationships. Rather than an academic transaction, learning is nurtured in the presence of teachers who embody the values they transmit.</span>
   },
   {
-    title: 'Rasa',
+    title: <span><em className="italic">Rasa</em></span>,
     sanskrit: 'रस',
     syllable: 'र',
-    desc: 'The cultivation of refined aesthetic perception as the cornerstone of education, culture, and life. It represents the ultimate aesthetic delight and spiritual transcendence that Nāṭya evokes.'
+    desc: <span>The cultivation of refined aesthetic perception as the cornerstone of education, culture, and life. It represents the ultimate aesthetic delight and spiritual transcendence that <em className="italic">Nāṭya</em> evokes.</span>
   },
   {
-    title: 'Dharma',
+    title: <span><em className="italic">Dharma</em></span>,
     sanskrit: 'धर्म',
     syllable: 'ध',
-    desc: 'Orienting knowledge toward responsibility, inner order, and service. It anchors all technical skill and intellectual inquiry in ethical custodianship and contribution to the community.'
+    desc: <span>Orienting knowledge toward responsibility, inner order, and service. It anchors all technical skill and intellectual inquiry in ethical custodianship and contribution to the community.</span>
   }
 ];
 
@@ -86,13 +86,13 @@ export const About = () => {
           </Caption>
           
           <HeadingXL as="h1" className="text-4xl md:text-6xl lg:text-[74px] font-light leading-[1.08] tracking-tight">
-            A Gurukulam for Śāstra, Sādhanā, and Civilisational Renewal
+            A <em className="italic">Gurukulam</em> for <em className="italic">Śāstra</em>, <em className="italic">Sādhanā</em>, and Civilisational Renewal
           </HeadingXL>
           
           <div className="w-16 h-[1px] bg-accent-bronze/30 mx-auto my-6" />
           
           <BodyLG className="max-w-3xl mx-auto text-lg md:text-2xl text-text-secondary leading-relaxed font-sans font-light">
-            Dedicated to the study, practice, and transmission of the Nāṭyaśāstra and its allied knowledge traditions.
+            Dedicated to the study, practice, and transmission of the <em className="italic">Nāṭyaśāstra</em> and its allied knowledge traditions.
           </BodyLG>
 
           {/* Animated Scroll Down Indicator */}
@@ -135,13 +135,13 @@ export const About = () => {
             
             <div className="lg:col-span-7 space-y-6 text-text-secondary leading-relaxed font-sans font-light text-base md:text-lg">
               <p>
-                Conceived as a modern Gurukulam rooted in timeless principles, it seeks to restore an integrated model of learning in which śāstra (knowledge), sādhanā (refinement of the self through practice), and saṃvāda (dialogue) are held together within a Dhārmic framework.
+                Conceived as a modern <em className="italic">Gurukulam</em> rooted in timeless principles, it seeks to restore an integrated model of learning in which <em className="italic">śāstra</em> (knowledge), <em className="italic">sādhanā</em> (refinement of the self through practice), and <em className="italic">saṃvāda</em> (dialogue) are held together within a <em className="italic">Dhārmic</em> framework.
               </p>
               <p>
-                While grounded in the classical performing arts, the Gurukulam understands Nāṭya as far more than performance. It is embodied knowledge, a disciplined means of refining perception, cultivating rasa, strengthening ethical awareness, and shaping individuals capable of contributing meaningfully to culture and public life.
+                While grounded in the classical performing arts, the <em className="italic">Gurukulam</em> understands <em className="italic">Nāṭya</em> as far more than performance. It is embodied knowledge, a disciplined means of refining perception, cultivating <em className="italic">rasa</em>, strengthening ethical awareness, and shaping individuals capable of contributing meaningfully to culture and public life.
               </p>
               <p>
-                In an age marked by fragmentation, speed, and distraction, the Gurukulam affirms depth, attentiveness, beauty, and inward cultivation as enduring civilisational values.
+                In an age marked by fragmentation, speed, and distraction, the <em className="italic">Gurukulam</em> affirms depth, attentiveness, beauty, and inward cultivation as enduring civilisational values.
               </p>
             </div>
           </div>
@@ -155,7 +155,7 @@ export const About = () => {
             <Caption className="text-accent-bronze/70">Our Story</Caption>
             <HeadingLG className="text-3xl md:text-4xl font-light">The Path of Consecration</HeadingLG>
             <Body className="text-text-secondary text-base md:text-lg leading-relaxed font-light pt-2">
-              The Gurukulam did not emerge as an institutional project conceived at a single moment. It unfolded gradually through conversations, guidance, study, practice, and a deepening saṅkalpa.
+              The <em className="italic">Gurukulam</em> did not emerge as an institutional project conceived at a single moment. It unfolded gradually through conversations, guidance, study, practice, and a deepening <em className="italic">saṅkalpa</em>.
             </Body>
           </div>
 
@@ -169,7 +169,7 @@ export const About = () => {
               <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
                 <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
                 <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">The First Saṅkalpa</span>
+                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">The First <em className="italic">Saṅkalpa</em></span>
                   <HeadingMD className="text-xl mb-1 font-light text-text-primary">
                     <a
                       href="https://www.tattvaloka.com"
@@ -177,7 +177,7 @@ export const About = () => {
                       rel="noopener noreferrer"
                       className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
                     >
-                      Tattvāloka Onward March
+                      <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
                     </a>
                     {' '}| 2018
                   </HeadingMD>
@@ -189,15 +189,15 @@ export const About = () => {
                       rel="noopener noreferrer"
                       className="text-accent-bronze font-medium hover:underline"
                     >
-                      Tattvāloka Onward March to Rāma Rājya
+                      <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
                     </a>{' '}
-                    initiative opened an inquiry into Nāṭya, aesthetics, pedagogy, Dharma, and the renewal of public life.
+                    initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
                   </Body>
                   
                   {/* Panel discussion note */}
                   <div className="mt-4 p-3.5 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 text-left text-xs font-sans text-text-stone-grey leading-relaxed">
                     <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
-                    (L-R) Eminent scholar of Nāṭyaśāstra Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em>Rāma Rājya Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+                    (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 hidden md:block" />
@@ -208,10 +208,10 @@ export const About = () => {
                 <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
                 <div className="w-full md:w-1/2 hidden md:block" />
                 <div className="w-full md:w-1/2 md:pl-12 pl-8">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">Mārga Darśana</span>
+                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1"><em className="italic">Mārga Darśana</em></span>
                   <HeadingMD className="text-xl mb-3 font-light text-text-primary">2019–2024</HeadingMD>
                   <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    Through years of study, teaching, yoga, research, civic engagement, and sustained dialogue, the need for a dedicated Gurukulam devoted to Nāṭya as a living knowledge system gradually became clear.<br className="mb-2" />
+                    Through years of study, teaching, yoga, research, civic engagement, and sustained dialogue, the need for a dedicated <em className="italic">Gurukulam</em> devoted to <em className="italic">Nāṭya</em> as a living knowledge system gradually became clear.<br className="mb-2" />
                     Under the guidance of Padma Bhushan Dr. M. B. Athreya and Karnataka Kalashri Dr. Padmaja Suresh, the vision began to acquire pedagogical and institutional form.
                   </Body>
                 </div>
@@ -224,7 +224,7 @@ export const About = () => {
                   <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">Emergence</span>
                   <HeadingMD className="text-xl mb-3 font-light text-text-primary">The Vision Takes Form | 2025</HeadingMD>
                   <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    The saṅkalpa moved from sustained inquiry towards institutional formation, bringing together the Gurukulam's vision of śāstra, sādhanā, saṃvāda, and civilisational renewal.
+                    The <em className="italic">saṅkalpa</em> moved from sustained inquiry towards institutional formation, bringing together the <em className="italic">Gurukulam</em>'s vision of <em className="italic">śāstra</em>, <em className="italic">sādhanā</em>, <em className="italic">saṃvāda</em>, and civilisational renewal.
                   </Body>
                 </div>
                 <div className="w-full md:w-1/2 hidden md:block" />
@@ -237,7 +237,7 @@ export const About = () => {
                 <div className="w-full md:w-1/2 md:pl-12 pl-8">
                   <div className="max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-5 space-y-4">
                     <span className="font-serif italic text-accent-bronze text-xl font-medium block">Consecration</span>
-                    <HeadingMD className="text-2xl font-light text-text-primary">Pratiṣṭhā Samāroham</HeadingMD>
+                    <HeadingMD className="text-2xl font-light text-text-primary"><em className="italic">Pratiṣṭhā Samāroham</em></HeadingMD>
                     <div className="font-sans text-xs uppercase tracking-wider text-accent-bronze/80 font-semibold mb-2">
                       23 November 2025 | Navi Mumbai
                     </div>
@@ -249,7 +249,7 @@ export const About = () => {
                       decoding="async"
                     />
                     <Body className="text-text-secondary text-xs md:text-sm leading-relaxed mt-3 mb-0">
-                      The Nāṭyaśāstra Gurukulam was consecrated at Śrī Subrahmaṇya Sevā Samāj, Navi Mumbai, through a sacred gathering of Vedic invocation, consecratory rites, dance, music, reflection, and dialogue. The Pratiṣṭhā Samāroham marked not merely an inauguration, but the formal consecration of the Gurukulam's saṅkalpa.
+                      The <em className="italic">Nāṭyaśāstra Gurukulam</em> was consecrated at Śrī <em className="italic">Subrahmaṇya</em> <em className="italic">Sevā</em> <em className="italic">Samāj</em>, Navi Mumbai, through a sacred gathering of <em className="italic">Vedic</em> invocation, consecratory rites, dance, music, reflection, and dialogue. The <em className="italic">Pratiṣṭhā Samāroham</em> marked not merely an inauguration, but the formal consecration of the <em className="italic">Gurukulam</em>'s <em className="italic">saṅkalpa</em>.
                     </Body>
                   </div>
                 </div>
@@ -259,11 +259,11 @@ export const About = () => {
               <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
                 <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
                 <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">Sthāpanā</span>
+                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1"><em className="italic">Sthāpanā</em></span>
                   <HeadingMD className="text-xl mb-3 font-light text-text-primary">Today</HeadingMD>
                   <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    The Gurukulam now enters its phase of sthāpanā, patiently establishing its pedagogical foundations, research, relationships, and institutional rhythm.<br className="mb-1" />
-                    Its work unfolds through sādhanā, study, dialogue, publication, and service, with growth guided by readiness rather than urgency.
+                    The <em className="italic">Gurukulam</em> now enters its phase of <em className="italic">sthāpanā</em>, patiently establishing its pedagogical foundations, research, relationships, and institutional rhythm.<br className="mb-1" />
+                    Its work unfolds through <em className="italic">sādhanā</em>, study, dialogue, publication, and service, with growth guided by readiness rather than urgency.
                   </Body>
                 </div>
                 <div className="w-full md:w-1/2 hidden md:block" />
@@ -284,18 +284,18 @@ export const About = () => {
             </span>
 
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#6B1D1E] leading-[1.3] font-normal tracking-wide max-w-3xl mx-auto uppercase">
-              AN INSTITUTION CONTRIBUTING, IN PERPETUITY, TO THE DHĀRMIC RENEWAL OF PUBLIC LIFE IN INDIA AND BEYOND—THROUGH GRADUATES WHO EMBODY THE SPIRIT OF RĀMA RĀJYAM, WITH A SĀTVIC BLEND OF DHARMA, SEVĀ, SELF-TRANSCENDENCE, AND AESTHETIC LEADERSHIP.
+              AN INSTITUTION CONTRIBUTING, IN PERPETUITY, TO THE <em className="italic">DHĀRMIC</em> RENEWAL OF PUBLIC LIFE IN INDIA AND BEYOND—THROUGH GRADUATES WHO EMBODY THE SPIRIT OF <em className="italic">RĀMA RĀJYAM</em>, WITH A <em className="italic">SĀTVIC</em> BLEND OF <em className="italic">DHARMA</em>, <em className="italic">SEVĀ</em>, SELF-TRANSCENDENCE, AND AESTHETIC LEADERSHIP.
             </h2>
 
             <LotusDivider className="my-6" />
 
             <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#7A5428] leading-relaxed max-w-2xl mx-auto font-light">
-              Rooted in Nāṭyaśāstra and its allied disciplines, the Gurukulam nurtures custodians of rasa, rhythm, and responsibility—where presence is pedagogy, and governance flows from inner rhythm.
+              Rooted in <em className="italic">Nāṭyaśāstra</em> and its allied disciplines, the <em className="italic">Gurukulam</em> nurtures custodians of <em className="italic">rasa</em>, rhythm, and responsibility—where presence is pedagogy, and governance flows from inner rhythm.
             </p>
 
             <div className="pt-6 border-t border-[#9E743B]/20 mt-6 max-w-md mx-auto">
               <span className="font-serif text-xs uppercase tracking-[0.2em] text-[#9E743B] block">
-                Consecrated through the Pratiṣṭhā Samāroham
+                Consecrated through the <em className="italic">Pratiṣṭhā Samāroham</em>
               </span>
               <span className="font-sans text-[11px] text-[#4A423B] tracking-wider block mt-1">
                 23 November 2025 • Navi Mumbai
@@ -402,7 +402,7 @@ export const About = () => {
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <Caption className="text-[#9E743B] tracking-[0.3em]">A Living Knowledge Tradition</Caption>
             <HeadingLG className="text-3xl md:text-5xl font-light text-[#6B1D1E]">
-              Why the Nāṭyaśāstra?
+              Why the <em className="italic">Nāṭyaśāstra</em>?
             </HeadingLG>
             <p className="font-serif italic text-base text-[#7A5428]">
               It brings together aesthetics, ethics, pedagogy, psychology, philosophy, and social order within a single coherent vision of human formation.
@@ -423,7 +423,7 @@ export const About = () => {
                   {/* Center Circle: NĀṬYAŚĀSTRA */}
                   <div className="relative z-20 w-32 h-32 rounded-full bg-[#6B1D1E] text-white flex flex-col items-center justify-center text-center p-2 shadow-xl border-2 border-[#9E743B]">
                     <LotusIcon className="w-6 h-6 text-[#9E743B] mb-0.5" fill="currentColor" />
-                    <span className="font-serif text-sm font-semibold tracking-wider">Nāṭyaśāstra</span>
+                    <span className="font-serif text-sm font-semibold tracking-wider"><em className="italic">Nāṭyaśāstra</em></span>
                   </div>
 
                   {/* 6 Orbiting Nodes */}
@@ -454,14 +454,14 @@ export const About = () => {
                   Core Pedagogic Formation
                 </span>
                 <p className="font-serif italic text-base text-[#6B1D1E] leading-relaxed">
-                  "The Gurukulam forms Player–Performers–Practitioners who understand Nāṭya as a discipline of becoming before it is an act of performance."
+                  "The <em className="italic">Gurukulam</em> forms Player–Performers–Practitioners who understand <em className="italic">Nāṭya</em> as a discipline of becoming before it is an act of performance."
                 </p>
               </ProspectusFrame>
 
               <div className="space-y-4 text-[#4A423B] font-sans text-sm leading-relaxed font-light">
-                <p>
-                  The Gurukulam does not seek to apply modern leadership theories to the Nāṭyaśāstra. It seeks to allow the Nāṭyaśāstra itself to shape a new understanding of leadership, education, and public life.
-                </p>
+                  <p>
+                    The <em className="italic">Gurukulam</em> does not seek to apply modern leadership theories to the <em className="italic">Nāṭyaśāstra</em>. It seeks to allow the <em className="italic">Nāṭyaśāstra</em> itself to shape a new understanding of leadership, education, and public life.
+                  </p>
               </div>
             </div>
 
@@ -478,7 +478,7 @@ export const About = () => {
                 src="/assets/images/sishyas_natya_seva_thumb.webp"
                 alt="Nāṭya practitioners undergoing immersion and training"
                 aspectRatio="aspect-[4/5]"
-                caption="Nāṭya practitioners being trained in a temple Gurukulam"
+                caption={<span><em className="italic">Nāṭya</em> practitioners being trained in a temple <em className="italic">Gurukulam</em></span>}
                 copyright="Gurukulam Tradition"
               />
             </div>
@@ -489,7 +489,7 @@ export const About = () => {
               </HeadingLG>
               <div className="w-12 h-[1px] bg-accent-bronze/20" />
               <Body className="text-text-secondary leading-relaxed font-sans font-light">
-                A Gurukulam is a place where knowledge is transmitted through relationship rather than information alone; where study is inseparable from practice; where dialogue is grounded in humility; and where education seeks to shape character as much as competence.
+                A <em className="italic">Gurukulam</em> is a place where knowledge is transmitted through relationship rather than information alone; where study is inseparable from practice; where dialogue is grounded in humility; and where education seeks to shape character as much as competence.
               </Body>
               <Body className="text-text-secondary leading-relaxed font-sans font-light">
                 Learning unfolds through living relationships, shared practice, quiet dialogue, and a deep reverence for the lineage, preserving the authentic transmission across generations.
@@ -525,7 +525,7 @@ export const About = () => {
                 <div className="space-y-2">
                   <h4 className="font-serif text-lg leading-tight text-text-primary">Padma Bhushan Dr. M. B. Athreya</h4>
                   <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                    Pioneer of the Indian Management Movement. A distinguished thinker who seeks to integrate modern organisational systems with Dhārmic vision.
+                    Pioneer of the Indian Management Movement. A distinguished thinker who seeks to integrate modern organisational systems with <em className="italic">Dhārmic</em> vision.
                   </p>
                 </div>
               </div>
@@ -544,7 +544,7 @@ export const About = () => {
                 <div className="space-y-2">
                   <h4 className="font-serif text-lg leading-tight text-text-primary">Karnataka Kalashri Dr. Padmaja Suresh</h4>
                   <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                    Acclaimed danseuse, scholar, and author whose life's work bridges classical training with deep research into the relationship between Nāṭya and Sādhanā.
+                    Acclaimed danseuse, scholar, and author whose life's work bridges classical training with deep research into the relationship between <em className="italic">Nāṭya</em> and <em className="italic">Sādhanā</em>.
                   </p>
                 </div>
               </div>
@@ -563,7 +563,7 @@ export const About = () => {
                 <div className="space-y-2">
                   <h4 className="font-serif text-lg leading-tight text-text-primary">Śrī K. V. Subrahmoṇyan</h4>
                   <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                    Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi. Offers Vedāntic clarity, gentle witnessing presence, and spiritual anchoring.
+                    Revered disciple in the lineage of <em className="italic">Bhagavān</em> Śrī <em className="italic">Ramaṇa</em> <em className="italic">Maharṣi</em>. Offers <em className="italic">Vedāntic</em> clarity, gentle witnessing presence, and spiritual anchoring.
                   </p>
                 </div>
               </div>
@@ -588,7 +588,7 @@ export const About = () => {
                   </span>
                   <h4 className="font-serif text-xl leading-tight text-text-primary">Rohit Viswanath</h4>
                   <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                    Serves the Gurukulam as Yajamāna & Yojaka, stewarding the consecrated saṅkalpa with fidelity, humility, and care to facilitate institutional form.
+                    Serves the <em className="italic">Gurukulam</em> as <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>, stewarding the consecrated <em className="italic">saṅkalpa</em> with fidelity, humility, and care to facilitate institutional form.
                   </p>
                 </div>
               </div>
@@ -602,7 +602,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Foundational Framework</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light">The Six Pillars of Nāṭya</HeadingLG>
+            <HeadingLG className="text-3xl md:text-4xl font-light">The Six Pillars of <em className="italic">Nāṭya</em></HeadingLG>
             <p className="font-sans text-xs uppercase tracking-wider text-text-secondary/70">
               <span className="hidden md:inline">Hover or click nodes to explore the dimensions</span>
               <span className="md:hidden text-accent-bronze font-semibold">Swipe horizontal to explore →</span>
@@ -657,7 +657,7 @@ export const About = () => {
                   x="210"
                   y="215"
                   textAnchor="middle"
-                  className="font-serif text-[11px] font-medium tracking-[0.25em] fill-accent-bronze select-none"
+                  className="font-serif text-[11px] font-medium tracking-[0.25em] fill-accent-bronze select-none italic"
                 >
                   NĀṬYA
                 </text>
@@ -711,7 +711,7 @@ export const About = () => {
                         x={node.labelX}
                         y={node.labelY}
                         textAnchor={node.anchor}
-                        className={`font-sans text-[10px] uppercase tracking-[0.2em] select-none transition-colors duration-300 ${
+                        className={`font-sans text-[10px] uppercase tracking-[0.2em] select-none transition-colors duration-300 italic ${
                           isActive ? 'fill-accent-bronze font-semibold' : 'fill-text-secondary'
                         }`}
                       >
@@ -800,7 +800,7 @@ export const About = () => {
               {/* Block 1 */}
               <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">01</span>
-                <HeadingMD className="text-lg md:text-xl font-light">Nāṭya as Civilisational Knowledge</HeadingMD>
+                <HeadingMD className="text-lg md:text-xl font-light"><em className="italic">Nāṭya</em> as Civilisational Knowledge</HeadingMD>
                 <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
                   Approaching performance not as mere entertainment or choreographic technique, but as a complete system of aesthetics, psychology, and public ethics.
                 </Body>
@@ -811,7 +811,7 @@ export const About = () => {
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">02</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Research & Publications</HeadingMD>
                 <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
-                  Focusing on translating, annotating, and publishing critical commentaries on commentarial traditions like Abhinavabhāratī.
+                  Focusing on translating, annotating, and publishing critical commentaries on commentarial traditions like <em className="italic">Abhinavabhāratī</em>.
                 </Body>
               </div>
 
@@ -838,7 +838,7 @@ export const About = () => {
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">05</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Civilisational Dialogue</HeadingMD>
                 <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
-                  Hosting Saṃvāda circles between traditional masters, contemporary artists, philosophers, and policy makers to bridge ancient ideas with public life.
+                  Hosting <em className="italic">Saṃvāda</em> circles between traditional masters, contemporary artists, philosophers, and policy makers to bridge ancient ideas with public life.
                 </Body>
               </div>
 
@@ -871,13 +871,13 @@ export const About = () => {
             </div>
             <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-10 pb-3 md:pb-0">
               {[
-                { id: 'I.', title: 'Study of Nāṭyaśāstra', desc: 'Rigorous study of the Nāṭyaśāstra text and its commentarial traditions, particularly Abhinavabhāratī.' },
-                { id: 'II.', title: 'Embodied Practice', desc: 'Embodied practice and Nāṭya as a path of inner spiritual refinement and conscious movement.' },
+                { id: 'I.', title: <span>Study of <em className="italic">Nāṭyaśāstra</em></span>, desc: <span>Rigorous study of the <em className="italic">Nāṭyaśāstra</em> text and its commentarial traditions, particularly <em className="italic">Abhinavabhāratī</em>.</span> },
+                { id: 'II.', title: 'Embodied Practice', desc: <span>Embodied practice and <em className="italic">Nāṭya</em> as a path of inner spiritual refinement and conscious movement.</span> },
                 { id: 'III.', title: 'Pedagogy', desc: 'Designing educational methodologies that treat artistic transmission as character formation.' },
                 { id: 'IV.', title: 'Research & Publications', desc: 'Publishing academic journals, commentaries, and research monographs on classical Indian aesthetics.' },
                 { id: 'V.', title: 'Archives', desc: 'Collecting, preserving, and providing stewardship for manuscripts, audio-visual archives, and treatises.' },
-                { id: 'VI.', title: 'Dialogue', desc: 'Fostering Saṃvāda (dialogue) among scholars, educators, institutions, and contemporary performers.' },
-                { id: 'VII.', title: 'Leadership & Consulting', desc: 'Applying Dhārmic principles of alignment and rhythm to institutional design and leadership mentoring.' }
+                { id: 'VI.', title: 'Dialogue', desc: <span>Fostering <em className="italic">Saṃvāda</em> (dialogue) among scholars, educators, institutions, and contemporary performers.</span> },
+                { id: 'VII.', title: 'Leadership & Consulting', desc: <span>Applying <em className="italic">Dhārmic</em> principles of alignment and rhythm to institutional design and leadership mentoring.</span> }
               ].map((item) => (
                 <div key={item.id} className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl flex gap-3.5 items-start">
                   <span className="font-serif italic text-accent-bronze text-sm font-semibold tracking-wider pt-1">{item.id}</span>
@@ -913,7 +913,7 @@ export const About = () => {
                 { title: 'Silence and Listening', desc: 'Deep attention is the foundation of learning.' },
                 { title: 'Reverence for Lineage', desc: 'Knowledge is received with gratitude and transmitted with responsibility.' },
                 { title: 'Patience before Expansion', desc: 'Growth follows readiness rather than urgency.' },
-                { title: 'Education for Custodianship', desc: 'Students are formed not merely as practitioners, but as future custodians of Nāṭya and Dharma.' }
+                { title: 'Education for Custodianship', desc: <span>Students are formed not merely as practitioners, but as future custodians of <em className="italic">Nāṭya</em> and <em className="italic">Dharma</em>.</span> }
               ].map((ethos) => (
                 <div key={ethos.title} className="flex-none w-[82%] md:w-auto snap-start p-5 sm:p-6 border border-accent-bronze/15 rounded-xl bg-white md:bg-bg-parchment/10 space-y-2.5 shadow-sm md:shadow-none">
                   <h4 className="font-serif text-base sm:text-lg text-text-primary font-light leading-snug">{ethos.title}</h4>
@@ -929,14 +929,14 @@ export const About = () => {
       <Section className="py-24 md:py-32 bg-bg-ivory" background="none" container={true} yOffset={0}>
         <div className="max-w-3xl mx-auto text-center space-y-16">
           <div className="space-y-4 font-serif italic text-xl md:text-2xl text-accent-bronze tracking-wide leading-relaxed">
-            <p className="m-0">The journey begins with Śāstra.</p>
-            <p className="m-0">It deepens through Sādhanā.</p>
-            <p className="m-0">It flowers in Saṃvāda.</p>
-            <p className="m-0">It is offered in Sevā.</p>
+            <p className="m-0">The journey begins with <em className="italic">Śāstra</em>.</p>
+            <p className="m-0">It deepens through <em className="italic">Sādhanā</em>.</p>
+            <p className="m-0">It flowers in <em className="italic">Saṃvāda</em>.</p>
+            <p className="m-0">It is offered in <em className="italic">Sevā</em>.</p>
           </div>
           
           <div className="pt-12 border-t border-accent-bronze/10 max-w-xs mx-auto">
-            <p className="font-serif text-[13px] tracking-[0.2em] text-text-primary uppercase m-0">Nāṭyaśāstra Gurukulam</p>
+            <p className="font-serif text-[13px] tracking-[0.2em] text-text-primary uppercase m-0"><em className="italic">Nāṭyaśāstra Gurukulam</em></p>
             <p className="font-sans text-[10px] tracking-[0.15em] text-text-secondary/60 uppercase mt-2 mb-0">Navi Mumbai • Established 2025</p>
           </div>
         </div>

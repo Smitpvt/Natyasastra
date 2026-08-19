@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import interimEmblem from '../assets/Interim emblem1-Photoroom.png';
+
 
 export const Footer = () => {
   return (
@@ -9,9 +11,16 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 pb-16 sm:pb-24">
           {/* Column 1: Logo & Brief Description */}
           <div className="space-y-6">
-            <span className="font-serif text-[22px] tracking-wide text-[#211F1D] block">
-              Nāṭyaśāstra Gurukulam
-            </span>
+            <Link to="/" className="flex items-center gap-3 group select-none">
+              <img
+                src={interimEmblem}
+                alt="Nāṭyaśāstra Gurukulam Emblem"
+                className="h-12 w-auto object-contain"
+              />
+              <span className="font-serif text-[22px] tracking-wide text-[#211F1D] block italic">
+                Nāṭyaśāstra Gurukulam
+              </span>
+            </Link>
             <p className="font-sans text-[14px] leading-relaxed text-[#757069] font-light max-w-xs">
               A heritage institution dedicated to the study, somatic reconstruction, and preservation of classical Indian performing arts and aesthetic systems.
             </p>
@@ -67,7 +76,7 @@ export const Footer = () => {
         {/* Thin Divider above copyright */}
         <div className="border-t border-[#E0D8CE]/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="font-sans text-[11px] text-[#757069]/60 uppercase tracking-widest">
-            © {new Date().getFullYear()} Nāṭyaśāstra Gurukulam. All rights reserved.
+            © {new Date().getFullYear()} <span className="italic">Nāṭyaśāstra Gurukulam</span>. All rights reserved.
           </span>
           <span className="font-serif text-[12px] text-accent-bronze/70 italic tracking-widest">
             Śāstra • Sādhanā • Saṃvāda

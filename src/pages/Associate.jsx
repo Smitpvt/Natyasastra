@@ -49,7 +49,7 @@ export const Associate = () => {
                 <Caption className="text-[#9E743B]">Foundational Endowments</Caption>
                 <HeadingMD className="text-2xl text-[#6B1D1E]">The Circles of Permanence</HeadingMD>
                 <p className="font-sans text-xs text-[#4A423B] font-light leading-relaxed">
-                  Five concentric spheres of custodianship sustaining the Gurukulam in perpetuity.
+                  Five concentric spheres of custodianship sustaining the <em className="italic">Gurukulam</em> in perpetuity.
                 </p>
               </div>
 
@@ -59,8 +59,8 @@ export const Associate = () => {
                   { num: 'I.', title: 'PERPETUITY FUND', desc: 'Sustaining the institution that makes all this possible.' },
                   { num: 'II.', title: 'CUSTODIAN SCHOLARSHIP FUND', desc: 'Sustaining the people who carry the tradition forward.' },
                   { num: 'III.', title: 'CIVILISATIONAL INQUIRY FUND', desc: 'Sustaining ideas that inform leadership and public life.' },
-                  { num: 'IV.', title: 'NĀṬYĀLOKA FUND', desc: 'Sustaining the voice that preserves and shares our inheritance.' },
-                  { num: 'V.', title: 'INSTITUTIONAL ENDOWMENT FUND', desc: 'Enabling the Gurukulam’s perpetual continuity and expansion.' }
+                  { num: 'IV.', title: <span><em className="italic">NĀṬYĀLOKA</em> FUND</span>, desc: 'Sustaining the voice that preserves and shares our inheritance.' },
+                  { num: 'V.', title: 'INSTITUTIONAL ENDOWMENT FUND', desc: <span>Enabling the <em className="italic">Gurukulam</em>’s perpetual continuity and expansion.</span> }
                 ].map((circle, i) => (
                   <div 
                     key={circle.title}
@@ -131,7 +131,7 @@ export const Associate = () => {
           
           <div className="space-y-2">
             <span className="font-serif italic text-3xl sm:text-4xl text-[#6B1D1E] font-medium block">
-              Śubham
+              <em className="italic">Śubham</em>
             </span>
             <LotusDivider className="my-3" />
           </div>
@@ -147,7 +147,7 @@ export const Associate = () => {
           <div className="space-y-4 font-serif text-lg sm:text-xl md:text-2xl text-[#4A423B] font-light leading-relaxed max-w-xl mx-auto">
             <p className="m-0">Some institutions are built for a generation.</p>
             <p className="m-0 font-medium text-[#6B1D1E]">Others are entrusted to generations.</p>
-            <p className="m-0 italic text-base sm:text-lg pt-2 text-[#7A5428]">Nāṭyaśāstra Gurukulam has been founded in that spirit.</p>
+            <p className="m-0 italic text-base sm:text-lg pt-2 text-[#7A5428]"><em className="italic">Nāṭyaśāstra Gurukulam</em> has been founded in that spirit.</p>
           </div>
 
           <div className="pt-6">
@@ -158,7 +158,7 @@ export const Associate = () => {
 
           <div className="pt-8 border-t border-[#9E743B]/20 max-w-xs mx-auto text-center space-y-1">
             <span className="font-serif text-xs uppercase tracking-[0.2em] font-bold text-[#6B1D1E] block">
-              NĀṬYAŚĀSTRA GURUKULAM
+              <em className="italic">NĀṬYAŚĀSTRA GURUKULAM</em>
             </span>
             <span className="font-sans text-[10px] uppercase tracking-widest text-[#7A5428] block">
               A Centre for Civilisational Statecraft

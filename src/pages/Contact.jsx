@@ -87,7 +87,7 @@ export const Contact = () => {
                   Register Interest
                 </HeadingMD>
                 <p className="font-serif italic text-sm text-[#757069]">
-                  Submit your statement of intent to engage with the Gurukulam
+                  Submit your statement of intent to engage with the <em className="italic">Gurukulam</em>
                 </p>
               </div>
 
@@ -100,7 +100,7 @@ export const Contact = () => {
                   className="py-12 px-6 text-center space-y-4 rounded-xl bg-[#F8F6F1] border border-accent-bronze/30"
                 >
                   <span className="font-serif italic text-xl text-accent-bronze block">
-                    "Samyak vicāritam — We have received your intent."
+                    “<em className="italic">Samyak</em> <em className="italic">vicāritam</em> — We have received your intent.”
                   </span>
                   <p className="font-sans text-sm text-text-stone-grey font-light max-w-md mx-auto leading-relaxed">
                     Your inquiry has been logged in our archives. We will review your background and statement of intent, and reply within seven days.

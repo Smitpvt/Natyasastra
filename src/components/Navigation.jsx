@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import interimEmblem from '../assets/Interim emblem1-Photoroom.png';
+
 
 const NAV_ITEMS = [
   { name: 'Home', path: '/' },
@@ -42,11 +44,16 @@ export const Navigation = () => {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[80px] w-full flex justify-between items-center xl:grid xl:grid-cols-3">
           {/* Logo - Left */}
           <div className="flex justify-start">
-            <Link to="/" className="flex flex-col group select-none">
+            <Link to="/" className="flex items-center gap-3 group select-none">
+              <img
+                src={interimEmblem}
+                alt="Nāṭyaśāstra Gurukulam Emblem"
+                className="h-10 w-auto object-contain"
+              />
               <span className={`font-serif text-[18px] xs:text-[20px] md:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
                 isScrolled ? 'text-[#211F1D] hover:text-accent-bronze' : isHeroPage ? 'text-white hover:text-[#E0D8CE]' : 'text-[#211F1D] hover:text-accent-bronze'
               }`}>
-                Nāṭyaśāstra Gurukulam
+                <span className="italic">Nāṭyaśāstra Gurukulam</span>
               </span>
             </Link>
           </div>

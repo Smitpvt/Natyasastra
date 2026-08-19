@@ -81,7 +81,7 @@ const YATRI_PATHWAY = [
   {
     num: '01',
     title: 'Residential Formation',
-    desc: 'Immersive training in pedagogy, Nāṭyaśāstra, repertoire, Dhārmic leadership, community engagement, and the Mārga.'
+    desc: <span>Immersive training in pedagogy, <em className="italic">Nāṭyaśāstra</em>, repertoire, <em className="italic">Dhārmic</em> leadership, community engagement, and the <em className="italic">Mārga</em>.</span>
   },
   {
     num: '02',
@@ -91,12 +91,12 @@ const YATRI_PATHWAY = [
   {
     num: '03',
     title: 'Community Stewardship',
-    desc: 'Carrying the Mārga into communities through teaching, cultural programmes, workshops, and outreach.'
+    desc: <span>Carrying the <em className="italic">Mārga</em> into communities through teaching, cultural programmes, workshops, and outreach.</span>
   },
   {
     num: '04',
     title: 'Continuing Alignment',
-    desc: 'Continuing education, mentorship, review, certification, peer learning, and Yātri gatherings.'
+    desc: <span>Continuing education, mentorship, review, certification, peer learning, and <em className="italic">Yātri</em> gatherings.</span>
   }
 ];
 
@@ -125,7 +125,7 @@ const STATECRAFT_AREAS = [
   {
     code: 'CULT',
     title: 'Cultural & Aesthetic Research',
-    desc: 'Nāṭya, rasa, pedagogy, cultural memory, aesthetic leadership, and the relationship between culture and public life.'
+    desc: <span><em className="italic">Nāṭya</em>, <em className="italic">rasa</em>, pedagogy, cultural memory, aesthetic leadership, and the relationship between culture and public life.</span>
   }
 ];
 
@@ -141,8 +141,8 @@ const DIRECT_ENGAGEMENTS = [
   },
   {
     title: 'Study Circles',
-    subtitle: 'Sustained inquiry into Śāstra',
-    desc: 'Small-group engagements with selected texts, concepts, and questions through listening, reflection, questioning, and dialogue. Areas include the Nāṭyaśāstra, Abhinavabhāratī, rasa, bhāva, and Indian aesthetics.',
+    subtitle: <span>Sustained inquiry into <em className="italic">Śāstra</em></span>,
+    desc: <span>Small-group engagements with selected texts, concepts, and questions through listening, reflection, questioning, and dialogue. Areas include the <em className="italic">Nāṭyaśāstra</em>, <em className="italic">Abhinavabhāratī</em>, <em className="italic">rasa</em>, <em className="italic">bhāva</em>, and Indian aesthetics.</span>,
     mode: 'In Person',
     image: '/assets/images/sthapatya_thumb.webp',
     objectPos: 'object-center'
@@ -150,15 +150,15 @@ const DIRECT_ENGAGEMENTS = [
   {
     title: 'Workshops',
     subtitle: 'From knowledge to embodied understanding',
-    desc: 'Focused engagements bringing selected principles of Nāṭya into practice through movement, abhinaya, rasa, rhythm, aesthetic perception, contemplative practice, and pedagogy.',
+    desc: <span>Focused engagements bringing selected principles of <em className="italic">Nāṭya</em> into practice through movement, <em className="italic">abhinaya</em>, <em className="italic">rasa</em>, rhythm, aesthetic perception, contemplative practice, and pedagogy.</span>,
     mode: 'In Person',
     image: '/assets/images/yajna_thumb.webp',
     objectPos: 'object-center'
   },
   {
     title: 'Lecture & Dialogue Series',
-    subtitle: 'The Sabhā as a space for inquiry',
-    desc: 'Encounters with artistes, scholars, teachers, thinkers, and knowledge holders addressing Nāṭyaśāstra, aesthetics, pedagogy, culture, civilisational thought, ethics, and leadership.',
+    subtitle: <span>The <em className="italic">Sabhā</em> as a space for inquiry</span>,
+    desc: <span>Encounters with artistes, scholars, teachers, thinkers, and knowledge holders addressing <em className="italic">Nāṭyaśāstra</em>, aesthetics, pedagogy, culture, civilisational thought, ethics, and leadership.</span>,
     mode: 'In Person',
     image: '/assets/images/prof_ramasubramanian_thumb.webp',
     objectPos: 'object-[center_20%]'
@@ -174,7 +174,7 @@ const DIRECT_ENGAGEMENTS = [
   {
     title: 'Institutional Engagements',
     subtitle: 'Bringing the inquiry into institutional life',
-    desc: 'Bespoke engagements with educational, cultural, corporate, and other institutions exploring aesthetic leadership, embodied learning, ethical formation, and Dhārmic approaches to organisational life.',
+    desc: <span>Bespoke engagements with educational, cultural, corporate, and other institutions exploring aesthetic leadership, embodied learning, ethical formation, and <em className="italic">Dhārmic</em> approaches to organisational life.</span>,
     mode: 'Bespoke • In Person',
     image: '/assets/images/brochure_release_thumb.webp',
     objectPos: 'object-[center_20%]'
@@ -268,15 +268,15 @@ export const ProgrammesDetail = () => {
               </div>
 
               <HeadingLG as="h1" className="text-4xl sm:text-5xl lg:text-[58px] font-serif font-light leading-[1.08] tracking-tight">
-                From Śāstra to Sādhanā, <br className="hidden sm:block" />
-                from Sādhanā to Sevā
+                From <em className="italic">Śāstra</em> to <em className="italic">Sādhanā</em>, <br className="hidden sm:block" />
+                from <em className="italic">Sādhanā</em> to <em className="italic">Sevā</em>
               </HeadingLG>
 
               <div className="w-20 h-[1px] bg-accent-bronze/40" />
 
               <div className="space-y-4 font-sans text-base md:text-lg text-text-stone-grey leading-relaxed font-light">
                 <p>
-                  The programmes of Nāṭyaśāstra Gurukulam arise from the Gurukulam's Mārga—a path of study, practice, inner refinement, and service.
+                  The programmes of <em className="italic">Nāṭyaśāstra Gurukulam</em> arise from the Gurukulam's <em className="italic">Mārga</em>—a path of study, practice, inner refinement, and service.
                 </p>
                 <p>
                   They are designed not simply to impart skills, but to create spaces where <span className="font-medium text-[#211F1D] italic font-serif">śāstra</span> (textual wisdom), <span className="font-medium text-[#211F1D] italic font-serif">sādhanā</span> (embodied discipline), and <span className="font-medium text-[#211F1D] italic font-serif">saṃvāda</span> (contemplative dialogue) converge.
@@ -321,7 +321,7 @@ export const ProgrammesDetail = () => {
                     Living Transmission
                   </span>
                   <p className="font-serif text-base font-light leading-snug">
-                    Nāṭya Seva offering during the Pratishtha Samaroham
+                    <em className="italic">Nāṭya Seva</em> offering during the <em className="italic">Pratiṣṭhā Samāroham</em>
                   </p>
                 </div>
               </motion.div>
@@ -339,14 +339,14 @@ export const ProgrammesDetail = () => {
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <Caption className="text-accent-bronze tracking-[0.3em]">Foundational Framework</Caption>
             <HeadingLG className="text-3xl sm:text-4xl md:text-5xl font-serif font-light">
-              The Mārga & The Pedagogical Spiral
+              The <em className="italic">Mārga</em> & The Pedagogical Spiral
             </HeadingLG>
             <p className="font-sans text-xs sm:text-sm text-accent-bronze font-semibold uppercase tracking-[0.2em]">
               The Path that gives the Gurukulam its direction
             </p>
             <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto my-4" />
             <Body className="text-base text-text-stone-grey leading-relaxed font-light">
-              The Mārga is the governing path of Nāṭyaśāstra Gurukulam. Click or hover on any node around the mandala to explore the dimensions of the pedagogical spiral.
+              The <em className="italic">Mārga</em> is the governing path of <em className="italic">Nāṭyaśāstra Gurukulam</em>. Click or hover on any node around the mandala to explore the dimensions of the pedagogical spiral.
             </Body>
           </div>
 
@@ -401,7 +401,7 @@ export const ProgrammesDetail = () => {
                   x="210"
                   y="214"
                   textAnchor="middle"
-                  className="font-serif text-[12px] font-medium tracking-[0.25em] fill-accent-bronze select-none"
+                  className="font-serif text-[12px] font-medium tracking-[0.25em] fill-accent-bronze select-none italic"
                 >
                   MĀRGA
                 </text>
@@ -440,7 +440,7 @@ export const ProgrammesDetail = () => {
                           isActive ? 'fill-accent-bronze font-bold' : 'fill-text-stone-grey/80'
                         }`}
                       >
-                        {node.syllable}
+                        <em className="italic">{node.syllable}</em>
                       </text>
 
                       {/* Node Outer Name Label */}
@@ -448,7 +448,7 @@ export const ProgrammesDetail = () => {
                         x={node.labelX}
                         y={node.labelY}
                         textAnchor={node.anchor}
-                        className={`font-sans text-[10px] font-semibold uppercase tracking-[0.2em] transition-all duration-300 ${
+                        className={`font-sans text-[10px] font-semibold uppercase tracking-[0.2em] transition-all duration-300 italic ${
                           isActive ? 'fill-accent-bronze' : 'fill-[#757069]/70'
                         }`}
                       >
@@ -700,7 +700,7 @@ export const ProgrammesDetail = () => {
                         <BrassDiyaIcon className="w-6 h-6" glow={true} />
                       </div>
                       <span className="font-serif italic text-xs font-medium text-[#6B1D1E] mt-1 bg-white/80 px-2 py-0.5 rounded shadow-2xs border border-[#9E743B]/20">
-                        {lamp.name}
+                        <em className="italic">{lamp.name}</em>
                       </span>
                     </div>
                   );
@@ -890,7 +890,7 @@ export const ProgrammesDetail = () => {
               From Inner Refinement to Civilisational Renewal
             </HeadingLG>
             <BodyLG className="text-text-stone-grey font-light">
-              The Mārga does not end with the individual. Its work unfolds through three widening realms of impact.
+              The <em className="italic">Mārga</em> does not end with the individual. Its work unfolds through three widening realms of impact.
             </BodyLG>
           </div>
 
@@ -921,7 +921,7 @@ export const ProgrammesDetail = () => {
                     </div>
 
                     <div>
-                      <h3 className="font-serif text-2xl font-semibold text-[#211F1D]">
+                      <h3 className="font-serif text-2xl font-semibold text-[#211F1D] italic">
                         {realm.realm}
                       </h3>
                       <p className="font-sans text-xs text-accent-bronze uppercase tracking-wider font-semibold mt-1">

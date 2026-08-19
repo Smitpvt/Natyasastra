@@ -7,15 +7,15 @@ import AutoScrollContainer from '../../components/AutoScrollContainer';
 const GALLERY_HIGHLIGHTS = [
   {
     title: 'Consecration of the Vision Statement',
-    subtitle: 'Pratiṣṭhā Samaroham • Nov 23, 2025',
+    subtitle: <span><em className="italic">Pratiṣṭhā Samāroham</em> • Nov 23, 2025</span>,
     image: '/assets/images/vision_statement_thumb.webp',
-    desc: 'The sacred consecration of the Gurukulam Vision Statement, establishing the Dhārmic axis of Śāstra, Sādhanā, and Saṃvāda.'
+    desc: <span>The sacred consecration of the <em className="italic">Gurukulam</em> Vision Statement, establishing the <em className="italic">Dhārmic</em> axis of <em className="italic">Śāstra</em>, <em className="italic">Sādhanā</em>, and <em className="italic">Saṃvāda</em>.</span>
   },
   {
     title: 'Mukhyatithi Prof. K. Ramasubramanian',
     subtitle: 'Distinguished Guest & Scholars',
     image: '/assets/images/prof_ramasubramanian_thumb.webp',
-    desc: 'Revered scholar Prof. K. Ramasubramanian with Ācāryā Dr. Padmaja Suresh during the auspicious inauguration.'
+    desc: <span>Revered scholar Prof. K. Ramasubramanian with <em className="italic">Ācāryā</em> Dr. Padmaja Suresh during the auspicious inauguration.</span>
   },
   {
     title: 'Release of the Gurukulam Brochure',
@@ -24,10 +24,10 @@ const GALLERY_HIGHLIGHTS = [
     desc: 'Formal release of the institutional brochure outlining the pedagogical roadmap and aesthetic vision.'
   },
   {
-    title: 'Nāṭya Sevā & Dance Offering',
-    subtitle: 'Somatic Sādhanā in Practice',
+    title: <span><em className="italic">Nāṭya Sevā</em> & Dance Offering</span>,
+    subtitle: <span>Somatic <em className="italic">Sādhanā</em> in Practice</span>,
     image: '/assets/images/dance_offering_thumb.webp',
-    desc: 'Sacred dance offerings by disciples of Smt. Charanya Gurusathya during the Pratishtha Samaroham.'
+    desc: <span>Sacred dance offerings by disciples of Smt. Charanya Gurusathya during the <em className="italic">Pratiṣṭhā Samāroham</em>.</span>
   }
 ];
 
@@ -46,7 +46,7 @@ export const PratishthaSection = () => {
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#6B1D1E] font-light">
-              Pratiṣṭhā Samaroham Highlights
+              <em className="italic">Pratiṣṭhā Samāroham</em> Highlights
             </h2>
             <p className="font-serif italic text-base text-[#7A5428]">
               Moments from the sacred consecration ceremony on November 23, 2025.

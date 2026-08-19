@@ -19,7 +19,7 @@ export const Home = () => {
       'alternateName': 'Natyasastra Gurukulam',
       'description': 'An institution dedicated to the study, practice, and somatic reconstruction of classical Indian performing arts and aesthetic leadership.',
       'url': typeof window !== 'undefined' ? window.location.origin : '',
-      'logo': typeof window !== 'undefined' ? `${window.location.origin}/favicon.svg` : '',
+      'logo': typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : '',
       'foundingDate': '2025-11-23',
       'address': {
         '@type': 'PostalAddress',

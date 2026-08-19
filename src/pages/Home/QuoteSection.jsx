@@ -11,16 +11,16 @@ export const QuoteSection = () => {
       sanskrit: 'यतो हस्तस्ततो दृष्टिर्यतो दृष्टिस्ततो मनः ।\nयतो मनस्ततो भावो यतो भावस्ततो रसः ॥',
       translit: 'Yato hastas tato dṛṣṭir yato dṛṣṭis tato manaḥ | yato manas tato bhāvo yato bhāvas tato rasaḥ ||',
       english: 'Where the hand goes, the eyes follow; where the eyes go, the mind follows;\nwhere the mind goes, bhāva arises; where bhāva arises, rasa unfolds.',
-      commentary: 'Nāṭya gathers attention, and attention ripens into rasa.',
-      citation: 'ABHINAYADARPAṆA • VERSE 37'
+      commentary: <span><em className="italic">Nāṭya</em> gathers attention, and attention ripens into <em className="italic">rasa</em>.</span>,
+      citation: <span><em className="italic">ABHINAYADARPAṆA</em> • VERSE 37</span>
     },
     {
       title: 'THE ALL-ENCOMPASSING CANON',
       sanskrit: 'न तज्ज्ञानं न तच्छिल्पं न सा विद्या न सा कला ।\nनासौ योगो न तत्कर्म नाट्येऽस्मिन् यन्न दृश्यते ॥',
       translit: 'Na tajjñānaṁ na tacchilpaṁ na sā vidyā na sā kalā | nāsau yogo na tatkarma nāṭye’smin yanna dṛśyate ||',
       english: 'There is no wisdom, art, learning, craft, device, yoga or action\nthat is not found in Nāṭya.',
-      commentary: 'Nāṭya is the complete synthesis of civilisational knowledge.',
-      citation: 'NĀṬYAŚĀSTRA • CHAPTER 1 ★ VERSE 116'
+      commentary: <span><em className="italic">Nāṭya</em> is the complete synthesis of civilisational knowledge.</span>,
+      citation: <span><em className="italic">NĀṬYAŚĀSTRA</em> • CHAPTER 1 ★ VERSE 116</span>
     }
   ];
 
@@ -40,7 +40,7 @@ export const QuoteSection = () => {
             
             <div className="flex items-center justify-center gap-3">
               <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
-              <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#9E743B] font-bold">
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#9E743B] font-bold italic">
                 ŚĀSTRA PRATIṢṬHĀ
               </span>
               <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
@@ -81,7 +81,7 @@ export const QuoteSection = () => {
               </h2>
 
               {/* Transliteration */}
-              <p className="font-serif text-[13px] sm:text-[15px] md:text-[16px] text-[#9E743B] tracking-[0.05em] font-medium px-2 max-w-2xl mx-auto">
+              <p className="font-serif text-[13px] sm:text-[15px] md:text-[16px] text-[#9E743B] tracking-[0.05em] font-medium px-2 max-w-2xl mx-auto italic">
                 {current.translit}
               </p>
 
