@@ -331,6 +331,180 @@ export const ProgrammesDetail = () => {
         </div>
       </Section>
 
+      {/* FEATURED RECENT PROGRAMME: NĀMA • RŪPA • NĀDA • BINDU (#18) */}
+      <Section className="py-16 sm:py-20 border-b border-accent-bronze/10 bg-[#FAF6F0]">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px]">
+          <div className="space-y-8 max-w-5xl mx-auto">
+            
+            <div className="text-center space-y-3">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFE8DC] border border-accent-bronze/30 text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
+                RECENT FEATURED PROGRAMME
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+                <em className="italic">Nāma</em> • <em className="italic">Rūpa</em> • <em className="italic">Nāda</em> • <em className="italic">Bindu</em>
+              </h2>
+              <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
+                A Recent Residential Immersion of the <em className="italic">Gurukulam</em>
+              </p>
+              <LotusDivider className="my-2" />
+            </div>
+
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-accent-bronze/20 p-6 sm:p-10 space-y-8">
+              {/* Image Collateral with full view, correct aspect ratio, no cropping */}
+              <div className="w-full overflow-hidden rounded-xl bg-[#1E1C1A] border border-accent-bronze/20 shadow-md">
+                <img
+                  src="/assets/images/Participants in the Nama Rupa Nada Bindu immersion.jpg"
+                  alt="Participants in the Nāma Rūpa Nāda Bindu immersion"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto object-contain max-h-[600px] mx-auto"
+                />
+              </div>
+
+              <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base sm:text-lg max-w-4xl mx-auto text-center sm:text-left">
+                <p>
+                  <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative inquiry, somatic practice, and deep exploration of sound, form, and aesthetic manifestation.
+                </p>
+                <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-4 font-sans text-xs uppercase tracking-widest text-accent-bronze font-semibold">
+                  <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
+                    Residential Immersion
+                  </span>
+                  <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
+                    Somatic & Textual Sādhanā
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </Section>
+
+      {/* FORTHCOMING PROGRAMMES (#19) */}
+      <Section className="py-20 border-b border-accent-bronze/10 bg-[#F8F6F1]">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px]">
+          <div className="space-y-12 max-w-4xl mx-auto">
+            
+            {/* Section Header */}
+            <div className="text-center space-y-3">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFE8DC] border border-accent-bronze/30 text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
+                FORTHCOMING PROGRAMMES
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+                Reimagining the <em className="italic">Sabhā</em>: A <em className="italic">Saṃvāda</em> in <em className="italic">Nāṭya</em>
+              </h2>
+              <div className="flex items-center justify-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#9E743B] pt-1">
+                <span>27 December 2026</span>
+                <span>·</span>
+                <span>Chennai</span>
+              </div>
+              <p className="font-serif italic text-base sm:text-lg text-[#7A5428] pt-1">
+                A Margazhi conversation on differentiation, <em className="italic">svadharma</em>, and the future of <em className="italic">Nāṭya</em>
+              </p>
+              <LotusDivider className="my-2" />
+            </div>
+
+            {/* Event Content Container */}
+            <ProspectusFrame innerClassName="p-8 sm:p-12 space-y-8 bg-white">
+              
+              {/* Introductory Statement */}
+              <div className="p-6 rounded-xl bg-[#FAF6F0] border-l-4 border-[#9E743B] space-y-2">
+                <p className="font-serif text-base sm:text-lg text-[#6B1D1E] leading-relaxed">
+                  During Chennai’s Margazhi season, Aatmalaya Academy of Art and Culture, in collaboration with <em className="italic">Nāṭyaśāstra Gurukulam</em>, convenes a <em className="italic">Saṃvāda</em> on the future of the <em className="italic">Sabhā</em>.
+                </p>
+              </div>
+
+              {/* Main Body */}
+              <div className="space-y-6 text-text-stone-grey font-sans font-light text-base leading-relaxed">
+                <p>
+                  The <em className="italic">Sabhā</em> was never merely a venue for performance. It was an assembly shaped by aesthetic discernment, shared cultural literacy, the relationship between artist and <em className="italic">rasika</em>, and continuity across generations.
+                </p>
+                <p>
+                  Today, however, practitioners with very different artistic purposes, stages of development, audiences, and economic realities increasingly inhabit the same institutional framework. The resulting tensions raise familiar questions of access, opportunity, remuneration, and ‘pay to perform’. Beneath these questions lies a deeper one:
+                </p>
+                
+                <div className="py-2 text-center">
+                  <p className="font-serif italic text-xl sm:text-2xl text-[#6B1D1E] font-medium">
+                    Could the future of the <em className="italic">Sabhā</em> lie in differentiation?
+                  </p>
+                </div>
+
+                <p>
+                  At the heart of the enquiry is <em className="italic">svadharma</em>—the distinctive orientation, responsibility, and voice of each practitioner.
+                </p>
+
+                <p className="font-semibold text-[#211F1D]">
+                  The conversation will explore three propositions:
+                </p>
+              </div>
+
+              {/* Three Propositions Subsections */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+                
+                <div className="p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-3 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <span className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
+                      I. THE SABHĀ
+                    </span>
+                    <p className="font-serif italic text-base text-[#6B1D1E] leading-snug font-medium">
+                      The future of the <em className="italic">Sabhā</em> lies in differentiation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-3 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <span className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
+                      II. THE PRACTITIONER
+                    </span>
+                    <p className="font-serif italic text-base text-[#6B1D1E] leading-snug font-medium">
+                      The future of the <em className="italic">Nāṭya</em> practitioner depends less on securing platforms and more on cultivating one's own assembly.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-3 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <span className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
+                      III. THE PURPOSE
+                    </span>
+                    <p className="font-serif italic text-base text-[#6B1D1E] leading-snug font-medium">
+                      A <em className="italic">Sabhā</em> ultimately exists not merely to sustain performance, but to sustain the conditions in which <em className="italic">Rasa</em> can arise.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Closing Paragraphs */}
+              <div className="space-y-4 text-text-stone-grey font-sans font-light text-base leading-relaxed border-t border-[#9E743B]/20 pt-6">
+                <p>
+                  Each proposition will be examined through contrasting voices, followed by moderated exchange. The format is deliberately concise and dialogic: participants will be invited to speak from experience, conviction, and <em className="italic">svadharma</em> rather than deliver conventional papers.
+                </p>
+                <p>
+                  The <em className="italic">Saṃvāda</em> seeks neither a single answer nor manufactured consensus. It seeks to create an assembly in which different artistic orientations can be heard, questioned, and placed in relation to one another—and to identify propositions that may contribute to the future ecology of <em className="italic">Nāṭya</em>.
+                </p>
+              </div>
+
+              {/* Event Details Footer */}
+              <div className="p-6 rounded-xl bg-[#6B1D1E] text-white space-y-2 shadow-md">
+                <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-bold block">
+                  EVENT DETAILS
+                </span>
+                <div className="font-serif text-lg font-normal">
+                  27 December 2026 | Morning
+                </div>
+                <div className="font-sans text-xs text-[#FAF6F0]/90 tracking-wide font-light">
+                  at Narada Gana Sabha under the auspices of Karthik Fine Arts, Chennai
+                </div>
+              </div>
+
+            </ProspectusFrame>
+
+          </div>
+        </div>
+      </Section>
+
       {/* 2. VISUAL PROGRESSION I: THE MĀRGA — INTERACTIVE MANDALA CYCLE */}
       <Section className="py-24 border-b border-accent-bronze/10 bg-[#F8F6F1] relative">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-16">

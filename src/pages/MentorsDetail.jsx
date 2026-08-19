@@ -337,14 +337,6 @@ export const MentorsDetail = () => {
                     decoding="async"
                   />
                 </div>
-                <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze font-bold block">
-                    YAJAMĀNA & YOJAKA
-                  </span>
-                  <p className="font-serif text-sm font-semibold text-[#211F1D]">
-                    Rohit Viswanath
-                  </p>
-                </div>
               </div>
             </motion.div>
 
@@ -370,7 +362,7 @@ export const MentorsDetail = () => {
               SAṄKALPA
             </div>
             <HeadingLG className="text-2xl sm:text-3xl font-serif font-light text-[#211F1D]">
-              Life Vision
+              Life Vision of the <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>
             </HeadingLG>
             <p className="font-serif italic text-accent-bronze text-xs sm:text-sm">
               Consecrated as a Personal Saṅkalpa

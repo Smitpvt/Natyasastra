@@ -8,54 +8,54 @@ const PILLARS = [
     title: <span><em className="italic">Śāstra</em></span>,
     sanskrit: 'शास्त्र',
     syllable: 'शा',
-    subtitle: 'Textual Hermeneutics & Intellectual Lineage',
-    quote: <span>The intellect is refined through rigorous study of the <em className="italic">Nāṭyaśāstra</em> and its commentarial traditions.</span>,
-    desc: <span>Rigorous study of the <em className="italic">Nāṭyaśāstra</em>, the <em className="italic">Abhinavabhāratī</em> commentary, and allied civilisational knowledge traditions. It provides the intellectual framework, preserving textual integrity and commentarial lineage.</span>
+    subtitle: 'TEXTUAL STUDY & COMMENTARIAL TRADITION',
+    quote: <span><em className="italic">Śāstra</em> gives form to inquiry; disciplined study opens the way to understanding.</span>,
+    desc: <span>Study of the <em className="italic">Nāṭyaśāstra</em>, the <em className="italic">Abhinavabhāratī</em> and the traditions of commentary through which their knowledge has been received, interpreted, and transmitted.</span>
   },
   {
     id: 'sadhana',
     title: <span><em className="italic">Sādhanā</em></span>,
     sanskrit: 'साधना',
     syllable: 'सा',
-    subtitle: 'Somatic Reconstruction & Daily Practice',
-    quote: 'The body is the laboratory where theoretical knowledge is transformed into lived experience.',
-    desc: 'Embodied learning through disciplined daily practice, movement, breath, and the refinement of perception. The physical body becomes the sacred vessel for aesthetic embodiment.'
+    subtitle: 'EMBODIED PRACTICE & INNER REFINEMENT',
+    quote: <span><em className="italic">Śāstra</em> becomes knowledge through practice; practice becomes <em className="italic">sādhanā</em> through disciplined attention.</span>,
+    desc: <span><em className="italic">Sādhanā</em> is the disciplined cultivation of body, breath, attention, perception, and conduct. Through sustained practice, what is received through <em className="italic">śāstra</em> moves from intellectual understanding towards embodied experience and inner refinement.</span>
   },
   {
     id: 'samvada',
     title: <span><em className="italic">Saṃvāda</em></span>,
     sanskrit: 'संवाद',
     syllable: 'सं',
-    subtitle: 'Quiet Listening & Collective Hermeneutics',
-    quote: 'Dialogue rooted in humility, quiet listening, and a collective search for truth.',
-    desc: 'Dialogue rooted in humility, quiet listening, and a collective search for understanding rather than assertion. It resolves modern fragmentations through shared aesthetic contemplation.'
+    subtitle: 'ATTENTIVE LISTENING & SHARED INQUIRY',
+    quote: 'Understanding deepens through attentive listening, questioning, and encounter.',
+    desc: 'A space for listening, reflection, questioning, and dialogue, where knowledge is deepened through encounter and shared inquiry rather than assertion.'
   },
   {
     id: 'parampara',
     title: <span><em className="italic">Paramparā</em></span>,
     sanskrit: 'परम्परा',
     syllable: 'प',
-    subtitle: 'Living Transmission & Guru-Śiṣya Abidance',
-    quote: 'Wisdom is transmitted through living presence, relationship, and unbroken lineage.',
-    desc: 'Transmission of wisdom through living lineages and relationships. Rather than an academic transaction, learning is nurtured in the presence of teachers who embody the values they transmit.'
+    subtitle: <span>LIVING TRANSMISSION & <em className="italic">GURU–ŚIṢYA PARAMPARĀ</em></span>,
+    quote: 'Wisdom is transmitted through living presence, relationship, and lineage.',
+    desc: 'Wisdom is transmitted through living lineages and relationships. Rather than mere academic instruction, learning is nurtured through the presence of teachers who embody the values they transmit.'
   },
   {
     id: 'rasa',
     title: <span><em className="italic">Rasa</em></span>,
     sanskrit: 'रस',
     syllable: 'र',
-    subtitle: 'Refined Aesthetic Perception & Spiritual Delight',
-    quote: <span><em className="italic">Rasa</em> is the ultimate aesthetic delight and spiritual transcendence that <em className="italic">Nāṭya</em> evokes.</span>,
-    desc: <span>The cultivation of refined aesthetic perception as the cornerstone of education, culture, and life. It transforms sensory experience into spiritual delight and emotional poise.</span>
+    subtitle: 'REFINED AESTHETIC PERCEPTION & AESTHETIC DELIGHT',
+    quote: <span><em className="italic">Rasa</em> is the aesthetic relish that <em className="italic">Nāṭya</em> awakens through refined perception.</span>,
+    desc: <span>The cultivation of refined aesthetic perception as a cornerstone of education, culture, and life. Through <em className="italic">Nāṭya</em>, sensory experience is refined into aesthetic relish, deepening perception, sensitivity, and poise.</span>
   },
   {
     id: 'dharma',
     title: <span><em className="italic">Dharma</em></span>,
     sanskrit: 'धर्म',
     syllable: 'ध',
-    subtitle: 'Aesthetic Leadership & Public Ordering',
+    subtitle: 'AESTHETIC LEADERSHIP & CIVILISATIONAL ORDERING',
     quote: <span>Public life is renewed through aesthetic poise and <em className="italic">dhārmic</em> responsibility.</span>,
-    desc: 'The application of aesthetic poise and moral clarity to public life, governance, and institutional leadership, offering a harmonious vision of civilisational ordering.'
+    desc: 'The extension of aesthetic cultivation into public life, governance, and institutional leadership—bringing poise, responsibility, and discernment to the work of civilisational ordering.'
   }
 ];
 
@@ -83,15 +83,15 @@ export const PillarsMandala = () => {
           <div className="flex items-center justify-center gap-2">
             <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#9E743B] font-bold">
-              FOUNDATIONAL PILLARS OF <span className="italic">GURUKULAM</span>
+              THE <span className="italic">GURUKULAM</span>'S FOUNDATIONS
             </span>
             <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#6B1D1E] tracking-tight">
-            The Hexagonal <em className="italic">Dhārmic</em> Hexad
+            The Six Pillars
           </h2>
           <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
-            Six interconnected dimensions of learning, practice, and aesthetic leadership.
+            Six interconnected dimensions of learning, practice, transmission, aesthetic experience, and responsibility.
           </p>
           <LotusDivider className="my-2" />
         </div>
@@ -178,3 +178,4 @@ export const PillarsMandala = () => {
 };
 
 export default PillarsMandala;
+

@@ -22,7 +22,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="font-sans text-[14px] leading-relaxed text-[#757069] font-light max-w-xs">
-              A heritage institution dedicated to the study, somatic reconstruction, and preservation of classical Indian performing arts and aesthetic systems.
+              A living institution dedicated to the study, practice, and renewal of <em className="italic">Nāṭya</em> as a civilisational knowledge system.
             </p>
           </div>
 
