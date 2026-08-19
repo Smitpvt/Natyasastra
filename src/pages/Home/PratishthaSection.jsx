@@ -2,31 +2,32 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BrassDiyaIcon } from '../../components/LotusOrnament';
+import AutoScrollContainer from '../../components/AutoScrollContainer';
 
 const GALLERY_HIGHLIGHTS = [
   {
     title: 'Consecration of the Vision Statement',
-    subtitle: 'Pratiṣṭhā Samaroham • Nov 23, 2025',
-    image: '/assets/images/vision_statement.jpg',
-    desc: 'The sacred consecration of the Gurukulam Vision Statement, establishing the Dhārmic axis of Śāstra, Sādhanā, and Saṃvāda.'
+    subtitle: <span><em className="italic">Pratiṣṭhā Samāroham</em> • Nov 23, 2025</span>,
+    image: '/assets/images/vision_statement_thumb.webp',
+    desc: <span>The sacred consecration of the <em className="italic">Gurukulam</em> Vision Statement, establishing the <em className="italic">Dhārmic</em> axis of <em className="italic">Śāstra</em>, <em className="italic">Sādhanā</em>, and <em className="italic">Saṃvāda</em>.</span>
   },
   {
     title: 'Mukhyatithi Prof. K. Ramasubramanian',
     subtitle: 'Distinguished Guest & Scholars',
-    image: '/assets/images/prof_ramasubramanian.jpg',
-    desc: 'Revered scholar Prof. K. Ramasubramanian with Ācāryā Dr. Padmaja Suresh during the auspicious inauguration.'
+    image: '/assets/images/prof_ramasubramanian_thumb.webp',
+    desc: <span>Revered scholar Prof. K. Ramasubramanian with <em className="italic">Ācāryā</em> Dr. Padmaja Suresh during the auspicious inauguration.</span>
   },
   {
     title: 'Release of the Gurukulam Brochure',
     subtitle: 'Publication Launch',
-    image: '/assets/images/brochure_release.jpg',
+    image: '/assets/images/brochure_release_thumb.webp',
     desc: 'Formal release of the institutional brochure outlining the pedagogical roadmap and aesthetic vision.'
   },
   {
-    title: 'Nāṭya Sevā & Dance Offering',
-    subtitle: 'Somatic Sādhanā in Practice',
-    image: '/assets/images/dance_offering.jpg',
-    desc: 'Sacred dance offerings by disciples of Smt. Charanya Gurusathya during the Pratishtha Samaroham.'
+    title: <span><em className="italic">Nāṭya Sevā</em> & Dance Offering</span>,
+    subtitle: <span>Somatic <em className="italic">Sādhanā</em> in Practice</span>,
+    image: '/assets/images/dance_offering_thumb.webp',
+    desc: <span>Sacred dance offerings by disciples of Smt. Charanya Gurusathya during the <em className="italic">Pratiṣṭhā Samāroham</em>.</span>
   }
 ];
 
@@ -45,7 +46,7 @@ export const PratishthaSection = () => {
               </span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#6B1D1E] font-light">
-              Pratiṣṭhā Samaroham Highlights
+              <em className="italic">Pratiṣṭhā Samāroham</em> Highlights
             </h2>
             <p className="font-serif italic text-base text-[#7A5428]">
               Moments from the sacred consecration ceremony on November 23, 2025.
@@ -62,8 +63,11 @@ export const PratishthaSection = () => {
           </div>
         </div>
 
-        {/* 4 Photo Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {/* 4 Photo Grid with Mobile Auto-Scrolling Slider */}
+        <AutoScrollContainer 
+          interval={3200}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-6 -mx-6 px-6 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 pb-4 md:pb-0"
+        >
           {GALLERY_HIGHLIGHTS.map((item, idx) => (
             <motion.div
               key={item.title}
@@ -71,12 +75,14 @@ export const PratishthaSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group flex flex-col h-full bg-[#FAF6F0] rounded-xl border border-[#9E743B]/25 overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1.5"
+              className="flex-none w-[82vw] xs:w-[75vw] sm:w-[48vw] md:w-auto snap-start group flex flex-col h-full bg-[#FAF6F0] rounded-xl border border-[#9E743B]/25 overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 md:hover:-translate-y-1.5"
             >
               <div className="aspect-[4/3] overflow-hidden relative border-b border-[#9E743B]/20 bg-[#1E1C1A]">
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center filter contrast-[1.02]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -98,7 +104,7 @@ export const PratishthaSection = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </AutoScrollContainer>
 
       </div>
     </section>

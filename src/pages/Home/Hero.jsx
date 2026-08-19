@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
-import heroBg from '../../assets/temple-corridor-hero.jpg';
+import heroBg from '../../assets/temple-corridor-hero.webp';
 import { LotusDivider } from '../../components/LotusOrnament';
 
 export const Hero = () => {
@@ -64,7 +64,7 @@ export const Hero = () => {
               नाट्यशास्त्रप्रवर्तकं भरतमुनिं वन्दे।
             </span>
             <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C4B39C] font-semibold opacity-95 block">
-              Custodians of Rasa, Rhythm & Dhārmic Responsibility
+              Custodians of Rasa, Rhythm & <em className="italic">Dhārmic</em> Responsibility
             </span>
           </motion.div>
 
@@ -88,7 +88,7 @@ export const Hero = () => {
             <LotusDivider className="my-3" />
 
             <p className="font-serif italic text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-xl leading-relaxed">
-              A Dhārmic Stream For The Renewal Of Public Life Through Aesthetic Leadership
+              A <em className="italic">Dhārmic</em> Stream For The Renewal Of Public Life Through Aesthetic Leadership
             </p>
           </motion.div>
 
@@ -101,7 +101,7 @@ export const Hero = () => {
               to="/about"
               className="w-full max-w-[240px] sm:w-56 py-3.5 border-2 border-[#D4AF37]/60 text-[#F5F0E6] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold bg-[#805335]/30 backdrop-blur-xs hover:bg-[#D4AF37] hover:text-[#1A1817] hover:border-[#D4AF37] transition-all duration-300 text-center rounded-lg shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]"
             >
-              Explore Gurukulam
+              Explore <em className="italic">Gurukulam</em>
             </Link>
             <Link
               to="/library"

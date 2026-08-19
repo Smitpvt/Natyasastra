@@ -2,8 +2,62 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
+import { useSEO } from '../hooks/useSEO';
 
 export const MentorsDetail = () => {
+  useSEO({
+    title: 'Marga Darshaks & Mentors',
+    description: 'Meet the mentors, spiritual elders, and Ācāryās guiding the pedagogical roadmap and spiritual axis of the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'Gurukulam Mentors & Acharyas',
+      'description': 'A list of spiritual elders and guides of the Nāṭyaśāstra Gurukulam.',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'item': {
+            '@type': 'Person',
+            'name': 'Padma Bhushan Dr. M. B. Athreya',
+            'jobTitle': 'Marga Darshak',
+            'description': 'Pioneer of the Indian Management Movement. Anchors the larger civilisational horizon at the Gurukulam.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'item': {
+            '@type': 'Person',
+            'name': 'Karnataka Kalashri Dr. Padmaja Suresh',
+            'jobTitle': 'Ācāryā for Nāṭya Pedagogy',
+            'description': 'Acclaimed danseuse, scholar, teacher, and author whose pedagogy understands Nāṭya as Sādhanā.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'item': {
+            '@type': 'Person',
+            'name': 'Śrī K. V. Subrahmoṇyan',
+            'jobTitle': 'Spiritual Elder',
+            'description': 'Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi, serving as a spiritual axis.'
+          }
+        },
+        {
+          '@type': 'ListItem',
+          'position': 4,
+          'item': {
+            '@type': 'Person',
+            'name': 'Rohit Viswanath',
+            'jobTitle': 'Yajamāna & Yojaka',
+            'description': 'Stewards the Gurukulam’s consecrated saṅkalpa and institutional form.'
+          }
+        }
+      ]
+    }
+  });
+
   return (
     <div className="bg-bg-ivory pt-24 min-h-screen text-[#211F1D] selection:bg-accent-bronze/20 selection:text-[#211F1D]">
       
@@ -16,7 +70,7 @@ export const MentorsDetail = () => {
           </div>
 
           <HeadingLG as="h1" className="text-4xl sm:text-5xl lg:text-6xl font-serif font-light leading-tight">
-            Mārga Darśak & Mentors
+            Marga Darshak & Mentors
           </HeadingLG>
 
           <p className="font-sans text-sm sm:text-base text-accent-bronze font-semibold uppercase tracking-[0.2em]">
@@ -26,7 +80,7 @@ export const MentorsDetail = () => {
           <div className="w-20 h-[1px] bg-accent-bronze/40 mx-auto lg:mx-0 my-4" />
 
           <BodyLG className="text-text-stone-grey font-light leading-relaxed max-w-3xl">
-            Nāṭyaśāstra Gurukulam is guided by mentors whose lives embody the integration of Dharma, Śāstra, lived wisdom, and inner discipline. Their role is not one of institutional authority, but of custodianship. Through the living continuity of paramparā, they help preserve the Gurukulam's rhythm, safeguard its ethos, and ensure that its work remains faithful to its consecrated purpose across time.
+            <em className="italic">Nāṭyaśāstra Gurukulam</em> is guided by mentors whose lives embody the integration of <em className="italic">Dharma</em>, <em className="italic">Śāstra</em>, lived wisdom, and inner discipline. Their role is not one of institutional authority, but of custodianship. Through the living continuity of <em className="italic">paramparā</em>, they help preserve the <em className="italic">Gurukulam</em>'s rhythm, safeguard its ethos, and ensure that its work remains faithful to its consecrated purpose across time.
           </BodyLG>
         </div>
       </Section>
@@ -47,15 +101,16 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/dr_athreya.jpg"
+                    src="/assets/images/dr_athreya_thumb.webp"
                     alt="Padma Bhushan Dr. M. B. Athreya"
                     className="w-full h-full object-cover object-top filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
                   <span className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze font-bold block">
-                    MĀRGA DARŚAK
+                    MARGA DARSHAK
                   </span>
                   <p className="font-serif text-sm font-semibold text-[#211F1D]">
                     Padma Bhushan Dr. M. B. Athreya
@@ -67,7 +122,7 @@ export const MentorsDetail = () => {
             {/* Biography Content */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-1">
-                <Caption className="text-accent-bronze uppercase tracking-[0.25em] font-semibold">Mārga Darśak</Caption>
+                <Caption className="text-accent-bronze uppercase tracking-[0.25em] font-semibold">Marga Darshak</Caption>
                 <HeadingMD className="text-3xl sm:text-4xl text-[#211F1D] font-serif font-light">
                   Padma Bhushan Dr. M. B. Athreya
                 </HeadingMD>
@@ -75,13 +130,13 @@ export const MentorsDetail = () => {
               
               <div className="p-5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze">
                 <p className="font-serif italic text-base sm:text-lg text-accent-bronze leading-relaxed">
-                  "Providing Dhārmic, civilisational, and ethical guidance to the Gurukulam's vision and public orientation."
+                  "Providing <em className="italic">Dhārmic</em>, civilisational, and ethical guidance to the <em className="italic">Gurukulam</em>'s vision and public orientation."
                 </p>
               </div>
 
               <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base">
                 <p>
-                  Dr. M. B. Athreya is widely regarded as the pioneer of the Indian Management Movement and a distinguished thinker who has consistently sought to integrate modern organisational thought with Dhārmic vision. He has taught at leading institutions in India and abroad, advised governments, corporations, and civil society organisations, and has made enduring contributions to leadership, governance, and philanthropy.
+                  Dr. M. B. Athreya is widely regarded as the pioneer of the Indian Management Movement and a distinguished thinker who has consistently sought to integrate modern organisational thought with <em className="italic">Dhārmic</em> vision. He has taught at leading institutions in India and abroad, advised governments, corporations, and civil society organisations, and has made enduring contributions to leadership, governance, and philanthropy.
                 </p>
                 <p>
                   Awarded the Padma Bhushan by the Government of India and honoured with the title of <em>Dharma Pracharak</em> by His Holiness the Jagadguru Śankarācārya of Śṛṅgeri, Dr. Athreya has long advocated the importance of grounding institutions in ethical clarity and civilisational consciousness.
@@ -112,19 +167,19 @@ export const MentorsDetail = () => {
               
               <div className="p-5 rounded-xl bg-white border-l-2 border-accent-bronze shadow-sm">
                 <p className="font-serif italic text-base sm:text-lg text-accent-bronze leading-relaxed">
-                  "Shaping the Gurukulam's pedagogic vision through Nāṭya as Sādhanā."
+                  "Shaping the <em className="italic">Gurukulam</em>'s pedagogic vision through <em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em>."
                 </p>
               </div>
 
               <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base">
                 <p>
-                  Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life's work bridges rigorous classical training with deep philosophical inquiry. Trained under Guru Padma Shri K. Kalyanasundaram and her father Śrī Chākyār Rajan, she has represented Indian classical arts internationally while pursuing sustained research into the relationship between Nāṭya, Tantra, and spiritual practice.
+                  Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life's work bridges rigorous classical training with deep philosophical inquiry. Trained under Guru Padma Shri K. Kalyanasundaram and her father Śrī <em className="italic">Chākyār</em> Rajan, she has represented Indian classical arts internationally while pursuing sustained research into the relationship between <em className="italic">Nāṭya</em>, <em className="italic">Tantra</em>, and spiritual practice.
                 </p>
                 <p>
-                  Her pedagogy understands Nāṭya not merely as performance, but as <em>Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness. Her work integrates Śāstra, lived practice, and disciplined inquiry into a single pedagogic vision.
+                  Her pedagogy understands <em className="italic">Nāṭya</em> not merely as performance, but as <em>Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness. Her work integrates <em className="italic">Śāstra</em>, lived practice, and disciplined inquiry into a single pedagogic vision.
                 </p>
                 <p>
-                  At the Gurukulam, she transmits not merely technique, but temperament; not merely repertoire, but responsibility, forming <em>sahṛdayas</em> and future custodians of India's aesthetic traditions.
+                  At the <em className="italic">Gurukulam</em>, she transmits not merely technique, but temperament; not merely repertoire, but responsibility, forming <em>sahṛdayas</em> and future custodians of India's aesthetic traditions.
                 </p>
               </div>
             </div>
@@ -140,10 +195,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/dr_padmaja_suresh.jpg"
+                    src="/assets/images/dr_padmaja_suresh_thumb.webp"
                     alt="Karnataka Kalashri Dr. Padmaja Suresh"
                     className="w-full h-full object-cover object-top filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
@@ -177,10 +233,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/sri_kv_subrahmonyam.jpg"
+                    src="/assets/images/sri_kv_subrahmonyam_thumb.webp"
                     alt="Śrī K. V. Subrahmoṇyan"
                     className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
@@ -205,19 +262,19 @@ export const MentorsDetail = () => {
               
               <div className="p-5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze">
                 <p className="font-serif italic text-base sm:text-lg text-accent-bronze leading-relaxed">
-                  "A presence of sākṣitva and Vedāntic anchoring, offering blessings, inner orientation, and lived wisdom."
+                  "A presence of <em className="italic">sākṣitva</em> and <em className="italic">Vedāntic</em> anchoring, offering blessings, inner orientation, and lived wisdom."
                 </p>
               </div>
 
               <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base">
                 <p>
-                  Śrī K. V. Subrahmoṇyan, a revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi, has spent much of his life at Śrī Ramaṇāśramam, Tiruvaṇṇāmalai. His life reflects quiet abidance, simplicity, discernment, and lived Vedāntic clarity.
+                  Śrī K. V. Subrahmoṇyan, a revered disciple in the lineage of <em className="italic">Bhagavān</em> Śrī <em className="italic">Ramaṇa</em> <em className="italic">Maharṣi</em>, has spent much of his life at Śrī Ramaṇāśramam, Tiruvaṇṇāmalai. His life reflects quiet abidance, simplicity, discernment, and lived <em className="italic">Vedāntic</em> clarity.
                 </p>
                 <p>
                   Known for his gentle presence and directness, he embodies <em>sākṣitva</em>, the witnessing consciousness that steadies inquiry without assertion and guides without seeking prominence.
                 </p>
                 <p>
-                  For the Gurukulam, his blessings serve as a spiritual axis, affirming that Nāṭya as Sādhanā must ultimately rest in stillness, self-knowledge, and inner freedom.
+                  For the <em className="italic">Gurukulam</em>, his blessings serve as a spiritual axis, affirming that <em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em> must ultimately rest in stillness, self-knowledge, and inner freedom.
                 </p>
               </div>
             </div>
@@ -242,22 +299,22 @@ export const MentorsDetail = () => {
               
               <div className="p-5 rounded-xl bg-white border-l-2 border-accent-bronze shadow-sm">
                 <p className="font-serif italic text-base sm:text-lg text-accent-bronze leading-relaxed">
-                  "Stewarding the Gurukulam's consecrated saṅkalpa with fidelity, humility, and care."
+                  "Stewarding the <em className="italic">Gurukulam</em>'s consecrated <em className="italic">saṅkalpa</em> with fidelity, humility, and care."
                 </p>
               </div>
 
               <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base">
                 <p>
-                  Nāṭyaśāstra Gurukulam is understood not merely as an institution, but as a living Yajña dedicated to the transmission of Nāṭya, Dharma, and civilisational renewal.
+                  <em className="italic">Nāṭyaśāstra Gurukulam</em> is understood not merely as an institution, but as a living <em className="italic">Yajña</em> dedicated to the transmission of <em className="italic">Nāṭya</em>, <em className="italic">Dharma</em>, and civilisational renewal.
                 </p>
                 <p>
-                  Within this understanding, the <strong>Yajamāna</strong> is not an owner or authority, but the one who bears responsibility for the consecration, continuity, and integrity of the yajña. The <strong>Yojaka</strong> brings people, ideas, and institutions into harmonious relationship, ensuring that the original saṅkalpa unfolds faithfully across time and is handed on to future generations.
+                  Within this understanding, the <strong><em className="italic">Yajamāna</em></strong> is not an owner or authority, but the one who bears responsibility for the consecration, continuity, and integrity of the <em className="italic">yajña</em>. The <strong><em className="italic">Yojaka</em></strong> brings people, ideas, and institutions into harmonious relationship, ensuring that the original <em className="italic">saṅkalpa</em> unfolds faithfully across time and is handed on to future generations.
                 </p>
                 <p>
-                  Rohit Viswanath serves the Gurukulam in this spirit as its Yajamāna & Yojaka. His journey took him through the study of Ancient Indian Culture and International Relations, followed by work in journalism, public policy, governance, yoga, agriculture, higher education, and civilisational studies. Rather than separate pursuits, these became successive stages in a single unfolding inquiry into Dharma, education, leadership, and Nāṭya.
+                  Rohit Viswanath serves the <em className="italic">Gurukulam</em> in this spirit as its <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>. His journey took him through the study of Ancient Indian Culture and International Relations, followed by work in journalism, public policy, governance, yoga, agriculture, higher education, and civilisational studies. Rather than separate pursuits, these became successive stages in a single unfolding inquiry into <em className="italic">Dharma</em>, education, leadership, and <em className="italic">Nāṭya</em>.
                 </p>
                 <p>
-                  His role is therefore not that of a founder in the modern sense, but of a custodian of the Yajña and a facilitator of lineage. He seeks to ensure that Nāṭya remains Sādhanā, pedagogy remains presence, and institutional form never eclipses Dhārmic intent.
+                  His role is therefore not that of a founder in the modern sense, but of a custodian of the <em className="italic">Yajña</em> and a facilitator of lineage. He seeks to ensure that <em className="italic">Nāṭya</em> remains <em className="italic">Sādhanā</em>, pedagogy remains presence, and institutional form never eclipses <em className="italic">Dhārmic</em> intent.
                 </p>
               </div>
             </div>
@@ -273,10 +330,11 @@ export const MentorsDetail = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#1E1C1A] group">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
-                    src="/assets/images/rohit_viswanath.png"
+                    src="/assets/images/rohit_viswanath_thumb.webp"
                     alt="Rohit Viswanath - Yajamāna & Yojaka"
                     className="w-full h-full object-cover object-bottom filter contrast-[1.02]"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-3.5 bg-white/95 backdrop-blur-sm border-t border-black/5 text-center">
@@ -336,7 +394,7 @@ export const MentorsDetail = () => {
               <div className="flex items-start gap-3">
                 <span className="text-accent-bronze text-sm font-normal pt-1">✦</span>
                 <p>
-                  I aspire to be a <span className="text-[#211F1D] font-normal">Kuśala Nimittam</span> for the creative propagation of Dharma through Nāṭya — not as a performer or messenger, but as a consecrator of rhythm and sacred atmosphere.
+                  I aspire to be a <span className="text-[#211F1D] font-normal"><em className="italic">Kuśala</em> <em className="italic">Nimittam</em></span> for the creative propagation of <em className="italic">Dharma</em> through <em className="italic">Nāṭya</em> — not as a performer or messenger, but as a consecrator of rhythm and sacred atmosphere.
                 </p>
               </div>
 
@@ -350,12 +408,12 @@ export const MentorsDetail = () => {
               <div className="flex items-start gap-3">
                 <span className="text-accent-bronze text-sm font-normal pt-1">✦</span>
                 <p>
-                  I seek to leave behind, for India and the world, perpetually living maṇḍalas of <span className="text-[#211F1D] font-normal">Nāṭya Sevakas</span> — those who carry the Yajña not through ambition, but through presence, play, and quiet alignment.
+                  I seek to leave behind, for India and the world, perpetually living <em className="italic">maṇḍalas</em> of <span className="text-[#211F1D] font-normal"><em className="italic">Nāṭya</em> <em className="italic">Sevakas</em></span> — those who carry the <em className="italic">Yajña</em> not through ambition, but through presence, play, and quiet alignment.
                 </p>
               </div>
 
               <div className="pt-3 border-t border-accent-bronze/20 text-center font-normal text-accent-bronze text-sm sm:text-base space-y-1">
-                <p className="italic">May each act become offering. May each sabhā remain centred.</p>
+                <p className="italic">May each act become offering. May each <em className="italic">sabhā</em> remain centred.</p>
                 <p className="italic">And may every successor walk not in my image, but toward their own light.</p>
               </div>
 

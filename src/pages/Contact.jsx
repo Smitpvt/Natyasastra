@@ -2,8 +2,21 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Caption } from '../components/Typography';
+import { useSEO } from '../hooks/useSEO';
 
 export const Contact = () => {
+  useSEO({
+    title: 'Inquire Now - Contact Us',
+    description: 'Initiate a dialogue, register your interest, or submit a statement of intent to engage with the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      'name': 'Contact & Inquiry',
+      'description': 'Contact page to register interest and submit statement of intent to engage with the Nāṭyaśāstra Gurukulam.',
+      'url': typeof window !== 'undefined' ? window.location.origin + '/contact' : ''
+    }
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,7 +87,7 @@ export const Contact = () => {
                   Register Interest
                 </HeadingMD>
                 <p className="font-serif italic text-sm text-[#757069]">
-                  Submit your statement of intent to engage with the Gurukulam
+                  Submit your statement of intent to engage with the <em className="italic">Gurukulam</em>
                 </p>
               </div>
 
@@ -87,7 +100,7 @@ export const Contact = () => {
                   className="py-12 px-6 text-center space-y-4 rounded-xl bg-[#F8F6F1] border border-accent-bronze/30"
                 >
                   <span className="font-serif italic text-xl text-accent-bronze block">
-                    "Samyak vicāritam — We have received your intent."
+                    “<em className="italic">Samyak</em> <em className="italic">vicāritam</em> — We have received your intent.”
                   </span>
                   <p className="font-sans text-sm text-text-stone-grey font-light max-w-md mx-auto leading-relaxed">
                     Your inquiry has been logged in our archives. We will review your background and statement of intent, and reply within seven days.

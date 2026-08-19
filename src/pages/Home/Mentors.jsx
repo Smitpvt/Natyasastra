@@ -8,11 +8,11 @@ const MENTORS = [
     id: 'athreya',
     tabLabel: 'Padma Bhushan Dr. M. B. Athreya',
     name: 'Padma Bhushan Dr. M. B. Athreya',
-    role: 'Mārga Darśak',
+    role: 'Marga Darshak',
     tagline: 'Civilisational & Ethical Guidance',
-    quote: 'Providing Dhārmic, civilisational, and ethical guidance to the Gurukulam’s vision and public orientation.',
-    bio: 'Dr. M. B. Athreya is widely regarded as the pioneer of the Indian Management Movement and a distinguished thinker who has consistently sought to integrate modern organisational thought with Dhārmic vision. Awarded the Padma Bhushan by the Government of India, his presence anchors the larger civilisational horizon at the Gurukulam.',
-    image: '/assets/images/dr_athreya.jpg',
+    quote: <span>Providing <em className="italic">Dhārmic</em>, civilisational, and ethical guidance to the <em className="italic">Gurukulam</em>’s vision and public orientation.</span>,
+    bio: <span>Dr. M. B. Athreya is widely regarded as the pioneer of the Indian Management Movement and a distinguished thinker who has consistently sought to integrate modern organisational thought with <em className="italic">Dhārmic</em> vision. Awarded the Padma Bhushan by the Government of India, his presence anchors the larger civilisational horizon at the <em className="italic">Gurukulam</em>.</span>,
+    image: '/assets/images/dr_athreya_thumb.webp',
     objectPos: 'object-top',
     pillarDevanagari: 'दृष्टि',
     pillarEnglish: 'VISION'
@@ -21,11 +21,11 @@ const MENTORS = [
     id: 'padmaja',
     tabLabel: 'Karnataka Kalashri Dr. Padmaja Suresh',
     name: 'Karnataka Kalashri Dr. Padmaja Suresh',
-    role: 'Ācāryā for Nāṭya Pedagogy',
-    tagline: 'Nāṭya as Sādhanā & Pedagogy',
-    quote: 'Shaping the Gurukulam’s pedagogic vision through Nāṭya as Sādhanā.',
-    bio: 'Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life’s work bridges rigorous classical training with deep philosophical inquiry. Her pedagogy understands Nāṭya not merely as performance, but as Sādhanā, a path of inner refinement, ethical sensitivity, and contemplative awareness.',
-    image: '/assets/images/dr_padmaja_suresh.jpg',
+    role: <span><em className="italic">Ācāryā</em> for <em className="italic">Nāṭya</em> Pedagogy</span>,
+    tagline: <span><em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em> & Pedagogy</span>,
+    quote: <span>Shaping the <em className="italic">Gurukulam</em>’s pedagogic vision through <em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em>.</span>,
+    bio: <span>Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life’s work bridges rigorous classical training with deep philosophical inquiry. Her pedagogy understands <em className="italic">Nāṭya</em> not merely as performance, but as <em className="italic">Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness.</span>,
+    image: '/assets/images/dr_padmaja_suresh_thumb.webp',
     objectPos: 'object-top',
     pillarDevanagari: 'साधना',
     pillarEnglish: 'PRACTICE'
@@ -35,10 +35,10 @@ const MENTORS = [
     tabLabel: 'Śrī K. V. Subrahmoṇyan',
     name: 'Śrī K. V. Subrahmoṇyan',
     role: 'Spiritual Elder',
-    tagline: 'Sākṣitva & Vedāntic Anchoring',
-    quote: 'A presence of sākṣitva and Vedāntic anchoring, offering blessings, inner orientation, and lived wisdom.',
-    bio: 'Revered disciple in the lineage of Bhagavān Śrī Ramaṇa Maharṣi. His life reflects quiet abidance, simplicity, discernment, and lived Vedāntic clarity, serving as a spiritual axis for the Gurukulam.',
-    image: '/assets/images/sri_kv_subrahmonyam.jpg',
+    tagline: <span><em className="italic">Sākṣitva</em> & <em className="italic">Vedāntic</em> Anchoring</span>,
+    quote: <span>A presence of <em className="italic">sākṣitva</em> and <em className="italic">Vedāntic</em> anchoring, offering blessings, inner orientation, and lived wisdom.</span>,
+    bio: <span>Revered disciple in the lineage of <em className="italic">Bhagavān</em> <em className="italic">Śrī</em> <em className="italic">Ramaṇa</em> <em className="italic">Maharṣi</em>. His life reflects quiet abidance, simplicity, discernment, and lived <em className="italic">Vedāntic</em> clarity, serving as a spiritual axis for the <em className="italic">Gurukulam</em>.</span>,
+    image: '/assets/images/sri_kv_subrahmonyam_thumb.webp',
     objectPos: 'object-bottom',
     pillarDevanagari: 'मौन',
     pillarEnglish: 'SILENCE'
@@ -115,6 +115,8 @@ export const Mentors = () => {
                       <img
                         src={MENTORS[activeTab].image}
                         alt={MENTORS[activeTab].name}
+                        loading="lazy"
+                        decoding="async"
                         className={`w-full h-full object-cover ${MENTORS[activeTab].objectPos} filter contrast-[1.02]`}
                       />
                     </div>
@@ -140,7 +142,7 @@ export const Mentors = () => {
 
                     <div className="p-4 rounded-xl bg-[#F5F0E6] border-l-3 border-[#9E743B]">
                       <p className="font-serif italic text-base text-[#6B1D1E] leading-relaxed">
-                        "{MENTORS[activeTab].quote}"
+                        “{MENTORS[activeTab].quote}”
                       </p>
                     </div>
 

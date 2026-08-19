@@ -5,16 +5,16 @@ import { LotusDivider, ProspectusFrame, BrassDiyaIcon } from '../../components/L
 const PILLARS = [
   {
     id: 'sastra',
-    title: 'Śāstra',
+    title: <span><em className="italic">Śāstra</em></span>,
     sanskrit: 'शास्त्र',
     syllable: 'शा',
     subtitle: 'Textual Hermeneutics & Intellectual Lineage',
-    quote: 'The intellect is refined through rigorous study of the Nāṭyaśāstra and its commentarial traditions.',
-    desc: 'Rigorous study of the Nāṭyaśāstra, the Abhinavabhāratī commentary, and allied civilisational knowledge traditions. It provides the intellectual framework, preserving textual integrity and commentarial lineage.'
+    quote: <span>The intellect is refined through rigorous study of the <em className="italic">Nāṭyaśāstra</em> and its commentarial traditions.</span>,
+    desc: <span>Rigorous study of the <em className="italic">Nāṭyaśāstra</em>, the <em className="italic">Abhinavabhāratī</em> commentary, and allied civilisational knowledge traditions. It provides the intellectual framework, preserving textual integrity and commentarial lineage.</span>
   },
   {
     id: 'sadhana',
-    title: 'Sādhanā',
+    title: <span><em className="italic">Sādhanā</em></span>,
     sanskrit: 'साधना',
     syllable: 'सा',
     subtitle: 'Somatic Reconstruction & Daily Practice',
@@ -23,7 +23,7 @@ const PILLARS = [
   },
   {
     id: 'samvada',
-    title: 'Saṃvāda',
+    title: <span><em className="italic">Saṃvāda</em></span>,
     sanskrit: 'संवाद',
     syllable: 'सं',
     subtitle: 'Quiet Listening & Collective Hermeneutics',
@@ -32,7 +32,7 @@ const PILLARS = [
   },
   {
     id: 'parampara',
-    title: 'Paramparā',
+    title: <span><em className="italic">Paramparā</em></span>,
     sanskrit: 'परम्परा',
     syllable: 'प',
     subtitle: 'Living Transmission & Guru-Śiṣya Abidance',
@@ -41,20 +41,20 @@ const PILLARS = [
   },
   {
     id: 'rasa',
-    title: 'Rasa',
+    title: <span><em className="italic">Rasa</em></span>,
     sanskrit: 'रस',
     syllable: 'र',
     subtitle: 'Refined Aesthetic Perception & Spiritual Delight',
-    quote: 'Rasa is the ultimate aesthetic delight and spiritual transcendence that Nāṭya evokes.',
-    desc: 'The cultivation of refined aesthetic perception as the cornerstone of education, culture, and life. It transforms sensory experience into spiritual delight and emotional poise.'
+    quote: <span><em className="italic">Rasa</em> is the ultimate aesthetic delight and spiritual transcendence that <em className="italic">Nāṭya</em> evokes.</span>,
+    desc: <span>The cultivation of refined aesthetic perception as the cornerstone of education, culture, and life. It transforms sensory experience into spiritual delight and emotional poise.</span>
   },
   {
     id: 'dharma',
-    title: 'Dharma',
+    title: <span><em className="italic">Dharma</em></span>,
     sanskrit: 'धर्म',
     syllable: 'ध',
     subtitle: 'Aesthetic Leadership & Public Ordering',
-    quote: 'Public life is renewed through aesthetic poise and dhārmic responsibility.',
+    quote: <span>Public life is renewed through aesthetic poise and <em className="italic">dhārmic</em> responsibility.</span>,
     desc: 'The application of aesthetic poise and moral clarity to public life, governance, and institutional leadership, offering a harmonious vision of civilisational ordering.'
   }
 ];
@@ -83,12 +83,12 @@ export const PillarsMandala = () => {
           <div className="flex items-center justify-center gap-2">
             <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
             <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#9E743B] font-bold">
-              FOUNDATIONAL PILLARS OF GURUKULAM
+              FOUNDATIONAL PILLARS OF <span className="italic">GURUKULAM</span>
             </span>
             <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#6B1D1E] tracking-tight">
-            The Hexagonal Dhārmic Hexad
+            The Hexagonal <em className="italic">Dhārmic</em> Hexad
           </h2>
           <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
             Six interconnected dimensions of learning, practice, and aesthetic leadership.
@@ -161,7 +161,7 @@ export const PillarsMandala = () => {
               <LotusDivider className="my-4" />
 
               <blockquote className="font-serif italic text-lg sm:text-xl text-[#6B1D1E] max-w-2xl mx-auto leading-relaxed">
-                "{activePillar.quote}"
+                “{activePillar.quote}”
               </blockquote>
 
               <p className="font-sans text-base text-[#4A423B] leading-relaxed max-w-3xl mx-auto font-light">

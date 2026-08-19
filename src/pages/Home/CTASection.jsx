@@ -8,7 +8,7 @@ export const CTASection = () => {
       {/* Heritage background texture */}
       <div 
         className="absolute inset-0 bg-cover bg-[center_55%] opacity-40"
-        style={{ backgroundImage: "url('/assets/images/cta.jpg')" }}
+        style={{ backgroundImage: "url('/assets/images/cta.webp')" }}
       />
       <div className="absolute inset-0 bg-black/50" />
 

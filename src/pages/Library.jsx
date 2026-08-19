@@ -2,8 +2,35 @@ import React, { useState } from 'react';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { PUBLICATIONS } from '../data/publications';
+import { useSEO } from '../hooks/useSEO';
+import { formatSanskrit } from '../utils/text';
 
 export const Library = () => {
+  useSEO({
+    title: 'Publications & Research Archives',
+    description: 'Access the flagship treatises, civilisational statecraft working papers, and Rasa reflection monographs published by the Nāṭyaśāstra Gurukulam.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Publications and Research Archives',
+      'description': 'Treatises, working papers, and research documents on civilisational statecraft, governance, and aesthetic knowledge systems.',
+      'mainEntity': {
+        '@type': 'ItemList',
+        'itemListElement': PUBLICATIONS.slice(0, 5).map((pub, idx) => ({
+          '@type': 'ListItem',
+          'position': idx + 1,
+          'item': {
+            '@type': 'ScholarlyArticle',
+            'name': pub.title,
+            'description': pub.desc,
+            'genre': pub.series,
+            'url': typeof window !== 'undefined' ? `${window.location.origin}${pub.file}` : pub.file
+          }
+        }))
+      }
+    }
+  });
+
   const [filter, setFilter] = useState('All');
 
   const SERIES_TABS = [
@@ -69,12 +96,12 @@ export const Library = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={`Open PDF for ${pub.title}`}
-                  className="w-[150px] h-[225px] sm:w-[165px] sm:h-[245px] mx-auto sm:mx-0 shrink-0 relative rounded-sm overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300 border border-black/10 bg-white block cursor-pointer"
+                  className="w-[150px] h-[225px] sm:w-[165px] sm:h-[245px] mx-auto sm:mx-0 shrink-0 relative rounded-sm overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300 border border-black/10 bg-white flex items-center justify-center cursor-pointer"
                 >
                   <img
                     src={pub.cover}
                     alt={pub.title}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-contain object-center"
                     loading="lazy"
                   />
                   {/* Subtle Book Spine overlay effect */}
@@ -101,7 +128,7 @@ export const Library = () => {
                   <div className="pl-2 flex flex-col h-full justify-between">
                     <div className="space-y-1">
                       <span className="text-[7px] uppercase tracking-widest opacity-80 block font-sans">
-                        {pub.series}
+                        {formatSanskrit(pub.series)}
                       </span>
                       <span className="text-[9px] uppercase tracking-wider opacity-90 block font-bold font-sans">
                         {pub.type}
@@ -109,7 +136,7 @@ export const Library = () => {
                     </div>
                     
                     <span className="font-serif text-[12px] leading-snug block mt-3 pb-2 line-clamp-6">
-                      {pub.title}
+                      {formatSanskrit(pub.title)}
                     </span>
                     
                     <div className="mt-auto text-[7px] uppercase tracking-[0.2em] opacity-80 border-t border-current/20 pt-2 font-medium">
@@ -123,7 +150,7 @@ export const Library = () => {
               <div className="flex flex-col flex-1 h-full pt-1 space-y-4">
                 <div className="space-y-2">
                   <span className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze font-semibold">
-                    {pub.series} • {pub.type}
+                    {formatSanskrit(pub.series)} • {pub.type}
                   </span>
                   <a
                     href={pub.file}
@@ -132,11 +159,11 @@ export const Library = () => {
                     className="block group-hover:text-accent-bronze transition-colors duration-300"
                   >
                     <HeadingMD className="text-xl md:text-2xl text-text-charcoal leading-tight">
-                      {pub.title}
+                      {formatSanskrit(pub.title)}
                     </HeadingMD>
                   </a>
                   <Body className="text-[13px] md:text-sm text-text-stone-grey leading-relaxed font-light pb-2">
-                    {pub.desc}
+                    {formatSanskrit(pub.desc)}
                   </Body>
                 </div>
 
