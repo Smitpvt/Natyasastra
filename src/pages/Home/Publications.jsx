@@ -31,12 +31,17 @@ export const Publications = () => {
       
       if (scrollWidth <= clientWidth + 10) return;
 
+      const width = window.innerWidth;
+      const cardWidth = width < 480 ? 160 : width < 640 ? 200 : clientWidth * 0.25;
+      const gap = 24;
+      const scrollDist = cardWidth + gap;
+
       if (scrollLeft + clientWidth >= scrollWidth - 25) {
         containerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        containerRef.current.scrollBy({ left: clientWidth * 0.5, behavior: 'smooth' });
+        containerRef.current.scrollBy({ left: scrollDist, behavior: 'smooth' });
       }
-    }, 3500);
+    }, 5500);
 
     return () => clearInterval(timer);
   }, [isPaused, isDragging]);
@@ -85,7 +90,7 @@ export const Publications = () => {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px]">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#9E743B]/20 pb-6 mb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#9E743B]/20 pb-6 mb-4 sm:mb-6 md:mb-8">
           <div className="space-y-3 max-w-2xl">
             <div className="flex items-center gap-2">
               <BrassDiyaIcon className="w-5 h-5 text-[#9E743B]" />
@@ -149,7 +154,7 @@ export const Publications = () => {
                     e.preventDefault();
                   }
                 }}
-                className="snap-start flex-none w-[75%] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] group block"
+                className="snap-start flex-none w-[160px] xs:w-[200px] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] group block"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -160,7 +165,7 @@ export const Publications = () => {
                 >
                   {/* Publication Cover Image */}
                   {pub.cover ? (
-                    <div className="w-full aspect-[2/3] max-h-[220px] xs:max-h-[260px] sm:max-h-none shrink-0 shadow-md relative rounded-sm overflow-hidden border border-black/10 transition-transform duration-500 group-hover:-translate-y-2 bg-white flex items-center justify-center cursor-pointer">
+                    <div className="w-full aspect-[2/3] shrink-0 shadow-md relative rounded-sm overflow-hidden border border-black/10 transition-transform duration-500 group-hover:-translate-y-2 bg-white flex items-center justify-center cursor-pointer">
                       <img
                         src={pub.cover}
                         alt={pub.title}
@@ -178,7 +183,7 @@ export const Publications = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className={`w-full aspect-[2/3] max-h-[220px] xs:max-h-[260px] sm:max-h-none shrink-0 shadow-md flex flex-col p-4 sm:p-6 relative border transition-transform duration-500 group-hover:-translate-y-2 ${pub.theme}`}>
+                    <div className={`w-full aspect-[2/3] shrink-0 shadow-md flex flex-col p-4 sm:p-6 relative border transition-transform duration-500 group-hover:-translate-y-2 ${pub.theme}`}>
                       <div className="absolute left-0 top-0 bottom-0 w-3 sm:w-4 bg-black/10 shadow-[inset_1px_0_2px_rgba(255,255,255,0.2)]"></div>
                       <div className="pl-3 sm:pl-4 flex flex-col h-full justify-between">
                         <div className="space-y-1">
