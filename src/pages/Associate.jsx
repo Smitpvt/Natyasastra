@@ -38,7 +38,7 @@ export const Associate = () => {
       </Section>
 
       {/* 2. THE CIRCLES OF PERMANENCE & 5 FLAME LEVELS (PDF Page 11 Inspiration) */}
-      <Section className="py-16 border-b border-[#9E743B]/20 bg-[#FAF6F0]">
+      <Section className="py-10 md:py-14 border-b border-[#9E743B]/20 bg-[#FAF6F0]">
         <div className="max-w-6xl mx-auto space-y-16">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -126,7 +126,7 @@ export const Associate = () => {
       </Section>
 
       {/* 3. ŚUBHAM CEREMONIAL CLOSING (Inspired by PDF Page 13) */}
-      <Section className="py-24 bg-[#F5F0E6] relative border-t border-[#9E743B]/20">
+      <Section className="py-14 md:py-20 bg-[#F5F0E6] relative border-t border-[#9E743B]/20">
         <div className="max-w-3xl mx-auto text-center space-y-8 px-6 relative z-10">
           
           <div className="space-y-2">

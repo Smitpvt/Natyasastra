@@ -111,8 +111,8 @@ export const GlimpsesAndMedia = () => {
   const visibleItems = isExpanded ? filteredItems : filteredItems.slice(0, 4);
 
   return (
-    <section className="w-full bg-[#FAF6F0] py-20 lg:py-28 relative border-t border-[#9E743B]/20">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-12">
+    <section className="w-full bg-[#FAF6F0] py-12 md:py-16 relative border-t border-[#9E743B]/20">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-8 sm:space-y-12">
         
         {/* SECTION INTRO */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#9E743B]/20 pb-8">

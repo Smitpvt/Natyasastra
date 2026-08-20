@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PUBLICATIONS } from '../../data/publications';
+import { BrassDiyaIcon } from '../../components/LotusOrnament';
 import { formatSanskrit } from '../../utils/text';
 
 // Select featured papers for the homepage
@@ -86,24 +87,27 @@ export const Publications = () => {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px]">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-start justify-between mb-6 gap-8 md:gap-4">
-          <div className="md:w-1/3">
-            <h2 className="font-serif text-[42px] sm:text-[48px] md:text-[56px] leading-[1.05] font-normal text-[#211F1D]">
-              Our <br className="hidden md:block" />
-              Publications
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#9E743B]/20 pb-6 mb-8">
+          <div className="space-y-3 max-w-2xl">
+            <div className="flex items-center gap-2">
+              <BrassDiyaIcon className="w-5 h-5 text-[#9E743B]" />
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-[#9E743B] font-bold">
+                KNOWLEDGE SYSTEMS
+              </span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+              Our Publications
             </h2>
-          </div>
-          <div className="md:w-1/3 flex items-start md:pt-4">
-            <p className="font-sans text-[14px] md:text-[15px] text-[#757069] leading-[1.6] max-w-[280px]">
-              A curated collection of foundational texts, research journals, and articles.
+            <p className="font-serif italic text-base text-[#7A5428]">
+              A curated collection of foundational texts, research journals, and commentarial works.
             </p>
           </div>
-          <div className="md:w-1/3 flex items-start justify-start md:justify-end md:pt-4">
+          <div className="flex items-end shrink-0 pt-2 md:pt-0">
             <Link
               to="/library"
-              className="font-sans text-[13px] uppercase tracking-widest text-[#757069] hover:text-[#211F1D] transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#9E743B]/30 text-[#6B1D1E] font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-[#6B1D1E] hover:text-white transition-all duration-300 shadow-xs"
             >
-              View all publications →
+              View Library Catalog →
             </Link>
           </div>
         </div>
@@ -132,7 +136,7 @@ export const Publications = () => {
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
-            className="flex overflow-x-auto gap-6 pb-8 scrollbar-none snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0 cursor-grab active:cursor-grabbing select-none"
+            className="flex overflow-x-auto gap-6 pb-8 scrollbar-none snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0 cursor-grab active:cursor-grabbing select-none items-stretch"
             style={{ scrollSnapType: 'x mandatory', scrollBehavior: isDragging ? 'auto' : 'smooth' }}
           >
             {RECENT_PUBLICATIONS.map((pub, index) => (
@@ -147,7 +151,7 @@ export const Publications = () => {
                     e.preventDefault();
                   }
                 }}
-                className="snap-start flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] group block"
+                className="snap-start flex-none w-[75%] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] group block"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

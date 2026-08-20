@@ -122,7 +122,7 @@ export const About = () => {
       </Section>
 
       {/* 2. ABOUT THE GURUKULAM */}
-      <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-4">
@@ -149,7 +149,7 @@ export const About = () => {
       </Section>
 
       {/* 3. OUR STORY */}
-      <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <Caption className="text-accent-bronze/70">Our Story</Caption>
@@ -284,7 +284,7 @@ export const About = () => {
       </Section>
 
       {/* 4. OUR VISION (Inspired by PDF Page 3) */}
-      <Section className="py-20 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
+      <Section className="py-12 md:py-16 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
         <div className="max-w-4xl mx-auto px-4">
           <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-14 text-center">
             
@@ -316,7 +316,7 @@ export const About = () => {
       </Section>
 
       {/* NEW: THE WORK BEFORE OUR GENERATION (Inspired by PDF Page 4) */}
-      <Section className="py-24 bg-[#FAF6F0] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-20 bg-[#FAF6F0] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -406,7 +406,7 @@ export const About = () => {
       </Section>
 
       {/* 6. WHY NĀṬYAŚĀSTRA KNOWLEDGE WHEEL (Inspired by PDF Page 5) */}
-      <Section className="py-24 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-20 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <Caption className="text-[#9E743B] tracking-[0.3em]">A Living Knowledge Tradition</Caption>
@@ -479,7 +479,7 @@ export const About = () => {
       </Section>
 
       {/* 7. WHY A GURUKULAM */}
-      <Section className="py-24 md:py-36 bg-[#FAF6F0] border-b border-[#9E743B]/10" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 bg-[#FAF6F0] border-b border-[#9E743B]/10" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             <div className="lg:col-span-5 w-full max-w-md mx-auto order-2 lg:order-1">
@@ -509,7 +509,7 @@ export const About = () => {
       </Section>
 
       {/* 5. GUIDING INFLUENCES */}
-      <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Guiding Influences</Caption>
@@ -607,7 +607,7 @@ export const About = () => {
       </Section>
 
       {/* 8. THE SIX PILLARS */}
-      <Section className="py-24 md:py-36 bg-bg-parchment/10 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 bg-bg-parchment/10 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Foundational Framework</Caption>
@@ -789,7 +789,7 @@ export const About = () => {
       </Section>
 
       {/* 9. WHAT MAKES THE GURUKULAM DISTINCTIVE */}
-      <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="space-y-4">
             <Caption className="text-accent-bronze/70">What Makes Us Distinctive</Caption>
@@ -804,7 +804,7 @@ export const About = () => {
               <span>Distinctive Pillars</span>
               <span className="text-accent-bronze font-semibold">Swipe →</span>
             </div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-16 pb-3 md:pb-0">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-16 pb-3 md:pb-0 items-stretch">
               
               {/* Block 1 */}
               <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
@@ -866,7 +866,7 @@ export const About = () => {
       </Section>
 
       {/* 10. AREAS OF ENGAGEMENT */}
-      <Section className="py-24 md:py-36 bg-bg-parchment/10 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 bg-bg-parchment/10 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Areas of Engagement</Caption>
@@ -878,7 +878,7 @@ export const About = () => {
               <span>Engagement Areas</span>
               <span className="text-accent-bronze font-semibold">Swipe →</span>
             </div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-10 pb-3 md:pb-0">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-10 pb-3 md:pb-0 items-stretch">
               {[
                 { id: 'I.', title: <span>Study of <em className="italic">Nāṭyaśāstra</em></span>, desc: <span>Rigorous study of the <em className="italic">Nāṭyaśāstra</em> text and its commentarial traditions, particularly <em className="italic">Abhinavabhāratī</em>.</span> },
                 { id: 'II.', title: 'Embodied Practice', desc: <span>Embodied practice and <em className="italic">Nāṭya</em> as a path of inner spiritual refinement and conscious movement.</span> },
@@ -902,7 +902,7 @@ export const About = () => {
       </Section>
 
       {/* 11. OUR ETHOS */}
-      <Section className="py-24 md:py-36 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-24 border-b border-accent-bronze/5" background="none" container={true} yOffset={0}>
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Our Ethos</Caption>
@@ -914,7 +914,7 @@ export const About = () => {
               <span>Enduring Principles</span>
               <span className="text-accent-bronze font-semibold">Swipe →</span>
             </div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 pb-3 md:pb-0">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 pb-3 md:pb-0 items-stretch">
               {[
                 { title: 'Inner Order before Outer Achievement', desc: 'Lasting excellence begins with inner discipline.' },
                 { title: 'Truthfulness as Practice', desc: 'Learning begins with honest perception, careful discernment, and intellectual integrity.' },
@@ -935,7 +935,7 @@ export const About = () => {
       </Section>
 
       {/* 13. CEREMONIAL CLOSING */}
-      <Section className="py-24 md:py-32 bg-bg-ivory" background="none" container={true} yOffset={0}>
+      <Section className="py-14 md:py-22 bg-bg-ivory" background="none" container={true} yOffset={0}>
         <div className="max-w-3xl mx-auto text-center space-y-16">
           <div className="space-y-4 font-serif italic text-xl md:text-2xl text-accent-bronze tracking-wide leading-relaxed">
             <p className="m-0">The journey begins with <em className="italic">Śāstra</em>.</p>

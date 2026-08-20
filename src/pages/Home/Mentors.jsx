@@ -49,7 +49,7 @@ export const Mentors = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="w-full bg-[#F5F0E6] py-24 border-t border-[#9E743B]/20 relative overflow-hidden text-[#211F1D]">
+    <section className="w-full bg-[#F5F0E6] py-12 md:py-16 border-t border-[#9E743B]/20 relative overflow-hidden text-[#211F1D]">
       
       {/* Background Subtle Geometry */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] select-none">
@@ -59,7 +59,7 @@ export const Mentors = () => {
         </svg>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-12 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-8 sm:space-y-12 relative z-10">
         
         {/* ========================================================================= */}
         {/* SECTION: Gurus & Acharyas (Inspired by PDF Page 7) */}

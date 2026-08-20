@@ -27,7 +27,7 @@ export const QuoteSection = () => {
   const current = VERSES[activeVerse];
 
   return (
-    <section className="w-full bg-[#FAF6F0] relative z-20 py-20 md:py-28 flex justify-center items-center border-t border-[#9E743B]/20">
+    <section className="w-full bg-[#FAF6F0] relative z-20 py-12 md:py-16 flex justify-center items-center border-t border-[#9E743B]/20">
       <div className="max-w-[920px] w-full px-6 mx-auto">
         
         <motion.div

@@ -309,7 +309,7 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* FEATURED RECENT PROGRAMME: NĀMA • RŪPA • NĀDA • BINDU (#18) */}
-      <Section className="py-16 sm:py-20 border-b border-accent-bronze/10 bg-[#FAF6F0]">
+      <Section className="py-12 sm:py-16 border-b border-accent-bronze/10 bg-[#FAF6F0]">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px]">
           <div className="space-y-8 max-w-5xl mx-auto">
             
@@ -433,7 +433,7 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* FORTHCOMING PROGRAMMES (#19) */}
-      <Section className="py-20 border-b border-accent-bronze/10 bg-[#F8F6F1]">
+      <Section className="py-12 md:py-16 border-b border-accent-bronze/10 bg-[#F8F6F1]">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px]">
           <div className="space-y-12 max-w-4xl mx-auto">
             
@@ -558,7 +558,7 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* 2. VISUAL PROGRESSION I: THE MĀRGA — INTERACTIVE MANDALA CYCLE */}
-      <Section className="py-24 border-b border-accent-bronze/10 bg-[#F8F6F1] relative">
+      <Section className="py-14 md:py-20 border-b border-accent-bronze/10 bg-[#F8F6F1] relative">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-16">
           
           {/* Section Header */}
@@ -764,7 +764,7 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* 3. VISUAL PROGRESSION II: TWO OUTWARD MOVEMENTS (PROMINENT FEATURE SHOWCASES) */}
-      <Section className="py-12 sm:py-16 lg:py-20 border-b border-accent-bronze/10 relative">
+      <Section className="py-10 sm:py-12 lg:py-16 border-b border-accent-bronze/10 relative">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[80px] space-y-12 sm:space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -1029,7 +1029,7 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* 4. VISUAL PROGRESSION III: ENTER THE GURUKULAM (PROGRAMME FORMATS) */}
-      <Section className="py-24 border-b border-accent-bronze/10 bg-[#F8F6F1]">
+      <Section className="py-14 md:py-20 border-b border-accent-bronze/10 bg-[#F8F6F1]">
         <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -1048,7 +1048,7 @@ export const ProgrammesDetail = () => {
               <span>Programme Formats</span>
               <span className="text-accent-bronze font-semibold">Auto-scrolling • Swipe →</span>
             </div>
-            <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 pb-3 md:pb-0">
+            <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 pb-3 md:pb-0 items-stretch">
               {DIRECT_ENGAGEMENTS.map((item, idx) => (
                 <motion.div
                   key={item.title}
@@ -1107,7 +1107,7 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* 5. VISUAL PROGRESSION IV: CIVILISATIONAL IMPACT */}
-      <Section className="py-24 border-b border-accent-bronze/10 relative">
+      <Section className="py-14 md:py-20 border-b border-accent-bronze/10 relative">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -1126,7 +1126,7 @@ export const ProgrammesDetail = () => {
               <span>Realms of Impact</span>
               <span className="text-accent-bronze font-semibold">Auto-scrolling • Swipe →</span>
             </div>
-            <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-8 pb-3 md:pb-0">
+            <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-8 pb-3 md:pb-0 items-stretch">
               {REALMS_OF_IMPACT.map((realm, idx) => (
                 <motion.div
                   key={realm.realm}

@@ -77,37 +77,37 @@
 
 /* Reusable editorial section rhythm */
 .section-large {
-  padding-top: 5rem;
-  padding-bottom: 7rem;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
   .section-large {
-    padding-top: 7rem;
-    padding-bottom: 9rem;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
   }
 }
 
 .section-medium {
-  padding-top: 4.5rem;
-  padding-bottom: 5.5rem;
-}
-
-@media (min-width: 768px) {
-  .section-medium {
-    padding-top: 5.5rem;
-    padding-bottom: 6.5rem;
-  }
-}
-
-.section-compact {
-  padding-top: 3.5rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
-  .section-compact {
+  .section-medium {
     padding-top: 4rem;
     padding-bottom: 5rem;
+  }
+}
+
+.section-compact {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-compact {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
   }
 }
