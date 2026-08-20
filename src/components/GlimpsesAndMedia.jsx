@@ -158,7 +158,7 @@ export const GlimpsesAndMedia = () => {
         </div>
 
         {/* CURATED GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-6 px-6 md:mx-0 md:px-0 md:grid md:grid-cols-2 md:gap-8 pb-4 md:pb-0 items-stretch">
           {visibleItems.map(item => (
             <motion.div
               key={item.id}
@@ -166,7 +166,7 @@ export const GlimpsesAndMedia = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#9E743B]/20 flex flex-col justify-between group hover:shadow-xl hover:border-[#6B1D1E]/40 transition-all duration-500"
+              className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#9E743B]/20 flex flex-col justify-between group hover:shadow-xl hover:border-[#6B1D1E]/40 transition-all duration-500 flex-none w-[280px] xs:w-[310px] md:w-auto snap-start"
             >
               {/* Media Preview Container */}
               {item.type === 'video' ? (
@@ -182,7 +182,7 @@ export const GlimpsesAndMedia = () => {
               ) : (
                 <div 
                   onClick={() => setLightboxItem(item)}
-                  className="relative h-64 sm:h-72 w-full bg-[#1E1C1A] overflow-hidden border-b border-[#9E743B]/20 cursor-pointer"
+                  className="relative h-48 xs:h-52 sm:h-56 md:h-60 lg:h-64 w-full bg-[#1E1C1A] overflow-hidden border-b border-[#9E743B]/20 cursor-pointer"
                 >
                   <img
                     src={item.image}
@@ -209,20 +209,20 @@ export const GlimpsesAndMedia = () => {
               )}
 
               {/* Text Card Body */}
-              <div className="p-6 sm:p-8 space-y-3 flex-grow flex flex-col justify-between">
+              <div className="p-4 xs:p-5 sm:p-6 space-y-2 flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
-                  <div className="flex justify-between items-baseline gap-2 border-b border-[#9E743B]/10 pb-2">
-                    <span className="font-sans text-[10px] uppercase tracking-widest text-[#9E743B] font-bold">
+                  <div className="flex justify-between items-baseline gap-2 border-b border-[#9E743B]/10 pb-1.5">
+                    <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-[#9E743B] font-bold">
                       {item.category}
                     </span>
-                    <span className="font-sans text-[10px] uppercase tracking-wider text-[#757069]">
+                    <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-wider text-[#757069]">
                       {item.date}
                     </span>
                   </div>
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#6B1D1E] font-normal leading-snug">
+                  <h3 className="font-serif text-base xs:text-lg sm:text-xl text-[#6B1D1E] font-normal leading-snug">
                     {item.title}
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-[#59524A] font-light leading-relaxed pt-1">
+                  <p className="font-sans text-xs sm:text-[13px] text-[#59524A] font-light leading-relaxed pt-0.5 line-clamp-2 sm:line-clamp-3">
                     {item.desc}
                   </p>
                 </div>
