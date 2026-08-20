@@ -172,7 +172,7 @@ export const About = () => {
                   <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">The First <em className="italic">Saṅkalpa</em></span>
                   <HeadingMD className="text-xl mb-1 font-light text-text-primary">
                     <a
-                      href="https://www.tattvaloka.com"
+                      href="https://sites.google.com/view/ramarajya/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
@@ -184,7 +184,7 @@ export const About = () => {
                   <Body className="text-text-secondary text-sm md:text-base leading-relaxed mt-2">
                     Early conversations within the{' '}
                     <a
-                      href="https://www.tattvaloka.com"
+                      href="https://sites.google.com/view/ramarajya/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent-bronze font-medium hover:underline"
@@ -242,8 +242,8 @@ export const About = () => {
                       23 November 2025 | Navi Mumbai
                     </div>
                     <img
-                      src="/assets/images/yajna_thumb.webp"
-                      alt="Pratiṣṭhā Consecration Ceremony"
+                      src="/assets/images/sishyas_natya_seva_thumb.webp"
+                      alt="Pratiṣṭhā Consecration Dance Offering - Sishyas of Smt. Charanya Gurusathya"
                       className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border border-accent-bronze/10 rounded-md"
                       loading="lazy"
                       decoding="async"

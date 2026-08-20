@@ -36,7 +36,7 @@ const CURATED_MEDIA = [
     category: 'Sacred Offerings',
     title: 'Nāṭya Seva & Disciples of Lineage',
     subtitle: 'Living Transmission in Motion',
-    image: '/assets/images/dance_offering_thumb.webp',
+    image: '/assets/images/sishyas_natya_seva_thumb.webp',
     date: '23 November 2025',
     location: 'Navi Mumbai',
     desc: 'Sacred dance performance embodying Mārga discipline and aesthetic devotion during the inaugural consecration.',

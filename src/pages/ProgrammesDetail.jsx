@@ -286,7 +286,7 @@ export const ProgrammesDetail = () => {
                 className="relative rounded-xl overflow-hidden shadow-xl border-4 border-white group"
               >
                 <img
-                  src="/assets/images/dance_offering.webp"
+                  src="/assets/images/sishyas_natya_seva.webp"
                   alt="Nāṭya Seva offering by sishyas"
                   loading="lazy"
                   decoding="async"

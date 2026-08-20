@@ -8,7 +8,7 @@ import { formatSanskrit } from '../utils/text';
 export const Library = () => {
   useSEO({
     title: 'Publications & Research Archives',
-    description: 'Access the flagship treatises, civilisational statecraft working papers, and Rasa reflection monographs published by the Nāṭyaśāstra Gurukulam.',
+    description: 'Access the DTHF papers, civilisational statecraft working papers, and Rasa reflection monographs published by the Nāṭyaśāstra Gurukulam.',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
@@ -36,7 +36,6 @@ export const Library = () => {
   const SERIES_TABS = [
     'All',
     'DTHF Papers',
-    'Flagship Treatise',
     'Civilisational Statecraft Series',
     'Civilisational Governance',
     'Aesthetic Knowledge Systems',

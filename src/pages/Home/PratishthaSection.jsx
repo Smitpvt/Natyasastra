@@ -26,7 +26,7 @@ const GALLERY_HIGHLIGHTS = [
   {
     title: <span><em className="italic">Nāṭya Sevā</em> & Dance Offering</span>,
     subtitle: <span>Somatic <em className="italic">Sādhanā</em> in Practice</span>,
-    image: '/assets/images/dance_offering_thumb.webp',
+    image: '/assets/images/sishyas_natya_seva_thumb.webp',
     desc: <span>Sacred dance offerings by disciples of Smt. Charanya Gurusathya during the <em className="italic">Pratiṣṭhā Samāroham</em>.</span>
   }
 ];
