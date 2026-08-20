@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FileText, ExternalLink } from 'lucide-react';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { LotusIcon, LotusDivider, BrassDiyaIcon, ProspectusFrame } from '../components/LotusOrnament';
@@ -350,30 +351,105 @@ export const ProgrammesDetail = () => {
             </div>
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-accent-bronze/20 p-6 sm:p-10 space-y-8">
-              {/* Image Collateral with full view, correct aspect ratio, no cropping */}
-              <div className="w-full overflow-hidden rounded-xl bg-[#1E1C1A] border border-accent-bronze/20 shadow-md">
+              {/* Image Collateral with clean alignment, correct aspect ratio, no black side bars */}
+              <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-xl bg-[#FAF6F0] border border-accent-bronze/20 shadow-md">
                 <img
                   src="/assets/images/Participants in the Nama Rupa Nada Bindu immersion.jpg"
                   alt="Participants in the Nāma Rūpa Nāda Bindu immersion"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-auto object-contain max-h-[600px] mx-auto"
+                  className="w-full h-auto max-h-[500px] object-cover sm:object-contain mx-auto"
                 />
               </div>
 
-              <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base sm:text-lg max-w-4xl mx-auto text-center sm:text-left">
+              <div className="space-y-6 text-text-stone-grey font-sans font-light leading-relaxed text-base sm:text-lg max-w-4xl mx-auto text-center sm:text-left">
                 <p>
                   <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative inquiry, somatic practice, and deep exploration of sound, form, and aesthetic manifestation.
                 </p>
-                <div className="pt-2 flex flex-wrap justify-center sm:justify-start gap-4 font-sans text-xs uppercase tracking-widest text-accent-bronze font-semibold">
-                  <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
-                    Residential Immersion
-                  </span>
-                  <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
-                    Somatic & Textual Sādhanā
-                  </span>
+                
+                <div className="pt-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 font-sans text-xs uppercase tracking-widest text-accent-bronze font-semibold">
+                    <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
+                      Residential Immersion
+                    </span>
+                    <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
+                      Somatic & Textual Sādhanā
+                    </span>
+                  </div>
+
+                  {/* Refined CTA Button: VIEW PARTICIPANT HANDBOOK ↗ */}
+                  <a
+                    href="/assets/publications/NRNB Immersion Participant Handbook.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-[#6B1D1E] hover:bg-[#521617] text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 border border-[#9E743B]/40 cursor-pointer"
+                  >
+                    <FileText className="w-4 h-4 text-white/90 shrink-0" />
+                    <span>VIEW PARTICIPANT HANDBOOK</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-white/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 shrink-0" />
+                  </a>
                 </div>
               </div>
+
+              {/* Phase 4: Embedded Video Cards (Day 1 & Day 2) */}
+              <div className="pt-6 border-t border-[#9E743B]/20 space-y-6">
+                <div className="flex items-center gap-2">
+                  <span className="font-serif text-xl sm:text-2xl text-[#6B1D1E] font-medium">
+                    Immersion Video Recordings
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                  {/* Day 1 Video Card */}
+                  <div className="bg-[#FAF6F0] rounded-xl overflow-hidden border border-[#9E743B]/25 shadow-md flex flex-col justify-between">
+                    <div className="aspect-video w-full bg-black">
+                      <iframe
+                        src="https://www.youtube.com/embed/2D6bqFiehA8"
+                        title="Nāma Rūpa Nāda Bindu Immersion - Day 1"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full border-0"
+                      />
+                    </div>
+                    <div className="p-4 sm:p-5 space-y-1 bg-white border-t border-[#9E743B]/20">
+                      <span className="inline-block px-3 py-1 rounded-full bg-[#6B1D1E] text-white font-sans text-[10px] uppercase tracking-widest font-bold">
+                        Day 1
+                      </span>
+                      <h4 className="font-serif text-lg font-semibold text-[#6B1D1E] pt-1">
+                        Immersion Session — Day 1
+                      </h4>
+                      <p className="font-sans text-xs text-[#59524A] font-light leading-relaxed">
+                        Contemplative inquiry, sound-form resonance, and opening proceedings of the residential immersion.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Day 2 Video Card */}
+                  <div className="bg-[#FAF6F0] rounded-xl overflow-hidden border border-[#9E743B]/25 shadow-md flex flex-col justify-between">
+                    <div className="aspect-video w-full bg-black">
+                      <iframe
+                        src="https://www.youtube.com/embed/JMuPaOkrAjk"
+                        title="Nāma Rūpa Nāda Bindu Immersion - Day 2"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full border-0"
+                      />
+                    </div>
+                    <div className="p-4 sm:p-5 space-y-1 bg-white border-t border-[#9E743B]/20">
+                      <span className="inline-block px-3 py-1 rounded-full bg-[#6B1D1E] text-white font-sans text-[10px] uppercase tracking-widest font-bold">
+                        Day 2
+                      </span>
+                      <h4 className="font-serif text-lg font-semibold text-[#6B1D1E] pt-1">
+                        Immersion Session — Day 2
+                      </h4>
+                      <p className="font-sans text-xs text-[#59524A] font-light leading-relaxed">
+                        Aesthetic synthesis, movement sādhanā, and culmination proceedings of the residential immersion.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -727,23 +803,23 @@ export const ProgrammesDetail = () => {
 
           {/* SHOWCASE 1: THE YĀTRI INITIATIVE */}
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="rounded-2xl overflow-hidden bg-[#1E1C1A] text-[#F3EEE6] shadow-xl border border-accent-bronze/30 grid grid-cols-1 lg:grid-cols-12"
+            transition={{ duration: 0.6 }}
+            className="rounded-2xl overflow-hidden bg-[#1E1C1A] text-[#F3EEE6] shadow-xl border border-accent-bronze/30 grid grid-cols-1 lg:grid-cols-12 max-w-6xl mx-auto"
           >
             {/* Left Photo & Highlight */}
-            <div className="lg:col-span-5 relative h-56 sm:h-72 lg:h-full min-h-[220px] lg:min-h-[380px] overflow-hidden">
+            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto lg:min-h-full overflow-hidden">
               <img
                 src="/assets/images/sishyas_natya_seva_thumb.webp"
                 alt="The Yātri Initiative - Cultural Transmission"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover object-top filter brightness-[0.95] contrast-[1.02]"
+                className="w-full h-full object-cover object-top filter brightness-[0.98] contrast-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1E1C1A] via-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#1E1C1A]" />
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-3 rounded-lg bg-black/75 backdrop-blur-md border border-white/10 space-y-0.5">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1E1C1A] via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/10 lg:to-[#1E1C1A]" />
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 rounded-lg bg-black/75 backdrop-blur-md border border-white/10 space-y-0.5">
                 <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-accent-bronze font-semibold block">
                   Cultural Custodians
                 </span>
@@ -754,13 +830,13 @@ export const ProgrammesDetail = () => {
             </div>
 
             {/* Right Details */}
-            <div className="lg:col-span-7 p-5 sm:p-8 lg:p-10 flex flex-col justify-between space-y-5">
-              <div className="space-y-4 sm:space-y-5">
-                <div className="space-y-1 sm:space-y-1.5">
+            <div className="lg:col-span-7 p-5 sm:p-7 lg:p-8 flex flex-col justify-between space-y-4">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-1">
                   <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold block">
                     Flagship Pathway
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-white">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white">
                     The Yātri Initiative
                   </h3>
                   <p className="font-sans text-[11px] sm:text-xs uppercase tracking-widest text-[#E0D8CE]/75">
@@ -768,11 +844,11 @@ export const ProgrammesDetail = () => {
                   </p>
                 </div>
 
-                <p className="font-sans text-xs sm:text-sm lg:text-base leading-relaxed text-[#E0D8CE]/90 font-light">
+                <p className="font-sans text-xs sm:text-sm leading-relaxed text-[#E0D8CE]/90 font-light">
                   The Yātri Initiative is the Gurukulam's flagship pathway for cultural awakening. A Yātri is defined not by performance or acclaim, but by presence, alignment, service, and inner clarity—carrying the Mārga into a community as a cultural custodian, educator, and bearer of the Gurukulam's ethos.
                 </p>
 
-                <div className="p-3.5 sm:p-4 rounded-xl bg-white/5 border border-white/10 space-y-1.5">
+                <div className="p-3 rounded-lg bg-white/5 border border-white/10 space-y-1">
                   <span className="font-serif text-xs sm:text-sm italic text-accent-bronze block font-medium">
                     From Practitioner to Custodian
                   </span>
@@ -782,14 +858,14 @@ export const ProgrammesDetail = () => {
                 </div>
 
                 {/* Pathway Steps: Auto-scrolling horizontal carousel on mobile, 2-col grid on sm+ */}
-                <div className="space-y-1.5 pt-1">
+                <div className="space-y-1 pt-1">
                   <div className="flex items-center justify-between sm:hidden text-[10px] uppercase tracking-widest text-[#E0D8CE]/60">
                     <span>Pathway Steps</span>
                     <span className="text-accent-bronze">Auto-scrolling • Swipe →</span>
                   </div>
-                  <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 -mx-5 px-5 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-3.5 pb-2 sm:pb-0">
+                  <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 -mx-5 px-5 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-3 pb-2 sm:pb-0">
                     {YATRI_PATHWAY.map((item) => (
-                      <div key={item.title} className="flex-none w-[82%] sm:w-auto snap-start p-3.5 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                      <div key={item.title} className="flex-none w-[82%] sm:w-auto snap-start p-3 rounded-lg bg-white/5 border border-white/10 space-y-0.5">
                         <div className="flex items-center gap-1.5">
                           <span className="font-serif text-xs text-accent-bronze font-semibold">{item.num}.</span>
                           <h4 className="font-serif text-xs sm:text-sm font-medium text-white">{item.title}</h4>
@@ -801,13 +877,13 @@ export const ProgrammesDetail = () => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="pt-3 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <span className="font-sans text-[11px] sm:text-xs text-[#E0D8CE]/60 italic">
                   Fidelity to the Mārga with room for organic local expression
                 </span>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full bg-[#9E743B] text-white font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-white hover:text-[#1E1C1A] transition-all duration-300 shadow-md text-center"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#9E743B] text-white font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-white hover:text-[#1E1C1A] transition-all duration-300 shadow-md text-center shrink-0"
                 >
                   Explore Yātri Pathway →
                 </Link>
@@ -816,30 +892,30 @@ export const ProgrammesDetail = () => {
           </motion.div>
 
           {/* NEW: THE YĀTRI NETWORK DIYA RADIAL DIAGRAM (Inspired by PDF Page 8) */}
-          <div className="my-12">
-            <ProspectusFrame innerClassName="p-8 sm:p-12 text-center bg-[#FAF6F0]">
-              <div className="space-y-3 max-w-2xl mx-auto">
+          <div className="my-8 max-w-5xl mx-auto">
+            <ProspectusFrame innerClassName="p-6 sm:p-10 text-center bg-[#FAF6F0]">
+              <div className="space-y-2 max-w-2xl mx-auto">
                 <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block">
                   DISTRIBUTED TRANSMISSION
                 </span>
-                <h3 className="font-serif text-2xl sm:text-4xl font-light text-[#6B1D1E]">
+                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-light text-[#6B1D1E]">
                   The Yātri Network
                 </h3>
-                <p className="font-serif italic text-sm sm:text-base text-[#7A5428]">
+                <p className="font-serif italic text-xs sm:text-sm text-[#7A5428]">
                   A living tradition grows not by replication, but by transmission.
                 </p>
                 <LotusDivider className="my-2" />
               </div>
 
-              {/* Radial Lamp Visualizer */}
-              <div className="relative w-full max-w-[500px] aspect-square mx-auto my-8 flex items-center justify-center">
+              {/* Radial Lamp Visualizer - Full Bounds Unclipped */}
+              <div className="relative w-full max-w-[440px] aspect-square mx-auto my-8 flex items-center justify-center p-2">
                 {/* Connecting Ray Lines */}
                 <div className="absolute inset-8 rounded-full border border-[#9E743B]/20 stroke-dasharray-[3_3]" />
                 
                 {/* Central Diya: NĀṬYAŚĀSTRA GURUKULAM */}
-                <div className="relative z-20 w-36 h-36 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-3">
-                  <BrassDiyaIcon className="w-9 h-9" />
-                  <span className="font-serif text-xs font-semibold text-[#6B1D1E] tracking-wider uppercase mt-1">
+                <div className="relative z-20 w-28 sm:w-32 h-28 sm:h-32 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-2">
+                  <BrassDiyaIcon className="w-7 sm:w-8 h-7 sm:h-8" />
+                  <span className="font-serif text-[11px] sm:text-xs font-semibold text-[#6B1D1E] tracking-wider uppercase mt-0.5 leading-tight">
                     Nāṭyaśāstra<br />Gurukulam
                   </span>
                 </div>
@@ -856,8 +932,8 @@ export const ProgrammesDetail = () => {
                   { name: 'Viveka', angle: 252 },
                   { name: 'Rasa', angle: 288 },
                   { name: 'Sādhanā', angle: 324 }
-                ].map((lamp, i) => {
-                  const radius = 175; // px radius
+                ].map((lamp) => {
+                  const radius = 145; // px radius for unclipped proportions
                   const rad = (lamp.angle - 90) * (Math.PI / 180);
                   const x = Math.round(radius * Math.cos(rad));
                   const y = Math.round(radius * Math.sin(rad));
@@ -870,10 +946,10 @@ export const ProgrammesDetail = () => {
                       }}
                       className="absolute z-20 flex flex-col items-center justify-center group cursor-pointer"
                     >
-                      <div className="w-12 h-12 rounded-full bg-white border border-[#9E743B]/40 shadow-md flex items-center justify-center group-hover:border-[#6B1D1E] group-hover:scale-110 transition-all">
-                        <BrassDiyaIcon className="w-6 h-6" glow={true} />
+                      <div className="w-9 sm:w-10 h-9 sm:h-10 rounded-full bg-white border border-[#9E743B]/40 shadow-sm flex items-center justify-center group-hover:border-[#6B1D1E] group-hover:scale-110 transition-all">
+                        <BrassDiyaIcon className="w-4 sm:w-5 h-4 sm:h-5" glow={true} />
                       </div>
-                      <span className="font-serif italic text-xs font-medium text-[#6B1D1E] mt-1 bg-white/80 px-2 py-0.5 rounded shadow-2xs border border-[#9E743B]/20">
+                      <span className="font-serif italic text-[10px] sm:text-xs font-medium text-[#6B1D1E] mt-0.5 bg-white/90 px-1.5 py-0.2 rounded shadow-2xs border border-[#9E743B]/20 whitespace-nowrap">
                         <em className="italic">{lamp.name}</em>
                       </span>
                     </div>
@@ -881,9 +957,9 @@ export const ProgrammesDetail = () => {
                 })}
               </div>
 
-              {/* Bottom Quote Banner from PDF Page 8 */}
-              <div className="pt-6 border-t border-[#9E743B]/20 max-w-2xl mx-auto space-y-2">
-                <h4 className="font-serif text-lg sm:text-xl text-[#6B1D1E] tracking-wide uppercase font-light">
+              {/* Bottom Quote Banner */}
+              <div className="pt-6 border-t border-[#9E743B]/20 max-w-2xl mx-auto space-y-1.5">
+                <h4 className="font-serif text-base sm:text-xl text-[#6B1D1E] tracking-wide uppercase font-light leading-snug">
                   ONE LAMP LIGHTS ANOTHER WITHOUT DIMINISHING ITS OWN FLAME.
                 </h4>
                 <p className="font-serif italic text-xs sm:text-sm text-[#7A5428]">
@@ -896,20 +972,20 @@ export const ProgrammesDetail = () => {
 
           {/* SHOWCASE 2: CENTRE FOR CIVILISATIONAL STATECRAFT */}
           <motion.div
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="rounded-2xl overflow-hidden bg-white text-[#211F1D] shadow-xl border border-black/10 grid grid-cols-1 lg:grid-cols-12"
+            transition={{ duration: 0.6 }}
+            className="rounded-2xl overflow-hidden bg-white text-[#211F1D] shadow-xl border border-black/10 grid grid-cols-1 lg:grid-cols-12 max-w-6xl mx-auto"
           >
             {/* Left Details */}
-            <div className="lg:col-span-7 p-5 sm:p-8 lg:p-10 flex flex-col justify-between space-y-5 order-2 lg:order-1">
-              <div className="space-y-4 sm:space-y-5">
-                <div className="space-y-1 sm:space-y-1.5">
+            <div className="lg:col-span-7 p-5 sm:p-7 lg:p-8 flex flex-col justify-between space-y-4 order-2 lg:order-1">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="space-y-1">
                   <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold block">
                     Research & Public Inquiry
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#211F1D]">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#211F1D]">
                     Centre for Civilisational Statecraft
                   </h3>
                   <p className="font-sans text-[11px] sm:text-xs uppercase tracking-widest text-[#757069]">
@@ -917,19 +993,19 @@ export const ProgrammesDetail = () => {
                   </p>
                 </div>
 
-                <p className="font-sans text-xs sm:text-sm lg:text-base leading-relaxed text-text-stone-grey font-light">
+                <p className="font-sans text-xs sm:text-sm leading-relaxed text-text-stone-grey font-light">
                   Extends the Gurukulam's inquiry into governance, public policy, strategic affairs, institutional life, leadership, and cultural research—asking how principles from India's knowledge traditions illuminate contemporary questions of public order, power, and human flourishing.
                 </p>
 
-                {/* 5 Key Areas: Auto-scrolling horizontal carousel on mobile, 2-col grid on sm+ */}
-                <div className="space-y-2 pt-1">
+                {/* 5 Key Areas - All 5 Cards Fully Rendered */}
+                <div className="space-y-1.5 pt-1">
                   <div className="flex items-center justify-between font-sans text-[11px] uppercase tracking-[0.2em] text-accent-bronze font-semibold">
                     <span>Five Key Areas of Inquiry</span>
                     <span className="sm:hidden text-[10px] tracking-widest text-[#757069]">Auto-scrolling • Swipe →</span>
                   </div>
                   <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 -mx-5 px-5 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-3 pb-2 sm:pb-0">
                     {STATECRAFT_AREAS.map((area) => (
-                      <div key={area.title} className="flex-none w-[82%] sm:w-auto snap-start p-3.5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze space-y-0.5">
+                      <div key={area.title} className="flex-none w-[82%] sm:w-auto snap-start p-3 rounded-lg bg-[#F8F6F1] border-l-2 border-accent-bronze space-y-0.5">
                         <span className="font-sans text-[9px] uppercase tracking-widest text-accent-bronze font-bold">{area.code}</span>
                         <h4 className="font-serif text-xs sm:text-sm font-semibold text-[#211F1D]">{area.title}</h4>
                         <p className="font-sans text-[11px] text-text-stone-grey font-light leading-relaxed">{area.desc}</p>
@@ -939,13 +1015,13 @@ export const ProgrammesDetail = () => {
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-black/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              <div className="pt-3 border-t border-black/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <span className="font-sans text-[11px] sm:text-xs text-text-stone-grey italic">
                   Expressed through research papers, working papers, and dialogues
                 </span>
                 <Link
                   to="/library"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:py-3 rounded-full border border-[#211F1D] text-[#211F1D] font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-300 text-center"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-[#211F1D] text-[#211F1D] font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-300 text-center shrink-0"
                 >
                   View Publications →
                 </Link>
@@ -953,16 +1029,16 @@ export const ProgrammesDetail = () => {
             </div>
 
             {/* Right Photo */}
-            <div className="lg:col-span-5 relative h-56 sm:h-72 lg:h-full min-h-[220px] lg:min-h-[380px] overflow-hidden order-1 lg:order-2">
+            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto lg:min-h-full overflow-hidden order-1 lg:order-2">
               <img
                 src="/assets/images/brochure_release_thumb.webp"
                 alt="Centre for Civilisational Statecraft - Consecration & Brochure Release"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover object-top filter brightness-[0.98] contrast-[1.02]"
+                className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.02]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-white/20" />
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-3 rounded-lg bg-white/90 backdrop-blur-md border border-black/10 space-y-0.5 text-[#211F1D]">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-white/10" />
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 rounded-lg bg-white/90 backdrop-blur-md border border-black/10 space-y-0.5 text-[#211F1D]">
                 <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-accent-bronze font-semibold block">
                   Public Release & Consecration
                 </span>
@@ -1130,11 +1206,11 @@ export const ProgrammesDetail = () => {
       </Section>
 
       {/* 6. CLOSING: PROGRAMMES IN THE MAKING (LUMINOUS PARCHMENT & GOLD ELEGANCE) */}
-      <Section className="py-24 bg-gradient-to-b from-[#F8F6F1] via-[#F3EEE6] to-[#EFE8DC] text-[#211F1D] relative border-t border-accent-bronze/10 overflow-hidden">
+      <Section className="py-14 sm:py-16 lg:py-18 bg-gradient-to-b from-[#F8F6F1] via-[#F3EEE6] to-[#EFE8DC] text-[#211F1D] relative border-t border-accent-bronze/10 overflow-hidden">
         
         {/* Background Sacred Mandala Outline */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] select-none">
-          <svg width="700" height="700" viewBox="0 0 600 600" fill="none" className="text-accent-bronze">
+          <svg width="600" height="600" viewBox="0 0 600 600" fill="none" className="text-accent-bronze">
             <circle cx="300" cy="300" r="280" stroke="currentColor" strokeWidth="1" />
             <circle cx="300" cy="300" r="200" stroke="currentColor" strokeWidth="1" strokeDasharray="6 6" />
             <circle cx="300" cy="300" r="100" stroke="currentColor" strokeWidth="1" />
@@ -1143,179 +1219,76 @@ export const ProgrammesDetail = () => {
           </svg>
         </div>
 
-        <div className="max-w-5xl mx-auto text-center space-y-12 px-6 sm:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8 px-6 sm:px-8 relative z-10">
           
           {/* Header */}
-          <div className="space-y-3">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/80 border border-accent-bronze/30 shadow-sm text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
+          <div className="space-y-2">
+            <span className="inline-block px-4 py-1 rounded-full bg-white/80 border border-accent-bronze/30 shadow-sm text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
               PHASE OF STHĀPANĀ
             </span>
-            <HeadingLG className="text-3xl sm:text-5xl md:text-6xl font-serif font-light text-[#211F1D] tracking-tight">
+            <HeadingLG className="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#211F1D] tracking-tight">
               Programmes in the Making
             </HeadingLG>
           </div>
 
-          <div className="w-20 h-[1px] bg-accent-bronze/40 mx-auto" />
+          <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto" />
 
           {/* Illuminated Parchment Quote Showcase Box */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="bg-white/90 backdrop-blur-sm p-8 sm:p-12 rounded-2xl shadow-[0_15px_40px_rgba(168,124,79,0.08)] border border-accent-bronze/30 space-y-6 max-w-4xl mx-auto relative overflow-hidden group hover:border-accent-bronze transition-all duration-500"
+            transition={{ duration: 0.6 }}
+            className="bg-white/90 backdrop-blur-sm p-6 sm:p-8 rounded-xl shadow-md border border-accent-bronze/30 space-y-4 max-w-3xl mx-auto relative overflow-hidden group hover:border-accent-bronze transition-all duration-500"
           >
             {/* Subtle corner flourish */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-bronze/40" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-bronze/40" />
+            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-accent-bronze/40" />
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-accent-bronze/40" />
 
-            <p className="font-sans text-base sm:text-lg text-text-stone-grey leading-relaxed font-light">
+            <p className="font-sans text-xs sm:text-sm text-text-stone-grey leading-relaxed font-light">
               Nāṭyaśāstra Gurukulam is presently consolidating its foundations, pedagogic relationships, research, and institutional capacity.
             </p>
 
-            <div className="py-4 border-y border-accent-bronze/20 bg-[#F8F6F1]/80 px-6 sm:px-8 rounded-xl my-4">
-              <p className="font-serif italic text-lg sm:text-2xl text-accent-bronze leading-relaxed">
+            <div className="py-3 border-y border-accent-bronze/20 bg-[#F8F6F1]/80 px-5 sm:px-6 rounded-lg my-3">
+              <p className="font-serif italic text-base sm:text-xl text-accent-bronze leading-relaxed">
                 “Its programmes will grow deliberately rather than hurriedly—with depth before display, readiness before scale, and fidelity before expansion.”
               </p>
             </div>
 
-            <p className="font-sans text-base sm:text-lg text-[#211F1D] leading-relaxed font-light">
+            <p className="font-sans text-xs sm:text-sm text-[#211F1D] leading-relaxed font-light">
               The aim is not to offer more programmes, but to create the right spaces in which learning becomes <span className="font-serif italic font-semibold text-accent-bronze">sādhanā</span>, sādhanā becomes <span className="font-serif italic font-semibold text-accent-bronze">presence</span>, and presence becomes <span className="font-serif italic font-semibold text-accent-bronze">sevā</span>.
             </p>
           </motion.div>
 
           {/* Triad Visual Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto pt-4">
-            <div className="bg-white p-6 rounded-xl border border-accent-bronze/20 shadow-sm text-center space-y-2 hover:border-accent-bronze hover:shadow-md transition-all duration-300">
-              <span className="font-serif text-sm text-accent-bronze font-bold block">01</span>
-              <h4 className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#211F1D]">Inner Refinement</h4>
-              <p className="font-sans text-xs text-text-stone-grey font-light">Cultivation of the individual self</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-2">
+            <div className="bg-white p-4 sm:p-5 rounded-lg border border-accent-bronze/20 shadow-xs text-center space-y-1 hover:border-accent-bronze hover:shadow-md transition-all duration-300">
+              <span className="font-serif text-xs text-accent-bronze font-bold block">01</span>
+              <h4 className="font-sans text-[11px] uppercase tracking-[0.2em] font-bold text-[#211F1D]">Inner Refinement</h4>
+              <p className="font-sans text-[11px] text-text-stone-grey font-light">Cultivation of the individual self</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-accent-bronze/20 shadow-sm text-center space-y-2 hover:border-accent-bronze hover:shadow-md transition-all duration-300">
-              <span className="font-serif text-sm text-accent-bronze font-bold block">02</span>
-              <h4 className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#211F1D]">Cultural Awakening</h4>
-              <p className="font-sans text-xs text-text-stone-grey font-light">Stewardship of community ethos</p>
+            <div className="bg-white p-4 sm:p-5 rounded-lg border border-accent-bronze/20 shadow-xs text-center space-y-1 hover:border-accent-bronze hover:shadow-md transition-all duration-300">
+              <span className="font-serif text-xs text-accent-bronze font-bold block">02</span>
+              <h4 className="font-sans text-[11px] uppercase tracking-[0.2em] font-bold text-[#211F1D]">Cultural Awakening</h4>
+              <p className="font-sans text-[11px] text-text-stone-grey font-light">Stewardship of community ethos</p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl border border-accent-bronze/20 shadow-sm text-center space-y-2 hover:border-accent-bronze hover:shadow-md transition-all duration-300">
-              <span className="font-serif text-sm text-accent-bronze font-bold block">03</span>
-              <h4 className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#211F1D]">Civilisational Renewal</h4>
-              <p className="font-sans text-xs text-[#757069] font-light">Fulfillment of Dhārmic purpose</p>
+            <div className="bg-white p-4 sm:p-5 rounded-lg border border-accent-bronze/20 shadow-xs text-center space-y-1 hover:border-accent-bronze hover:shadow-md transition-all duration-300">
+              <span className="font-serif text-xs text-accent-bronze font-bold block">03</span>
+              <h4 className="font-sans text-[11px] uppercase tracking-[0.2em] font-bold text-[#211F1D]">Civilisational Renewal</h4>
+              <p className="font-sans text-[11px] text-[#757069] font-light">Fulfillment of Dhārmic purpose</p>
             </div>
           </div>
 
           {/* CTA Action */}
-          <div className="pt-6">
+          <div className="pt-3">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.25em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-500 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Inquire About Upcoming Programmes <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
-          </div>
-
-        </div>
-      </Section>
-
-      {/* 7. CONCLUDING SECTION: ASSOCIATE WITH US */}
-      <Section className="py-24 bg-[#1E1C1A] text-[#F3EEE6] relative border-t border-accent-bronze/20">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-16">
-          
-          <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-accent-bronze/30 text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
-              JOIN THE JOURNEY
-            </span>
-            <HeadingLG className="text-3xl sm:text-5xl font-serif font-light text-white">
-              Associate With Us
-            </HeadingLG>
-            <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto my-3" />
-            <p className="font-sans text-base sm:text-lg text-[#E0D8CE]/90 font-light leading-relaxed">
-              We warmly welcome scholars, artistes, educators, institutions, patrons, collaborators, seekers, and practitioners who wish to engage with the Gurukulam across research, sādhanā, pedagogy, and Dhārmic public life.
-            </p>
-          </div>
-
-          {/* Association Pathways Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 hover:border-accent-bronze/50 transition-all duration-300 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="font-serif text-2xl text-accent-bronze">01</span>
-                <h4 className="font-serif text-xl font-normal text-white">Scholars & Researchers</h4>
-                <p className="font-sans text-xs text-[#E0D8CE]/75 font-light leading-relaxed">
-                  Collaborate on textual translation, commentarial research, civilisational statecraft papers, and aesthetic knowledge traditions.
-                </p>
-              </div>
-              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
-                Engage in Research →
-              </Link>
-            </div>
-
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 hover:border-accent-bronze/50 transition-all duration-300 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="font-serif text-2xl text-accent-bronze">02</span>
-                <h4 className="font-serif text-xl font-normal text-white">Artistes & Seekers</h4>
-                <p className="font-sans text-xs text-[#E0D8CE]/75 font-light leading-relaxed">
-                  Participate in residential immersions, study circles, workshops, and the Yātri pathway for somatic and spiritual refinement.
-                </p>
-              </div>
-              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
-                Join Immersions →
-              </Link>
-            </div>
-
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 hover:border-accent-bronze/50 transition-all duration-300 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="font-serif text-2xl text-accent-bronze">03</span>
-                <h4 className="font-serif text-xl font-normal text-white">Educators & Institutions</h4>
-                <p className="font-sans text-xs text-[#E0D8CE]/75 font-light leading-relaxed">
-                  Partner on curriculum development, bespoke institutional workshops, lecture series, and leadership mentoring rooted in Dharma.
-                </p>
-              </div>
-              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
-                Institutional Partnership →
-              </Link>
-            </div>
-
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#2A2623] border border-accent-bronze/40 space-y-4 hover:border-accent-bronze transition-all duration-300 flex flex-col justify-between shadow-lg">
-              <div className="space-y-3">
-                <span className="font-serif text-2xl text-accent-bronze">04</span>
-                <h4 className="font-serif text-xl font-normal text-white">Founding Patronage</h4>
-                <p className="font-sans text-xs text-[#E0D8CE]/85 font-light leading-relaxed">
-                  Anchor the Gurukulam's long-term saṅkalpa, library archives, and residential facilities through quiet, dedicated patronage.
-                </p>
-              </div>
-              <Link to="/contact" className="font-sans text-xs uppercase tracking-widest text-accent-bronze hover:text-white font-semibold pt-4 inline-block">
-                Patron Prospectus →
-              </Link>
-            </div>
-
-          </div>
-
-          {/* Special Dedicated Box for Founding Patronage */}
-          <div className="bg-gradient-to-r from-[#282421] via-[#211F1D] to-[#282421] p-8 sm:p-12 rounded-2xl border border-accent-bronze/30 text-center max-w-4xl mx-auto space-y-6 shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-accent-bronze/10 rounded-full blur-2xl pointer-events-none" />
-            
-            <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-accent-bronze font-bold block">
-              SUPPORT THE GURUKULAM
-            </span>
-
-            <h3 className="font-serif text-2xl sm:text-3xl font-light text-white">
-              Founding Patronage & Endowments
-            </h3>
-
-            <p className="font-sans text-sm sm:text-base text-[#E0D8CE]/85 leading-relaxed font-light max-w-2xl mx-auto">
-              We invite visionary patrons to support the establishment of the Gurukulam's physical, academic, and archival foundations. A detailed <em>Founding Patron Prospectus</em> is available upon request.
-            </p>
-
-            <div className="pt-2">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[#1E1C1A] transition-all duration-300 shadow-md"
-              >
-                Inquire for Founding Patronage →
-              </Link>
-            </div>
           </div>
 
         </div>

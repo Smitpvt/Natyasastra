@@ -1,5 +1,15 @@
 export const PUBLICATIONS = [
-  // 0. Flagship Treatise
+  // 0. DTHF Papers Series
+  {
+    series: 'DTHF Papers',
+    type: 'DTHF Working Paper I',
+    title: 'Human Flourishing and Democratic Resilience in Africa: A Dhārmic Inquiry',
+    desc: 'Examines human flourishing and democratic resilience in Africa through a Dhārmic framework of governance, institutional ethics, and civilisational statecraft.',
+    file: '/assets/publications/TDTHF WP I- Human Flourishing and Democratic Resilience in Africa A Dharmic Inquiry.pdf',
+    cover: '/assets/publications/covers/africa_dthf_cover.jpg',
+    theme: 'bg-gradient-to-br from-accent-bronze to-[#462814] text-[#F3EEE6] border border-[#462814]/40 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]'
+  },
+  // 0.1 Flagship Treatise
   {
     isFlagship: true,
     series: 'Flagship Treatise',

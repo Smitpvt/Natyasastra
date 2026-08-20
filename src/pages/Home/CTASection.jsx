@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const CTASection = () => {
   return (
-    <section className="relative w-full pt-28 md:pt-[120px] pb-24 md:pb-[100px] bg-[#211F1D] overflow-hidden flex items-center justify-center border-t border-[#E0D8CE]/10">
+    <section className="relative w-full py-16 md:py-20 bg-[#211F1D] overflow-hidden flex items-center justify-center border-t border-[#E0D8CE]/10">
       {/* Heritage background texture */}
       <div 
         className="absolute inset-0 bg-cover bg-[center_55%] opacity-40"

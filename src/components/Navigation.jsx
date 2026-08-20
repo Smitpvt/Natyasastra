@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { name: 'About', path: '/about' },
   { name: 'Publications', path: '/library' },
   { name: 'Programmes', path: '/programmes' },
-  { name: 'Gallery', path: '/gallery' }
+  { name: 'Associate With Us', path: '/associate' }
 ];
 
 export const Navigation = () => {

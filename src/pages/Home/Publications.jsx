@@ -5,8 +5,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PUBLICATIONS } from '../../data/publications';
 import { formatSanskrit } from '../../utils/text';
 
-// Select the two CCS-AKS papers and the two Rasa Reflections for the homepage
-const FEATURED_SERIES = ['Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
+// Select featured papers for the homepage
+const FEATURED_SERIES = ['DTHF Papers', 'Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
 const RECENT_PUBLICATIONS = PUBLICATIONS
   .filter(pub => FEATURED_SERIES.includes(pub.series))
   .map(pub => ({

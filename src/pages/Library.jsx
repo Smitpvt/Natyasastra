@@ -35,6 +35,7 @@ export const Library = () => {
 
   const SERIES_TABS = [
     'All',
+    'DTHF Papers',
     'Flagship Treatise',
     'Civilisational Statecraft Series',
     'Civilisational Governance',

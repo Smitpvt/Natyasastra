@@ -4,7 +4,7 @@ import QuoteSection from './Home/QuoteSection';
 import PillarsMandala from './Home/PillarsMandala';
 import Publications from './Home/Publications';
 import Mentors from './Home/Mentors';
-import PratishthaSection from './Home/PratishthaSection';
+import GlimpsesAndMedia from '../components/GlimpsesAndMedia';
 import CTASection from './Home/CTASection';
 import { useSEO } from '../hooks/useSEO';
 
@@ -57,8 +57,8 @@ export const Home = () => {
       {/* 5. Mentors & Living Lineages */}
       <Mentors />
 
-      {/* 6. Consecration Highlights */}
-      <PratishthaSection />
+      {/* 6. Curated Glimpses & Media Archive */}
+      <GlimpsesAndMedia />
 
       {/* 7. CTA Section */}
       <CTASection />
