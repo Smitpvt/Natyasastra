@@ -56,14 +56,14 @@ export const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-[900px] w-full px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center"
+          className="max-w-[900px] w-full px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center lg:-translate-x-[2%] xl:-translate-x-[3%] transition-transform duration-500"
         >
           {/* Devanagari Invocation */}
           <motion.div variants={itemVariants} className="space-y-2 mb-[16px] flex flex-col items-center">
-            <span className="font-serif text-sm sm:text-base text-[#D4AF37] tracking-[0.2em] font-medium" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
+            <span className="font-serif text-sm sm:text-base text-[#D4AF37] tracking-[0.2em] font-medium pl-[0.2em]" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
               नाट्यशास्त्रप्रवर्तकं भरतमुनिं वन्दे।
             </span>
-            <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C4B39C] font-semibold opacity-95 block">
+            <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C4B39C] font-semibold opacity-95 block pl-[0.35em]">
               Custodians of Rasa, Rhythm & <em className="italic">Dhārmic</em> Responsibility
             </span>
           </motion.div>
@@ -71,7 +71,7 @@ export const Hero = () => {
           {/* Major Serifed Headings - Gold Foil & Ivory Shimmer */}
           <motion.div variants={itemVariants} className="flex flex-col items-center">
             <h1 
-              className="font-serif text-[44px] xs:text-[54px] sm:text-[72px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2"
+              className="font-serif text-[44px] xs:text-[54px] sm:text-[72px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2 pl-[0.025em]"
               style={{ filter: 'drop-shadow(0px 8px 16px rgba(0,0,0,0.75))' }}
             >
               नाट्यशास्त्र
@@ -79,7 +79,7 @@ export const Hero = () => {
             
             {/* Subtitle */}
             <p 
-              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.3em] mt-[8px]"
+              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.3em] mt-[8px] pl-[0.3em]"
               style={{ textShadow: '0 4px 14px rgba(0,0,0,0.8)' }}
             >
               गुरुकुलम्
@@ -87,7 +87,7 @@ export const Hero = () => {
 
             <LotusDivider className="my-3" />
 
-            <p className="font-serif italic text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-xl leading-relaxed">
+            <p className="font-serif italic text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-lg leading-[1.8] text-center mx-auto pl-[0.025em]">
               A <em className="italic">Dhārmic</em> Stream For The Renewal Of Public Life Through Aesthetic Leadership
             </p>
           </motion.div>
@@ -121,7 +121,7 @@ export const Hero = () => {
         className="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer group select-none"
         onClick={() => window.scrollTo({ top: window.innerHeight - 80, behavior: 'smooth' })}
       >
-        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-[#D4AF37] opacity-90 group-hover:opacity-100 transition-opacity font-semibold">
+        <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-[#D4AF37] opacity-90 group-hover:opacity-100 transition-opacity font-semibold pl-[0.3em]">
           Scroll to Discover
         </span>
         <div className="mt-1 p-1 rounded-full border border-[#D4AF37]/40 group-hover:border-[#D4AF37] bg-black/40 backdrop-blur-xs transition-all animate-bounce">
