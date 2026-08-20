@@ -132,7 +132,7 @@ export const GlimpsesAndMedia = () => {
           </div>
 
           {/* Category Filter Tabs */}
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 w-full sm:w-auto">
             {[
               { id: 'all', label: 'All Media' },
               { id: 'visual', label: 'Visuals' },
@@ -145,10 +145,10 @@ export const GlimpsesAndMedia = () => {
                   setActiveTab(tab.id);
                   setIsExpanded(false);
                 }}
-                className={`px-4 py-2 rounded-full font-sans text-xs uppercase tracking-widest transition-all duration-300 ${
+                className={`px-3 py-2 rounded-lg font-sans text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center text-center cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[#6B1D1E] text-white shadow-sm'
-                    : 'bg-[#EFE8DC] text-[#4A423B] border border-[#9E743B]/20 hover:border-[#6B1D1E]'
+                    : 'bg-[#FAF6F0] text-[#4A423B] border border-[#9E743B]/25 hover:border-[#6B1D1E] hover:bg-white'
                 }`}
               >
                 {tab.label}
