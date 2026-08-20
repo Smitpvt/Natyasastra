@@ -133,30 +133,6 @@ const STATECRAFT_AREAS = [
 
 const DIRECT_ENGAGEMENTS = [
   {
-    title: 'Residential Immersions',
-    subtitle: 'Stepping into the rhythm of the Gurukulam',
-    desc: 'Intensive residential encounters combining study, practice, reflection, silence, and shared time. Participants include practitioners, educators, scholars, and serious seekers brought together around a focused theme or inquiry.',
-    mode: 'Residential • In Person',
-    image: '/assets/images/corridor_thumb.webp',
-    objectPos: 'object-center'
-  },
-  {
-    title: 'Study Circles',
-    subtitle: <span>Sustained inquiry into <em className="italic">Śāstra</em></span>,
-    desc: <span>Small-group engagements with selected texts, concepts, and questions through listening, reflection, questioning, and dialogue. Areas include the <em className="italic">Nāṭyaśāstra</em>, <em className="italic">Abhinavabhāratī</em>, <em className="italic">rasa</em>, <em className="italic">bhāva</em>, and Indian aesthetics.</span>,
-    mode: 'In Person',
-    image: '/assets/images/sthapatya_thumb.webp',
-    objectPos: 'object-center'
-  },
-  {
-    title: 'Workshops',
-    subtitle: 'From knowledge to embodied understanding',
-    desc: <span>Focused engagements bringing selected principles of <em className="italic">Nāṭya</em> into practice through movement, <em className="italic">abhinaya</em>, <em className="italic">rasa</em>, rhythm, aesthetic perception, contemplative practice, and pedagogy.</span>,
-    mode: 'In Person',
-    image: '/assets/images/yajna_thumb.webp',
-    objectPos: 'object-center'
-  },
-  {
     title: 'Lecture & Dialogue Series',
     subtitle: <span>The <em className="italic">Sabhā</em> as a space for inquiry</span>,
     desc: <span>Encounters with artistes, scholars, teachers, thinkers, and knowledge holders addressing <em className="italic">Nāṭyaśāstra</em>, aesthetics, pedagogy, culture, civilisational thought, ethics, and leadership.</span>,
@@ -293,7 +269,7 @@ export const ProgrammesDetail = () => {
                   In-Person Formats
                 </span>
                 <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-white/60 shadow-sm">
-                  Residential Immersions
+                  Direct Engagements
                 </span>
                 <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-white/60 shadow-sm">
                   Phase of Sthāpanā
