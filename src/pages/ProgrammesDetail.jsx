@@ -457,7 +457,7 @@ export const ProgrammesDetail = () => {
             </div>
 
             {/* Event Content Container */}
-            <ProspectusFrame innerClassName="p-8 sm:p-12 space-y-8 bg-white">
+            <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-12 space-y-6 sm:space-y-8 bg-white">
               
               {/* Introductory Statement */}
               <div className="p-6 rounded-xl bg-[#FAF6F0] border-l-4 border-[#9E743B] space-y-2">
@@ -869,7 +869,7 @@ export const ProgrammesDetail = () => {
 
           {/* NEW: THE YĀTRI NETWORK DIYA RADIAL DIAGRAM (Inspired by PDF Page 8) */}
           <div className="my-8 max-w-5xl mx-auto">
-            <ProspectusFrame innerClassName="p-6 sm:p-10 text-center bg-[#FAF6F0]">
+            <ProspectusFrame innerClassName="p-5 sm:p-10 text-center bg-[#FAF6F0]">
               <div className="space-y-2 max-w-2xl mx-auto">
                 <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block">
                   DISTRIBUTED TRANSMISSION

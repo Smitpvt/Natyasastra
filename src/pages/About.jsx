@@ -286,7 +286,7 @@ export const About = () => {
       {/* 4. OUR VISION (Inspired by PDF Page 3) */}
       <Section className="py-20 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
         <div className="max-w-4xl mx-auto px-4">
-          <ProspectusFrame innerClassName="p-8 sm:p-14 text-center">
+          <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-14 text-center">
             
             <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block mb-2">
               FOUNDING VISION STATEMENT

@@ -138,7 +138,7 @@ export const PillarsMandala = () => {
             transition={{ duration: 0.4 }}
             className="max-w-4xl mx-auto"
           >
-            <ProspectusFrame innerClassName="p-8 sm:p-12 text-center space-y-6">
+            <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-12 text-center space-y-4 sm:space-y-6">
               
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#6B1D1E] text-[#D4AF37] border-2 border-[#9E743B] shadow-md mb-2">
                 <span className="font-serif text-3xl font-bold" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
@@ -158,7 +158,7 @@ export const PillarsMandala = () => {
                 </p>
               </div>
 
-              <LotusDivider className="my-4" />
+              <LotusDivider className="my-2.5 sm:my-4" />
 
               <blockquote className="font-serif italic text-lg sm:text-xl text-[#6B1D1E] max-w-2xl mx-auto leading-relaxed">
                 “{activePillar.quote}”

@@ -106,7 +106,7 @@ export const Mentors = () => {
               transition={{ duration: 0.5 }}
               className="max-w-5xl mx-auto"
             >
-              <ProspectusFrame innerClassName="p-8 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+              <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                 
                 {/* Left Portrait with Gold Frame */}
                 <div className="lg:col-span-5 flex justify-center">
