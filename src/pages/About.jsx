@@ -194,10 +194,19 @@ export const About = () => {
                     initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
                   </Body>
                   
-                  {/* Panel discussion note */}
-                  <div className="mt-4 p-3.5 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 text-left text-xs font-sans text-text-stone-grey leading-relaxed">
-                    <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
-                    (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+                  {/* Panel discussion note with image */}
+                  <div className="mt-4 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 overflow-hidden text-left shadow-sm">
+                    <img
+                      src="/assets/images/Raam_Rajya.jpeg"
+                      alt="Panel Discussion on Rāma Rājya Vision and Values for Today"
+                      className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border-b border-accent-bronze/10"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div className="p-3.5 text-xs font-sans text-text-stone-grey leading-relaxed">
+                      <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
+                      (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+                    </div>
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 hidden md:block" />
