@@ -47,12 +47,12 @@ export const QuoteSection = () => {
             </div>
 
             {/* Verse Selector Tabs */}
-            <div className="flex justify-center items-center gap-2 sm:gap-3 pt-2">
+            <div className="flex justify-center items-stretch gap-2 sm:gap-3 pt-2 w-full max-w-md mx-auto">
               {VERSES.map((v, i) => (
                 <button
                   key={v.title}
                   onClick={() => setActiveVerse(i)}
-                  className={`px-3 py-1 sm:px-4 sm:py-1.5 rounded-full font-sans text-[10px] sm:text-[11px] uppercase tracking-widest transition-all ${
+                  className={`flex-1 sm:flex-initial flex items-center justify-center text-center px-3 py-2 sm:px-4 sm:py-1.5 rounded-full font-sans text-[10px] sm:text-[11px] uppercase tracking-widest transition-all ${
                     activeVerse === i
                       ? 'bg-[#6B1D1E] text-white shadow-sm font-semibold'
                       : 'bg-[#F3EEE6] text-[#757069] border border-[#9E743B]/20 hover:border-[#9E743B]/60'
