@@ -60,7 +60,7 @@ const MILESTONES = [
           href="https://sites.google.com/view/ramarajya/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent-bronze font-medium hover:underline inline-flex items-center"
+          className="text-accent-bronze font-medium hover:underline"
         >
           <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
         </a>{' '}
@@ -157,19 +157,19 @@ export const About = () => {
     <div className="bg-bg-ivory pt-24 min-h-screen text-text-primary selection:bg-accent-bronze/10 selection:text-text-primary overflow-x-hidden">
       
       {/* 1. HERO SECTION */}
-      <Section className="min-h-[65vh] flex flex-col justify-start pt-8 pb-16 md:pt-12 md:pb-20 relative border-b border-accent-bronze/10" background="none" container={true} yOffset={0}>
-        <div className="max-w-5xl mx-auto text-center space-y-8 relative z-10 px-4 pt-4 md:pt-6">
+      <Section className="min-h-[50vh] lg:min-h-[55vh] flex flex-col justify-center pt-8 pb-16 md:pt-12 md:pb-20 relative border-b border-accent-bronze/10" background="none" container={true} yOffset={0}>
+        <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10 px-4 pt-4 md:pt-6">
           <Caption className="text-accent-bronze tracking-[0.35em] text-sm md:text-base font-semibold uppercase">
             ABOUT THE GURUKULAM
           </Caption>
           
-          <HeadingXL as="h1" className="text-4xl md:text-6xl lg:text-[74px] font-light leading-[1.08] tracking-tight">
+          <HeadingXL as="h1" className="text-3xl sm:text-5xl lg:text-[58px] font-light leading-[1.1] tracking-tight">
             A <em className="italic">Gurukulam</em> for <em className="italic">Śāstra</em>, <em className="italic">Sādhanā</em>, and Civilisational Renewal
           </HeadingXL>
           
-          <div className="w-16 h-[1px] bg-accent-bronze/30 mx-auto my-6" />
+          <div className="w-16 h-[1px] bg-accent-bronze/30 mx-auto my-4" />
           
-          <BodyLG className="max-w-3xl mx-auto text-lg md:text-2xl text-text-secondary leading-relaxed font-sans font-light">
+          <BodyLG className="max-w-2xl mx-auto text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed font-sans font-light">
             Dedicated to the study, practice, and transmission of the <em className="italic">Nāṭyaśāstra</em> and its allied knowledge traditions.
           </BodyLG>
 
@@ -238,140 +238,95 @@ export const About = () => {
           </div>
 
           <div className="relative">
-            {/* Desktop Timeline */}
-            <div className="hidden md:block relative">
-              {/* Center line for timeline on desktop */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-accent-bronze/10 -translate-x-1/2" />
+            {/* Center line for timeline */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-accent-bronze/10 -translate-x-1/2" />
 
-              <div className="space-y-16">
-                {MILESTONES.map((milestone, idx) => {
-                  const isEven = idx % 2 === 1;
-
-                  if (milestone.cardLayout) {
-                    return (
-                      <div key={milestone.id} className="relative flex items-center">
-                        <div className="absolute left-1/2 w-4 h-4 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1/2 -translate-y-1/2 z-10" />
-                        
-                        <div className={`w-1/2 ${isEven ? 'pr-12 text-right' : 'pl-12 order-2'}`}>
-                          <div className={`max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-5 space-y-4 text-left ${isEven ? 'ml-auto' : ''}`}>
-                            <span className="font-serif italic text-accent-bronze text-xl font-medium block">{milestone.title}</span>
-                            <HeadingMD className="text-2xl font-light text-text-primary">{milestone.subtitle}</HeadingMD>
-                            <div className="font-sans text-xs uppercase tracking-wider text-accent-bronze/80 font-semibold mb-2">
-                              {milestone.date}
-                            </div>
-                            <img
-                              src={milestone.image}
-                              alt={milestone.imageAlt}
-                              className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border border-accent-bronze/10 rounded-md"
-                              loading="lazy"
-                            />
-                            <Body className="text-text-secondary text-xs md:text-sm leading-relaxed mt-3 mb-0">
-                              {milestone.desc}
-                            </Body>
-                          </div>
-                        </div>
-                        
-                        <div className={`w-1/2 ${isEven ? 'order-2' : ''}`} />
-                      </div>
-                    );
-                  }
-
+            <div className="space-y-10 md:space-y-16">
+              {MILESTONES.map((milestone, idx) => {
+                const isLeft = idx % 2 === 0; // Desktop left side
+                
+                if (milestone.cardLayout) {
                   return (
-                    <div key={milestone.id} className="relative flex items-stretch">
-                      <div className="absolute left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
+                    <div key={milestone.id} className="relative flex flex-col md:flex-row items-stretch">
+                      {/* Timeline Dot */}
+                      <div className="absolute left-4 md:left-1/2 w-3.5 h-3.5 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 md:top-1/2 md:-translate-y-1/2 z-10" />
                       
-                      <div className={`w-1/2 ${isEven ? 'pr-12 text-right' : 'pl-12 order-2'}`}>
-                        <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">
-                          {milestone.title}
-                        </span>
-                        <HeadingMD className="text-xl mb-1 font-light text-text-primary">
-                          {milestone.link ? (
-                            <a
-                              href={milestone.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
-                            >
-                              {milestone.linkText}
-                            </a>
-                          ) : (
-                            milestone.subtitle
-                          )}
-                        </HeadingMD>
-                        <Body className="text-text-secondary text-sm md:text-base leading-relaxed mt-2">
-                          {milestone.desc}
-                        </Body>
-                        
-                        {milestone.image && (
-                          <div className={`mt-4 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 overflow-hidden text-left shadow-sm ${isEven ? 'ml-auto' : ''}`}>
-                            <img
-                              src={milestone.image}
-                              alt={milestone.imageAlt}
-                              className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border-b border-accent-bronze/10"
-                              loading="lazy"
-                            />
-                            {milestone.imageCaption && (
-                              <div className="p-3.5 text-xs font-sans text-text-stone-grey leading-relaxed">
-                                {milestone.imageCaption}
-                              </div>
-                            )}
+                      {/* Content Column */}
+                      <div className={`w-full md:w-1/2 pl-8 md:pl-0 md:pr-12 text-left md:text-right ${isLeft ? '' : 'order-1 md:order-2 md:pl-12 md:pr-0 md:text-left'}`}>
+                        <div className={`max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-4 sm:p-5 space-y-3 text-left ${isLeft ? 'md:ml-auto' : ''}`}>
+                          <span className="font-serif italic text-accent-bronze text-lg font-medium block leading-none">{milestone.title}</span>
+                          <HeadingMD className="text-xl font-light text-text-primary leading-tight">{milestone.subtitle}</HeadingMD>
+                          <div className="font-sans text-[11px] uppercase tracking-wider text-accent-bronze/80 font-semibold">
+                            {milestone.date}
                           </div>
-                        )}
+                          <img
+                            src={milestone.image}
+                            alt={milestone.imageAlt}
+                            className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border border-accent-bronze/10 rounded-md"
+                            loading="lazy"
+                          />
+                          <Body className="text-text-secondary text-xs md:text-sm leading-relaxed mt-2 mb-0 font-light">
+                            {milestone.desc}
+                          </Body>
+                        </div>
                       </div>
                       
-                      <div className={`w-1/2 ${isEven ? 'order-2' : ''}`} />
+                      {/* Spacer Column */}
+                      <div className={`hidden md:block w-1/2 ${isLeft ? 'order-2' : 'order-1'}`} />
                     </div>
                   );
-                })}
-              </div>
-            </div>
+                }
 
-            {/* Mobile Touch-Swipeable Horizontal Timeline */}
-            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:hidden pb-4">
-              {MILESTONES.map((milestone) => (
-                <div key={milestone.id} className="flex-none w-[88%] snap-start bg-white border border-accent-bronze/15 p-4 rounded-xl flex flex-col justify-between shadow-md">
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between border-b border-accent-bronze/10 pb-2">
-                      <span className="font-serif italic text-accent-bronze text-base font-semibold">
+                return (
+                  <div key={milestone.id} className="relative flex flex-col md:flex-row items-stretch">
+                    {/* Timeline Dot */}
+                    <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
+                    
+                    {/* Content Column */}
+                    <div className={`w-full md:w-1/2 pl-8 md:pl-0 md:pr-12 text-left md:text-right ${isLeft ? '' : 'order-1 md:order-2 md:pl-12 md:pr-0 md:text-left'}`}>
+                      <span className="font-serif italic text-accent-bronze/80 text-base md:text-lg block mb-1">
                         {milestone.title}
                       </span>
-                      <span className="font-sans text-[10px] font-semibold text-text-secondary/70 uppercase">
-                        {milestone.id === 5 ? "Today" : `Step ${milestone.id}`}
-                      </span>
-                    </div>
-                    
-                    {milestone.date ? (
-                      <div className="text-[10px] uppercase tracking-wider text-accent-bronze font-semibold">
-                        {milestone.date}
-                      </div>
-                    ) : (
-                      <div className="font-sans text-[11px] uppercase tracking-wider text-text-secondary/80 font-medium">
-                        {milestone.subtitle}
-                      </div>
-                    )}
-                    
-                    <div className="text-text-secondary text-[13px] font-sans font-light leading-relaxed m-0">
-                      {milestone.desc}
-                    </div>
-
-                    {milestone.image && (
-                      <div className="mt-3 rounded-lg overflow-hidden border border-accent-bronze/10 bg-bg-parchment/10">
-                        <img
-                          src={milestone.image}
-                          alt={milestone.imageAlt}
-                          className="w-full aspect-[16/10] object-cover"
-                          loading="lazy"
-                        />
-                        {milestone.imageCaption && (
-                          <div className="p-2.5 text-[10px] font-sans text-text-stone-grey leading-normal bg-bg-parchment/20 border-t border-accent-bronze/5">
-                            {milestone.imageCaption}
-                          </div>
+                      <HeadingMD className="text-lg md:text-xl mb-1 font-light text-text-primary leading-snug">
+                        {milestone.link ? (
+                          <a
+                            href={milestone.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
+                          >
+                            {milestone.linkText}
+                          </a>
+                        ) : (
+                          milestone.subtitle
                         )}
-                      </div>
-                    )}
+                      </HeadingMD>
+                      <Body className="text-text-secondary text-xs sm:text-sm md:text-base leading-relaxed mt-1.5 font-light">
+                        {milestone.desc}
+                      </Body>
+                      
+                      {milestone.image && (
+                        <div className={`mt-3 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 overflow-hidden text-left shadow-sm max-w-md ${isLeft ? 'md:ml-auto' : ''}`}>
+                          <img
+                            src={milestone.image}
+                            alt={milestone.imageAlt}
+                            className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border-b border-accent-bronze/10"
+                            loading="lazy"
+                          />
+                          {milestone.imageCaption && (
+                            <div className="p-2.5 text-[11px] font-sans text-text-stone-grey leading-relaxed bg-bg-parchment/10">
+                              {milestone.imageCaption}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Spacer Column */}
+                    <div className={`hidden md:block w-1/2 ${isLeft ? 'order-2' : 'order-1'}`} />
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
