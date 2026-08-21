@@ -46,6 +46,84 @@ const PILLARS = [
   }
 ];
 
+const MILESTONES = [
+  {
+    id: 1,
+    title: <span>The First <em className="italic">Saṅkalpa</em></span>,
+    subtitle: <span><em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em> | 2018</span>,
+    link: "https://sites.google.com/view/ramarajya/",
+    linkText: <span><em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em></span>,
+    desc: (
+      <span>
+        Early conversations within the{' '}
+        <a
+          href="https://sites.google.com/view/ramarajya/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent-bronze font-medium hover:underline inline-flex items-center"
+        >
+          <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
+        </a>{' '}
+        initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
+      </span>
+    ),
+    image: "/assets/images/Raam_Rajya.jpeg",
+    imageAlt: "Panel Discussion on Rāma Rājya Vision and Values for Today",
+    imageCaption: (
+      <span>
+        <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
+        (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+      </span>
+    )
+  },
+  {
+    id: 2,
+    title: <span><em className="italic">Mārga Darśana</em></span>,
+    subtitle: "2019–2024",
+    desc: (
+      <span>
+        Through years of study, teaching, yoga, research, civic engagement, and sustained dialogue, the need for a dedicated <em className="italic">Gurukulam</em> devoted to <em className="italic">Nāṭya</em> as a living knowledge system gradually became clear.<br className="mb-2" />
+        Under the guidance of Padma Bhushan Dr. M. B. Athreya and Karnataka Kalashri Dr. Padmaja Suresh, the vision began to acquire pedagogical and institutional form.
+      </span>
+    )
+  },
+  {
+    id: 3,
+    title: "Emergence",
+    subtitle: "The Vision Takes Form | 2025",
+    desc: (
+      <span>
+        The <em className="italic">saṅkalpa</em> moved from sustained inquiry towards institutional formation, bringing together the <em className="italic">Gurukulam</em>'s vision of <em className="italic">śāstra</em>, <em className="italic">sādhanā</em>, <em className="italic">saṃvāda</em>, and civilisational renewal.
+      </span>
+    )
+  },
+  {
+    id: 4,
+    title: "Consecration",
+    subtitle: <span><em className="italic">Pratiṣṭhā Samāroham</em></span>,
+    date: "23 November 2025 | Navi Mumbai",
+    desc: (
+      <span>
+        The <em className="italic">Nāṭyaśāstra Gurukulam</em> was consecrated at Śrī <em className="italic">Subrahmaṇya</em> <em className="italic">Sevā</em> <em className="italic">Samāj</em>, Navi Mumbai, through a sacred gathering of <em className="italic">Vedic</em> invocation, consecratory rites, dance, music, reflection, and dialogue. The <em className="italic">Pratiṣṭhā Samāroham</em> marked not merely an inauguration, but the formal consecration of the <em className="italic">Gurukulam</em>'s <em className="italic">saṅkalpa</em>.
+      </span>
+    ),
+    image: "/assets/images/sishyas_natya_seva_thumb.webp",
+    imageAlt: "Pratiṣṭhā Consecration Dance Offering - Sishyas of Smt. Charanya Gurusathya",
+    cardLayout: true
+  },
+  {
+    id: 5,
+    title: <span><em className="italic">Sthāpanā</em></span>,
+    subtitle: "Today",
+    desc: (
+      <span>
+        The <em className="italic">Gurukulam</em> now enters its phase of <em className="italic">sthāpanā</em>, patiently establishing its pedagogical foundations, research, relationships, and institutional rhythm.<br className="mb-1" />
+        Its work unfolds through <em className="italic">sādhanā</em>, study, dialogue, publication, and service, with growth guided by readiness rather than urgency.
+      </span>
+    )
+  }
+];
+
 export const About = () => {
   useSEO({
     title: 'About the Gurukulam - Lineage & Vision',
@@ -160,124 +238,140 @@ export const About = () => {
           </div>
 
           <div className="relative">
-            {/* Center line for timeline on desktop */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-accent-bronze/10 -translate-x-1/2" />
+            {/* Desktop Timeline */}
+            <div className="hidden md:block relative">
+              {/* Center line for timeline on desktop */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-accent-bronze/10 -translate-x-1/2" />
 
-            <div className="space-y-16">
-              
-              {/* Milestone 1: The First Saṅkalpa */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">The First <em className="italic">Saṅkalpa</em></span>
-                  <HeadingMD className="text-xl mb-1 font-light text-text-primary">
-                    <a
-                      href="https://sites.google.com/view/ramarajya/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
-                    >
-                      <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
-                    </a>
-                    {' '}| 2018
-                  </HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed mt-2">
-                    Early conversations within the{' '}
-                    <a
-                      href="https://sites.google.com/view/ramarajya/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent-bronze font-medium hover:underline"
-                    >
-                      <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
-                    </a>{' '}
-                    initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
-                  </Body>
-                  
-                  {/* Panel discussion note with image */}
-                  <div className="mt-4 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 overflow-hidden text-left shadow-sm">
-                    <img
-                      src="/assets/images/Raam_Rajya.jpeg"
-                      alt="Panel Discussion on Rāma Rājya Vision and Values for Today"
-                      className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border-b border-accent-bronze/10"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div className="p-3.5 text-xs font-sans text-text-stone-grey leading-relaxed">
-                      <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
-                      (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+              <div className="space-y-16">
+                {MILESTONES.map((milestone, idx) => {
+                  const isEven = idx % 2 === 1;
+
+                  if (milestone.cardLayout) {
+                    return (
+                      <div key={milestone.id} className="relative flex items-center">
+                        <div className="absolute left-1/2 w-4 h-4 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1/2 -translate-y-1/2 z-10" />
+                        
+                        <div className={`w-1/2 ${isEven ? 'pr-12 text-right' : 'pl-12 order-2'}`}>
+                          <div className={`max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-5 space-y-4 text-left ${isEven ? 'ml-auto' : ''}`}>
+                            <span className="font-serif italic text-accent-bronze text-xl font-medium block">{milestone.title}</span>
+                            <HeadingMD className="text-2xl font-light text-text-primary">{milestone.subtitle}</HeadingMD>
+                            <div className="font-sans text-xs uppercase tracking-wider text-accent-bronze/80 font-semibold mb-2">
+                              {milestone.date}
+                            </div>
+                            <img
+                              src={milestone.image}
+                              alt={milestone.imageAlt}
+                              className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border border-accent-bronze/10 rounded-md"
+                              loading="lazy"
+                            />
+                            <Body className="text-text-secondary text-xs md:text-sm leading-relaxed mt-3 mb-0">
+                              {milestone.desc}
+                            </Body>
+                          </div>
+                        </div>
+                        
+                        <div className={`w-1/2 ${isEven ? 'order-2' : ''}`} />
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div key={milestone.id} className="relative flex items-stretch">
+                      <div className="absolute left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
+                      
+                      <div className={`w-1/2 ${isEven ? 'pr-12 text-right' : 'pl-12 order-2'}`}>
+                        <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">
+                          {milestone.title}
+                        </span>
+                        <HeadingMD className="text-xl mb-1 font-light text-text-primary">
+                          {milestone.link ? (
+                            <a
+                              href={milestone.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
+                            >
+                              {milestone.linkText}
+                            </a>
+                          ) : (
+                            milestone.subtitle
+                          )}
+                        </HeadingMD>
+                        <Body className="text-text-secondary text-sm md:text-base leading-relaxed mt-2">
+                          {milestone.desc}
+                        </Body>
+                        
+                        {milestone.image && (
+                          <div className={`mt-4 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 overflow-hidden text-left shadow-sm ${isEven ? 'ml-auto' : ''}`}>
+                            <img
+                              src={milestone.image}
+                              alt={milestone.imageAlt}
+                              className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border-b border-accent-bronze/10"
+                              loading="lazy"
+                            />
+                            {milestone.imageCaption && (
+                              <div className="p-3.5 text-xs font-sans text-text-stone-grey leading-relaxed">
+                                {milestone.imageCaption}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className={`w-1/2 ${isEven ? 'order-2' : ''}`} />
                     </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Mobile Touch-Swipeable Horizontal Timeline */}
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:hidden pb-4">
+              {MILESTONES.map((milestone) => (
+                <div key={milestone.id} className="flex-none w-[88%] snap-start bg-white border border-accent-bronze/15 p-4 rounded-xl flex flex-col justify-between shadow-md">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between border-b border-accent-bronze/10 pb-2">
+                      <span className="font-serif italic text-accent-bronze text-base font-semibold">
+                        {milestone.title}
+                      </span>
+                      <span className="font-sans text-[10px] font-semibold text-text-secondary/70 uppercase">
+                        {milestone.id === 5 ? "Today" : `Step ${milestone.id}`}
+                      </span>
+                    </div>
+                    
+                    {milestone.date ? (
+                      <div className="text-[10px] uppercase tracking-wider text-accent-bronze font-semibold">
+                        {milestone.date}
+                      </div>
+                    ) : (
+                      <div className="font-sans text-[11px] uppercase tracking-wider text-text-secondary/80 font-medium">
+                        {milestone.subtitle}
+                      </div>
+                    )}
+                    
+                    <div className="text-text-secondary text-[13px] font-sans font-light leading-relaxed m-0">
+                      {milestone.desc}
+                    </div>
+
+                    {milestone.image && (
+                      <div className="mt-3 rounded-lg overflow-hidden border border-accent-bronze/10 bg-bg-parchment/10">
+                        <img
+                          src={milestone.image}
+                          alt={milestone.imageAlt}
+                          className="w-full aspect-[16/10] object-cover"
+                          loading="lazy"
+                        />
+                        {milestone.imageCaption && (
+                          <div className="p-2.5 text-[10px] font-sans text-text-stone-grey leading-normal bg-bg-parchment/20 border-t border-accent-bronze/5">
+                            {milestone.imageCaption}
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </div>
-
-              {/* Milestone 2: Mārga Darśana */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 hidden md:block" />
-                <div className="w-full md:w-1/2 md:pl-12 pl-8">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1"><em className="italic">Mārga Darśana</em></span>
-                  <HeadingMD className="text-xl mb-3 font-light text-text-primary">2019–2024</HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    Through years of study, teaching, yoga, research, civic engagement, and sustained dialogue, the need for a dedicated <em className="italic">Gurukulam</em> devoted to <em className="italic">Nāṭya</em> as a living knowledge system gradually became clear.<br className="mb-2" />
-                    Under the guidance of Padma Bhushan Dr. M. B. Athreya and Karnataka Kalashri Dr. Padmaja Suresh, the vision began to acquire pedagogical and institutional form.
-                  </Body>
-                </div>
-              </div>
-
-              {/* Milestone 3: The Vision Takes Form */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">Emergence</span>
-                  <HeadingMD className="text-xl mb-3 font-light text-text-primary">The Vision Takes Form | 2025</HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    The <em className="italic">saṅkalpa</em> moved from sustained inquiry towards institutional formation, bringing together the <em className="italic">Gurukulam</em>'s vision of <em className="italic">śāstra</em>, <em className="italic">sādhanā</em>, <em className="italic">saṃvāda</em>, and civilisational renewal.
-                  </Body>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </div>
-
-              {/* Milestone 4: Pratiṣṭhā Samāroham */}
-              <div className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-2 md:top-1/2 -translate-y-1/2 z-10" />
-                <div className="w-full md:w-1/2 hidden md:block" />
-                <div className="w-full md:w-1/2 md:pl-12 pl-8">
-                  <div className="max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-5 space-y-4">
-                    <span className="font-serif italic text-accent-bronze text-xl font-medium block">Consecration</span>
-                    <HeadingMD className="text-2xl font-light text-text-primary"><em className="italic">Pratiṣṭhā Samāroham</em></HeadingMD>
-                    <div className="font-sans text-xs uppercase tracking-wider text-accent-bronze/80 font-semibold mb-2">
-                      23 November 2025 | Navi Mumbai
-                    </div>
-                    <img
-                      src="/assets/images/sishyas_natya_seva_thumb.webp"
-                      alt="Pratiṣṭhā Consecration Dance Offering - Sishyas of Smt. Charanya Gurusathya"
-                      className="w-full aspect-[16/10] object-cover filter contrast-[1.03] sepia-[0.05] border border-accent-bronze/10 rounded-md"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <Body className="text-text-secondary text-xs md:text-sm leading-relaxed mt-3 mb-0">
-                      The <em className="italic">Nāṭyaśāstra Gurukulam</em> was consecrated at Śrī <em className="italic">Subrahmaṇya</em> <em className="italic">Sevā</em> <em className="italic">Samāj</em>, Navi Mumbai, through a sacred gathering of <em className="italic">Vedic</em> invocation, consecratory rites, dance, music, reflection, and dialogue. The <em className="italic">Pratiṣṭhā Samāroham</em> marked not merely an inauguration, but the formal consecration of the <em className="italic">Gurukulam</em>'s <em className="italic">saṅkalpa</em>.
-                    </Body>
-                  </div>
-                </div>
-              </div>
-
-              {/* Milestone 5: Sthāpanā */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1"><em className="italic">Sthāpanā</em></span>
-                  <HeadingMD className="text-xl mb-3 font-light text-text-primary">Today</HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    The <em className="italic">Gurukulam</em> now enters its phase of <em className="italic">sthāpanā</em>, patiently establishing its pedagogical foundations, research, relationships, and institutional rhythm.<br className="mb-1" />
-                    Its work unfolds through <em className="italic">sādhanā</em>, study, dialogue, publication, and service, with growth guided by readiness rather than urgency.
-                  </Body>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </div>
-
+              ))}
             </div>
           </div>
         </div>
@@ -423,33 +517,34 @@ export const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7 flex justify-center">
-              <div className="relative w-full max-w-[440px] aspect-square flex items-center justify-center p-4 overflow-hidden">
-                <div className="w-full h-full relative flex items-center justify-center scale-[0.72] xs:scale-[0.85] sm:scale-100 origin-center transition-transform duration-500">
+              <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center p-4 overflow-hidden mx-auto">
+                <div className="w-full h-full relative flex items-center justify-center origin-center">
                   {/* Outer decorative ring */}
-                  <div className="absolute inset-4 rounded-full border border-[#9E743B]/25 stroke-dasharray-[4_4]" />
+                  <div className="absolute inset-4 rounded-full border border-[#9E743B]/25 border-dashed" />
                   <div className="absolute inset-16 rounded-full border border-[#9E743B]/15" />
 
                   {/* Center Circle: NĀṬYAŚĀSTRA */}
-                  <div className="relative z-20 w-32 h-32 rounded-full bg-[#6B1D1E] text-white flex flex-col items-center justify-center text-center p-2 shadow-xl border-2 border-[#9E743B]">
-                    <LotusIcon className="w-6 h-6 text-[#9E743B] mb-0.5" fill="currentColor" />
-                    <span className="font-serif text-sm font-semibold tracking-wider"><em className="italic">Nāṭyaśāstra</em></span>
+                  <div className="absolute z-20 w-28 h-28 sm:w-32 sm:h-32 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#6B1D1E] text-white flex flex-col items-center justify-center text-center p-2 shadow-xl border-2 border-[#9E743B]">
+                    <LotusIcon className="w-5 h-5 sm:w-6 sm:h-6 text-[#9E743B] mb-0.5" fill="currentColor" />
+                    <span className="font-serif text-xs sm:text-sm font-semibold tracking-wider"><em className="italic">Nāṭyaśāstra</em></span>
                   </div>
 
                   {/* 6 Orbiting Nodes */}
                   {[
-                    { title: 'ETHICS', sans: 'Dharma', pos: 'top-2 left-1/2 -translate-x-1/2' },
-                    { title: 'AESTHETICS', sans: 'Rasa', pos: 'top-16 right-2' },
-                    { title: 'PEDAGOGY', sans: 'Śikṣā', pos: 'bottom-16 right-2' },
-                    { title: 'PHILOSOPHY', sans: 'Darśana', pos: 'bottom-2 left-1/2 -translate-x-1/2' },
-                    { title: 'LEADERSHIP', sans: 'Nīti', pos: 'bottom-16 left-2' },
-                    { title: 'COMMUNITY', sans: 'Saṅgha', pos: 'top-16 left-2' }
+                    { title: 'ETHICS', sans: 'Dharma', style: { left: '50%', top: '12%' } },
+                    { title: 'AESTHETICS', sans: 'Rasa', style: { left: '82.9%', top: '31%' } },
+                    { title: 'PEDAGOGY', sans: 'Śikṣā', style: { left: '82.9%', top: '69%' } },
+                    { title: 'PHILOSOPHY', sans: 'Darśana', style: { left: '50%', top: '88%' } },
+                    { title: 'LEADERSHIP', sans: 'Nīti', style: { left: '17.1%', top: '69%' } },
+                    { title: 'COMMUNITY', sans: 'Saṅgha', style: { left: '17.1%', top: '31%' } }
                   ].map((node) => (
                     <div
                       key={node.title}
-                      className={`absolute ${node.pos} z-20 w-24 h-24 rounded-full bg-[#FAF6F0] border border-[#9E743B]/40 shadow-md flex flex-col items-center justify-center text-center p-2 hover:border-[#6B1D1E] transition-all`}
+                      className="absolute z-20 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FAF6F0] border border-[#9E743B]/40 shadow-md flex flex-col items-center justify-center text-center p-1.5 sm:p-2 hover:border-[#6B1D1E] transition-all"
+                      style={node.style}
                     >
-                      <span className="font-sans text-[9px] uppercase tracking-wider font-bold text-[#6B1D1E]">{node.title}</span>
-                      <span className="font-serif italic text-xs text-[#9E743B]">({node.sans})</span>
+                      <span className="font-sans text-[8px] sm:text-[9px] uppercase tracking-wider font-bold text-[#6B1D1E] leading-tight">{node.title}</span>
+                      <span className="font-serif italic text-[10px] sm:text-xs text-[#9E743B] mt-0.5">({node.sans})</span>
                     </div>
                   ))}
                 </div>
@@ -516,13 +611,13 @@ export const About = () => {
             <HeadingLG className="text-3xl md:text-4xl font-light">Anchors of the Tradition</HeadingLG>
           </div>
 
-          {/* Guiding Influences: 3-column grid for senior mentors */}
+          {/* Guiding Influences: 3-column grid for senior mentors / Horizontal scroll on mobile */}
           <div className="space-y-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 pb-4 md:grid md:grid-cols-3 md:gap-8 md:mx-0 md:px-0 items-stretch">
               
               {/* Mentor 1 */}
-              <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-6 border border-accent-bronze/10 rounded-xl">
-                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+              <div className="flex-none w-[85%] md:w-auto snap-start flex flex-row md:flex-col items-center md:items-stretch gap-4 md:gap-4 bg-bg-parchment/10 p-4 md:p-6 border border-accent-bronze/10 rounded-xl shadow-sm md:shadow-none">
+                <div className="w-24 h-32 md:w-full md:h-auto md:aspect-[3/4] shrink-0 overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
                   <img
                     src="/assets/images/dr_athreya_thumb.webp"
                     alt="Padma Bhushan Dr. M. B. Athreya"
@@ -531,17 +626,17 @@ export const About = () => {
                     decoding="async"
                   />
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-serif text-lg leading-tight text-text-primary">Padma Bhushan Dr. M. B. Athreya</h4>
-                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                <div className="space-y-1.5 md:space-y-2 flex-1">
+                  <h4 className="font-serif text-base md:text-lg leading-tight text-text-primary">Padma Bhushan Dr. M. B. Athreya</h4>
+                  <p className="font-sans text-[12px] md:text-[13px] text-text-secondary leading-relaxed font-light">
                     Pioneer of the Indian Management Movement. A distinguished thinker who seeks to integrate modern organisational systems with <em className="italic">Dhārmic</em> vision.
                   </p>
                 </div>
               </div>
 
               {/* Mentor 2 */}
-              <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-6 border border-accent-bronze/10 rounded-xl">
-                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+              <div className="flex-none w-[85%] md:w-auto snap-start flex flex-row md:flex-col items-center md:items-stretch gap-4 md:gap-4 bg-bg-parchment/10 p-4 md:p-6 border border-accent-bronze/10 rounded-xl shadow-sm md:shadow-none">
+                <div className="w-24 h-32 md:w-full md:h-auto md:aspect-[3/4] shrink-0 overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
                   <img
                     src="/assets/images/dr_padmaja_suresh_thumb.webp"
                     alt="Karnataka Kalashri Dr. Padmaja Suresh"
@@ -550,17 +645,17 @@ export const About = () => {
                     decoding="async"
                   />
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-serif text-lg leading-tight text-text-primary">Karnataka Kalashri Dr. Padmaja Suresh</h4>
-                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                <div className="space-y-1.5 md:space-y-2 flex-1">
+                  <h4 className="font-serif text-base md:text-lg leading-tight text-text-primary">Karnataka Kalashri Dr. Padmaja Suresh</h4>
+                  <p className="font-sans text-[12px] md:text-[13px] text-text-secondary leading-relaxed font-light">
                     Acclaimed danseuse, scholar, and author whose life's work bridges classical training with deep research into the relationship between <em className="italic">Nāṭya</em> and <em className="italic">Sādhanā</em>.
                   </p>
                 </div>
               </div>
 
               {/* Mentor 3 */}
-              <div className="flex flex-col space-y-4 bg-bg-parchment/10 p-6 border border-accent-bronze/10 rounded-xl">
-                <div className="aspect-[3/4] overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
+              <div className="flex-none w-[85%] md:w-auto snap-start flex flex-row md:flex-col items-center md:items-stretch gap-4 md:gap-4 bg-bg-parchment/10 p-4 md:p-6 border border-accent-bronze/10 rounded-xl shadow-sm md:shadow-none">
+                <div className="w-24 h-32 md:w-full md:h-auto md:aspect-[3/4] shrink-0 overflow-hidden border border-accent-bronze/10 bg-[#1E1C1A] rounded-lg">
                   <img
                     src="/assets/images/sri_kv_subrahmonyam_thumb.webp"
                     alt="Śrī K. V. Subrahmoṇyan"
@@ -569,9 +664,9 @@ export const About = () => {
                     decoding="async"
                   />
                 </div>
-                <div className="space-y-2">
-                  <h4 className="font-serif text-lg leading-tight text-text-primary">Śrī K. V. Subrahmoṇyan</h4>
-                  <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
+                <div className="space-y-1.5 md:space-y-2 flex-1">
+                  <h4 className="font-serif text-base md:text-lg leading-tight text-text-primary">Śrī K. V. Subrahmoṇyan</h4>
+                  <p className="font-sans text-[12px] md:text-[13px] text-text-secondary leading-relaxed font-light">
                     Revered disciple in the lineage of <em className="italic">Bhagavān</em> Śrī <em className="italic">Ramaṇa</em> <em className="italic">Maharṣi</em>. Offers <em className="italic">Vedāntic</em> clarity, gentle witnessing presence, and spiritual anchoring.
                   </p>
                 </div>
@@ -581,7 +676,7 @@ export const About = () => {
 
             {/* Yajamāna & Yojaka Block positioned below the three seniors */}
             <div className="pt-8 border-t border-accent-bronze/15 max-w-3xl mx-auto">
-              <div className="bg-bg-parchment/20 p-6 sm:p-8 rounded-xl border border-accent-bronze/20 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
+              <div className="bg-bg-parchment/20 p-4 sm:p-8 rounded-xl border border-accent-bronze/20 flex flex-col sm:flex-row items-center gap-6 shadow-sm">
                 <div className="w-28 h-36 shrink-0 rounded-lg overflow-hidden border border-accent-bronze/20 bg-[#1E1C1A]">
                   <img
                     src="/assets/images/rohit_viswanath_thumb.webp"
@@ -765,7 +860,7 @@ export const About = () => {
             {/* Mobile Touch-Swipeable Horizontal Carousel */}
             <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 -mx-4 px-4 md:hidden pb-3">
               {PILLARS.map((pillar, i) => (
-                <div key={pillar.title} className="flex-none w-[82%] snap-start p-6 bg-white border border-accent-bronze/20 rounded-xl space-y-3 shadow-md">
+                <div key={pillar.title} className="flex-none w-[85%] sm:w-[82%] snap-start p-4 sm:p-5 bg-white border border-accent-bronze/20 rounded-xl space-y-2 shadow-md">
                   <div className="flex justify-between items-baseline">
                     <span className="font-serif italic text-accent-bronze text-xl font-medium block">
                       {i + 1}. {pillar.title}
@@ -777,7 +872,7 @@ export const About = () => {
                       {pillar.sanskrit}
                     </span>
                   </div>
-                  <Body className="text-text-secondary text-sm font-sans font-light leading-relaxed">
+                  <Body className="text-text-secondary text-[13px] font-sans font-light leading-relaxed">
                     {pillar.desc}
                   </Body>
                 </div>
@@ -807,55 +902,55 @@ export const About = () => {
             <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-4 px-4 md:mx-0 md:px-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 md:gap-y-16 pb-3 md:pb-0 items-stretch">
               
               {/* Block 1 */}
-              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+              <div className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-2">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">01</span>
                 <HeadingMD className="text-lg md:text-xl font-light"><em className="italic">Nāṭya</em> as Civilisational Knowledge</HeadingMD>
-                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                <Body className="text-text-secondary text-[13px] md:text-base leading-relaxed font-sans font-light">
                   Approaching performance not as mere entertainment or choreographic technique, but as a complete system of aesthetics, psychology, and public ethics.
                 </Body>
               </div>
 
               {/* Block 2 */}
-              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+              <div className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-2">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">02</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Research & Publications</HeadingMD>
-                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                <Body className="text-text-secondary text-[13px] md:text-base leading-relaxed font-sans font-light">
                   Focusing on translating, annotating, and publishing critical commentaries on commentarial traditions like <em className="italic">Abhinavabhāratī</em>.
                 </Body>
               </div>
 
               {/* Block 3 */}
-              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+              <div className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-2">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">03</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Pedagogy & Curriculum</HeadingMD>
-                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                <Body className="text-text-secondary text-[13px] md:text-base leading-relaxed font-sans font-light">
                   Designing academic structures where transmission of artistic form and theoretical framework happens in a living relationship context.
                 </Body>
               </div>
 
               {/* Block 4 */}
-              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+              <div className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-2">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">04</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Archives & Custodianship</HeadingMD>
-                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                <Body className="text-text-secondary text-[13px] md:text-base leading-relaxed font-sans font-light">
                   Collecting and digitizing manuscripts, oral records, and traditional performance blueprints to preserve civilisational lineage for posterity.
                 </Body>
               </div>
 
               {/* Block 5 */}
-              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+              <div className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-2">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">05</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Civilisational Dialogue</HeadingMD>
-                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                <Body className="text-text-secondary text-[13px] md:text-base leading-relaxed font-sans font-light">
                   Hosting <em className="italic">Saṃvāda</em> circles between traditional masters, contemporary artists, philosophers, and policy makers to bridge ancient ideas with public life.
                 </Body>
               </div>
 
               {/* Block 6 */}
-              <div className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-3">
+              <div className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl space-y-2">
                 <span className="font-serif italic text-accent-bronze text-3xl md:text-4xl font-light block leading-none">06</span>
                 <HeadingMD className="text-lg md:text-xl font-light">Leadership Formation</HeadingMD>
-                <Body className="text-text-secondary text-xs md:text-base leading-relaxed font-sans font-light">
+                <Body className="text-text-secondary text-[13px] md:text-base leading-relaxed font-sans font-light">
                   Providing institutional mentoring to guide future leaders, anchoring executive behavior in character, inner order, and responsibility.
                 </Body>
               </div>
@@ -888,11 +983,11 @@ export const About = () => {
                 { id: 'VI.', title: 'Dialogue', desc: <span>Fostering <em className="italic">Saṃvāda</em> (dialogue) among scholars, educators, institutions, and contemporary performers.</span> },
                 { id: 'VII.', title: 'Leadership & Consulting', desc: <span>Applying <em className="italic">Dhārmic</em> principles of alignment and rhythm to institutional design and leadership mentoring.</span> }
               ].map((item) => (
-                <div key={item.id} className="flex-none w-[82%] md:w-auto snap-start p-5 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl flex gap-3.5 items-start">
+                <div key={item.id} className="flex-none w-[85%] md:w-auto snap-start p-4 md:p-0 bg-white md:bg-transparent border md:border-none border-accent-bronze/15 rounded-xl flex gap-3.5 items-start">
                   <span className="font-serif italic text-accent-bronze text-sm font-semibold tracking-wider pt-1">{item.id}</span>
-                  <div className="space-y-1.5">
+                  <div className="space-y-1.5 flex-1">
                     <h4 className="font-serif text-base sm:text-lg text-text-primary leading-snug">{item.title}</h4>
-                    <p className="font-sans text-xs sm:text-[13px] text-text-secondary leading-relaxed font-light">{item.desc}</p>
+                    <p className="font-sans text-[12px] sm:text-[13px] text-text-secondary leading-relaxed font-light">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -924,9 +1019,9 @@ export const About = () => {
                 { title: 'Patience before Expansion', desc: 'Growth follows readiness rather than urgency.' },
                 { title: 'Education for Custodianship', desc: <span>Students are formed not merely as practitioners, but as future custodians of <em className="italic">Nāṭya</em> and <em className="italic">Dharma</em>.</span> }
               ].map((ethos) => (
-                <div key={ethos.title} className="flex-none w-[82%] md:w-auto snap-start p-5 sm:p-6 border border-accent-bronze/15 rounded-xl bg-white md:bg-bg-parchment/10 space-y-2.5 shadow-sm md:shadow-none">
+                <div key={ethos.title} className="flex-none w-[85%] md:w-auto snap-start p-4 sm:p-6 border border-accent-bronze/15 rounded-xl bg-white md:bg-bg-parchment/10 space-y-2 shadow-sm md:shadow-none">
                   <h4 className="font-serif text-base sm:text-lg text-text-primary font-light leading-snug">{ethos.title}</h4>
-                  <p className="font-sans text-xs text-text-secondary leading-relaxed font-light">{ethos.desc}</p>
+                  <p className="font-sans text-[12px] sm:text-xs text-text-secondary leading-relaxed font-light">{ethos.desc}</p>
                 </div>
               ))}
             </div>
