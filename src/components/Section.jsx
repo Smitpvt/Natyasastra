@@ -32,7 +32,7 @@ export const Section = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.2, delay, ease: [0.25, 0.1, 0.25, 1.0] }}
-        className={container ? `max-w-[1440px] mx-auto px-8 md:px-16 ${className}` : className}
+        className={container ? `max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] ${className}` : className}
       >
         {children}
       </motion.div>

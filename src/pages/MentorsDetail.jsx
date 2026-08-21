@@ -123,9 +123,9 @@ export const MentorsDetail = () => {
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-1">
                 <Caption className="text-accent-bronze uppercase tracking-[0.25em] font-semibold">Marga Darshak</Caption>
-                <HeadingMD className="text-3xl sm:text-4xl text-[#211F1D] font-serif font-light">
+                <HeadingLG className="text-[#211F1D]">
                   Padma Bhushan Dr. M. B. Athreya
-                </HeadingMD>
+                </HeadingLG>
               </div>
               
               <div className="p-5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze">
@@ -160,9 +160,9 @@ export const MentorsDetail = () => {
             <div className="lg:col-span-7 space-y-6 order-2 lg:order-1">
               <div className="space-y-1">
                 <Caption className="text-accent-bronze uppercase tracking-[0.25em] font-semibold">Ācāryā for Nāṭya Pedagogy</Caption>
-                <HeadingMD className="text-3xl sm:text-4xl text-[#211F1D] font-serif font-light">
+                <HeadingLG className="text-[#211F1D]">
                   Karnataka Kalashri Dr. Padmaja Suresh
-                </HeadingMD>
+                </HeadingLG>
               </div>
               
               <div className="p-5 rounded-xl bg-white border-l-2 border-accent-bronze shadow-sm">
@@ -255,9 +255,9 @@ export const MentorsDetail = () => {
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-1">
                 <Caption className="text-accent-bronze uppercase tracking-[0.25em] font-semibold">Spiritual Elder</Caption>
-                <HeadingMD className="text-3xl sm:text-4xl text-[#211F1D] font-serif font-light">
+                <HeadingLG className="text-[#211F1D]">
                   Śrī K. V. Subrahmoṇyan
-                </HeadingMD>
+                </HeadingLG>
               </div>
               
               <div className="p-5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze">
@@ -292,9 +292,9 @@ export const MentorsDetail = () => {
             <div className="lg:col-span-7 space-y-6 order-2 lg:order-1">
               <div className="space-y-1">
                 <Caption className="text-accent-bronze uppercase tracking-[0.25em] font-semibold">Yajamāna & Yojaka</Caption>
-                <HeadingMD className="text-3xl sm:text-4xl text-[#211F1D] font-serif font-light">
+                <HeadingLG className="text-[#211F1D]">
                   Rohit Viswanath
-                </HeadingMD>
+                </HeadingLG>
               </div>
               
               <div className="p-5 rounded-xl bg-white border-l-2 border-accent-bronze shadow-sm">
@@ -361,7 +361,7 @@ export const MentorsDetail = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 border border-accent-bronze/30 shadow-sm text-accent-bronze font-sans text-[11px] uppercase tracking-[0.25em] font-semibold">
               SAṄKALPA
             </div>
-            <HeadingLG className="text-2xl sm:text-3xl font-serif font-light text-[#211F1D]">
+            <HeadingLG className="text-[#211F1D]">
               Life Vision of the <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>
             </HeadingLG>
             <p className="font-serif italic text-accent-bronze text-xs sm:text-sm">

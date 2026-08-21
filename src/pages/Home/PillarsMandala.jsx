@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LotusDivider, ProspectusFrame, BrassDiyaIcon } from '../../components/LotusOrnament';
+import { HeadingLG } from '../../components/Typography';
 
 const PILLARS = [
   {
@@ -87,9 +88,9 @@ export const PillarsMandala = () => {
             </span>
             <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#6B1D1E] tracking-tight">
+          <HeadingLG className="text-[#6B1D1E] tracking-tight">
             The Six Pillars
-          </h2>
+          </HeadingLG>
           <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
             Six interconnected dimensions of learning, practice, transmission, aesthetic experience, and responsibility.
           </p>
@@ -150,9 +151,9 @@ export const PillarsMandala = () => {
                 <span className="font-sans text-xs uppercase tracking-[0.25em] text-[#9E743B] font-bold block mb-1">
                   PILLAR {activeIdx + 1} OF VI
                 </span>
-                <h3 className="font-serif text-3xl sm:text-4xl text-[#6B1D1E] font-normal">
+                <HeadingLG className="text-[#6B1D1E] font-normal">
                   {activePillar.title} <span className="font-serif italic text-2xl text-[#9E743B]">({activePillar.sanskrit})</span>
-                </h3>
+                </HeadingLG>
                 <p className="font-sans text-xs uppercase tracking-widest text-[#7A5428] font-semibold mt-1">
                   {activePillar.subtitle}
                 </p>

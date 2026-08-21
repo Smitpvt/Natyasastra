@@ -47,7 +47,7 @@ export const Associate = () => {
             <div className="lg:col-span-6 space-y-6">
               <div className="space-y-2 text-center lg:text-left">
                 <Caption className="text-[#9E743B]">Foundational Endowments</Caption>
-                <HeadingMD className="text-2xl text-[#6B1D1E]">The Circles of Permanence</HeadingMD>
+                <HeadingMD className="text-[#6B1D1E]">The Circles of Permanence</HeadingMD>
                 <p className="font-sans text-xs text-[#4A423B] font-light leading-relaxed">
                   Five concentric spheres of custodianship sustaining the <em className="italic">Gurukulam</em> in perpetuity.
                 </p>

@@ -52,7 +52,7 @@ export const QuoteSection = () => {
                 <button
                   key={v.title}
                   onClick={() => setActiveVerse(i)}
-                  className={`flex-1 sm:flex-initial flex items-center justify-center text-center px-3 py-2 sm:px-4 sm:py-1.5 rounded-full font-sans text-[10px] sm:text-[11px] uppercase tracking-widest transition-all ${
+                  className={`flex-1 sm:flex-initial flex items-center justify-center text-center px-2 py-1.5 sm:px-4 sm:py-1.5 rounded-full font-sans text-[9px] xs:text-[10px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest transition-all ${
                     activeVerse === i
                       ? 'bg-[#6B1D1E] text-white shadow-sm font-semibold'
                       : 'bg-[#F3EEE6] text-[#757069] border border-[#9E743B]/20 hover:border-[#9E743B]/60'

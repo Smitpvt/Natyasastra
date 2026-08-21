@@ -205,7 +205,7 @@ export const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             <div className="lg:col-span-5 space-y-4">
               <Caption className="text-accent-bronze/70">The Institution</Caption>
-              <HeadingLG className="text-3xl md:text-4xl font-light text-text-primary leading-tight">
+              <HeadingLG className="leading-tight">
                 A Sanctuary for Lived Heritage
               </HeadingLG>
               <div className="w-12 h-[1px] bg-accent-bronze/20 mt-4" />
@@ -231,7 +231,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <Caption className="text-accent-bronze/70">Our Story</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light">The Path of Consecration</HeadingLG>
+            <HeadingLG>The Path of Consecration</HeadingLG>
             <Body className="text-text-secondary text-base md:text-lg leading-relaxed font-light pt-2">
               The <em className="italic">Gurukulam</em> did not emerge as an institutional project conceived at a single moment. It unfolded gradually through conversations, guidance, study, practice, and a deepening <em className="italic">saṅkalpa</em>.
             </Body>
@@ -373,7 +373,7 @@ export const About = () => {
             <div className="lg:col-span-7 space-y-8">
               <div className="space-y-2 text-center lg:text-left">
                 <Caption className="text-[#9E743B] tracking-[0.3em]">Civilisational Imperative</Caption>
-                <HeadingLG className="text-3xl md:text-4xl font-light text-[#6B1D1E]">
+                <HeadingLG className="text-[#6B1D1E]">
                   The Work Before Our Generation
                 </HeadingLG>
                 <LotusDivider className="lg:justify-start justify-center my-3" />
@@ -459,7 +459,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <Caption className="text-[#9E743B] tracking-[0.3em]">A Living Knowledge Tradition</Caption>
-            <HeadingLG className="text-3xl md:text-5xl font-light text-[#6B1D1E]">
+            <HeadingLG className="text-[#6B1D1E]">
               Why the <em className="italic">Nāṭyaśāstra</em>?
             </HeadingLG>
             <p className="font-serif italic text-base text-[#7A5428]">
@@ -543,7 +543,7 @@ export const About = () => {
             </div>
             <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
               <Caption className="text-accent-bronze/80">Pedagogy of Relationship</Caption>
-              <HeadingLG className="text-3xl md:text-4xl font-light text-text-primary leading-tight">
+              <HeadingLG className="leading-tight">
                 Why a Gurukulam?
               </HeadingLG>
               <div className="w-12 h-[1px] bg-accent-bronze/20" />
@@ -563,7 +563,7 @@ export const About = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Guiding Influences</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light">Anchors of the Tradition</HeadingLG>
+            <HeadingLG>Anchors of the Tradition</HeadingLG>
           </div>
 
           {/* Guiding Influences: 3-column grid for senior mentors / Horizontal scroll on mobile */}
@@ -661,7 +661,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Foundational Framework</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light">The Six Pillars of <em className="italic">Nāṭya</em></HeadingLG>
+            <HeadingLG>The Six Pillars of <em className="italic">Nāṭya</em></HeadingLG>
             <p className="font-sans text-xs uppercase tracking-wider text-text-secondary/70">
               <span className="hidden md:inline">Hover or click nodes to explore the dimensions</span>
               <span className="md:hidden text-accent-bronze font-semibold">Swipe horizontal to explore →</span>
@@ -843,7 +843,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="space-y-4">
             <Caption className="text-accent-bronze/70">What Makes Us Distinctive</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light max-w-2xl">
+            <HeadingLG className="max-w-2xl">
               An Enduring Contribution to Cultural Renewal
             </HeadingLG>
             <div className="w-16 h-[1px] bg-accent-bronze/25 mt-4" />
@@ -920,7 +920,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Areas of Engagement</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light">Institutional Stewardship</HeadingLG>
+            <HeadingLG>Institutional Stewardship</HeadingLG>
           </div>
 
           <div className="space-y-2">
@@ -956,7 +956,7 @@ export const About = () => {
         <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
           <div className="text-center space-y-4">
             <Caption className="text-accent-bronze/70">Our Ethos</Caption>
-            <HeadingLG className="text-3xl md:text-4xl font-light">Enduring Principles</HeadingLG>
+            <HeadingLG>Enduring Principles</HeadingLG>
           </div>
 
           <div className="space-y-2">

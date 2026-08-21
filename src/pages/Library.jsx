@@ -158,7 +158,7 @@ export const Library = () => {
                     rel="noopener noreferrer"
                     className="block group-hover:text-accent-bronze transition-colors duration-300"
                   >
-                    <HeadingMD className="text-xl md:text-2xl text-text-charcoal leading-tight">
+                    <HeadingMD className="text-text-charcoal leading-tight">
                       {formatSanskrit(pub.title)}
                     </HeadingMD>
                   </a>

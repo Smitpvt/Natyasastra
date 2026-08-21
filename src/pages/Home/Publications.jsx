@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PUBLICATIONS } from '../../data/publications';
 import { BrassDiyaIcon } from '../../components/LotusOrnament';
 import { formatSanskrit } from '../../utils/text';
+import { HeadingLG } from '../../components/Typography';
 
 // Select featured papers for the homepage
 const FEATURED_SERIES = ['DTHF Papers', 'Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
@@ -87,7 +88,7 @@ export const Publications = () => {
 
   return (
     <section className="w-full bg-[#F3EEE6] section-medium border-t border-[#E0D8CE]/40">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-[80px]">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px]">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#9E743B]/20 pb-6 mb-4 sm:mb-6 md:mb-8">
@@ -98,9 +99,9 @@ export const Publications = () => {
                 KNOWLEDGE SYSTEMS
               </span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+            <HeadingLG className="text-[#6B1D1E] tracking-tight">
               Our Publications
-            </h2>
+            </HeadingLG>
             <p className="font-serif italic text-base text-[#7A5428]">
               A curated collection of foundational texts, research journals, and commentarial works.
             </p>

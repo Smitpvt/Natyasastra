@@ -123,7 +123,7 @@ export const GlimpsesAndMedia = () => {
                 CURATED ARCHIVE
               </span>
             </div>
-            <HeadingLG as="h2" className="text-3xl sm:text-4xl lg:text-5xl text-[#6B1D1E] font-light">
+            <HeadingLG className="text-[#6B1D1E]">
               Glimpses & Media
             </HeadingLG>
             <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">

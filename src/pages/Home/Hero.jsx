@@ -71,7 +71,7 @@ export const Hero = () => {
           {/* Major Serifed Headings - Gold Foil & Ivory Shimmer */}
           <motion.div variants={itemVariants} className="flex flex-col items-center">
             <h1 
-              className="font-serif text-[44px] xs:text-[54px] sm:text-[72px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2 pl-[0.025em]"
+              className="font-serif text-[36px] xs:text-[46px] sm:text-[68px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2 pl-[0.025em]"
               style={{ filter: 'drop-shadow(0px 8px 16px rgba(0,0,0,0.75))' }}
             >
               नाट्यशास्त्र
@@ -79,7 +79,7 @@ export const Hero = () => {
             
             {/* Subtitle */}
             <p 
-              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.3em] mt-[8px] pl-[0.3em]"
+              className="font-serif text-[18px] xs:text-[22px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.3em] mt-[8px] pl-[0.3em]"
               style={{ textShadow: '0 4px 14px rgba(0,0,0,0.8)' }}
             >
               गुरुकुलम्

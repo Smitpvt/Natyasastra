@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { LotusDivider, ProspectusFrame } from '../../components/LotusOrnament';
+import { HeadingLG } from '../../components/Typography';
 
 const MENTORS = [
   {
@@ -70,9 +71,9 @@ export const Mentors = () => {
             <span className="inline-block px-4 py-1.5 rounded-full bg-[#FAF6F0] border border-[#9E743B]/30 text-[#9E743B] font-sans text-xs uppercase tracking-[0.3em] font-semibold">
               LIVING LINEAGES
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+            <HeadingLG className="text-[#6B1D1E] tracking-tight">
               Those Who Guide The Gurukulam
-            </h2>
+            </HeadingLG>
             <p className="font-serif italic text-base text-[#9E743B]">
               A tradition flourishes through those who quietly embody and transmit its deepest values.
             </p>
@@ -207,9 +208,9 @@ export const Mentors = () => {
                         <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-[#9E743B] font-bold block">
                           {MENTORS[activeTab].role}
                         </span>
-                        <h3 className="font-serif text-3xl sm:text-4xl font-light text-[#6B1D1E] leading-tight">
+                        <HeadingLG className="text-[#6B1D1E] leading-tight">
                           {MENTORS[activeTab].name}
-                        </h3>
+                        </HeadingLG>
                       </div>
 
                       <div className="p-4 rounded-xl bg-[#F5F0E6] border-l-3 border-[#9E743B]">

@@ -317,9 +317,9 @@ export const ProgrammesDetail = () => {
               <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFE8DC] border border-accent-bronze/30 text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
                 RECENT FEATURED PROGRAMME
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+              <HeadingLG className="text-[#6B1D1E] tracking-tight">
                 <em className="italic">Nāma</em> • <em className="italic">Rūpa</em> • <em className="italic">Nāda</em> • <em className="italic">Bindu</em>
-              </h2>
+              </HeadingLG>
               <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
                 A Recent Residential Immersion of the <em className="italic">Gurukulam</em>
               </p>
@@ -391,9 +391,9 @@ export const ProgrammesDetail = () => {
                       <span className="inline-block px-3 py-1 rounded-full bg-[#6B1D1E] text-white font-sans text-[10px] uppercase tracking-widest font-bold">
                         Day 1
                       </span>
-                      <h4 className="font-serif text-lg font-semibold text-[#6B1D1E] pt-1">
+                      <HeadingMD className="text-[#6B1D1E] pt-1">
                         Immersion Session — Day 1
-                      </h4>
+                      </HeadingMD>
                       <p className="font-sans text-xs text-[#59524A] font-light leading-relaxed">
                         Contemplative inquiry, sound-form resonance, and opening proceedings of the residential immersion.
                       </p>
@@ -415,9 +415,9 @@ export const ProgrammesDetail = () => {
                       <span className="inline-block px-3 py-1 rounded-full bg-[#6B1D1E] text-white font-sans text-[10px] uppercase tracking-widest font-bold">
                         Day 2
                       </span>
-                      <h4 className="font-serif text-lg font-semibold text-[#6B1D1E] pt-1">
+                      <HeadingMD className="text-[#6B1D1E] pt-1">
                         Immersion Session — Day 2
-                      </h4>
+                      </HeadingMD>
                       <p className="font-sans text-xs text-[#59524A] font-light leading-relaxed">
                         Aesthetic synthesis, movement sādhanā, and culmination proceedings of the residential immersion.
                       </p>
@@ -442,9 +442,9 @@ export const ProgrammesDetail = () => {
               <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFE8DC] border border-accent-bronze/30 text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
                 FORTHCOMING PROGRAMMES
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-[#6B1D1E] tracking-tight">
+              <HeadingLG className="text-[#6B1D1E] tracking-tight">
                 Reimagining the <em className="italic">Sabhā</em>: A <em className="italic">Saṃvāda</em> in <em className="italic">Nāṭya</em>
-              </h2>
+              </HeadingLG>
               <div className="flex items-center justify-center gap-2 font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#9E743B] pt-1">
                 <span>27 December 2026</span>
                 <span>·</span>
@@ -564,7 +564,7 @@ export const ProgrammesDetail = () => {
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <Caption className="text-accent-bronze tracking-[0.3em]">Foundational Framework</Caption>
-            <HeadingLG className="text-3xl sm:text-4xl md:text-5xl font-serif font-light">
+            <HeadingLG>
               The <em className="italic">Mārga</em> & The Pedagogical Spiral
             </HeadingLG>
             <p className="font-sans text-xs sm:text-sm text-accent-bronze font-semibold uppercase tracking-[0.2em]">
@@ -662,11 +662,11 @@ export const ProgrammesDetail = () => {
                         x={node.x}
                         y={node.y + 6}
                         textAnchor="middle"
-                        className={`font-serif text-sm font-medium transition-all duration-300 ${
+                        className={`font-serif text-sm font-medium transition-all duration-300 italic ${
                           isActive ? 'fill-accent-bronze font-bold' : 'fill-text-stone-grey/80'
                         }`}
                       >
-                        <em className="italic">{node.syllable}</em>
+                        {node.syllable}
                       </text>
 
                       {/* Node Outer Name Label */}
@@ -700,9 +700,9 @@ export const ProgrammesDetail = () => {
                   <div className="space-y-2 border-b border-black/5 pb-6">
                     <div className="flex items-baseline justify-between flex-wrap gap-2">
                       <div className="flex items-baseline gap-4">
-                        <h3 className="font-serif italic text-4xl sm:text-5xl text-accent-bronze font-light">
+                        <HeadingLG className="text-accent-bronze italic">
                           {MARGA_MANDALA_NODES[activeStep].name}
-                        </h3>
+                        </HeadingLG>
                         <span className="font-serif text-2xl text-[#757069]/70">
                           {MARGA_MANDALA_NODES[activeStep].sanskrit}
                         </span>
@@ -769,7 +769,7 @@ export const ProgrammesDetail = () => {
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <Caption className="text-accent-bronze tracking-[0.3em] text-[11px]">Outward Expression</Caption>
-            <HeadingLG className="text-2xl sm:text-4xl md:text-5xl font-serif font-light text-[#211F1D]">
+            <HeadingLG className="text-[#211F1D]">
               Two Outward Movements
             </HeadingLG>
             <BodyLG className="text-text-stone-grey font-light text-sm sm:text-base leading-relaxed">
@@ -1034,7 +1034,7 @@ export const ProgrammesDetail = () => {
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <Caption className="text-accent-bronze tracking-[0.3em]">Direct Engagement</Caption>
-            <HeadingLG className="text-3xl sm:text-4xl md:text-5xl font-serif font-light">
+            <HeadingLG>
               Enter the Gurukulam
             </HeadingLG>
             <BodyLG className="text-text-stone-grey font-light">
@@ -1112,7 +1112,7 @@ export const ProgrammesDetail = () => {
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <Caption className="text-accent-bronze tracking-[0.3em]">Widening Impact</Caption>
-            <HeadingLG className="text-3xl sm:text-4xl md:text-5xl font-serif font-light">
+            <HeadingLG>
               From Inner Refinement to Civilisational Renewal
             </HeadingLG>
             <BodyLG className="text-text-stone-grey font-light">
@@ -1202,7 +1202,7 @@ export const ProgrammesDetail = () => {
             <span className="inline-block px-4 py-1 rounded-full bg-white/80 border border-accent-bronze/30 shadow-sm text-accent-bronze font-sans text-xs uppercase tracking-[0.3em] font-semibold">
               PHASE OF STHĀPANĀ
             </span>
-            <HeadingLG className="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#211F1D] tracking-tight">
+            <HeadingLG className="text-[#211F1D] tracking-tight">
               Programmes in the Making
             </HeadingLG>
           </div>
