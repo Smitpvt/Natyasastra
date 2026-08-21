@@ -333,29 +333,29 @@ export const About = () => {
       </Section>
 
       {/* 4. OUR VISION (Inspired by PDF Page 3) */}
-      <Section className="py-12 md:py-16 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
+      <Section className="py-10 md:py-12 bg-[#F5F0E6] border-b border-[#9E743B]/20" background="none" container={true} yOffset={0}>
         <div className="max-w-4xl mx-auto px-4">
-          <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-14 text-center">
+          <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-10 text-center">
             
             <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block mb-2">
               FOUNDING VISION STATEMENT
             </span>
 
-            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#6B1D1E] leading-[1.3] font-normal tracking-wide max-w-3xl mx-auto uppercase">
+            <h2 className="font-serif text-base sm:text-lg md:text-xl lg:text-2xl text-[#6B1D1E] leading-relaxed font-normal tracking-wide max-w-2xl mx-auto uppercase">
               AN INSTITUTION CONTRIBUTING, IN PERPETUITY, TO THE <em className="italic">DHĀRMIC</em> RENEWAL OF PUBLIC LIFE IN INDIA AND BEYOND—THROUGH GRADUATES WHO EMBODY THE SPIRIT OF <em className="italic">RĀMA RĀJYAM</em>, WITH A <em className="italic">SĀTVIC</em> BLEND OF <em className="italic">DHARMA</em>, <em className="italic">SEVĀ</em>, SELF-TRANSCENDENCE, AND AESTHETIC LEADERSHIP.
             </h2>
 
-            <LotusDivider className="my-6" />
+            <LotusDivider className="my-4" />
 
-            <p className="font-serif italic text-base sm:text-lg md:text-xl text-[#7A5428] leading-relaxed max-w-2xl mx-auto font-light">
+            <p className="font-serif italic text-xs sm:text-sm md:text-base text-[#7A5428] leading-relaxed max-w-xl mx-auto font-light">
               Rooted in <em className="italic">Nāṭyaśāstra</em> and its allied disciplines, the <em className="italic">Gurukulam</em> nurtures custodians of <em className="italic">rasa</em>, rhythm, and responsibility—where presence is pedagogy, and governance flows from inner rhythm.
             </p>
 
-            <div className="pt-6 border-t border-[#9E743B]/20 mt-6 max-w-md mx-auto">
-              <span className="font-serif text-xs uppercase tracking-[0.2em] text-[#9E743B] block">
+            <div className="pt-4 border-t border-[#9E743B]/20 mt-4 max-w-xs mx-auto">
+              <span className="font-serif text-[10px] uppercase tracking-[0.2em] text-[#9E743B] block">
                 Consecrated through the <em className="italic">Pratiṣṭhā Samāroham</em>
               </span>
-              <span className="font-sans text-[11px] text-[#4A423B] tracking-wider block mt-1">
+              <span className="font-sans text-[10px] text-[#4A423B] tracking-wider block mt-1">
                 23 November 2025 • Navi Mumbai
               </span>
             </div>
