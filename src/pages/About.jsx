@@ -416,12 +416,12 @@ export const About = () => {
             
             {/* Left Column: 4 Pillars */}
             <div className="lg:col-span-7 space-y-8">
-              <div className="space-y-2">
+              <div className="space-y-2 text-center lg:text-left">
                 <Caption className="text-[#9E743B] tracking-[0.3em]">Civilisational Imperative</Caption>
                 <HeadingLG className="text-3xl md:text-4xl font-light text-[#6B1D1E]">
                   The Work Before Our Generation
                 </HeadingLG>
-                <LotusDivider className="justify-start my-3" />
+                <LotusDivider className="lg:justify-start justify-center my-3" />
               </div>
 
               <div className="space-y-6">
@@ -481,7 +481,7 @@ export const About = () => {
                   alt="Practitioner by lamp"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-[400px] object-cover object-top filter brightness-[0.95] contrast-[1.03]"
+                  className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover object-top filter brightness-[0.95] contrast-[1.03]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
