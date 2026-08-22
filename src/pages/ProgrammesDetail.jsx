@@ -228,6 +228,8 @@ export const ProgrammesDetail = () => {
   });
 
   const [activeStep, setActiveStep] = useState(0);
+  const [showAllSabhaDetails, setShowAllSabhaDetails] = useState(false);
+  const [showAllStatecraft, setShowAllStatecraft] = useState(false);
 
   return (
     <div className="bg-bg-ivory pt-24 min-h-screen text-[#211F1D] selection:bg-accent-bronze/20 selection:text-[#211F1D] overflow-x-hidden">
@@ -264,14 +266,14 @@ export const ProgrammesDetail = () => {
               </div>
 
               {/* Badges */}
-              <div className="pt-4 flex flex-wrap gap-4 font-sans text-xs uppercase tracking-widest text-accent-bronze font-semibold">
-                <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-white/60 shadow-sm">
+              <div className="pt-3 flex flex-row flex-nowrap overflow-x-auto scrollbar-none items-center gap-2.5 font-sans text-[10px] xs:text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[#9E743B] font-semibold -mx-5 px-5 sm:mx-0 sm:px-0">
+                <span className="shrink-0 px-3.5 py-1.5 border border-[#9E743B]/30 rounded-full bg-white/80 shadow-2xs whitespace-nowrap">
                   In-Person Formats
                 </span>
-                <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-white/60 shadow-sm">
+                <span className="shrink-0 px-3.5 py-1.5 border border-[#9E743B]/30 rounded-full bg-white/80 shadow-2xs whitespace-nowrap">
                   Direct Engagements
                 </span>
-                <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-white/60 shadow-sm">
+                <span className="shrink-0 px-3.5 py-1.5 border border-[#9E743B]/30 rounded-full bg-white/80 shadow-2xs whitespace-nowrap">
                   Phase of Sthāpanā
                 </span>
               </div>
@@ -326,29 +328,29 @@ export const ProgrammesDetail = () => {
               <LotusDivider className="my-2" />
             </div>
 
-            <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-accent-bronze/20 p-6 sm:p-10 space-y-8">
-              {/* Image Collateral with clean alignment, correct aspect ratio, no black side bars */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-accent-bronze/20 p-4 sm:p-10 space-y-4 sm:space-y-8">
+              {/* Image Collateral with clean alignment, correct aspect ratio */}
               <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-xl bg-[#FAF6F0] border border-accent-bronze/20 shadow-md">
                 <img
                   src="/assets/images/Participants in the Nama Rupa Nada Bindu immersion.jpg"
                   alt="Participants in the Nāma Rūpa Nāda Bindu immersion"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-auto max-h-[500px] object-cover sm:object-contain mx-auto"
+                  className="w-full h-auto max-h-[220px] xs:max-h-[260px] sm:max-h-[500px] object-cover sm:object-contain mx-auto"
                 />
               </div>
 
-              <div className="space-y-6 text-text-stone-grey font-sans font-light leading-relaxed text-base sm:text-lg max-w-4xl mx-auto text-center sm:text-left">
+              <div className="space-y-4 sm:space-y-6 text-text-stone-grey font-sans font-light leading-relaxed text-xs xs:text-sm sm:text-lg max-w-4xl mx-auto text-left">
                 <p>
                   <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative inquiry, somatic practice, and deep exploration of sound, form, and aesthetic manifestation.
                 </p>
                 
-                <div className="pt-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 font-sans text-xs uppercase tracking-widest text-accent-bronze font-semibold">
-                    <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
+                <div className="pt-2 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
+                  <div className="flex flex-row flex-nowrap overflow-x-auto scrollbar-none items-center gap-2 font-sans text-[10px] xs:text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-[#9E743B] font-semibold -mx-4 px-4 sm:mx-0 sm:px-0">
+                    <span className="shrink-0 px-3 py-1 sm:px-3.5 sm:py-1.5 border border-[#9E743B]/30 rounded-full bg-[#FAF6F0] shadow-2xs whitespace-nowrap">
                       Residential Immersion
                     </span>
-                    <span className="px-3.5 py-1.5 border border-accent-bronze/30 rounded-full bg-[#FAF6F0]">
+                    <span className="shrink-0 px-3 py-1 sm:px-3.5 sm:py-1.5 border border-[#9E743B]/30 rounded-full bg-[#FAF6F0] shadow-2xs whitespace-nowrap">
                       Somatic & Textual Sādhanā
                     </span>
                   </div>
@@ -358,26 +360,32 @@ export const ProgrammesDetail = () => {
                     href="/assets/publications/NRNB Immersion Participant Handbook.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-[#6B1D1E] hover:bg-[#521617] text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 border border-[#9E743B]/40 cursor-pointer"
+                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-2.5 sm:px-6 sm:py-3.5 rounded-xl bg-[#6B1D1E] hover:bg-[#521617] text-white font-sans text-[11px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 border border-[#9E743B]/40 cursor-pointer"
                   >
-                    <FileText className="w-4 h-4 text-white/90 shrink-0" />
+                    <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white/90 shrink-0" />
                     <span>VIEW PARTICIPANT HANDBOOK</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-white/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 shrink-0" />
+                    <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 shrink-0" />
                   </a>
                 </div>
               </div>
 
               {/* Phase 4: Embedded Video Cards (Day 1 & Day 2) */}
-              <div className="pt-6 border-t border-[#9E743B]/20 space-y-6">
-                <div className="flex items-center gap-2">
+              <div className="pt-6 border-t border-[#9E743B]/20 space-y-4">
+                <div className="flex items-center justify-between flex-wrap gap-2">
                   <span className="font-serif text-xl sm:text-2xl text-[#6B1D1E] font-medium">
                     Immersion Video Recordings
                   </span>
+                  <span className="md:hidden text-[10px] uppercase tracking-widest text-[#9E743B] font-semibold">
+                    Auto-swiping • Swipe →
+                  </span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <AutoScrollContainer 
+                  interval={4000}
+                  className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-5 px-5 md:mx-0 md:px-0 md:grid md:grid-cols-2 md:gap-8 pb-3 md:pb-0 items-stretch"
+                >
                   {/* Day 1 Video Card */}
-                  <div className="bg-[#FAF6F0] rounded-xl overflow-hidden border border-[#9E743B]/25 shadow-md flex flex-col justify-between">
+                  <div className="snap-start flex-none w-[88%] md:w-auto bg-[#FAF6F0] rounded-xl overflow-hidden border border-[#9E743B]/25 shadow-md flex flex-col justify-between">
                     <div className="aspect-video w-full bg-black">
                       <iframe
                         src="https://www.youtube.com/embed/2D6bqFiehA8"
@@ -387,7 +395,7 @@ export const ProgrammesDetail = () => {
                         className="w-full h-full border-0"
                       />
                     </div>
-                    <div className="p-4 sm:p-5 space-y-1 bg-white border-t border-[#9E743B]/20">
+                    <div className="p-4 sm:p-5 space-y-1 bg-white border-t border-[#9E743B]/20 flex-1">
                       <span className="inline-block px-3 py-1 rounded-full bg-[#6B1D1E] text-white font-sans text-[10px] uppercase tracking-widest font-bold">
                         Day 1
                       </span>
@@ -401,7 +409,7 @@ export const ProgrammesDetail = () => {
                   </div>
 
                   {/* Day 2 Video Card */}
-                  <div className="bg-[#FAF6F0] rounded-xl overflow-hidden border border-[#9E743B]/25 shadow-md flex flex-col justify-between">
+                  <div className="snap-start flex-none w-[88%] md:w-auto bg-[#FAF6F0] rounded-xl overflow-hidden border border-[#9E743B]/25 shadow-md flex flex-col justify-between">
                     <div className="aspect-video w-full bg-black">
                       <iframe
                         src="https://www.youtube.com/embed/JMuPaOkrAjk"
@@ -411,7 +419,7 @@ export const ProgrammesDetail = () => {
                         className="w-full h-full border-0"
                       />
                     </div>
-                    <div className="p-4 sm:p-5 space-y-1 bg-white border-t border-[#9E743B]/20">
+                    <div className="p-4 sm:p-5 space-y-1 bg-white border-t border-[#9E743B]/20 flex-1">
                       <span className="inline-block px-3 py-1 rounded-full bg-[#6B1D1E] text-white font-sans text-[10px] uppercase tracking-widest font-bold">
                         Day 2
                       </span>
@@ -423,7 +431,7 @@ export const ProgrammesDetail = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </AutoScrollContainer>
               </div>
 
             </div>
@@ -457,98 +465,110 @@ export const ProgrammesDetail = () => {
             </div>
 
             {/* Event Content Container */}
-            <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-12 space-y-6 sm:space-y-8 bg-white">
+            <ProspectusFrame innerClassName="p-4 sm:p-12 space-y-4 sm:space-y-8 bg-white">
               
               {/* Introductory Statement */}
-              <div className="p-6 rounded-xl bg-[#FAF6F0] border-l-4 border-[#9E743B] space-y-2">
-                <p className="font-serif text-base sm:text-lg text-[#6B1D1E] leading-relaxed">
+              <div className="p-4 sm:p-6 rounded-xl bg-[#FAF6F0] border-l-4 border-[#9E743B] space-y-2">
+                <p className="font-serif text-sm sm:text-lg text-[#6B1D1E] leading-relaxed">
                   During Chennai’s Margazhi season, Aatmalaya Academy of Art and Culture, in collaboration with <em className="italic">Nāṭyaśāstra Gurukulam</em>, convenes a <em className="italic">Saṃvāda</em> on the future of the <em className="italic">Sabhā</em>.
                 </p>
               </div>
 
               {/* Main Body */}
-              <div className="space-y-6 text-text-stone-grey font-sans font-light text-base leading-relaxed">
+              <div className="space-y-4 text-text-stone-grey font-sans font-light text-xs sm:text-base leading-relaxed">
                 <p>
                   The <em className="italic">Sabhā</em> was never merely a venue for performance. It was an assembly shaped by aesthetic discernment, shared cultural literacy, the relationship between artist and <em className="italic">rasika</em>, and continuity across generations.
                 </p>
-                <p>
-                  Today, however, practitioners with very different artistic purposes, stages of development, audiences, and economic realities increasingly inhabit the same institutional framework. The resulting tensions raise familiar questions of access, opportunity, remuneration, and ‘pay to perform’. Beneath these questions lies a deeper one:
-                </p>
-                
-                <div className="py-2 text-center">
-                  <p className="font-serif italic text-xl sm:text-2xl text-[#6B1D1E] font-medium">
-                    Could the future of the <em className="italic">Sabhā</em> lie in differentiation?
+
+                {/* Collapsible Content Section for Mobile */}
+                <div className={`space-y-4 ${showAllSabhaDetails ? 'block' : 'hidden sm:block'}`}>
+                  <p>
+                    Today, however, practitioners with very different artistic purposes, stages of development, audiences, and economic realities increasingly inhabit the same institutional framework. The resulting tensions raise familiar questions of access, opportunity, remuneration, and ‘pay to perform’. Beneath these questions lies a deeper one:
                   </p>
-                </div>
-
-                <p>
-                  At the heart of the enquiry is <em className="italic">svadharma</em>—the distinctive orientation, responsibility, and voice of each practitioner.
-                </p>
-
-                <p className="font-semibold text-[#211F1D]">
-                  The conversation will explore three propositions:
-                </p>
-              </div>
-
-              {/* Three Propositions Subsections */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-                
-                <div className="p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-3 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <span className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
-                      I. THE SABHĀ
-                    </span>
-                    <p className="font-serif italic text-base text-[#6B1D1E] leading-snug font-medium">
-                      The future of the <em className="italic">Sabhā</em> lies in differentiation.
+                  
+                  <div className="py-2 text-center">
+                    <p className="font-serif italic text-lg sm:text-2xl text-[#6B1D1E] font-medium">
+                      Could the future of the <em className="italic">Sabhā</em> lie in differentiation?
                     </p>
+                  </div>
+
+                  <p>
+                    At the heart of the enquiry is <em className="italic">svadharma</em>—the distinctive orientation, responsibility, and voice of each practitioner.
+                  </p>
+
+                  <p className="font-semibold text-[#211F1D]">
+                    The conversation will explore three propositions:
+                  </p>
+
+                  {/* Three Propositions Subsections */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-2">
+                    
+                    <div className="p-4 sm:p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-2 sm:space-y-3 flex flex-col justify-between">
+                      <div className="space-y-1 sm:space-y-2">
+                        <span className="font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
+                          I. THE SABHĀ
+                        </span>
+                        <p className="font-serif italic text-sm sm:text-base text-[#6B1D1E] leading-snug font-medium">
+                          The future of the <em className="italic">Sabhā</em> lies in differentiation.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="p-4 sm:p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-2 sm:space-y-3 flex flex-col justify-between">
+                      <div className="space-y-1 sm:space-y-2">
+                        <span className="font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
+                          II. THE PRACTITIONER
+                        </span>
+                        <p className="font-serif italic text-sm sm:text-base text-[#6B1D1E] leading-snug font-medium">
+                          The future of the <em className="italic">Nāṭya</em> practitioner depends less on securing platforms and more on cultivating one's own assembly.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="p-4 sm:p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-2 sm:space-y-3 flex flex-col justify-between">
+                      <div className="space-y-1 sm:space-y-2">
+                        <span className="font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
+                          III. THE PURPOSE
+                        </span>
+                        <p className="font-serif italic text-sm sm:text-base text-[#6B1D1E] leading-snug font-medium">
+                          A <em className="italic">Sabhā</em> ultimately exists not merely to sustain performance, but to sustain the conditions in which <em className="italic">Rasa</em> can arise.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Closing Paragraphs */}
+                  <div className="space-y-3 sm:space-y-4 text-text-stone-grey font-sans font-light text-xs sm:text-base leading-relaxed border-t border-[#9E743B]/20 pt-4 sm:pt-6">
+                    <p>
+                      Each proposition will be examined through contrasting voices, followed by moderated exchange. The format is deliberately concise and dialogic: participants will be invited to speak from experience, conviction, and <em className="italic">svadharma</em> rather than deliver conventional papers.
+                    </p>
+                    <p>
+                      The <em className="italic">Saṃvāda</em> seeks neither a single answer nor manufactured consensus. It seeks to create an assembly in which different artistic orientations can be heard, questioned, and placed in relation to one another—and to identify propositions that may contribute to the future ecology of <em className="italic">Nāṭya</em>.
+                    </p>
+                  </div>
+
+                  {/* Event Details Footer */}
+                  <div className="p-4 sm:p-6 rounded-xl bg-[#6B1D1E] text-white space-y-1.5 sm:space-y-2 shadow-md">
+                    <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-bold block">
+                      EVENT DETAILS
+                    </span>
+                    <div className="font-serif text-base sm:text-lg font-normal">
+                      27 December 2026 | Morning
+                    </div>
+                    <div className="font-sans text-xs text-[#FAF6F0]/90 tracking-wide font-light">
+                      at Narada Gana Sabha under the auspices of Karthik Fine Arts, Chennai
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-3 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <span className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
-                      II. THE PRACTITIONER
-                    </span>
-                    <p className="font-serif italic text-base text-[#6B1D1E] leading-snug font-medium">
-                      The future of the <em className="italic">Nāṭya</em> practitioner depends less on securing platforms and more on cultivating one's own assembly.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-xl bg-[#F8F6F1] border border-[#9E743B]/25 space-y-3 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <span className="font-sans text-xs uppercase tracking-[0.2em] font-bold text-[#9E743B] block">
-                      III. THE PURPOSE
-                    </span>
-                    <p className="font-serif italic text-base text-[#6B1D1E] leading-snug font-medium">
-                      A <em className="italic">Sabhā</em> ultimately exists not merely to sustain performance, but to sustain the conditions in which <em className="italic">Rasa</em> can arise.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Closing Paragraphs */}
-              <div className="space-y-4 text-text-stone-grey font-sans font-light text-base leading-relaxed border-t border-[#9E743B]/20 pt-6">
-                <p>
-                  Each proposition will be examined through contrasting voices, followed by moderated exchange. The format is deliberately concise and dialogic: participants will be invited to speak from experience, conviction, and <em className="italic">svadharma</em> rather than deliver conventional papers.
-                </p>
-                <p>
-                  The <em className="italic">Saṃvāda</em> seeks neither a single answer nor manufactured consensus. It seeks to create an assembly in which different artistic orientations can be heard, questioned, and placed in relation to one another—and to identify propositions that may contribute to the future ecology of <em className="italic">Nāṭya</em>.
-                </p>
-              </div>
-
-              {/* Event Details Footer */}
-              <div className="p-6 rounded-xl bg-[#6B1D1E] text-white space-y-2 shadow-md">
-                <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-bold block">
-                  EVENT DETAILS
-                </span>
-                <div className="font-serif text-lg font-normal">
-                  27 December 2026 | Morning
-                </div>
-                <div className="font-sans text-xs text-[#FAF6F0]/90 tracking-wide font-light">
-                  at Narada Gana Sabha under the auspices of Karthik Fine Arts, Chennai
-                </div>
+                {/* View More / View Less Toggle Button for Mobile */}
+                <button
+                  onClick={() => setShowAllSabhaDetails(!showAllSabhaDetails)}
+                  className="sm:hidden w-full py-2.5 px-4 rounded-xl border border-[#9E743B]/30 bg-[#FAF6F0] hover:bg-white text-[#6B1D1E] font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-2xs mt-3"
+                >
+                  <span>{showAllSabhaDetails ? 'Show Less ↑' : 'View More Details & Propositions ↓'}</span>
+                </button>
               </div>
 
             </ProspectusFrame>
@@ -579,19 +599,30 @@ export const ProgrammesDetail = () => {
           {/* Interactive SVG Mandala Component & Detail Panel */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Desktop SVG Interactive Mandala */}
-            <div className="lg:col-span-6 flex justify-center items-center">
-              <svg width="440" height="440" viewBox="0 0 440 440" className="w-full max-w-[420px] h-auto select-none overflow-visible">
+            {/* Interactive SVG Mandala Component */}
+            <div className="lg:col-span-6 flex justify-center items-center py-2 sm:py-0 w-full max-w-full sm:max-w-[560px] mx-auto">
+              <svg width="440" height="440" viewBox="15 15 390 390" className="w-full max-w-full sm:max-w-[540px] h-auto select-none overflow-visible">
                 {/* Outer subtle guide ring */}
                 <circle
                   cx="210"
                   cy="210"
-                  r="135"
+                  r="138"
                   fill="none"
                   stroke="var(--color-accent-bronze)"
-                  strokeOpacity="0.15"
-                  strokeWidth="0.5"
-                  strokeDasharray="3 3"
+                  strokeOpacity="0.2"
+                  strokeWidth="1.2"
+                  strokeDasharray="4 4"
+                />
+                
+                {/* Outer aura glow ring */}
+                <circle
+                  cx="210"
+                  cy="210"
+                  r="154"
+                  fill="none"
+                  stroke="var(--color-accent-bronze)"
+                  strokeOpacity="0.1"
+                  strokeWidth="0.6"
                 />
 
                 {/* Spoke lines connecting Center (210, 210) to each outer node */}
@@ -605,29 +636,41 @@ export const ProgrammesDetail = () => {
                       x2={node.x}
                       y2={node.y}
                       stroke="var(--color-accent-bronze)"
-                      strokeOpacity={isActive ? 0.7 : 0.2}
-                      strokeWidth={isActive ? 1.5 : 1}
+                      strokeOpacity={isActive ? 0.9 : 0.25}
+                      strokeWidth={isActive ? 2.2 : 1.2}
                       strokeDasharray="4 4"
                       className="transition-all duration-500"
                     />
                   );
                 })}
 
+                {/* Central Node Outer Glow Aura */}
+                <circle
+                  cx="210"
+                  cy="210"
+                  r="64"
+                  fill="none"
+                  stroke="var(--color-accent-bronze)"
+                  strokeWidth="1.2"
+                  strokeOpacity="0.3"
+                  strokeDasharray="3 3"
+                />
+
                 {/* Central Node (MĀRGA) */}
                 <circle
                   cx="210"
                   cy="210"
-                  r="44"
+                  r="52"
                   fill="#F3EEE6"
                   stroke="var(--color-accent-bronze)"
-                  strokeWidth="1.2"
+                  strokeWidth="2"
                   className="filter drop-shadow-md"
                 />
                 <text
                   x="210"
-                  y="214"
+                  y="215"
                   textAnchor="middle"
-                  className="font-serif text-[12px] font-medium tracking-[0.25em] fill-accent-bronze select-none italic"
+                  className="font-serif text-[14px] sm:text-[15px] font-bold tracking-[0.25em] fill-[#6B1D1E] select-none italic"
                 >
                   MĀRGA
                 </text>
@@ -642,28 +685,42 @@ export const ProgrammesDetail = () => {
                       onClick={() => setActiveStep(i)}
                       onMouseEnter={() => setActiveStep(i)}
                     >
-                      {/* Expanded Hit Area */}
-                      <circle cx={node.x} cy={node.y} r="32" fill="transparent" />
+                      {/* Expanded Hit Area for touch devices */}
+                      <circle cx={node.x} cy={node.y} r="42" fill="transparent" />
                       
+                      {/* Active Node Outer Ring Glow */}
+                      {isActive && (
+                        <circle
+                          cx={node.x}
+                          cy={node.y}
+                          r="33"
+                          fill="none"
+                          stroke="#6B1D1E"
+                          strokeWidth="1.8"
+                          strokeOpacity="0.6"
+                          className="animate-pulse"
+                        />
+                      )}
+
                       {/* Outer Node Circle */}
                       <circle
                         cx={node.x}
                         cy={node.y}
-                        r="22"
-                        fill="#F3EEE6"
+                        r={isActive ? 28 : 26}
+                        fill={isActive ? "#6B1D1E" : "#F3EEE6"}
                         stroke="var(--color-accent-bronze)"
-                        strokeWidth={isActive ? 2 : 1}
-                        strokeOpacity={isActive ? 1 : 0.35}
-                        className="transition-all duration-300 shadow-sm"
+                        strokeWidth={isActive ? 2.5 : 1.5}
+                        strokeOpacity={isActive ? 1 : 0.55}
+                        className="transition-all duration-300 shadow-md"
                       />
 
                       {/* Devanagari Syllable */}
                       <text
                         x={node.x}
-                        y={node.y + 6}
+                        y={node.y + 6.5}
                         textAnchor="middle"
-                        className={`font-serif text-sm font-medium transition-all duration-300 italic ${
-                          isActive ? 'fill-accent-bronze font-bold' : 'fill-text-stone-grey/80'
+                        className={`font-serif text-lg sm:text-xl font-bold transition-all duration-300 italic ${
+                          isActive ? 'fill-white' : 'fill-text-stone-grey'
                         }`}
                       >
                         {node.syllable}
@@ -674,8 +731,8 @@ export const ProgrammesDetail = () => {
                         x={node.labelX}
                         y={node.labelY}
                         textAnchor={node.anchor}
-                        className={`font-sans text-[10px] font-semibold uppercase tracking-[0.2em] transition-all duration-300 italic ${
-                          isActive ? 'fill-accent-bronze' : 'fill-[#757069]/70'
+                        className={`font-sans text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] transition-all duration-300 italic ${
+                          isActive ? 'fill-[#6B1D1E]' : 'fill-[#757069]'
                         }`}
                       >
                         {node.name}
@@ -687,60 +744,58 @@ export const ProgrammesDetail = () => {
             </div>
 
             {/* Right: Selected Node Detail Panel */}
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStep}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.4 }}
-                  className="space-y-6 bg-white p-8 sm:p-10 rounded-2xl shadow-md border border-accent-bronze/20"
+                  transition={{ duration: 0.3 }}
+                  className="space-y-4 sm:space-y-6 bg-white p-4 xs:p-5 sm:p-10 rounded-2xl shadow-md border border-accent-bronze/20"
                 >
-                  <div className="space-y-2 border-b border-black/5 pb-6">
+                  <div className="space-y-1.5 border-b border-black/5 pb-3 sm:pb-6">
                     <div className="flex items-baseline justify-between flex-wrap gap-2">
-                      <div className="flex items-baseline gap-4">
-                        <HeadingLG className="text-accent-bronze italic">
+                      <div className="flex items-baseline gap-2.5 sm:gap-4">
+                        <HeadingLG className="text-[#6B1D1E] italic text-xl xs:text-2xl sm:text-3xl">
                           {MARGA_MANDALA_NODES[activeStep].name}
                         </HeadingLG>
-                        <span className="font-serif text-2xl text-[#757069]/70">
+                        <span className="font-serif text-lg sm:text-2xl text-[#757069]/80 font-medium">
                           {MARGA_MANDALA_NODES[activeStep].sanskrit}
                         </span>
                       </div>
-                      <span className="font-serif text-xs font-semibold px-3 py-1 bg-[#EFE8DC] text-accent-bronze rounded-full">
+                      <span className="font-serif text-[10px] sm:text-xs font-semibold px-2.5 py-0.5 sm:px-3 sm:py-1 bg-[#EFE8DC] text-[#6B1D1E] rounded-full">
                         Phase 0{activeStep + 1}
                       </span>
                     </div>
 
-                    <p className="font-sans text-xs uppercase tracking-[0.25em] text-accent-bronze font-semibold pt-2">
+                    <p className="font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#9E743B] font-semibold pt-1">
                       {MARGA_MANDALA_NODES[activeStep].tagline}
                     </p>
                   </div>
 
-                  <div className="w-12 h-[1px] bg-accent-bronze/30" />
-
-                  <p className="font-sans text-base sm:text-lg text-text-stone-grey leading-relaxed font-light">
+                  <p className="font-sans text-xs xs:text-sm sm:text-lg text-text-stone-grey leading-relaxed font-light">
                     {MARGA_MANDALA_NODES[activeStep].desc}
                   </p>
 
-                  <div className="p-5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze space-y-1">
-                    <span className="font-sans text-[10px] uppercase tracking-widest text-accent-bronze font-bold block">
+                  <div className="p-3.5 sm:p-5 rounded-xl bg-[#F8F6F1] border-l-2 border-accent-bronze space-y-1">
+                    <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-accent-bronze font-bold block">
                       Inner Insight
                     </span>
-                    <p className="font-serif italic text-sm md:text-base text-[#211F1D] leading-relaxed">
+                    <p className="font-serif italic text-xs sm:text-base text-[#211F1D] leading-relaxed">
                       "{MARGA_MANDALA_NODES[activeStep].quote}"
                     </p>
                   </div>
 
-                  {/* Node Step Selector Tabs for Easy Mobile & Desktop Navigation */}
-                  <div className="pt-4 flex flex-wrap gap-2 border-t border-black/5">
+                  {/* Horizontal Scrollable Phase Selector Tabs for Mobile & Desktop */}
+                  <div className="pt-3 border-t border-black/5 flex flex-row flex-nowrap overflow-x-auto scrollbar-none gap-2 -mx-4 px-4 sm:mx-0 sm:px-0">
                     {MARGA_MANDALA_NODES.map((n, idx) => (
                       <button
                         key={n.name}
                         onClick={() => setActiveStep(idx)}
-                        className={`px-3 py-1.5 rounded text-xs font-sans uppercase tracking-widest transition-all ${
+                        className={`shrink-0 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-sans uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
                           activeStep === idx
-                            ? 'bg-accent-bronze text-white font-semibold shadow-sm'
+                            ? 'bg-[#6B1D1E] text-white font-bold shadow-xs'
                             : 'bg-[#F3EEE6] text-[#757069] hover:bg-[#EFE8DC] hover:text-[#211F1D]'
                         }`}
                       >
@@ -867,75 +922,149 @@ export const ProgrammesDetail = () => {
             </div>
           </motion.div>
 
-          {/* NEW: THE YĀTRI NETWORK DIYA RADIAL DIAGRAM (Inspired by PDF Page 8) */}
-          <div className="my-8 max-w-5xl mx-auto">
-            <ProspectusFrame innerClassName="p-5 sm:p-10 text-center bg-[#FAF6F0]">
-              <div className="space-y-2 max-w-2xl mx-auto">
-                <span className="font-sans text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block">
+          {/* THE YĀTRI NETWORK DIYA RADIAL DIAGRAM */}
+          <div className="my-6 sm:my-8 max-w-5xl mx-auto">
+            <ProspectusFrame innerClassName="p-4 sm:p-10 text-center bg-[#FAF6F0]">
+              <div className="space-y-1.5 sm:space-y-2 max-w-2xl mx-auto">
+                <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-[#9E743B] font-bold block">
                   DISTRIBUTED TRANSMISSION
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-light text-[#6B1D1E]">
+                <h3 className="font-serif text-xl sm:text-3xl lg:text-4xl font-light text-[#6B1D1E]">
                   The Yātri Network
                 </h3>
                 <p className="font-serif italic text-xs sm:text-sm text-[#7A5428]">
                   A living tradition grows not by replication, but by transmission.
                 </p>
-                <LotusDivider className="my-2" />
+                <LotusDivider className="my-1.5 sm:my-2" />
               </div>
 
-              {/* Radial Lamp Visualizer - Full Bounds Unclipped */}
-              <div className="relative w-full max-w-[440px] aspect-square mx-auto my-8 flex items-center justify-center p-2">
-                {/* Connecting Ray Lines */}
-                <div className="absolute inset-8 rounded-full border border-[#9E743B]/20 stroke-dasharray-[3_3]" />
-                
-                {/* Central Diya: NĀṬYAŚĀSTRA GURUKULAM */}
-                <div className="relative z-20 w-28 sm:w-32 h-28 sm:h-32 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-2">
-                  <BrassDiyaIcon className="w-7 sm:w-8 h-7 sm:h-8" />
-                  <span className="font-serif text-[11px] sm:text-xs font-semibold text-[#6B1D1E] tracking-wider uppercase mt-0.5 leading-tight">
-                    Nāṭyaśāstra<br />Gurukulam
-                  </span>
-                </div>
+              {/* Radial Lamp Visualizer - Fluid Auto-adjustment on Mobile & Wide Scaling on Desktop */}
+              <div className="w-full max-w-full sm:max-w-[560px] md:max-w-[640px] lg:max-w-[720px] xl:max-w-[780px] aspect-square mx-auto my-4 sm:my-8 flex items-center justify-center px-1 sm:px-0">
+                <svg viewBox="0 0 540 540" className="w-full h-auto select-none overflow-visible">
+                  {/* Outer Orbit Guide Circle */}
+                  <circle
+                    cx="270"
+                    cy="270"
+                    r="170"
+                    fill="none"
+                    stroke="#9E743B"
+                    strokeOpacity="0.25"
+                    strokeWidth="1.2"
+                    strokeDasharray="4 4"
+                  />
+                  <circle
+                    cx="270"
+                    cy="270"
+                    r="185"
+                    fill="none"
+                    stroke="#9E743B"
+                    strokeOpacity="0.1"
+                    strokeWidth="0.8"
+                  />
 
-                {/* 10 Orbiting Lamps */}
-                {[
-                  { name: 'Dharma', angle: 0 },
-                  { name: 'Sevā', angle: 36 },
-                  { name: 'Śraddhā', angle: 72 },
-                  { name: 'Tyāga', angle: 108 },
-                  { name: 'Saṃvāda', angle: 144 },
-                  { name: 'Karuṇā', angle: 180 },
-                  { name: 'Maitrī', angle: 216 },
-                  { name: 'Viveka', angle: 252 },
-                  { name: 'Rasa', angle: 288 },
-                  { name: 'Sādhanā', angle: 324 }
-                ].map((lamp) => {
-                  const radius = 145; // px radius for unclipped proportions
-                  const rad = (lamp.angle - 90) * (Math.PI / 180);
-                  const x = Math.round(radius * Math.cos(rad));
-                  const y = Math.round(radius * Math.sin(rad));
+                  {/* Central Diya Hub: NĀṬYAŚĀSTRA GURUKULAM */}
+                  <circle
+                    cx="270"
+                    cy="270"
+                    r="62"
+                    fill="#FAF6F0"
+                    stroke="#9E743B"
+                    strokeWidth="2"
+                    className="filter drop-shadow-md"
+                  />
+                  <circle
+                    cx="270"
+                    cy="270"
+                    r="72"
+                    fill="none"
+                    stroke="#9E743B"
+                    strokeOpacity="0.2"
+                    strokeWidth="1"
+                    strokeDasharray="3 3"
+                  />
 
-                  return (
-                    <div
-                      key={lamp.name}
-                      style={{
-                        transform: `translate(${x}px, ${y}px)`
-                      }}
-                      className="absolute z-20 flex flex-col items-center justify-center group cursor-pointer"
-                    >
-                      <div className="w-9 sm:w-10 h-9 sm:h-10 rounded-full bg-white border border-[#9E743B]/40 shadow-sm flex items-center justify-center group-hover:border-[#6B1D1E] group-hover:scale-110 transition-all">
-                        <BrassDiyaIcon className="w-4 sm:w-5 h-4 sm:h-5" glow={true} />
-                      </div>
-                      <span className="font-serif italic text-[10px] sm:text-xs font-medium text-[#6B1D1E] mt-0.5 bg-white/90 px-1.5 py-0.2 rounded shadow-2xs border border-[#9E743B]/20 whitespace-nowrap">
-                        <em className="italic">{lamp.name}</em>
-                      </span>
-                    </div>
-                  );
-                })}
+                  {/* Central Flame */}
+                  <g transform="translate(260, 226) scale(0.85)">
+                    <path d="M10 2C10 2 6 7.5 6 10.5C6 12.5 7.5 14 10 14C12.5 14 14 12.5 14 10.5C14 7.5 10 2 10 2Z" fill="#FF9900" />
+                    <path d="M10 5C10 5 8 8 8 9.5C8 10.5 8.8 11.2 10 11.2C11.2 11.2 12 10.5 12 9.5C12 8 10 5 10 5Z" fill="#FFE699" />
+                    <path d="M2 17C2 17 3.5 22 10 22C16.5 22 18 17 18 17C18 17 15.5 15.8 10 15.8C4.5 15.8 2 17 2 17Z" fill="#D4AF37" stroke="#7A5428" strokeWidth="0.8" />
+                    <path d="M7 22L6.2 25H13.8L13 22H7Z" fill="#AA7A2B" stroke="#7A5428" strokeWidth="0.8" />
+                  </g>
+
+                  <text
+                    x="270"
+                    y="273"
+                    textAnchor="middle"
+                    className="font-serif text-[11px] font-bold tracking-[0.2em] fill-[#6B1D1E] select-none"
+                  >
+                    NĀṬYAŚĀSTRA
+                  </text>
+                  <text
+                    x="270"
+                    y="287"
+                    textAnchor="middle"
+                    className="font-serif text-[11px] font-bold tracking-[0.2em] fill-[#6B1D1E] select-none"
+                  >
+                    GURUKULAM
+                  </text>
+
+                  {/* 10 Orbiting Lamps - Exact Trigonometric Nodes on Radius 170 */}
+                  {[
+                    { name: 'Dharma', angle: 0 },
+                    { name: 'Sevā', angle: 36 },
+                    { name: 'Śraddhā', angle: 72 },
+                    { name: 'Tyāga', angle: 108 },
+                    { name: 'Saṃvāda', angle: 144 },
+                    { name: 'Karuṇā', angle: 180 },
+                    { name: 'Maitrī', angle: 216 },
+                    { name: 'Viveka', angle: 252 },
+                    { name: 'Rasa', angle: 288 },
+                    { name: 'Sādhanā', angle: 324 }
+                  ].map((lamp) => {
+                    const radius = 170;
+                    const rad = (lamp.angle - 90) * (Math.PI / 180);
+                    const cx = 270 + radius * Math.cos(rad);
+                    const cy = 270 + radius * Math.sin(rad);
+
+                    return (
+                      <g key={lamp.name} className="cursor-pointer group">
+                        {/* Pill Badge Container */}
+                        <rect
+                          x={cx - 42}
+                          y={cy - 14}
+                          width="84"
+                          height="28"
+                          rx="14"
+                          fill="#FFFFFF"
+                          fillOpacity="0.95"
+                          stroke="#9E743B"
+                          strokeOpacity="0.45"
+                          strokeWidth="1.2"
+                          className="group-hover:stroke-[#6B1D1E] transition-all duration-300 shadow-sm"
+                        />
+                        {/* Diya Flame Icon */}
+                        <g transform={`translate(${cx - 33}, ${cy - 8}) scale(0.6)`}>
+                          <path d="M10 2C10 2 6.5 7.5 6.5 10C6.5 11.5 7.8 12.8 10 12.8C12.2 12.8 13.5 11.5 13.5 10C13.5 7.5 10 2 10 2Z" fill="#FF9900" />
+                          <path d="M3 15C3 15 4.5 19.5 10 19.5C15.5 19.5 17 15 17 15C17 15 14.8 14 10 14C5.2 14 3 15 3 15Z" fill="#D4AF37" stroke="#7A5428" strokeWidth="0.8" />
+                        </g>
+                        {/* Node Text Label */}
+                        <text
+                          x={cx + 8}
+                          y={cy + 4}
+                          textAnchor="middle"
+                          className="font-serif italic text-[11.5px] font-semibold fill-[#6B1D1E] select-none"
+                        >
+                          {lamp.name}
+                        </text>
+                      </g>
+                    );
+                  })}
+                </svg>
               </div>
 
               {/* Bottom Quote Banner */}
-              <div className="pt-6 border-t border-[#9E743B]/20 max-w-2xl mx-auto space-y-1.5">
-                <h4 className="font-serif text-base sm:text-xl text-[#6B1D1E] tracking-wide uppercase font-light leading-snug">
+              <div className="pt-4 sm:pt-6 border-t border-[#9E743B]/20 max-w-2xl mx-auto space-y-1 sm:space-y-1.5">
+                <h4 className="font-serif text-sm xs:text-base sm:text-xl text-[#6B1D1E] tracking-wide uppercase font-light leading-snug">
                   ONE LAMP LIGHTS ANOTHER WITHOUT DIMINISHING ITS OWN FLAME.
                 </h4>
                 <p className="font-serif italic text-xs sm:text-sm text-[#7A5428]">
@@ -954,17 +1083,37 @@ export const ProgrammesDetail = () => {
             transition={{ duration: 0.6 }}
             className="rounded-2xl overflow-hidden bg-white text-[#211F1D] shadow-xl border border-black/10 grid grid-cols-1 lg:grid-cols-12 max-w-6xl mx-auto"
           >
+            {/* Right Photo */}
+            <div className="lg:col-span-5 relative aspect-video sm:h-80 lg:h-auto lg:min-h-full overflow-hidden order-1 lg:order-2">
+              <img
+                src="/assets/images/brochure_release_thumb.webp"
+                alt="Centre for Civilisational Statecraft - Consecration & Brochure Release"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white space-y-0.5 z-10">
+                <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-[#D4AF37] font-semibold block">
+                  Public Release & Consecration
+                </span>
+                <p className="font-serif text-xs sm:text-sm font-light leading-snug text-white/90">
+                  Consecration of Gurukulam research & vision documents during Pratishtha Samaroham.
+                </p>
+              </div>
+            </div>
+
             {/* Left Details */}
-            <div className="lg:col-span-7 p-5 sm:p-7 lg:p-8 flex flex-col justify-between space-y-4 order-2 lg:order-1">
+            <div className="lg:col-span-7 p-4 sm:p-7 lg:p-8 flex flex-col justify-between space-y-3 sm:space-y-4 order-2 lg:order-1">
               <div className="space-y-3 sm:space-y-4">
                 <div className="space-y-1">
                   <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold block">
                     Research & Public Inquiry
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl font-normal text-[#211F1D]">
+                  <h3 className="font-serif text-xl sm:text-3xl font-normal text-[#211F1D]">
                     Centre for Civilisational Statecraft
                   </h3>
-                  <p className="font-sans text-[11px] sm:text-xs uppercase tracking-widest text-[#757069]">
+                  <p className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-[#757069]">
                     Bringing Civilisational Knowledge into Public Life
                   </p>
                 </div>
@@ -973,54 +1122,45 @@ export const ProgrammesDetail = () => {
                   Extends the Gurukulam's inquiry into governance, public policy, strategic affairs, institutional life, leadership, and cultural research—asking how principles from India's knowledge traditions illuminate contemporary questions of public order, power, and human flourishing.
                 </p>
 
-                {/* 5 Key Areas - All 5 Cards Fully Rendered */}
-                <div className="space-y-1.5 pt-1">
-                  <div className="flex items-center justify-between font-sans text-[11px] uppercase tracking-[0.2em] text-accent-bronze font-semibold">
-                    <span>Five Key Areas of Inquiry</span>
-                    <span className="sm:hidden text-[10px] tracking-widest text-[#757069]">Auto-scrolling • Swipe →</span>
+                {/* Collapsible Key Areas & CTA Section for Mobile */}
+                <div className={`space-y-3.5 ${showAllStatecraft ? 'block' : 'hidden sm:block'}`}>
+                  {/* 5 Key Areas Carousel */}
+                  <div className="space-y-1.5 pt-1">
+                    <div className="flex items-center justify-between font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-accent-bronze font-semibold">
+                      <span>Five Key Areas of Inquiry</span>
+                      <span className="sm:hidden text-[10px] tracking-widest text-[#757069]">Auto-scrolling • Swipe →</span>
+                    </div>
+                    <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-3 pb-2 sm:pb-0">
+                      {STATECRAFT_AREAS.map((area) => (
+                        <div key={area.title} className="flex-none w-[82%] sm:w-auto snap-start p-3 rounded-lg bg-[#F8F6F1] border-l-2 border-accent-bronze space-y-0.5">
+                          <span className="font-sans text-[9px] uppercase tracking-widest text-accent-bronze font-bold">{area.code}</span>
+                          <h4 className="font-serif text-xs sm:text-sm font-semibold text-[#211F1D]">{area.title}</h4>
+                          <p className="font-sans text-[11px] text-text-stone-grey font-light leading-relaxed">{area.desc}</p>
+                        </div>
+                      ))}
+                    </AutoScrollContainer>
                   </div>
-                  <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 -mx-5 px-5 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-3 pb-2 sm:pb-0">
-                    {STATECRAFT_AREAS.map((area) => (
-                      <div key={area.title} className="flex-none w-[82%] sm:w-auto snap-start p-3 rounded-lg bg-[#F8F6F1] border-l-2 border-accent-bronze space-y-0.5">
-                        <span className="font-sans text-[9px] uppercase tracking-widest text-accent-bronze font-bold">{area.code}</span>
-                        <h4 className="font-serif text-xs sm:text-sm font-semibold text-[#211F1D]">{area.title}</h4>
-                        <p className="font-sans text-[11px] text-text-stone-grey font-light leading-relaxed">{area.desc}</p>
-                      </div>
-                    ))}
-                  </AutoScrollContainer>
+
+                  <div className="pt-3 border-t border-black/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                    <span className="font-sans text-[11px] sm:text-xs text-text-stone-grey italic">
+                      Expressed through research papers, working papers, and dialogues
+                    </span>
+                    <Link
+                      to="/library"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-[#211F1D] text-[#211F1D] font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-300 text-center shrink-0"
+                    >
+                      View Publications →
+                    </Link>
+                  </div>
                 </div>
-              </div>
 
-              <div className="pt-3 border-t border-black/5 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                <span className="font-sans text-[11px] sm:text-xs text-text-stone-grey italic">
-                  Expressed through research papers, working papers, and dialogues
-                </span>
-                <Link
-                  to="/library"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-[#211F1D] text-[#211F1D] font-sans text-xs uppercase tracking-[0.15em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-300 text-center shrink-0"
+                {/* View More / View Less Toggle Button for Mobile */}
+                <button
+                  onClick={() => setShowAllStatecraft(!showAllStatecraft)}
+                  className="sm:hidden w-full py-2.5 px-4 rounded-xl border border-[#9E743B]/30 bg-[#FAF6F0] hover:bg-white text-[#6B1D1E] font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-2xs mt-2"
                 >
-                  View Publications →
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Photo */}
-            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-auto lg:min-h-full overflow-hidden order-1 lg:order-2">
-              <img
-                src="/assets/images/brochure_release_thumb.webp"
-                alt="Centre for Civilisational Statecraft - Consecration & Brochure Release"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.02]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-white/10" />
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 rounded-lg bg-white/90 backdrop-blur-md border border-black/10 space-y-0.5 text-[#211F1D]">
-                <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-accent-bronze font-semibold block">
-                  Public Release & Consecration
-                </span>
-                <p className="font-serif text-xs sm:text-sm font-medium leading-snug">
-                  Consecration of Gurukulam research & vision documents during Pratishtha Samaroham.
-                </p>
+                  <span>{showAllStatecraft ? 'Show Less ↑' : 'View Key Areas of Inquiry & Publications ↓'}</span>
+                </button>
               </div>
             </div>
           </motion.div>

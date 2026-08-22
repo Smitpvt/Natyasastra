@@ -22,6 +22,16 @@ export const Publications = () => {
   const [hasDragged, setHasDragged] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Preload homepage publication covers on mount for instant display
+  useEffect(() => {
+    RECENT_PUBLICATIONS.slice(0, 6).forEach((pub) => {
+      if (pub.cover) {
+        const img = new Image();
+        img.src = pub.cover;
+      }
+    });
+  }, []);
+
   useEffect(() => {
     if (isPaused || isDragging) return;
 
@@ -155,14 +165,15 @@ export const Publications = () => {
                     e.preventDefault();
                   }
                 }}
-                className="snap-start flex-none w-[220px] xs:w-[260px] sm:w-[290px] md:w-[310px] lg:w-[calc(25%-18px)] group block"
+                style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 380px' }}
+                className="snap-start flex-none w-[88vw] max-w-[360px] xs:w-[340px] sm:w-[370px] md:w-[400px] lg:w-[calc(33.333%-16px)] group block"
               >
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.8, delay: index * 0.1, ease: [0.25, 0.1, 0.25, 1.0] }}
-                  className="w-full flex flex-col h-full bg-white hover:bg-white p-4 sm:p-5 rounded-2xl border border-[#9E743B]/20 hover:border-[#9E743B]/45 shadow-sm hover:shadow-xl transition-all duration-300"
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.4, delay: index < 4 ? index * 0.05 : 0.15, ease: 'easeOut' }}
+                  className="w-full flex flex-col h-full bg-white hover:bg-white p-4 sm:p-5 lg:p-6 rounded-2xl border border-[#9E743B]/20 hover:border-[#9E743B]/45 shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   {/* Publication Cover Image Stage */}
                   {pub.cover ? (
@@ -171,7 +182,9 @@ export const Publications = () => {
                         src={pub.cover}
                         alt={pub.title}
                         className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
-                        loading="lazy"
+                        loading={index < 4 ? "eager" : "lazy"}
+                        fetchpriority={index < 4 ? "high" : "low"}
+                        decoding="async"
                       />
                       {/* Subtle Book Spine overlay effect */}
                       <div className="absolute left-0 top-0 bottom-0 w-3.5 bg-gradient-to-r from-black/30 via-black/10 to-transparent pointer-events-none" />

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Search, X, FileText, ArrowUpRight, BookOpen, Sparkles } from 'lucide-react';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
@@ -34,6 +34,16 @@ export const Library = () => {
 
   const [filter, setFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Preload top publication covers into browser cache for instant load
+  useEffect(() => {
+    PUBLICATIONS.slice(0, 6).forEach((pub) => {
+      if (pub.cover) {
+        const img = new Image();
+        img.src = pub.cover;
+      }
+    });
+  }, []);
 
   const SERIES_TABS = [
     'All',
@@ -191,13 +201,14 @@ export const Library = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-10">
-            {filtered.map((pub) => (
+            {filtered.map((pub, idx) => (
               <div
                 key={pub.title}
+                style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 240px' }}
                 className="flex flex-col sm:flex-row bg-white rounded-2xl border border-[#9E743B]/20 shadow-2xs hover:shadow-xl hover:border-[#9E743B]/45 transition-all duration-300 group relative overflow-hidden items-stretch"
               >
-                {/* Framed Publication Cover Container - 100% Visible Unclipped Image */}
-                <div className="w-full sm:w-[170px] md:w-[190px] lg:w-[210px] aspect-[2/3] max-h-[260px] xs:max-h-[280px] sm:max-h-none sm:aspect-auto shrink-0 relative overflow-hidden bg-[#FAF8F5] border-b sm:border-b-0 sm:border-r border-[#9E743B]/15 flex items-center justify-center p-2 sm:p-3">
+                {/* Framed Publication Cover Container - 100% Visible Unclipped Image on Desktop & Mobile */}
+                <div className="w-full sm:w-[200px] md:w-[230px] lg:w-[250px] aspect-[2/3] shrink-0 relative overflow-hidden bg-[#FAF8F5] border-b sm:border-b-0 sm:border-r border-[#9E743B]/15 flex items-center justify-center p-2.5 sm:p-3.5">
                   {pub.cover ? (
                     <a
                       href={pub.file}
@@ -206,12 +217,14 @@ export const Library = () => {
                       title={`Open PDF for ${pub.title}`}
                       className="w-full h-full relative flex items-center justify-center overflow-hidden cursor-pointer rounded-md shadow-md group-hover:shadow-xl transition-all duration-300 bg-white"
                     >
-                      {/* Main Full Cover Image - 100% Unclipped */}
+                      {/* Main Full Cover Image - 100% Unclipped from Top to Bottom */}
                       <img
                         src={pub.cover}
                         alt={pub.title}
                         className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
-                        loading="lazy"
+                        loading={idx < 4 ? "eager" : "lazy"}
+                        fetchpriority={idx < 4 ? "high" : "low"}
+                        decoding="async"
                       />
 
                       {/* Realistic 3D Book Spine Overlay Effect */}

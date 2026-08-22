@@ -121,7 +121,7 @@ export const Associate = () => {
                         i >= 3 && !showAllFlames ? 'hidden sm:flex' : 'flex'
                       }`}
                     >
-                      <BrassDiyaIcon className="w-7 h-7 shrink-0" glow={true} />
+                      <BrassDiyaIcon className="w-7 h-7 shrink-0" />
                       <div className="space-y-0.5 flex-1">
                         <div className="flex items-baseline justify-between flex-wrap gap-2">
                           <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-[#6B1D1E]">{tier.flame}</h4>
@@ -168,10 +168,10 @@ export const Associate = () => {
             <LotusDivider className="my-3" />
           </div>
 
-          {/* Central Glowing Diya */}
+          {/* Central Diya */}
           <div className="py-4 flex justify-center">
             <div className="relative p-6 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B]/40 shadow-xl">
-              <BrassDiyaIcon className="w-16 h-16" glow={true} />
+              <BrassDiyaIcon className="w-16 h-16" />
             </div>
           </div>
 

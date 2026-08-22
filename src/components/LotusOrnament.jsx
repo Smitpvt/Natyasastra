@@ -86,7 +86,7 @@ export const ProspectusFrame = ({ children, className = "", innerClassName = "p-
 );
 
 // SVG Brass Diya Lamp Icon with Flame
-export const BrassDiyaIcon = ({ className = "w-8 h-8", glow = true }) => (
+export const BrassDiyaIcon = ({ className = "w-8 h-8", glow = false }) => (
   <div className={`relative inline-flex items-center justify-center ${className}`}>
     {glow && (
       <div className="absolute -top-1.5 w-4 h-5 bg-[#E69D35] rounded-full filter blur-[3px] opacity-70 animate-pulse" />

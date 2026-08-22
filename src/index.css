@@ -16,6 +16,20 @@
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure smooth scrolling across all scrollable containers, touch lists, and page elements */
+.overflow-x-auto,
+.overflow-y-auto,
+.overflow-auto,
+.scrollbar-none {
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch;
+}
+
 @layer base {
   body {
     background-color: var(--color-bg-ivory);
@@ -25,6 +39,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   hr {
