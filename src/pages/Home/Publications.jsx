@@ -165,19 +165,19 @@ export const Publications = () => {
                     e.preventDefault();
                   }
                 }}
-                style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 380px' }}
-                className="snap-start flex-none w-[88vw] max-w-[360px] xs:w-[340px] sm:w-[370px] md:w-[400px] lg:w-[calc(33.333%-16px)] group block"
+                style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 320px' }}
+                className="snap-start flex-none w-[82vw] max-w-[290px] xs:w-[310px] sm:w-[370px] md:w-[400px] lg:w-[calc(33.333%-16px)] group block"
               >
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.4, delay: index < 4 ? index * 0.05 : 0.15, ease: 'easeOut' }}
-                  className="w-full flex flex-col h-full bg-white hover:bg-white p-4 sm:p-5 lg:p-6 rounded-2xl border border-[#9E743B]/20 hover:border-[#9E743B]/45 shadow-sm hover:shadow-xl transition-all duration-300"
+                  className="w-full flex flex-col h-full bg-white hover:bg-white p-3.5 xs:p-4 sm:p-5 lg:p-6 rounded-2xl border border-[#9E743B]/20 hover:border-[#9E743B]/45 shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   {/* Publication Cover Image Stage */}
                   {pub.cover ? (
-                    <div className="w-full aspect-[2/3] shrink-0 shadow-md relative rounded-xl overflow-hidden border border-black/10 transition-transform duration-500 group-hover:-translate-y-1 bg-[#FAF8F5] flex items-center justify-center p-2 cursor-pointer">
+                    <div className="w-full aspect-[2/3] max-h-[210px] xs:max-h-[230px] sm:max-h-none shrink-0 shadow-md relative rounded-xl overflow-hidden border border-black/10 transition-transform duration-500 group-hover:-translate-y-1 bg-[#FAF8F5] flex items-center justify-center p-2 cursor-pointer">
                       <img
                         src={pub.cover}
                         alt={pub.title}
@@ -197,21 +197,21 @@ export const Publications = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className={`w-full aspect-[2/3] shrink-0 shadow-md flex flex-col p-5 sm:p-6 relative border rounded-xl transition-transform duration-500 group-hover:-translate-y-1 ${pub.theme}`}>
+                    <div className={`w-full aspect-[2/3] max-h-[210px] xs:max-h-[230px] sm:max-h-none shrink-0 shadow-md flex flex-col p-4 sm:p-6 relative border rounded-xl transition-transform duration-500 group-hover:-translate-y-1 ${pub.theme}`}>
                       <div className="absolute left-0 top-0 bottom-0 w-3.5 sm:w-4 bg-black/10 shadow-[inset_1px_0_2px_rgba(255,255,255,0.2)]"></div>
                       <div className="pl-3 sm:pl-4 flex flex-col h-full justify-between">
                         <div className="space-y-1">
-                          <span className="text-[10px] uppercase tracking-widest opacity-80 block font-sans">
+                          <span className="text-[9px] sm:text-[10px] uppercase tracking-widest opacity-80 block font-sans">
                             {formatSanskrit(pub.series)}
                           </span>
-                          <span className="text-[11px] uppercase tracking-wider opacity-90 block font-bold font-sans">
+                          <span className="text-[10px] sm:text-[11px] uppercase tracking-wider opacity-90 block font-bold font-sans">
                             {pub.type}
                           </span>
                         </div>
-                        <span className="font-serif text-sm sm:text-lg leading-snug block mt-4 pb-2 line-clamp-4 sm:line-clamp-6 font-semibold">
+                        <span className="font-serif text-xs sm:text-lg leading-snug block mt-2 sm:mt-4 pb-2 line-clamp-3 sm:line-clamp-6 font-semibold">
                           {formatSanskrit(pub.title)}
                         </span>
-                        <div className="mt-auto text-[10px] uppercase tracking-[0.2em] opacity-80 border-t border-current/20 pt-3 font-medium">
+                        <div className="mt-auto text-[9px] sm:text-[10px] uppercase tracking-[0.2em] opacity-80 border-t border-current/20 pt-2 font-medium">
                           Nāṭyaśāstra Gurukulam
                         </div>
                       </div>
@@ -219,14 +219,14 @@ export const Publications = () => {
                   )}
 
                   {/* Publication Details below image */}
-                  <div className="pt-4 flex flex-col flex-grow space-y-1.5">
-                    <span className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-[#9E743B] font-semibold block shrink-0">
+                  <div className="pt-2.5 sm:pt-4 flex flex-col flex-grow space-y-1">
+                    <span className="font-sans text-[9px] sm:text-xs uppercase tracking-widest text-[#9E743B] font-semibold block shrink-0">
                       {formatSanskrit(pub.series)}
                     </span>
-                    <h3 className="font-serif text-base sm:text-xl leading-snug font-semibold text-[#211F1D] group-hover:text-[#6B1D1E] transition-colors line-clamp-2 min-h-[44px] sm:min-h-[52px] shrink-0">
+                    <h3 className="font-serif text-xs xs:text-sm sm:text-xl leading-snug font-semibold text-[#211F1D] group-hover:text-[#6B1D1E] transition-colors line-clamp-2 min-h-[34px] sm:min-h-[52px] shrink-0">
                       {formatSanskrit(pub.title)}
                     </h3>
-                    <p className="font-sans text-xs sm:text-sm text-[#757069] mt-1 line-clamp-3 font-light leading-relaxed">
+                    <p className="font-sans text-[11px] sm:text-sm text-[#757069] line-clamp-2 font-light leading-relaxed">
                       {formatSanskrit(pub.desc)}
                     </p>
                   </div>
