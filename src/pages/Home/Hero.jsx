@@ -56,22 +56,22 @@ export const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-[900px] w-full px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center lg:-translate-x-[2%] xl:-translate-x-[3%] transition-transform duration-500"
+          className="max-w-[900px] w-full px-3 xs:px-4 sm:px-6 text-center text-[#FAF8F5] flex flex-col items-center justify-center lg:-translate-x-[2%] xl:-translate-x-[3%] transition-transform duration-500"
         >
           {/* Devanagari Invocation */}
-          <motion.div variants={itemVariants} className="space-y-2 mb-[16px] flex flex-col items-center">
-            <span className="font-serif text-sm sm:text-base text-[#D4AF37] tracking-[0.2em] font-medium pl-[0.2em]" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
+          <motion.div variants={itemVariants} className="space-y-1.5 mb-[14px] flex flex-col items-center w-full">
+            <span className="font-serif text-xs xs:text-sm sm:text-base text-[#D4AF37] tracking-[0.15em] sm:tracking-[0.2em] font-medium px-1" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
               नाट्यशास्त्रप्रवर्तकं भरतमुनिं वन्दे।
             </span>
-            <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C4B39C] font-semibold opacity-95 block pl-[0.35em]">
+            <span className="font-sans text-[9px] xs:text-[10px] sm:text-[11px] uppercase tracking-[0.25em] sm:tracking-[0.35em] text-[#C4B39C] font-semibold opacity-95 block px-1">
               Custodians of Rasa, Rhythm & <em className="italic">Dhārmic</em> Responsibility
             </span>
           </motion.div>
 
           {/* Major Serifed Headings - Gold Foil & Ivory Shimmer */}
-          <motion.div variants={itemVariants} className="flex flex-col items-center">
+          <motion.div variants={itemVariants} className="flex flex-col items-center w-full">
             <h1 
-              className="font-serif text-[36px] xs:text-[46px] sm:text-[68px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2 pl-[0.025em]"
+              className="font-serif text-[38px] xs:text-[48px] sm:text-[68px] md:text-[86px] lg:text-[98px] font-normal leading-none tracking-wide bg-clip-text text-transparent bg-gradient-to-b from-[#FFF5E0] via-[#D4AF37] to-[#9E743B] pb-2"
               style={{ filter: 'drop-shadow(0px 8px 16px rgba(0,0,0,0.75))' }}
             >
               नाट्यशास्त्र
@@ -79,15 +79,15 @@ export const Hero = () => {
             
             {/* Subtitle */}
             <p 
-              className="font-serif text-[18px] xs:text-[22px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.3em] mt-[8px] pl-[0.3em]"
+              className="font-serif text-[20px] xs:text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#EADBB2] tracking-[0.25em] sm:tracking-[0.3em] mt-[6px] xs:mt-[8px]"
               style={{ textShadow: '0 4px 14px rgba(0,0,0,0.8)' }}
             >
               गुरुकुलम्
             </p>
 
-            <LotusDivider className="my-3" />
+            <LotusDivider className="my-2.5 sm:my-3" />
 
-            <p className="font-serif italic text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-lg leading-[1.8] text-center mx-auto pl-[0.025em]">
+            <p className="font-serif italic text-xs xs:text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-full xs:max-w-md sm:max-w-xl leading-[1.7] sm:leading-[1.8] text-center mx-auto px-2">
               A <em className="italic">Dhārmic</em> Stream For The Renewal Of Public Life Through Aesthetic Leadership
             </p>
           </motion.div>
@@ -95,17 +95,17 @@ export const Hero = () => {
           {/* Two Elegant Gold & Ivory CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-[28px] sm:mt-[36px] w-full px-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-6 mt-[24px] sm:mt-[36px] w-full px-2 xs:px-4"
           >
             <Link
               to="/about"
-              className="w-full max-w-[240px] sm:w-56 py-3.5 border-2 border-[#D4AF37]/60 text-[#F5F0E6] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold bg-[#805335]/30 backdrop-blur-xs hover:bg-[#D4AF37] hover:text-[#1A1817] hover:border-[#D4AF37] transition-all duration-300 text-center rounded-lg shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]"
+              className="w-full max-w-[300px] xs:max-w-[320px] sm:w-56 py-3.5 border-2 border-[#D4AF37]/60 text-[#F5F0E6] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold bg-[#805335]/30 backdrop-blur-xs hover:bg-[#D4AF37] hover:text-[#1A1817] hover:border-[#D4AF37] transition-all duration-300 text-center rounded-lg shadow-lg hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]"
             >
               Explore <em className="italic">Gurukulam</em>
             </Link>
             <Link
               to="/library"
-              className="w-full max-w-[240px] sm:w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold hover:bg-white/10 hover:text-white transition-all duration-300 text-center bg-transparent rounded-lg backdrop-blur-xs"
+              className="w-full max-w-[300px] xs:max-w-[320px] sm:w-56 py-3.5 border border-[#C4B39C]/40 text-[#C4B39C] font-sans text-[11px] uppercase tracking-[0.22em] font-semibold hover:bg-white/10 hover:text-white transition-all duration-300 text-center bg-transparent rounded-lg backdrop-blur-xs"
             >
               Publications
             </Link>

@@ -80,13 +80,13 @@ export const Mentors = () => {
             <LotusDivider className="my-2" />
           </div>
 
-          {/* Clean Interactive Navigation Tabs */}
-          <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 max-w-4xl mx-auto px-4 py-2">
+          {/* Clean Interactive Navigation Tabs - Beside Each Other Horizontally */}
+          <div className="flex flex-row overflow-x-auto sm:flex-wrap justify-start sm:justify-center items-center gap-1.5 xs:gap-2 sm:gap-4 max-w-full sm:max-w-4xl mx-auto px-2 xs:px-4 py-2 scrollbar-none">
             {MENTORS.map((m, idx) => (
               <button
                 key={m.id}
                 onClick={() => setActiveTab(idx)}
-                className={`px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-sans uppercase tracking-[0.15em] font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
+                className={`px-2.5 xs:px-3.5 sm:px-6 py-1.5 xs:py-2 sm:py-2.5 rounded-full text-[9px] xs:text-[10px] sm:text-xs font-sans uppercase tracking-[0.1em] sm:tracking-[0.15em] font-semibold transition-all duration-300 whitespace-nowrap shrink-0 cursor-pointer ${
                   activeTab === idx
                     ? 'bg-[#6B1D1E] text-white shadow-md ring-2 ring-[#6B1D1E]'
                     : 'bg-[#FAF6F0] text-[#757069] border border-[#9E743B]/25 hover:border-[#9E743B]/60 hover:bg-white'

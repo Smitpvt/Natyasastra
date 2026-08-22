@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
@@ -17,6 +17,25 @@ export const Associate = () => {
       'url': typeof window !== 'undefined' ? window.location.origin + '/associate' : ''
     }
   });
+
+  const [showAllFlames, setShowAllFlames] = useState(false);
+  const [showAllCircles, setShowAllCircles] = useState(false);
+
+  const CIRCLES_DATA = [
+    { num: 'I.', title: 'PERPETUITY FUND', desc: 'Sustaining the institution that makes all this possible.' },
+    { num: 'II.', title: 'CUSTODIAN SCHOLARSHIP FUND', desc: 'Sustaining the people who carry the tradition forward.' },
+    { num: 'III.', title: 'CIVILISATIONAL INQUIRY FUND', desc: 'Sustaining ideas that inform leadership and public life.' },
+    { num: 'IV.', title: <span><em className="italic">NĀṬYĀLOKA</em> FUND</span>, desc: 'Sustaining the voice that preserves and shares our inheritance.' },
+    { num: 'V.', title: 'INSTITUTIONAL ENDOWMENT FUND', desc: <span>Enabling the <em className="italic">Gurukulam</em>’s perpetual continuity and expansion.</span> }
+  ];
+
+  const FLAMES_DATA = [
+    { flame: 'I. THE FIRST FLAME', area: 'Scholarships', desc: 'Enables scholarships for promising practitioners with financial need.' },
+    { flame: 'II. THE SHARED FLAME', area: 'Research & Publications', desc: 'Supports research, white papers, publications, and institutional knowledge.' },
+    { flame: 'III. THE GUIDING FLAME', area: 'Residential Immersions', desc: 'Enables residential immersions and programmes that shape practitioners.' },
+    { flame: 'IV. THE ENDURING FLAME', area: 'Faculty Chairs & Archives', desc: 'Supports faculty chairs, documentation, and preservation of intellectual heritage.' },
+    { flame: 'V. THE ETERNAL FLAME', area: 'Institutional Endowment', desc: 'Builds the endowment corpus ensuring perpetual continuity across generations.' }
+  ];
 
   return (
     <div className="bg-[#F5F0E6] pt-24 min-h-screen text-[#211F1D] selection:bg-[#9E743B]/20">
@@ -55,16 +74,12 @@ export const Associate = () => {
 
               {/* Concentric Spheres Diagram */}
               <div className="space-y-3 pt-2">
-                {[
-                  { num: 'I.', title: 'PERPETUITY FUND', desc: 'Sustaining the institution that makes all this possible.' },
-                  { num: 'II.', title: 'CUSTODIAN SCHOLARSHIP FUND', desc: 'Sustaining the people who carry the tradition forward.' },
-                  { num: 'III.', title: 'CIVILISATIONAL INQUIRY FUND', desc: 'Sustaining ideas that inform leadership and public life.' },
-                  { num: 'IV.', title: <span><em className="italic">NĀṬYĀLOKA</em> FUND</span>, desc: 'Sustaining the voice that preserves and shares our inheritance.' },
-                  { num: 'V.', title: 'INSTITUTIONAL ENDOWMENT FUND', desc: <span>Enabling the <em className="italic">Gurukulam</em>’s perpetual continuity and expansion.</span> }
-                ].map((circle, i) => (
+                {CIRCLES_DATA.map((circle, i) => (
                   <div 
-                    key={circle.title}
-                    className="p-4 rounded-xl border border-[#9E743B]/30 bg-white/80 flex items-start gap-4 hover:border-[#6B1D1E] shadow-2xs transition-all"
+                    key={i}
+                    className={`p-4 rounded-xl border border-[#9E743B]/30 bg-white/80 items-start gap-4 hover:border-[#6B1D1E] shadow-2xs transition-all ${
+                      i >= 3 && !showAllCircles ? 'hidden sm:flex' : 'flex'
+                    }`}
                   >
                     <span className="font-serif text-sm font-semibold text-[#6B1D1E] pt-0.5">{circle.num}</span>
                     <div className="space-y-0.5">
@@ -73,6 +88,15 @@ export const Associate = () => {
                     </div>
                   </div>
                 ))}
+
+                {CIRCLES_DATA.length > 3 && (
+                  <button
+                    onClick={() => setShowAllCircles(!showAllCircles)}
+                    className="sm:hidden w-full py-2.5 px-4 rounded-xl border border-[#9E743B]/30 bg-white hover:bg-[#FAF6F0] text-[#6B1D1E] font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-2xs mt-3"
+                  >
+                    <span>{showAllCircles ? 'Show Less ↑' : `View More Funds (${CIRCLES_DATA.length - 3} More) ↓`}</span>
+                  </button>
+                )}
               </div>
             </div>
 
@@ -90,16 +114,15 @@ export const Associate = () => {
 
                 {/* 5 Flame Levels */}
                 <div className="space-y-5">
-                  {[
-                    { flame: 'I. THE FIRST FLAME', area: 'Scholarships', desc: 'Enables scholarships for promising practitioners with financial need.' },
-                    { flame: 'II. THE SHARED FLAME', area: 'Research & Publications', desc: 'Supports research, white papers, publications, and institutional knowledge.' },
-                    { flame: 'III. THE GUIDING FLAME', area: 'Residential Immersions', desc: 'Enables residential immersions and programmes that shape practitioners.' },
-                    { flame: 'IV. THE ENDURING FLAME', area: 'Faculty Chairs & Archives', desc: 'Supports faculty chairs, documentation, and preservation of intellectual heritage.' },
-                    { flame: 'V. THE ETERNAL FLAME', area: 'Institutional Endowment', desc: 'Builds the endowment corpus ensuring perpetual continuity across generations.' }
-                  ].map((tier) => (
-                    <div key={tier.flame} className="flex gap-4 items-start">
+                  {FLAMES_DATA.map((tier, i) => (
+                    <div 
+                      key={tier.flame} 
+                      className={`gap-4 items-start ${
+                        i >= 3 && !showAllFlames ? 'hidden sm:flex' : 'flex'
+                      }`}
+                    >
                       <BrassDiyaIcon className="w-7 h-7 shrink-0" glow={true} />
-                      <div className="space-y-0.5">
+                      <div className="space-y-0.5 flex-1">
                         <div className="flex items-baseline justify-between flex-wrap gap-2">
                           <h4 className="font-sans text-xs uppercase tracking-wider font-bold text-[#6B1D1E]">{tier.flame}</h4>
                           <span className="font-serif italic text-xs text-[#9E743B] font-medium">{tier.area}</span>
@@ -108,6 +131,15 @@ export const Associate = () => {
                       </div>
                     </div>
                   ))}
+
+                  {FLAMES_DATA.length > 3 && (
+                    <button
+                      onClick={() => setShowAllFlames(!showAllFlames)}
+                      className="sm:hidden w-full py-2.5 px-4 rounded-xl border border-[#9E743B]/30 bg-[#FAF6F0] hover:bg-white text-[#6B1D1E] font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-2xs mt-3"
+                    >
+                      <span>{showAllFlames ? 'Show Less ↑' : `View More Tiers (${FLAMES_DATA.length - 3} More) ↓`}</span>
+                    </button>
+                  )}
                 </div>
 
                 <div className="pt-4 border-t border-[#9E743B]/20 text-center">
