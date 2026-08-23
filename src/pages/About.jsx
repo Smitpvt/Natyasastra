@@ -67,12 +67,12 @@ const MILESTONES = [
         initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
       </span>
     ),
-    image: "/assets/images/Raam_Rajya.jpeg",
-    imageAlt: "Panel Discussion on Rāma Rājya Vision and Values for Today",
+    image: "/assets/images/rama_rajya.png",
+    imageAlt: "Panel Discussion during the Tattvāloka Onward March to Rāma Rājya initiative",
     imageCaption: (
       <span>
-        <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
-        (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+        <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion:</span>
+        (L-R) Mr. Milind Ranade, Dr. K. N. Ganeshaiah, Dr. Prakash Nadharni, Smt. Anu Pimpalapure, Shri Abhayraj Saoji, and Dr. Padmaja Suresh during a panel discussion of the <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em> initiative.
       </span>
     )
   },
@@ -241,98 +241,6 @@ export const About = () => {
             {/* Center line for timeline */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-accent-bronze/10 -translate-x-1/2" />
 
-<<<<<<< HEAD
-            <div className="space-y-16">
-              
-              {/* Milestone 1: The First Saṅkalpa */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">The First <em className="italic">Saṅkalpa</em></span>
-                  <HeadingMD className="text-xl mb-1 font-light text-text-primary">
-                    <a
-                      href="https://sites.google.com/view/ramarajya/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-accent-bronze transition-colors underline decoration-accent-bronze/40 underline-offset-4"
-                    >
-                      <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
-                    </a>
-                    {' '}| 2018
-                  </HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed mt-2">
-                    Early conversations within the{' '}
-                    <a
-                      href="https://sites.google.com/view/ramarajya/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent-bronze font-medium hover:underline"
-                    >
-                      <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
-                    </a>{' '}
-                    initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
-                  </Body>
-                  
-                  {/* Panel discussion note */}
-                  <div className="mt-4 p-3.5 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 text-left text-xs font-sans text-text-stone-grey leading-relaxed">
-                    <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion:</span>
-                    (L-R) Mr. Milind Ranade, Dr. K. N. Ganeshaiah, Dr. Prakash Nadharni, Smt. Anu Pimpalapure, Shri Abhayraj Saoji, and Dr. Padmaja Suresh during a panel discussion of the <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em> initiative.
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 md:pl-12 pl-8 pt-4 md:pt-0">
-                  <div className="max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-3 space-y-2">
-                    <img
-                      src="/assets/images/rama_rajya.png"
-                      alt="Tattvāloka Onward March to Rāma Rājya Panel Discussion"
-                      className="w-full aspect-[16/9] object-cover filter contrast-[1.02] border border-accent-bronze/10 rounded-md"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <p className="font-sans text-[11px] text-text-stone-grey italic leading-tight text-center m-0 pt-1">
-                      Panel Discussion during the <em>Tattvāloka</em> Onward March to <em>Rāma Rājya</em> initiative
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Milestone 2: Mārga Darśana */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 hidden md:block" />
-                <div className="w-full md:w-1/2 md:pl-12 pl-8">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1"><em className="italic">Mārga Darśana</em></span>
-                  <HeadingMD className="text-xl mb-3 font-light text-text-primary">2019–2024</HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    Through years of study, teaching, yoga, research, civic engagement, and sustained dialogue, the need for a dedicated <em className="italic">Gurukulam</em> devoted to <em className="italic">Nāṭya</em> as a living knowledge system gradually became clear.<br className="mb-2" />
-                    Under the guidance of Padma Bhushan Dr. M. B. Athreya and Karnataka Kalashri Dr. Padmaja Suresh, the vision began to acquire pedagogical and institutional form.
-                  </Body>
-                </div>
-              </div>
-
-              {/* Milestone 3: The Vision Takes Form */}
-              <div className="relative flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-1.5 z-10" />
-                <div className="w-full md:w-1/2 md:pr-12 md:text-right pl-8 md:pl-0">
-                  <span className="font-serif italic text-accent-bronze/80 text-lg block mb-1">Emergence</span>
-                  <HeadingMD className="text-xl mb-3 font-light text-text-primary">The Vision Takes Form | 2025</HeadingMD>
-                  <Body className="text-text-secondary text-sm md:text-base leading-relaxed">
-                    The <em className="italic">saṅkalpa</em> moved from sustained inquiry towards institutional formation, bringing together the <em className="italic">Gurukulam</em>'s vision of <em className="italic">śāstra</em>, <em className="italic">sādhanā</em>, <em className="italic">saṃvāda</em>, and civilisational renewal.
-                  </Body>
-                </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
-              </div>
-
-              {/* Milestone 4: Pratiṣṭhā Samāroham */}
-              <div className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent-bronze rounded-full border-4 border-bg-ivory -translate-x-1/2 top-2 md:top-1/2 -translate-y-1/2 z-10" />
-                <div className="w-full md:w-1/2 hidden md:block" />
-                <div className="w-full md:w-1/2 md:pl-12 pl-8">
-                  <div className="max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-5 space-y-4">
-                    <span className="font-serif italic text-accent-bronze text-xl font-medium block">Consecration</span>
-                    <HeadingMD className="text-2xl font-light text-text-primary"><em className="italic">Pratiṣṭhā Samāroham</em></HeadingMD>
-                    <div className="font-sans text-xs uppercase tracking-wider text-accent-bronze/80 font-semibold mb-2">
-                      23 November 2025 | Navi Mumbai
-=======
             <div className="space-y-10 md:space-y-16">
               {MILESTONES.map((milestone, idx) => {
                 const isLeft = idx % 2 === 0; // Desktop left side
@@ -365,7 +273,6 @@ export const About = () => {
                       
                       {/* Spacer Column */}
                       <div className={`hidden md:block w-1/2 ${isLeft ? 'order-2' : 'order-1'}`} />
->>>>>>> 1ea4d293e6ebab085cc7376d900ad9d6fbdf36cc
                     </div>
                   );
                 }

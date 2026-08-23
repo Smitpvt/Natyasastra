@@ -938,23 +938,6 @@ export const ProgrammesDetail = () => {
                 <LotusDivider className="my-1.5 sm:my-2" />
               </div>
 
-<<<<<<< HEAD
-              {/* Radial Lamp Visualizer - Full Bounds Unclipped */}
-              <div className="relative w-full max-w-[440px] aspect-square mx-auto my-8 flex items-center justify-center p-2">
-                {/* Connecting Ray Lines */}
-                <div className="absolute inset-8 rounded-full border border-[#9E743B]/20 stroke-dasharray-[3_3]" />
-                
-                {/* Central Diya: NĀṬYAŚĀSTRA GURUKULAM */}
-                <div className="relative z-20 w-32 sm:w-36 h-32 sm:h-36 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-2">
-                  <BrassDiyaIcon className="w-6 sm:w-7 h-6 sm:h-7" />
-                  <span className="font-serif text-[10px] sm:text-[11px] font-semibold text-[#6B1D1E] tracking-wider uppercase mt-0.5 leading-tight">
-                    Nāṭyaśāstra<br />Gurukulam
-                  </span>
-                  <span className="font-sans text-[6.5px] sm:text-[7.5px] text-[#7A5428] tracking-tight uppercase leading-none font-medium mt-1 max-w-[100px]">
-                    A Centre of Civilisational Statecraft
-                  </span>
-                </div>
-=======
               {/* Radial Lamp Visualizer - Fluid Auto-adjustment on Mobile & Wide Scaling on Desktop */}
               <div className="w-full max-w-full sm:max-w-[560px] md:max-w-[640px] lg:max-w-[720px] xl:max-w-[780px] aspect-square mx-auto my-4 sm:my-8 flex items-center justify-center px-1 sm:px-0">
                 <svg viewBox="0 0 540 540" className="w-full h-auto select-none overflow-visible">
@@ -978,7 +961,6 @@ export const ProgrammesDetail = () => {
                     strokeOpacity="0.1"
                     strokeWidth="0.8"
                   />
->>>>>>> 1ea4d293e6ebab085cc7376d900ad9d6fbdf36cc
 
                   {/* Central Diya Hub: NĀṬYAŚĀSTRA GURUKULAM */}
                   <circle

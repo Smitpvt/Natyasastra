@@ -85,7 +85,6 @@ export const Hero = () => {
               गुरुकुलम्
             </p>
 
-<<<<<<< HEAD
             <div className="flex flex-col items-center mt-2 space-y-1">
               <span className="font-serif text-[18px] sm:text-[22px] md:text-[25px] italic text-[#FFF5E0] tracking-wide font-normal">
                 Nāṭyaśāstra Gurukulam
@@ -95,10 +94,7 @@ export const Hero = () => {
               </span>
             </div>
 
-            <LotusDivider className="my-3" />
-=======
             <LotusDivider className="my-2.5 sm:my-3" />
->>>>>>> 1ea4d293e6ebab085cc7376d900ad9d6fbdf36cc
 
             <p className="font-serif italic text-xs xs:text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-full xs:max-w-md sm:max-w-xl leading-[1.7] sm:leading-[1.8] text-center mx-auto px-2">
               A <em className="italic">Dhārmic</em> Stream For The Renewal Of Public Life Through Aesthetic Leadership

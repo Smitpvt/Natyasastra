@@ -281,18 +281,6 @@ export const Library = () => {
                         • {pub.type}
                       </span>
                     </div>
-<<<<<<< HEAD
-                    
-                    <span className="font-serif text-[12px] leading-snug block mt-3 pb-2 line-clamp-6">
-                      {formatSanskrit(pub.title)}
-                    </span>
-                    
-                    <div className="mt-auto text-[7px] uppercase tracking-[0.2em] opacity-80 border-t border-current/20 pt-2 font-medium">
-                      Nāṭyaśāstra Gurukulam
-                      <span className="block text-[6px] tracking-[0.1em] opacity-90 font-normal mt-0.5">A Centre of Civilisational Statecraft</span>
-                    </div>
-=======
-
                     <a
                       href={pub.file}
                       target="_blank"
@@ -307,7 +295,6 @@ export const Library = () => {
                     <Body className="text-xs sm:text-sm text-[#5C564E] leading-relaxed font-light line-clamp-3 xs:line-clamp-4">
                       {formatSanskrit(pub.desc)}
                     </Body>
->>>>>>> 1ea4d293e6ebab085cc7376d900ad9d6fbdf36cc
                   </div>
 
                   {/* Touch-Friendly Action Button */}

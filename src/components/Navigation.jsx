@@ -59,12 +59,11 @@ export const Navigation = () => {
               <img
                 src={interimEmblem}
                 alt="Nāṭyaśāstra Gurukulam Emblem"
-<<<<<<< HEAD
                 className="h-10 sm:h-11 w-auto object-contain"
               />
               <div className="flex flex-col leading-tight">
                 <span className={`font-serif text-[16px] xs:text-[18px] md:text-[21px] font-medium tracking-[0.03em] transition-colors duration-500 ${
-                  isScrolled ? 'text-[#211F1D] group-hover:text-accent-bronze' : isHeroPage ? 'text-white group-hover:text-[#E0D8CE]' : 'text-[#211F1D] group-hover:text-accent-bronze'
+                  isOpen ? 'text-[#211F1D] group-hover:text-accent-bronze' : isScrolled ? 'text-[#211F1D] group-hover:text-accent-bronze' : isHeroPage ? 'text-white group-hover:text-[#E0D8CE]' : 'text-[#211F1D] group-hover:text-accent-bronze'
                 }`}>
                   <span className="italic">Nāṭyaśāstra Gurukulam</span>
                 </span>
@@ -74,21 +73,6 @@ export const Navigation = () => {
                   A Centre of Civilisational Statecraft
                 </span>
               </div>
-=======
-                className="h-8 sm:h-10 w-auto object-contain"
-              />
-              <span className={`font-serif text-[16px] xs:text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
-                isOpen
-                  ? 'text-[#211F1D] hover:text-accent-bronze'
-                  : isScrolled
-                  ? 'text-[#211F1D] hover:text-accent-bronze'
-                  : isHeroPage
-                  ? 'text-white hover:text-[#E0D8CE]'
-                  : 'text-[#211F1D] hover:text-accent-bronze'
-              }`}>
-                <span className="italic">Nāṭyaśāstra Gurukulam</span>
-              </span>
->>>>>>> 1ea4d293e6ebab085cc7376d900ad9d6fbdf36cc
             </Link>
           </div>
 
