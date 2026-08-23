@@ -311,7 +311,10 @@ export const MentorsDetail = () => {
                   Within this understanding, the <strong><em className="italic">Yajamāna</em></strong> is not an owner or authority, but the one who bears responsibility for the consecration, continuity, and integrity of the <em className="italic">yajña</em>. The <strong><em className="italic">Yojaka</em></strong> brings people, ideas, and institutions into harmonious relationship, ensuring that the original <em className="italic">saṅkalpa</em> unfolds faithfully across time and is handed on to future generations.
                 </p>
                 <p>
-                  Rohit Viswanath serves the <em className="italic">Gurukulam</em> in this spirit as its <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>. His journey took him through the study of Ancient Indian Culture and International Relations, followed by work in journalism, public policy, governance, yoga, agriculture, higher education, and civilisational studies. Rather than separate pursuits, these became successive stages in a single unfolding inquiry into <em className="italic">Dharma</em>, education, leadership, and <em className="italic">Nāṭya</em>.
+                  Rohit Viswanath serves the <em className="italic">Gurukulam</em> in this spirit as its <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>.
+                </p>
+                <p>
+                  His journey took him through the study of Ancient Indian Culture and International Relations, followed by work in journalism, public policy, governance, yoga, agriculture, higher education, and civilisational studies. Rather than separate pursuits, these became successive stages in a single unfolding inquiry into <em className="italic">Dharma</em>, education, leadership, and <em className="italic">Nāṭya</em>.
                 </p>
                 <p>
                   His role is therefore not that of a founder in the modern sense, but of a custodian of the <em className="italic">Yajña</em> and a facilitator of lineage. He seeks to ensure that <em className="italic">Nāṭya</em> remains <em className="italic">Sādhanā</em>, pedagogy remains presence, and institutional form never eclipses <em className="italic">Dhārmic</em> intent.

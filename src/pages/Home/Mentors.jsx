@@ -43,6 +43,19 @@ const MENTORS = [
     objectPos: 'object-bottom',
     pillarDevanagari: 'मौन',
     pillarEnglish: 'SILENCE'
+  },
+  {
+    id: 'rohit',
+    tabLabel: 'Rohit Viswanath',
+    name: 'Rohit Viswanath',
+    role: <span><em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em></span>,
+    tagline: <span>Custodianship & Institutional Consecration</span>,
+    quote: <span>Stewarding the <em className="italic">Gurukulam</em>’s consecrated <em className="italic">saṅkalpa</em> with fidelity, humility, and care.</span>,
+    bio: <span><em className="italic">Nāṭyaśāstra Gurukulam</em> is understood not merely as an institution, but as a living <em className="italic">Yajña</em>. Rohit Viswanath serves as its <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em> — bearing responsibility for the consecration, continuity, and integrity of the <em className="italic">Yajña</em>, while bringing people, ideas, and institutions into harmonious relationship.</span>,
+    image: '/assets/images/rohit_viswanath_thumb.webp',
+    objectPos: 'object-bottom',
+    pillarDevanagari: 'यज्ञ',
+    pillarEnglish: 'YAJÑA'
   }
 ];
 

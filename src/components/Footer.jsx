@@ -51,6 +51,9 @@ export const Footer = () => {
               Contact Us
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069] font-light">
+              <p>
+                Ms. Darafsha Shaikh / Ms. Vasanti Choudhary
+              </p>
               <a href="mailto:info.natyasastra@gmail.com" className="hover:text-accent-bronze transition-colors duration-300">
                 Email: info.natyasastra@gmail.com
               </a>
@@ -70,7 +73,7 @@ export const Footer = () => {
               Social Links
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069]">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Instagram</a>
+              <a href="https://www.instagram.com/natyashastragurukulam/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Instagram</a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">YouTube</a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Twitter / X</a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">LinkedIn</a>

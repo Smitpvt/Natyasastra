@@ -537,8 +537,6 @@ export const About = () => {
                 src="/assets/images/sishyas_natya_seva_thumb.webp"
                 alt="Nāṭya practitioners undergoing immersion and training"
                 aspectRatio="aspect-[4/5]"
-                caption={<span><em className="italic">Nāṭya</em> practitioners being trained in a temple <em className="italic">Gurukulam</em></span>}
-                copyright="Gurukulam Tradition"
               />
             </div>
             <div className="lg:col-span-7 space-y-6 order-1 lg:order-2">
@@ -647,7 +645,7 @@ export const About = () => {
                   </span>
                   <h4 className="font-serif text-xl leading-tight text-text-primary">Rohit Viswanath</h4>
                   <p className="font-sans text-[13px] text-text-secondary leading-relaxed font-light">
-                    Serves the <em className="italic">Gurukulam</em> as <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>, stewarding the consecrated <em className="italic">saṅkalpa</em> with fidelity, humility, and care to facilitate institutional form.
+                    "Stewarding the <em className="italic">Gurukulam</em>'s consecrated <em className="italic">saṅkalpa</em> with fidelity, humility, and care."
                   </p>
                 </div>
               </div>
