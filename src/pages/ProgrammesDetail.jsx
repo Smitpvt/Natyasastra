@@ -145,7 +145,7 @@ const DIRECT_ENGAGEMENTS = [
     subtitle: 'Where Śāstra, practice, and enquiry meet',
     desc: 'Curated conversations and working sessions bringing scholars and practitioners together around focused questions at the intersection of civilisational knowledge and artistic practice.',
     mode: 'By Invitation / Curated',
-    image: '/assets/images/group_pratishtha_thumb.webp',
+    image: '/assets/images/pratisha_samaroha.jpeg',
     objectPos: 'object-[center_15%]'
   },
   {

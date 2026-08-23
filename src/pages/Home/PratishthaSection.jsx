@@ -6,10 +6,10 @@ import AutoScrollContainer from '../../components/AutoScrollContainer';
 
 const GALLERY_HIGHLIGHTS = [
   {
-    title: 'Consecration of the Vision Statement',
+    title: 'Reception of Mukhyātithi',
     subtitle: <span><em className="italic">Pratiṣṭhā Samāroham</em> • Nov 23, 2025</span>,
-    image: '/assets/images/vision_statement_thumb.webp',
-    desc: <span>The sacred consecration of the <em className="italic">Gurukulam</em> Vision Statement, establishing the <em className="italic">Dhārmic</em> axis of <em className="italic">Śāstra</em>, <em className="italic">Sādhanā</em>, and <em className="italic">Saṃvāda</em>.</span>
+    image: '/assets/images/pratisha_samaroha.jpeg',
+    desc: <span>The <em className="italic">Gurukulam</em> welcomed <em className="italic">Ācārya</em> Prof. K. Ramasubramanian as the <em className="italic">mukhyātithi</em> of its <em className="italic">Pratiṣṭhā Samāroham</em>, receiving him with <em className="italic">Pūrṇa Kumbha</em> and <em className="italic">Vedaghoṣa</em>.</span>
   },
   {
     title: 'Mukhyatithi Prof. K. Ramasubramanian',

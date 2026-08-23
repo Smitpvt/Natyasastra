@@ -61,7 +61,7 @@ export const Footer = () => {
                 Phone: +91 77159 69599
               </a>
               <p className="leading-relaxed">
-                F7, 2/2, Aishwarya, Sector 7,<br />
+                Aishwarya, Sector 7,<br />
                 Sanpada, Navi Mumbai 400705
               </p>
             </div>

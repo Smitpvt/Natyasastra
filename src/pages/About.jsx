@@ -104,11 +104,11 @@ const MILESTONES = [
     date: "23 November 2025 | Navi Mumbai",
     desc: (
       <span>
-        The <em className="italic">Nāṭyaśāstra Gurukulam</em> was consecrated at Śrī <em className="italic">Subrahmaṇya</em> <em className="italic">Sevā</em> <em className="italic">Samāj</em>, Navi Mumbai, through a sacred gathering of <em className="italic">Vedic</em> invocation, consecratory rites, dance, music, reflection, and dialogue. The <em className="italic">Pratiṣṭhā Samāroham</em> marked not merely an inauguration, but the formal consecration of the <em className="italic">Gurukulam</em>'s <em className="italic">saṅkalpa</em>.
+        The <em className="italic">Gurukulam</em> welcomed <em className="italic">Ācārya</em> Prof. K. Ramasubramanian as the <em className="italic">mukhyātithi</em> of its <em className="italic">Pratiṣṭhā Samāroham</em>, receiving him with <em className="italic">Pūrṇa Kumbha</em> and <em className="italic">Vedaghoṣa</em>.
       </span>
     ),
-    image: "/assets/images/sishyas_natya_seva_thumb.webp",
-    imageAlt: "Pratiṣṭhā Consecration Dance Offering - Sishyas of Smt. Charanya Gurusathya",
+    image: "/assets/images/pratisha_samaroha.jpeg",
+    imageAlt: "Pratiṣṭhā Consecration Ceremony - Nāṭyaśāstra Gurukulam",
     cardLayout: true
   },
   {

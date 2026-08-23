@@ -76,12 +76,12 @@ const CURATED_MEDIA = [
     id: 'press-1',
     type: 'press',
     category: 'Institutional Release',
-    title: 'Consecration of the Vision Statement',
-    subtitle: 'Solemn Declaration of Purpose',
-    image: '/assets/images/vision_statement_thumb.webp',
+    title: 'Reception of Mukhyātithi',
+    subtitle: 'Pratiṣṭhā Samāroham',
+    image: '/assets/images/pratisha_samaroha.jpeg',
     date: '23 November 2025',
     location: 'Navi Mumbai',
-    desc: 'Official release and consecration of the Gurukulam Vision Statement, establishing the axis of Śāstra, Sādhanā, and Saṃvāda.',
+    desc: 'The Gurukulam welcomed Ācārya Prof. K. Ramasubramanian as the mukhyātithi of its Pratiṣṭhā Samāroham, receiving him with Pūrṇa Kumbha and Vedaghoṣa.',
     tag: 'Press Release'
   },
   {
