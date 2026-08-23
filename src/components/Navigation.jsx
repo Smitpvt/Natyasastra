@@ -48,13 +48,20 @@ export const Navigation = () => {
               <img
                 src={interimEmblem}
                 alt="Nāṭyaśāstra Gurukulam Emblem"
-                className="h-10 w-auto object-contain"
+                className="h-10 sm:h-11 w-auto object-contain"
               />
-              <span className={`font-serif text-[18px] xs:text-[20px] md:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
-                isScrolled ? 'text-[#211F1D] hover:text-accent-bronze' : isHeroPage ? 'text-white hover:text-[#E0D8CE]' : 'text-[#211F1D] hover:text-accent-bronze'
-              }`}>
-                <span className="italic">Nāṭyaśāstra Gurukulam</span>
-              </span>
+              <div className="flex flex-col leading-tight">
+                <span className={`font-serif text-[16px] xs:text-[18px] md:text-[21px] font-medium tracking-[0.03em] transition-colors duration-500 ${
+                  isScrolled ? 'text-[#211F1D] group-hover:text-accent-bronze' : isHeroPage ? 'text-white group-hover:text-[#E0D8CE]' : 'text-[#211F1D] group-hover:text-accent-bronze'
+                }`}>
+                  <span className="italic">Nāṭyaśāstra Gurukulam</span>
+                </span>
+                <span className={`font-sans text-[7.5px] xs:text-[8.5px] sm:text-[9.5px] tracking-[0.16em] uppercase transition-colors duration-500 font-medium ${
+                  isScrolled ? 'text-accent-bronze' : isHeroPage ? 'text-[#D4AF37]' : 'text-accent-bronze'
+                }`}>
+                  A Centre of Civilisational Statecraft
+                </span>
+              </div>
             </Link>
           </div>
 

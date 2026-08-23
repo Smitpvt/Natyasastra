@@ -85,6 +85,15 @@ export const Hero = () => {
               गुरुकुलम्
             </p>
 
+            <div className="flex flex-col items-center mt-2 space-y-1">
+              <span className="font-serif text-[18px] sm:text-[22px] md:text-[25px] italic text-[#FFF5E0] tracking-wide font-normal">
+                Nāṭyaśāstra Gurukulam
+              </span>
+              <span className="font-sans text-[11px] sm:text-[13px] uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
+                A Centre of Civilisational Statecraft
+              </span>
+            </div>
+
             <LotusDivider className="my-3" />
 
             <p className="font-serif italic text-sm sm:text-base md:text-lg text-[#E0D8CE] tracking-wide font-light max-w-xl leading-relaxed">

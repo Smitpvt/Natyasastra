@@ -161,7 +161,7 @@ export const Associate = () => {
               <em className="italic">NĀṬYAŚĀSTRA GURUKULAM</em>
             </span>
             <span className="font-sans text-[10px] uppercase tracking-widest text-[#7A5428] block">
-              A Centre for Civilisational Statecraft
+              A Centre of Civilisational Statecraft
             </span>
           </div>
 

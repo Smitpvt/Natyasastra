@@ -889,10 +889,13 @@ export const ProgrammesDetail = () => {
                 <div className="absolute inset-8 rounded-full border border-[#9E743B]/20 stroke-dasharray-[3_3]" />
                 
                 {/* Central Diya: NĀṬYAŚĀSTRA GURUKULAM */}
-                <div className="relative z-20 w-28 sm:w-32 h-28 sm:h-32 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-2">
-                  <BrassDiyaIcon className="w-7 sm:w-8 h-7 sm:h-8" />
-                  <span className="font-serif text-[11px] sm:text-xs font-semibold text-[#6B1D1E] tracking-wider uppercase mt-0.5 leading-tight">
+                <div className="relative z-20 w-32 sm:w-36 h-32 sm:h-36 rounded-full bg-[#FAF6F0] border-2 border-[#9E743B] shadow-xl flex flex-col items-center justify-center text-center p-2">
+                  <BrassDiyaIcon className="w-6 sm:w-7 h-6 sm:h-7" />
+                  <span className="font-serif text-[10px] sm:text-[11px] font-semibold text-[#6B1D1E] tracking-wider uppercase mt-0.5 leading-tight">
                     Nāṭyaśāstra<br />Gurukulam
+                  </span>
+                  <span className="font-sans text-[6.5px] sm:text-[7.5px] text-[#7A5428] tracking-tight uppercase leading-none font-medium mt-1 max-w-[100px]">
+                    A Centre of Civilisational Statecraft
                   </span>
                 </div>
 

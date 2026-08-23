@@ -141,6 +141,7 @@ export const Library = () => {
                     
                     <div className="mt-auto text-[7px] uppercase tracking-[0.2em] opacity-80 border-t border-current/20 pt-2 font-medium">
                       Nāṭyaśāstra Gurukulam
+                      <span className="block text-[6px] tracking-[0.1em] opacity-90 font-normal mt-0.5">A Centre of Civilisational Statecraft</span>
                     </div>
                   </div>
                 </a>

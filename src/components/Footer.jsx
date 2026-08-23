@@ -17,9 +17,14 @@ export const Footer = () => {
                 alt="Nāṭyaśāstra Gurukulam Emblem"
                 className="h-12 w-auto object-contain"
               />
-              <span className="font-serif text-[22px] tracking-wide text-[#211F1D] block italic">
-                Nāṭyaśāstra Gurukulam
-              </span>
+              <div className="flex flex-col">
+                <span className="font-serif text-[22px] tracking-wide text-[#211F1D] block italic leading-tight">
+                  Nāṭyaśāstra Gurukulam
+                </span>
+                <span className="font-sans text-[10.5px] uppercase tracking-[0.2em] text-accent-bronze font-medium mt-1">
+                  A Centre of Civilisational Statecraft
+                </span>
+              </div>
             </Link>
             <p className="font-sans text-[14px] leading-relaxed text-[#757069] font-light max-w-xs">
               A living institution dedicated to the study, practice, and renewal of <em className="italic">Nāṭya</em> as a civilisational knowledge system.

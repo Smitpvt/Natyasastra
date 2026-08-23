@@ -41,7 +41,8 @@ class ErrorBoundary extends React.Component {
       return (
         <div className="min-h-screen bg-[#F3EEE6] flex items-center justify-center p-6 text-center font-serif">
           <div className="max-w-md p-8 bg-white/80 rounded-xl shadow-lg border border-[#9E743B]/30">
-            <h2 className="text-2xl text-[#805335] font-semibold mb-3">Nāṭyaśāstra Gurukulam</h2>
+            <h2 className="text-2xl text-[#805335] font-semibold mb-1">Nāṭyaśāstra Gurukulam</h2>
+            <p className="text-xs uppercase tracking-widest text-[#805335]/80 font-sans mb-4 font-medium">A Centre of Civilisational Statecraft</p>
             <p className="text-[#757069] text-sm mb-6">An unexpected error occurred while loading this page.</p>
             <button
               onClick={() => window.location.reload()}

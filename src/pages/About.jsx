@@ -196,11 +196,24 @@ export const About = () => {
                   
                   {/* Panel discussion note */}
                   <div className="mt-4 p-3.5 rounded-lg bg-bg-parchment/30 border border-accent-bronze/15 text-left text-xs font-sans text-text-stone-grey leading-relaxed">
-                    <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion (July 14, 2019 • Delhi):</span>
-                    (L-R) Eminent scholar of <em className="italic">Nāṭyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em><em className="italic">Rāma Rājya</em> Vision and Values for Today</em>, organised as part of the Onward March to Rama Rajya Campaign in Delhi.
+                    <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion:</span>
+                    (L-R) Mr. Milind Ranade, Dr. K. N. Ganeshaiah, Dr. Prakash Nadharni, Smt. Anu Pimpalapure, Shri Abhayraj Saoji, and Dr. Padmaja Suresh during a panel discussion of the <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em> initiative.
                   </div>
                 </div>
-                <div className="w-full md:w-1/2 hidden md:block" />
+                <div className="w-full md:w-1/2 md:pl-12 pl-8 pt-4 md:pt-0">
+                  <div className="max-w-md rounded border border-accent-bronze/20 overflow-hidden shadow-sm bg-bg-parchment/20 p-3 space-y-2">
+                    <img
+                      src="/assets/images/rama_rajya.png"
+                      alt="Tattvāloka Onward March to Rāma Rājya Panel Discussion"
+                      className="w-full aspect-[16/9] object-cover filter contrast-[1.02] border border-accent-bronze/10 rounded-md"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <p className="font-sans text-[11px] text-text-stone-grey italic leading-tight text-center m-0 pt-1">
+                      Panel Discussion during the <em>Tattvāloka</em> Onward March to <em>Rāma Rājya</em> initiative
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {/* Milestone 2: Mārga Darśana */}
@@ -937,7 +950,8 @@ export const About = () => {
           
           <div className="pt-12 border-t border-accent-bronze/10 max-w-xs mx-auto">
             <p className="font-serif text-[13px] tracking-[0.2em] text-text-primary uppercase m-0"><em className="italic">Nāṭyaśāstra Gurukulam</em></p>
-            <p className="font-sans text-[10px] tracking-[0.15em] text-text-secondary/60 uppercase mt-2 mb-0">Navi Mumbai • Established 2025</p>
+            <p className="font-sans text-[10px] tracking-[0.18em] text-accent-bronze uppercase mt-1 mb-1 font-medium">A Centre of Civilisational Statecraft</p>
+            <p className="font-sans text-[9px] tracking-[0.15em] text-text-secondary/60 uppercase m-0">Navi Mumbai • Established 2025</p>
           </div>
         </div>
       </Section>
