@@ -16,7 +16,7 @@ export const useSEO = ({ title, description, jsonLd }) => {
     if (title) {
       document.title = `${title} | Nāṭyaśāstra Gurukulam`;
     } else {
-      document.title = 'Nāṭyaśāstra Gurukulam — A Centre of Civilisational Statecraft';
+      document.title = 'Nāṭyaśāstra Gurukulam — A Centre for Civilisational Statecraft';
     }
 
     // 2. Update Meta Description Tag

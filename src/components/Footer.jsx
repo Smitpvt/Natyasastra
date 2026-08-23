@@ -22,7 +22,7 @@ export const Footer = () => {
                   Nāṭyaśāstra Gurukulam
                 </span>
                 <span className="font-sans text-[10.5px] uppercase tracking-[0.2em] text-accent-bronze font-medium mt-1">
-                  A Centre of Civilisational Statecraft
+                  A Centre for Civilisational Statecraft
                 </span>
               </div>
             </Link>

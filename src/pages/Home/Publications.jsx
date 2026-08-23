@@ -215,7 +215,7 @@ export const Publications = () => {
                         </span>
                         <div className="mt-auto text-[9px] sm:text-[10px] uppercase tracking-[0.2em] opacity-80 border-t border-current/20 pt-2 font-medium">
                           Nāṭyaśāstra Gurukulam
-                          <span className="block text-[7px] tracking-[0.1em] opacity-90 font-normal mt-0.5">A Centre of Civilisational Statecraft</span>
+                          <span className="block text-[7px] tracking-[0.1em] opacity-90 font-normal mt-0.5">A Centre for Civilisational Statecraft</span>
                         </div>
                       </div>
                     </div>

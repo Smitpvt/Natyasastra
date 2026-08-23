@@ -67,12 +67,12 @@ const MILESTONES = [
         initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
       </span>
     ),
-    image: "/assets/images/rama_rajya.png",
-    imageAlt: "Panel Discussion during the Tattvāloka Onward March to Rāma Rājya initiative",
+    image: "/assets/images/Raam_Rajya_panel.jpeg",
+    imageAlt: "Panel Discussion on Rāma Rājya Vision and Values for Today",
     imageCaption: (
       <span>
         <span className="font-semibold text-accent-bronze block mb-1">Panel Discussion:</span>
-        (L-R) Mr. Milind Ranade, Dr. K. N. Ganeshaiah, Dr. Prakash Nadharni, Smt. Anu Pimpalapure, Shri Abhayraj Saoji, and Dr. Padmaja Suresh during a panel discussion of the <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em> initiative.
+        (L-R) Eminent scholar of <em className="italic">Natyaśāstra</em> Padma Shri Bharat Gupt, Senior Journalist Pramit Pal Chaudhury, Padma Bhushan Dr. M. B. Athreya, Eminent Danseuse Smt. Rama Vaidyanathan, Sri Anil Patni, Dr. Padmaja Suresh in the panel discussion on <em className="italic">Rāma Rājya</em> Vision and Values for Today, organised as part of the Onward March to <em className="italic">Rāma Rājya</em> Campaign in Delhi.
       </span>
     )
   },
@@ -994,7 +994,7 @@ export const About = () => {
           
           <div className="pt-12 border-t border-accent-bronze/10 max-w-xs mx-auto">
             <p className="font-serif text-[13px] tracking-[0.2em] text-text-primary uppercase m-0"><em className="italic">Nāṭyaśāstra Gurukulam</em></p>
-            <p className="font-sans text-[10px] tracking-[0.18em] text-accent-bronze uppercase mt-1 mb-1 font-medium">A Centre of Civilisational Statecraft</p>
+            <p className="font-sans text-[10px] tracking-[0.18em] text-accent-bronze uppercase mt-1 mb-1 font-medium">A Centre for Civilisational Statecraft</p>
             <p className="font-sans text-[9px] tracking-[0.15em] text-text-secondary/60 uppercase m-0">Navi Mumbai • Established 2025</p>
           </div>
         </div>

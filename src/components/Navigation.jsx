@@ -70,7 +70,7 @@ export const Navigation = () => {
                 <span className={`font-sans text-[7.5px] xs:text-[8.5px] sm:text-[9.5px] tracking-[0.16em] uppercase transition-colors duration-500 font-medium ${
                   isScrolled ? 'text-accent-bronze' : isHeroPage ? 'text-[#D4AF37]' : 'text-accent-bronze'
                 }`}>
-                  A Centre of Civilisational Statecraft
+                  A Centre for Civilisational Statecraft
                 </span>
               </div>
             </Link>

@@ -90,7 +90,7 @@ export const Hero = () => {
                 Nāṭyaśāstra Gurukulam
               </span>
               <span className="font-sans text-[11px] sm:text-[13px] uppercase tracking-[0.25em] text-[#D4AF37] font-semibold">
-                A Centre of Civilisational Statecraft
+                A Centre for Civilisational Statecraft
               </span>
             </div>
 
