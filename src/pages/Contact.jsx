@@ -20,7 +20,6 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    domain: 'study',
     intent: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -29,6 +28,14 @@ export const Contact = () => {
     e.preventDefault();
     if (formData.name && formData.email && formData.intent) {
       setSubmitted(true);
+      
+      const message = `*Nāṭyaśāstra Gurukulam — Enquiry*\n\n` +
+                      `*Name:* ${formData.name}\n` +
+                      `*Email:* ${formData.email}\n\n` +
+                      `*Statement of Intent:*\n${formData.intent}`;
+                      
+      const whatsappUrl = `https://wa.me/917715969599?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
     }
   };
 
@@ -139,23 +146,7 @@ export const Contact = () => {
                     />
                   </div>
 
-                  {/* Focus Domain */}
-                  <div className="space-y-2">
-                    <label className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-accent-bronze block">
-                      Focus Domain
-                    </label>
-                    <select
-                      value={formData.domain}
-                      onChange={(e) => setFormData({ ...formData, domain: e.target.value })}
-                      className="w-full bg-[#F8F6F1] border border-black/10 focus:border-accent-bronze focus:bg-white rounded-xl px-4 py-3.5 outline-none font-serif text-sm sm:text-base text-[#211F1D] transition-all duration-300 cursor-pointer shadow-inner"
-                    >
-                      <option value="study">Study (Textual Geometry & Śāstra)</option>
-                      <option value="practice">Practice (Karaṇa Reconstruction & Sādhanā)</option>
-                      <option value="pedagogy">Pedagogy (Teaching Transmission & Yātri)</option>
-                      <option value="archive">Archive (Manuscript Preservation & Digital Library)</option>
-                      <option value="samvada">Saṃvāda (Civilisational Statecraft & Patrons)</option>
-                    </select>
-                  </div>
+
 
                   {/* Statement of Intent */}
                   <div className="space-y-2">
