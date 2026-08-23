@@ -111,8 +111,8 @@ export const GlimpsesAndMedia = () => {
   const visibleItems = isExpanded ? filteredItems : filteredItems.slice(0, 4);
 
   return (
-    <section className="w-full bg-[#FAF6F0] py-20 lg:py-28 relative border-t border-[#9E743B]/20">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-12">
+    <section className="w-full bg-[#FAF6F0] py-12 md:py-16 relative border-t border-[#9E743B]/20">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] space-y-8 sm:space-y-12">
         
         {/* SECTION INTRO */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#9E743B]/20 pb-8">
@@ -123,7 +123,7 @@ export const GlimpsesAndMedia = () => {
                 CURATED ARCHIVE
               </span>
             </div>
-            <HeadingLG as="h2" className="text-3xl sm:text-4xl lg:text-5xl text-[#6B1D1E] font-light">
+            <HeadingLG className="text-[#6B1D1E]">
               Glimpses & Media
             </HeadingLG>
             <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
@@ -132,7 +132,7 @@ export const GlimpsesAndMedia = () => {
           </div>
 
           {/* Category Filter Tabs */}
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 w-full sm:w-auto">
             {[
               { id: 'all', label: 'All Media' },
               { id: 'visual', label: 'Visuals' },
@@ -145,10 +145,10 @@ export const GlimpsesAndMedia = () => {
                   setActiveTab(tab.id);
                   setIsExpanded(false);
                 }}
-                className={`px-4 py-2 rounded-full font-sans text-xs uppercase tracking-widest transition-all duration-300 ${
+                className={`px-3 py-2 rounded-lg font-sans text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center text-center cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[#6B1D1E] text-white shadow-sm'
-                    : 'bg-[#EFE8DC] text-[#4A423B] border border-[#9E743B]/20 hover:border-[#6B1D1E]'
+                    : 'bg-[#FAF6F0] text-[#4A423B] border border-[#9E743B]/25 hover:border-[#6B1D1E] hover:bg-white'
                 }`}
               >
                 {tab.label}
@@ -158,7 +158,7 @@ export const GlimpsesAndMedia = () => {
         </div>
 
         {/* CURATED GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 -mx-6 px-6 md:mx-0 md:px-0 md:grid md:grid-cols-2 md:gap-8 pb-4 md:pb-0 items-stretch">
           {visibleItems.map(item => (
             <motion.div
               key={item.id}
@@ -166,7 +166,7 @@ export const GlimpsesAndMedia = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#9E743B]/20 flex flex-col justify-between group hover:shadow-xl hover:border-[#6B1D1E]/40 transition-all duration-500"
+              className="bg-white rounded-2xl overflow-hidden shadow-md border border-[#9E743B]/20 flex flex-col justify-between group hover:shadow-xl hover:border-[#6B1D1E]/40 transition-all duration-500 flex-none w-[280px] xs:w-[310px] md:w-auto snap-start"
             >
               {/* Media Preview Container */}
               {item.type === 'video' ? (
@@ -182,7 +182,7 @@ export const GlimpsesAndMedia = () => {
               ) : (
                 <div 
                   onClick={() => setLightboxItem(item)}
-                  className="relative h-64 sm:h-72 w-full bg-[#1E1C1A] overflow-hidden border-b border-[#9E743B]/20 cursor-pointer"
+                  className="relative h-48 xs:h-52 sm:h-56 md:h-60 lg:h-64 w-full bg-[#1E1C1A] overflow-hidden border-b border-[#9E743B]/20 cursor-pointer"
                 >
                   <img
                     src={item.image}
@@ -209,20 +209,20 @@ export const GlimpsesAndMedia = () => {
               )}
 
               {/* Text Card Body */}
-              <div className="p-6 sm:p-8 space-y-3 flex-grow flex flex-col justify-between">
+              <div className="p-4 xs:p-5 sm:p-6 space-y-2 flex-grow flex flex-col justify-between">
                 <div className="space-y-2">
-                  <div className="flex justify-between items-baseline gap-2 border-b border-[#9E743B]/10 pb-2">
-                    <span className="font-sans text-[10px] uppercase tracking-widest text-[#9E743B] font-bold">
+                  <div className="flex justify-between items-baseline gap-2 border-b border-[#9E743B]/10 pb-1.5">
+                    <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-[#9E743B] font-bold">
                       {item.category}
                     </span>
-                    <span className="font-sans text-[10px] uppercase tracking-wider text-[#757069]">
+                    <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-wider text-[#757069]">
                       {item.date}
                     </span>
                   </div>
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#6B1D1E] font-normal leading-snug">
+                  <h3 className="font-serif text-base xs:text-lg sm:text-xl text-[#6B1D1E] font-normal leading-snug">
                     {item.title}
                   </h3>
-                  <p className="font-sans text-xs sm:text-sm text-[#59524A] font-light leading-relaxed pt-1">
+                  <p className="font-sans text-xs sm:text-[13px] text-[#59524A] font-light leading-relaxed pt-0.5 line-clamp-2 sm:line-clamp-3">
                     {item.desc}
                   </p>
                 </div>

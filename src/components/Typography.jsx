@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export const HeadingXL = ({ children, className = '', as: Component = 'h1', ...props }) => {
   return (
     <Component
-      className={`font-serif text-[40px] md:text-[52px] lg:text-[58px] font-light tracking-[0.01em] text-text-primary leading-[1.12] ${className}`}
+      className={`font-serif text-[34px] sm:text-[44px] md:text-[52px] lg:text-[58px] font-light tracking-[0.01em] text-text-primary leading-[1.12] ${className}`}
       {...props}
     >
       {children}
@@ -15,7 +15,7 @@ export const HeadingXL = ({ children, className = '', as: Component = 'h1', ...p
 export const HeadingLG = ({ children, className = '', as: Component = 'h2', ...props }) => {
   return (
     <Component
-      className={`font-serif text-[32px] md:text-[42px] lg:text-[46px] font-light tracking-[0.01em] text-text-primary leading-[1.18] ${className}`}
+      className={`font-serif text-[26px] sm:text-[32px] md:text-[42px] lg:text-[46px] font-light tracking-[0.01em] text-text-primary leading-[1.18] ${className}`}
       {...props}
     >
       {children}
@@ -26,7 +26,7 @@ export const HeadingLG = ({ children, className = '', as: Component = 'h2', ...p
 export const HeadingMD = ({ children, className = '', as: Component = 'h3', ...props }) => {
   return (
     <Component
-      className={`font-serif text-[22px] md:text-[26px] font-light tracking-wide text-text-primary leading-snug ${className}`}
+      className={`font-serif text-[20px] sm:text-[22px] md:text-[26px] font-light tracking-wide text-text-primary leading-snug ${className}`}
       {...props}
     >
       {children}

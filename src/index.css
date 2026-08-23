@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
+@import "lenis/dist/lenis.css";
 
 @import "tailwindcss";
 
@@ -16,6 +17,40 @@
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Ensure smooth scrolling across all scrollable containers, touch lists, and page elements */
+.overflow-x-auto,
+.overflow-y-auto,
+.overflow-auto,
+.scrollbar-none {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 @layer base {
   body {
     background-color: var(--color-bg-ivory);
@@ -25,6 +60,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   hr {
@@ -77,37 +113,37 @@
 
 /* Reusable editorial section rhythm */
 .section-large {
-  padding-top: 5rem;
-  padding-bottom: 7rem;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
   .section-large {
-    padding-top: 7rem;
-    padding-bottom: 9rem;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
   }
 }
 
 .section-medium {
-  padding-top: 4.5rem;
-  padding-bottom: 5.5rem;
-}
-
-@media (min-width: 768px) {
-  .section-medium {
-    padding-top: 5.5rem;
-    padding-bottom: 6.5rem;
-  }
-}
-
-.section-compact {
-  padding-top: 3.5rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
-  .section-compact {
+  .section-medium {
     padding-top: 4rem;
     padding-bottom: 5rem;
+  }
+}
+
+.section-compact {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-compact {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
   }
 }

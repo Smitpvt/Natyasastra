@@ -30,6 +30,17 @@ export const Navigation = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const isHeroPage = location.pathname === '/';
 
   return (
@@ -41,13 +52,14 @@ export const Navigation = () => {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[80px] w-full flex justify-between items-center xl:grid xl:grid-cols-3">
-          {/* Logo - Left */}
-          <div className="flex justify-start">
-            <Link to="/" className="flex items-center gap-3 group select-none">
+        <div className="max-w-[1600px] mx-auto px-6 sm:px-8 md:px-12 xl:px-[96px] w-full flex justify-between items-center xl:grid xl:grid-cols-[1fr_auto_1fr] items-center">
+          {/* Logo - Left Zone */}
+          <div className="flex items-center justify-start min-w-0 pr-12">
+            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group select-none">
               <img
                 src={interimEmblem}
                 alt="Nāṭyaśāstra Gurukulam Emblem"
+<<<<<<< HEAD
                 className="h-10 sm:h-11 w-auto object-contain"
               />
               <div className="flex flex-col leading-tight">
@@ -62,20 +74,35 @@ export const Navigation = () => {
                   A Centre of Civilisational Statecraft
                 </span>
               </div>
+=======
+                className="h-8 sm:h-10 w-auto object-contain"
+              />
+              <span className={`font-serif text-[16px] xs:text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[24px] font-medium tracking-[0.03em] transition-colors duration-500 ${
+                isOpen
+                  ? 'text-[#211F1D] hover:text-accent-bronze'
+                  : isScrolled
+                  ? 'text-[#211F1D] hover:text-accent-bronze'
+                  : isHeroPage
+                  ? 'text-white hover:text-[#E0D8CE]'
+                  : 'text-[#211F1D] hover:text-accent-bronze'
+              }`}>
+                <span className="italic">Nāṭyaśāstra Gurukulam</span>
+              </span>
+>>>>>>> 1ea4d293e6ebab085cc7376d900ad9d6fbdf36cc
             </Link>
           </div>
 
-          {/* Links - Center */}
-          <div className="hidden xl:flex justify-center items-center gap-10">
+          {/* Links - Center Zone */}
+          <div className="hidden xl:flex items-center justify-center gap-12 2xl:gap-16">
             {NAV_ITEMS.map((item) => {
               const isActive = location.pathname === item.path;
               return (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="relative py-1 group"
+                  className="relative py-1 group whitespace-nowrap"
                 >
-                  <span className={`font-sans text-[12px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 ${
+                  <span className={`font-sans text-[11px] xl:text-[12px] uppercase tracking-[0.12em] xl:tracking-[0.2em] font-medium transition-colors duration-500 ${
                     isActive
                       ? 'text-accent-bronze'
                       : isScrolled
@@ -94,11 +121,11 @@ export const Navigation = () => {
             })}
           </div>
 
-          {/* Action - Right */}
-          <div className="hidden xl:flex justify-end items-center">
+          {/* Action - Right Zone */}
+          <div className="hidden xl:flex items-center justify-end">
             <Link
               to="/contact"
-              className={`inline-block px-6 py-2.5 rounded-full border font-sans text-[11px] uppercase tracking-[0.2em] font-semibold transition-all duration-500 ease-out text-center ${
+              className={`inline-block px-4 xl:px-6 py-2 xl:py-2.5 rounded-full border font-sans text-[10px] xl:text-[11px] uppercase tracking-[0.15em] xl:tracking-[0.2em] font-semibold transition-all duration-500 ease-out text-center whitespace-nowrap ${
                 isScrolled
                   ? 'border-[#211F1D] text-[#211F1D] hover:bg-[#211F1D] hover:text-[#F3EEE6]'
                   : isHeroPage

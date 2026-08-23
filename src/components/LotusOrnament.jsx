@@ -34,18 +34,21 @@ export const LotusIcon = ({ className = "w-6 h-6 text-[#9E743B]", fill = "none" 
 );
 
 // Horizontal Lotus Flourish Divider
-export const LotusDivider = ({ className = "my-6", text = null }) => (
-  <div className={`flex items-center justify-center gap-4 ${className}`}>
-    <div className="h-[1px] bg-gradient-to-r from-transparent via-[#9E743B]/40 to-[#9E743B]/60 flex-1 max-w-[140px]" />
-    <div className="flex items-center gap-2 text-[#9E743B]">
-      <span className="w-1.5 h-1.5 rounded-full bg-[#9E743B]/60" />
-      <LotusIcon className="w-5 h-5 text-[#9E743B]" fill="currentColor" />
-      <span className="w-1.5 h-1.5 rounded-full bg-[#9E743B]/60" />
+export const LotusDivider = ({ className = "my-6", text = null }) => {
+  const hasJustify = className.split(' ').some(c => c.startsWith('justify-') || c.includes(':justify-'));
+  return (
+    <div className={`flex items-center gap-4 ${hasJustify ? '' : 'justify-center'} ${className}`}>
+      <div className="h-[1px] bg-gradient-to-r from-transparent via-[#9E743B]/40 to-[#9E743B]/60 flex-1 max-w-[140px]" />
+      <div className="flex items-center gap-2 text-[#9E743B]">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#9E743B]/60" />
+        <LotusIcon className="w-5 h-5 text-[#9E743B]" fill="currentColor" />
+        <span className="w-1.5 h-1.5 rounded-full bg-[#9E743B]/60" />
+      </div>
+      {text && <span className="font-serif italic text-xs uppercase tracking-widest text-[#9E743B] px-2">{text}</span>}
+      <div className="h-[1px] bg-gradient-to-l from-transparent via-[#9E743B]/40 to-[#9E743B]/60 flex-1 max-w-[140px]" />
     </div>
-    {text && <span className="font-serif italic text-xs uppercase tracking-widest text-[#9E743B] px-2">{text}</span>}
-    <div className="h-[1px] bg-gradient-to-l from-transparent via-[#9E743B]/40 to-[#9E743B]/60 flex-1 max-w-[140px]" />
-  </div>
-);
+  );
+};
 
 // Corner Lotus Accent for Frame Corners
 export const CornerLotus = ({ position = "top-left" }) => {
@@ -83,7 +86,7 @@ export const ProspectusFrame = ({ children, className = "", innerClassName = "p-
 );
 
 // SVG Brass Diya Lamp Icon with Flame
-export const BrassDiyaIcon = ({ className = "w-8 h-8", glow = true }) => (
+export const BrassDiyaIcon = ({ className = "w-8 h-8", glow = false }) => (
   <div className={`relative inline-flex items-center justify-center ${className}`}>
     {glow && (
       <div className="absolute -top-1.5 w-4 h-5 bg-[#E69D35] rounded-full filter blur-[3px] opacity-70 animate-pulse" />

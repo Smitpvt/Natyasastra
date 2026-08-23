@@ -83,9 +83,9 @@ export const Contact = () => {
                 <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-bold block">
                   ALIGNMENT & INQUIRY
                 </span>
-                <HeadingMD className="text-3xl sm:text-4xl font-serif font-light text-[#211F1D]">
+                <HeadingLG className="text-[#211F1D]">
                   Register Interest
-                </HeadingMD>
+                </HeadingLG>
                 <p className="font-serif italic text-sm text-[#757069]">
                   Submit your statement of intent to engage with the <em className="italic">Gurukulam</em>
                 </p>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LotusDivider, ProspectusFrame, BrassDiyaIcon } from '../../components/LotusOrnament';
+import { HeadingLG } from '../../components/Typography';
 
 const PILLARS = [
   {
@@ -64,7 +65,7 @@ export const PillarsMandala = () => {
   const activePillar = PILLARS[activeIdx];
 
   return (
-    <section className="w-full bg-[#FAF6F0] py-20 md:py-28 relative overflow-hidden border-t border-[#9E743B]/20">
+    <section className="w-full bg-[#FAF6F0] py-12 md:py-16 relative overflow-hidden border-t border-[#9E743B]/20">
       
       {/* Subtle Background Radial Mandala Vector */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] select-none">
@@ -76,7 +77,7 @@ export const PillarsMandala = () => {
         </svg>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] relative z-10 space-y-14">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[80px] relative z-10 space-y-8 sm:space-y-12">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -87,9 +88,9 @@ export const PillarsMandala = () => {
             </span>
             <BrassDiyaIcon className="w-6 h-6 text-[#9E743B]" />
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#6B1D1E] tracking-tight">
+          <HeadingLG className="text-[#6B1D1E] tracking-tight">
             The Six Pillars
-          </h2>
+          </HeadingLG>
           <p className="font-serif italic text-base sm:text-lg text-[#7A5428]">
             Six interconnected dimensions of learning, practice, transmission, aesthetic experience, and responsibility.
           </p>
@@ -97,28 +98,28 @@ export const PillarsMandala = () => {
         </div>
 
         {/* Pillars Navigation Hexagon Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 max-w-5xl mx-auto items-stretch">
           {PILLARS.map((pillar, idx) => {
             const isActive = idx === activeIdx;
             return (
               <button
                 key={pillar.id}
                 onClick={() => setActiveIdx(idx)}
-                className={`p-4 rounded-xl border flex flex-col items-center justify-center transition-all duration-300 group cursor-pointer ${
+                className={`h-[84px] p-2 rounded-xl border flex flex-col items-center justify-center transition-all duration-300 group cursor-pointer w-full text-center ${
                   isActive
-                    ? 'bg-[#6B1D1E] text-white border-[#6B1D1E] shadow-xl scale-[1.03] ring-2 ring-[#9E743B]/40'
+                    ? 'bg-[#6B1D1E] text-white border-[#6B1D1E] shadow-md ring-2 ring-[#9E743B]/40'
                     : 'bg-[#FAF6F0] hover:bg-white text-[#211F1D] border-[#9E743B]/25 hover:border-[#9E743B]/60 shadow-xs'
                 }`}
               >
                 <span 
-                  className={`font-serif text-2xl font-semibold mb-1 transition-colors ${
+                  className={`font-serif text-2xl font-semibold mb-0.5 transition-colors ${
                     isActive ? 'text-[#D4AF37]' : 'text-[#6B1D1E] group-hover:text-[#9E743B]'
                   }`}
                   style={{ fontFamily: '"Noto Serif Devanagari", serif' }}
                 >
                   {pillar.sanskrit}
                 </span>
-                <span className={`font-sans text-xs uppercase tracking-widest font-semibold ${
+                <span className={`font-sans text-[11px] sm:text-xs uppercase tracking-widest font-semibold ${
                   isActive ? 'text-white' : 'text-[#757069]'
                 }`}>
                   {pillar.title}
@@ -138,7 +139,7 @@ export const PillarsMandala = () => {
             transition={{ duration: 0.4 }}
             className="max-w-4xl mx-auto"
           >
-            <ProspectusFrame innerClassName="p-8 sm:p-12 text-center space-y-6">
+            <ProspectusFrame innerClassName="p-5 xs:p-6 sm:p-12 text-center space-y-4 sm:space-y-6">
               
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#6B1D1E] text-[#D4AF37] border-2 border-[#9E743B] shadow-md mb-2">
                 <span className="font-serif text-3xl font-bold" style={{ fontFamily: '"Noto Serif Devanagari", serif' }}>
@@ -150,15 +151,15 @@ export const PillarsMandala = () => {
                 <span className="font-sans text-xs uppercase tracking-[0.25em] text-[#9E743B] font-bold block mb-1">
                   PILLAR {activeIdx + 1} OF VI
                 </span>
-                <h3 className="font-serif text-3xl sm:text-4xl text-[#6B1D1E] font-normal">
+                <HeadingLG className="text-[#6B1D1E] font-normal">
                   {activePillar.title} <span className="font-serif italic text-2xl text-[#9E743B]">({activePillar.sanskrit})</span>
-                </h3>
+                </HeadingLG>
                 <p className="font-sans text-xs uppercase tracking-widest text-[#7A5428] font-semibold mt-1">
                   {activePillar.subtitle}
                 </p>
               </div>
 
-              <LotusDivider className="my-4" />
+              <LotusDivider className="my-2.5 sm:my-4" />
 
               <blockquote className="font-serif italic text-lg sm:text-xl text-[#6B1D1E] max-w-2xl mx-auto leading-relaxed">
                 “{activePillar.quote}”
