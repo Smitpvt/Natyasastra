@@ -25,7 +25,7 @@ const MENTORS = [
     role: <span><em className="italic">Ācāryā</em> for <em className="italic">Nāṭya</em> Pedagogy</span>,
     tagline: <span><em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em> & Pedagogy</span>,
     quote: <span>Shaping the <em className="italic">Gurukulam</em>’s pedagogic vision through <em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em>.</span>,
-    bio: <span>Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life’s work bridges rigorous classical training with deep philosophical inquiry. Her pedagogy understands <em className="italic">Nāṭya</em> not merely as performance, but as <em className="italic">Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness.</span>,
+    bio: <span>Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life’s work bridges rigorous classical training with deep philosophical enquiry. Her pedagogy understands <em className="italic">Nāṭya</em> not merely as performance, but as <em className="italic">Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness.</span>,
     image: '/assets/images/dr_padmaja_suresh_thumb.webp',
     objectPos: 'object-top',
     pillarDevanagari: 'साधना',

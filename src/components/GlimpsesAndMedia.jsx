@@ -23,11 +23,11 @@ const CURATED_MEDIA = [
     type: 'visual',
     category: 'Residential Immersion',
     title: 'Day 1 of the Nāma • Rūpa • Nāda • Bindu Immersion',
-    subtitle: 'Shared Gathering of Practice & Inquiry',
+    subtitle: 'Shared Gathering of Practice & Enquiry',
     image: '/assets/images/Participants in the Nama Rupa Nada Bindu immersion.jpg',
     date: 'July 11, 2026 · Navi Mumbai',
     location: 'Navi Mumbai',
-    desc: 'Participants and faculty in a shared gathering of practice and inquiry.',
+    desc: 'Participants and faculty in a shared gathering of practice and enquiry.',
     tag: 'Featured Visual'
   },
   {
@@ -49,7 +49,7 @@ const CURATED_MEDIA = [
     type: 'video',
     category: 'Video Recording',
     title: 'Nāma • Rūpa • Nāda • Bindu — Day 1 Session',
-    subtitle: 'Immersion Proceedings & Somatic Inquiry',
+    subtitle: 'Immersion Proceedings & Somatic Enquiry',
     youtubeId: '2D6bqFiehA8',
     embedUrl: 'https://www.youtube.com/embed/2D6bqFiehA8',
     date: 'Immersion Archive',
@@ -67,7 +67,7 @@ const CURATED_MEDIA = [
     embedUrl: 'https://www.youtube.com/embed/JMuPaOkrAjk',
     date: 'Immersion Archive',
     location: 'Recorded Live',
-    desc: 'Day 2 intensive sessions on aesthetic resonance, textual inquiry, and living practice.',
+    desc: 'Day 2 intensive sessions on aesthetic resonance, textual enquiry, and living practice.',
     tag: 'YouTube Recording'
   },
 

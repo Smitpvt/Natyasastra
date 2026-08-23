@@ -6,12 +6,12 @@ import { useSEO } from '../hooks/useSEO';
 
 export const Contact = () => {
   useSEO({
-    title: 'Inquire Now - Contact Us',
+    title: 'Enquire Now - Contact Us',
     description: 'Initiate a dialogue, register your interest, or submit a statement of intent to engage with the Nāṭyaśāstra Gurukulam.',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
-      'name': 'Contact & Inquiry',
+      'name': 'Contact & Enquiry',
       'description': 'Contact page to register interest and submit statement of intent to engage with the Nāṭyaśāstra Gurukulam.',
       'url': typeof window !== 'undefined' ? window.location.origin + '/contact' : ''
     }
@@ -52,18 +52,18 @@ export const Contact = () => {
           </div>
 
           <HeadingLG as="h1" className="text-4xl sm:text-5xl lg:text-6xl font-serif font-light leading-tight">
-            Contact & Inquiry
+            Contact & Enquiry
           </HeadingLG>
 
           <div className="w-16 h-[1px] bg-accent-bronze/40 mx-auto my-2" />
 
           <BodyLG className="text-text-stone-grey font-light leading-relaxed max-w-xl mx-auto">
-            We welcome inquiries from researchers, artists, educators, scholars, and patrons who align with our mission.
+            We welcome enquiries from researchers, artists, educators, scholars, and patrons who align with our mission.
           </BodyLG>
         </div>
       </Section>
 
-      {/* CENTERED INQUIRY FORM */}
+      {/* CENTERED ENQUIRY FORM */}
       <Section className="py-14 sm:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <motion.div
@@ -81,7 +81,7 @@ export const Contact = () => {
             <div className="space-y-8 relative z-10">
               <div className="text-center space-y-2">
                 <span className="font-sans text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-bold block">
-                  ALIGNMENT & INQUIRY
+                  ALIGNMENT & ENQUIRY
                 </span>
                 <HeadingLG className="text-[#211F1D]">
                   Register Interest
@@ -103,7 +103,7 @@ export const Contact = () => {
                     “<em className="italic">Samyak</em> <em className="italic">vicāritam</em> — We have received your intent.”
                   </span>
                   <p className="font-sans text-sm text-text-stone-grey font-light max-w-md mx-auto leading-relaxed">
-                    Your inquiry has been logged in our archives. We will review your background and statement of intent, and reply within seven days.
+                    Your enquiry has been logged in our archives. We will review your background and statement of intent, and reply within seven days.
                   </p>
                 </motion.div>
               ) : (

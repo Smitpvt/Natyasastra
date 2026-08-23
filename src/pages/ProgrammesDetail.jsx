@@ -28,7 +28,7 @@ const MARGA_MANDALA_NODES = [
     sanskrit: 'मनन',
     syllable: 'म',
     tagline: 'Reflecting with Clarity',
-    desc: 'Deepening understanding through disciplined reflection, hermeneutic inquiry, and quiet contemplation. Reflecting with rigor turns information into internalised clarity.',
+    desc: 'Deepening understanding through disciplined reflection, hermeneutic enquiry, and quiet contemplation. Reflecting with rigor turns information into internalised clarity.',
     quote: 'Sustained reflection turns external instruction into internal conviction.',
     x: 338,
     y: 168,
@@ -55,7 +55,7 @@ const MARGA_MANDALA_NODES = [
     syllable: 'अनु',
     tagline: 'Realising through Experience',
     desc: 'Transforming theoretical knowledge into direct, lived aesthetic delight and spiritual realization. Realization occurs when subject, practice, and perception become one.',
-    quote: 'Direct experience is the ultimate test and fruit of all Dhārmic inquiry.',
+    quote: 'Direct experience is the ultimate test and fruit of all Dhārmic enquiry.',
     x: 131,
     y: 319,
     labelX: 95,
@@ -134,7 +134,7 @@ const STATECRAFT_AREAS = [
 const DIRECT_ENGAGEMENTS = [
   {
     title: 'Lecture & Dialogue Series',
-    subtitle: <span>The <em className="italic">Sabhā</em> as a space for inquiry</span>,
+    subtitle: <span>The <em className="italic">Sabhā</em> as a space for enquiry</span>,
     desc: <span>Encounters with artistes, scholars, teachers, thinkers, and knowledge holders addressing <em className="italic">Nāṭyaśāstra</em>, aesthetics, pedagogy, culture, civilisational thought, ethics, and leadership.</span>,
     mode: 'In Person',
     image: '/assets/images/prof_ramasubramanian_thumb.webp',
@@ -142,7 +142,7 @@ const DIRECT_ENGAGEMENTS = [
   },
   {
     title: 'Research Dialogues',
-    subtitle: 'Where Śāstra, practice, and inquiry meet',
+    subtitle: 'Where Śāstra, practice, and enquiry meet',
     desc: 'Curated conversations and working sessions bringing scholars and practitioners together around focused questions at the intersection of civilisational knowledge and artistic practice.',
     mode: 'By Invitation / Curated',
     image: '/assets/images/group_pratishtha_thumb.webp',
@@ -150,7 +150,7 @@ const DIRECT_ENGAGEMENTS = [
   },
   {
     title: 'Institutional Engagements',
-    subtitle: 'Bringing the inquiry into institutional life',
+    subtitle: 'Bringing the enquiry into institutional life',
     desc: <span>Bespoke engagements with educational, cultural, corporate, and other institutions exploring aesthetic leadership, embodied learning, ethical formation, and <em className="italic">Dhārmic</em> approaches to organisational life.</span>,
     mode: 'Bespoke • In Person',
     image: '/assets/images/brochure_release_thumb.webp',
@@ -342,7 +342,7 @@ export const ProgrammesDetail = () => {
 
               <div className="space-y-4 sm:space-y-6 text-text-stone-grey font-sans font-light leading-relaxed text-xs xs:text-sm sm:text-lg max-w-4xl mx-auto text-left">
                 <p>
-                  <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative inquiry and deep exploration of sound, form, and aesthetic manifestation.
+                  <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative enquiry and deep exploration of sound, form, and aesthetic manifestation.
                 </p>
                 
                 <div className="pt-2 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
@@ -403,7 +403,7 @@ export const ProgrammesDetail = () => {
                         Immersion Session — Day 1
                       </HeadingMD>
                       <p className="font-sans text-xs text-[#59524A] font-light leading-relaxed">
-                        Contemplative inquiry, sound-form resonance, and opening proceedings of the residential immersion.
+                        Contemplative enquiry, sound-form resonance, and opening proceedings of the residential immersion.
                       </p>
                     </div>
                   </div>
@@ -828,7 +828,7 @@ export const ProgrammesDetail = () => {
               Two Outward Movements
             </HeadingLG>
             <BodyLG className="text-text-stone-grey font-light text-sm sm:text-base leading-relaxed">
-              The Gurukulam's work extends beyond individual formation in two principal directions: cultural transmission through the Yātri and civilisational inquiry through the Centre for Civilisational Statecraft.
+              The Gurukulam's work extends beyond individual formation in two principal directions: cultural transmission through the Yātri and civilisational enquiry through the Centre for Civilisational Statecraft.
             </BodyLG>
           </div>
 
@@ -1108,7 +1108,7 @@ export const ProgrammesDetail = () => {
               <div className="space-y-3 sm:space-y-4">
                 <div className="space-y-1">
                   <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-accent-bronze font-semibold block">
-                    Research & Public Inquiry
+                    Research & Public Enquiry
                   </span>
                   <h3 className="font-serif text-xl sm:text-3xl font-normal text-[#211F1D]">
                     Centre for Civilisational Statecraft
@@ -1119,7 +1119,7 @@ export const ProgrammesDetail = () => {
                 </div>
 
                 <p className="font-sans text-xs sm:text-sm leading-relaxed text-text-stone-grey font-light">
-                  Extends the Gurukulam's inquiry into governance, public policy, strategic affairs, institutional life, leadership, and cultural research—asking how principles from India's knowledge traditions illuminate contemporary questions of public order, power, and human flourishing.
+                  Extends the Gurukulam's enquiry into governance, public policy, strategic affairs, institutional life, leadership, and cultural research—asking how principles from India's knowledge traditions illuminate contemporary questions of public order, power, and human flourishing.
                 </p>
 
                 {/* Collapsible Key Areas & CTA Section for Mobile */}
@@ -1127,7 +1127,7 @@ export const ProgrammesDetail = () => {
                   {/* 5 Key Areas Carousel */}
                   <div className="space-y-1.5 pt-1">
                     <div className="flex items-center justify-between font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-accent-bronze font-semibold">
-                      <span>Five Key Areas of Inquiry</span>
+                      <span>Five Key Areas of Enquiry</span>
                       <span className="sm:hidden text-[10px] tracking-widest text-[#757069]">Auto-scrolling • Swipe →</span>
                     </div>
                     <AutoScrollContainer className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-3 pb-2 sm:pb-0">
@@ -1159,7 +1159,7 @@ export const ProgrammesDetail = () => {
                   onClick={() => setShowAllStatecraft(!showAllStatecraft)}
                   className="sm:hidden w-full py-2.5 px-4 rounded-xl border border-[#9E743B]/30 bg-[#FAF6F0] hover:bg-white text-[#6B1D1E] font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-2xs mt-2"
                 >
-                  <span>{showAllStatecraft ? 'Show Less ↑' : 'View Key Areas of Inquiry & Publications ↓'}</span>
+                  <span>{showAllStatecraft ? 'Show Less ↑' : 'View Key Areas of Enquiry & Publications ↓'}</span>
                 </button>
               </div>
             </div>
@@ -1234,7 +1234,7 @@ export const ProgrammesDetail = () => {
                       to="/contact"
                       className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-accent-bronze hover:text-[#211F1D] transition-colors"
                     >
-                      Inquire Details <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                      Enquire Details <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                     </Link>
                   </div>
                 </div>
@@ -1403,7 +1403,7 @@ export const ProgrammesDetail = () => {
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-accent-bronze text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#211F1D] hover:text-white transition-all duration-500 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              Inquire About Upcoming Programmes <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+              Enquire About Upcoming Programmes <span className="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
             </Link>
           </div>
 

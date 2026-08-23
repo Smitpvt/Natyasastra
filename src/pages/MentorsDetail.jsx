@@ -173,10 +173,10 @@ export const MentorsDetail = () => {
 
               <div className="space-y-4 text-text-stone-grey font-sans font-light leading-relaxed text-base">
                 <p>
-                  Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life's work bridges rigorous classical training with deep philosophical inquiry. Trained under Guru Padma Shri K. Kalyanasundaram and her father Śrī <em className="italic">Chākyār</em> Rajan, she has represented Indian classical arts internationally while pursuing sustained research into the relationship between <em className="italic">Nāṭya</em>, <em className="italic">Tantra</em>, and spiritual practice.
+                  Dr. Padmaja Suresh is an acclaimed danseuse, scholar, teacher, and author whose life's work bridges rigorous classical training with deep philosophical enquiry. Trained under Guru Padma Shri K. Kalyanasundaram and her father Śrī <em className="italic">Chākyār</em> Rajan, she has represented Indian classical arts internationally while pursuing sustained research into the relationship between <em className="italic">Nāṭya</em>, <em className="italic">Tantra</em>, and spiritual practice.
                 </p>
                 <p>
-                  Her pedagogy understands <em className="italic">Nāṭya</em> not merely as performance, but as <em>Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness. Her work integrates <em className="italic">Śāstra</em>, lived practice, and disciplined inquiry into a single pedagogic vision.
+                  Her pedagogy understands <em className="italic">Nāṭya</em> not merely as performance, but as <em>Sādhanā</em>, a path of inner refinement, ethical sensitivity, and contemplative awareness. Her work integrates <em className="italic">Śāstra</em>, lived practice, and disciplined enquiry into a single pedagogic vision.
                 </p>
                 <p>
                   At the <em className="italic">Gurukulam</em>, she transmits not merely technique, but temperament; not merely repertoire, but responsibility, forming <em>sahṛdayas</em> and future custodians of India's aesthetic traditions.
@@ -271,7 +271,7 @@ export const MentorsDetail = () => {
                   Śrī K. V. Subrahmoṇyan, a revered disciple in the lineage of <em className="italic">Bhagavān</em> Śrī <em className="italic">Ramaṇa</em> <em className="italic">Maharṣi</em>, has spent much of his life at Śrī Ramaṇāśramam, Tiruvaṇṇāmalai. His life reflects quiet abidance, simplicity, discernment, and lived <em className="italic">Vedāntic</em> clarity.
                 </p>
                 <p>
-                  Known for his gentle presence and directness, he embodies <em>sākṣitva</em>, the witnessing consciousness that steadies inquiry without assertion and guides without seeking prominence.
+                  Known for his gentle presence and directness, he embodies <em>sākṣitva</em>, the witnessing consciousness that steadies enquiry without assertion and guides without seeking prominence.
                 </p>
                 <p>
                   For the <em className="italic">Gurukulam</em>, his blessings serve as a spiritual axis, affirming that <em className="italic">Nāṭya</em> as <em className="italic">Sādhanā</em> must ultimately rest in stillness, self-knowledge, and inner freedom.
@@ -314,7 +314,7 @@ export const MentorsDetail = () => {
                   Rohit Viswanath serves the <em className="italic">Gurukulam</em> in this spirit as its <em className="italic">Yajamāna</em> & <em className="italic">Yojaka</em>.
                 </p>
                 <p>
-                  His journey took him through the study of Ancient Indian Culture and International Relations, followed by work in journalism, public policy, governance, yoga, agriculture, higher education, and civilisational studies. Rather than separate pursuits, these became successive stages in a single unfolding inquiry into <em className="italic">Dharma</em>, education, leadership, and <em className="italic">Nāṭya</em>.
+                  His journey took him through the study of Ancient Indian Culture and International Relations, followed by work in journalism, public policy, governance, yoga, agriculture, higher education, and civilisational studies. Rather than separate pursuits, these became successive stages in a single unfolding enquiry into <em className="italic">Dharma</em>, education, leadership, and <em className="italic">Nāṭya</em>.
                 </p>
                 <p>
                   His role is therefore not that of a founder in the modern sense, but of a custodian of the <em className="italic">Yajña</em> and a facilitator of lineage. He seeks to ensure that <em className="italic">Nāṭya</em> remains <em className="italic">Sādhanā</em>, pedagogy remains presence, and institutional form never eclipses <em className="italic">Dhārmic</em> intent.

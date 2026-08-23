@@ -37,7 +37,7 @@ export const CTASection = () => {
             to="/contact"
             className="inline-block px-10 py-4 rounded-full border border-white text-white hover:bg-white hover:text-[#211F1D] font-sans text-[11px] uppercase tracking-[0.2em] font-bold transition-all duration-300 text-center shadow-lg"
           >
-            Inquire Now
+            Enquire Now
           </Link>
         </div>
       </motion.div>

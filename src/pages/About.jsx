@@ -42,7 +42,7 @@ const PILLARS = [
     title: <span><em className="italic">Dharma</em></span>,
     sanskrit: 'धर्म',
     syllable: 'ध',
-    desc: <span>Orienting knowledge toward responsibility, inner order, and service. It anchors all technical skill and intellectual inquiry in ethical custodianship and contribution to the community.</span>
+    desc: <span>Orienting knowledge toward responsibility, inner order, and service. It anchors all technical skill and intellectual enquiry in ethical custodianship and contribution to the community.</span>
   }
 ];
 
@@ -64,7 +64,7 @@ const MILESTONES = [
         >
           <em className="italic">Tattvāloka</em> Onward March to <em className="italic">Rāma Rājya</em>
         </a>{' '}
-        initiative opened an inquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
+        initiative opened an enquiry into <em className="italic">Nāṭya</em>, aesthetics, pedagogy, <em className="italic">Dharma</em>, and the renewal of public life.
       </span>
     ),
     image: "/assets/images/Raam_Rajya_panel.jpeg",
@@ -93,7 +93,7 @@ const MILESTONES = [
     subtitle: "The Vision Takes Form | 2025",
     desc: (
       <span>
-        The <em className="italic">saṅkalpa</em> moved from sustained inquiry towards institutional formation, bringing together the <em className="italic">Gurukulam</em>'s vision of <em className="italic">śāstra</em>, <em className="italic">sādhanā</em>, <em className="italic">saṃvāda</em>, and civilisational renewal.
+        The <em className="italic">saṅkalpa</em> moved from sustained enquiry towards institutional formation, bringing together the <em className="italic">Gurukulam</em>'s vision of <em className="italic">śāstra</em>, <em className="italic">sādhanā</em>, <em className="italic">saṃvāda</em>, and civilisational renewal.
       </span>
     )
   },

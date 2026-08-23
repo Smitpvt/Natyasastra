@@ -117,7 +117,7 @@ export const Navigation = () => {
                   : 'border-[#211F1D] text-[#211F1D] hover:bg-[#211F1D] hover:text-[#F3EEE6]'
               }`}
             >
-              Inquire Now
+              Enquire Now
             </Link>
           </div>
 
@@ -184,7 +184,7 @@ export const Navigation = () => {
                   to="/contact"
                   className="px-8 py-3 rounded-full border border-[#211F1D] text-[#211F1D] hover:bg-[#211F1D] hover:text-[#F3EEE6] font-sans text-[12px] uppercase tracking-[0.2em] font-medium transition-all duration-500 text-center w-full max-w-xs"
                 >
-                  Inquire Now
+                  Enquire Now
                 </Link>
               </motion.div>
             </div>

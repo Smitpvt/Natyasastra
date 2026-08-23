@@ -10,7 +10,7 @@ const PILLARS = [
     sanskrit: 'शास्त्र',
     syllable: 'शा',
     subtitle: 'TEXTUAL STUDY & COMMENTARIAL TRADITION',
-    quote: <span><em className="italic">Śāstra</em> gives form to inquiry; disciplined study opens the way to understanding.</span>,
+    quote: <span><em className="italic">Śāstra</em> gives form to enquiry; disciplined study opens the way to understanding.</span>,
     desc: <span>Study of the <em className="italic">Nāṭyaśāstra</em>, the <em className="italic">Abhinavabhāratī</em> and the traditions of commentary through which their knowledge has been received, interpreted, and transmitted.</span>
   },
   {
@@ -27,9 +27,9 @@ const PILLARS = [
     title: <span><em className="italic">Saṃvāda</em></span>,
     sanskrit: 'संवाद',
     syllable: 'सं',
-    subtitle: 'ATTENTIVE LISTENING & SHARED INQUIRY',
+    subtitle: 'ATTENTIVE LISTENING & SHARED ENQUIRY',
     quote: 'Understanding deepens through attentive listening, questioning, and encounter.',
-    desc: 'A space for listening, reflection, questioning, and dialogue, where knowledge is deepened through encounter and shared inquiry rather than assertion.'
+    desc: 'A space for listening, reflection, questioning, and dialogue, where knowledge is deepened through encounter and shared enquiry rather than assertion.'
   },
   {
     id: 'parampara',
