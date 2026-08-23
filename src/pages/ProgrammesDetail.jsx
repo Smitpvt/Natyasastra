@@ -342,7 +342,7 @@ export const ProgrammesDetail = () => {
 
               <div className="space-y-4 sm:space-y-6 text-text-stone-grey font-sans font-light leading-relaxed text-xs xs:text-sm sm:text-lg max-w-4xl mx-auto text-left">
                 <p>
-                  <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative inquiry, somatic practice, and deep exploration of sound, form, and aesthetic manifestation.
+                  <em className="italic">Nāma • Rūpa • Nāda • Bindu</em> was conducted as a specialized residential immersion bringing together practitioners, scholars, and disciples for contemplative inquiry and deep exploration of sound, form, and aesthetic manifestation.
                 </p>
                 
                 <div className="pt-2 flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">

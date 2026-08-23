@@ -7,9 +7,11 @@ import { BrassDiyaIcon } from '../../components/LotusOrnament';
 import { formatSanskrit } from '../../utils/text';
 import { HeadingLG } from '../../components/Typography';
 
-// Select featured papers for the homepage
-const FEATURED_SERIES = ['DTHF Papers', 'Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
-const RECENT_PUBLICATIONS = PUBLICATIONS.map(pub => ({
+// Select featured papers for the homepage (Highlight AKS and Rasa Reflections only)
+const FEATURED_SERIES = ['Aesthetic Knowledge Systems', 'Rasa Reflection Series'];
+const RECENT_PUBLICATIONS = PUBLICATIONS.filter(pub => 
+  FEATURED_SERIES.includes(pub.series)
+).map(pub => ({
   ...pub,
   link: '/library'
 }));

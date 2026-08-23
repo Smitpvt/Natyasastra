@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { Search, X, FileText, ArrowUpRight, BookOpen, Sparkles } from 'lucide-react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { Search, X, FileText, ArrowUpRight, BookOpen, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import Section from '../components/Section';
 import { HeadingLG, HeadingMD, BodyLG, Body, Caption } from '../components/Typography';
 import { PUBLICATIONS } from '../data/publications';
@@ -34,6 +34,63 @@ export const Library = () => {
 
   const [filter, setFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Ref and state for mouse drag scrolling on categories
+  const containerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [hasDragged, setHasDragged] = useState(false);
+
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const checkScroll = () => {
+    if (containerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+      setCanScrollLeft(scrollLeft > 2);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 2);
+    }
+  };
+
+  // Run on mount, filter change, or window resize
+  useEffect(() => {
+    checkScroll();
+    const timer = setTimeout(checkScroll, 100);
+    window.addEventListener('resize', checkScroll);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', checkScroll);
+    };
+  }, [filter]);
+
+  const handleMouseDown = (e) => {
+    if (e.button !== 0) return; // Only drag with left click
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+    setHasDragged(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; // Drag speed multiplier
+    if (Math.abs(x - startX) > 5) {
+      setHasDragged(true);
+    }
+    containerRef.current.scrollLeft = scrollLeft - walk;
+    checkScroll();
+  };
 
   // Preload top publication covers into browser cache for instant load
   useEffect(() => {
@@ -126,34 +183,83 @@ export const Library = () => {
             )}
           </div>
 
-          {/* Series Filter Tabs as Touch Pills */}
-          <div className="flex gap-1.5 sm:gap-2 overflow-x-auto scrollbar-none py-0.5 -mx-4 px-4 sm:mx-0 sm:px-0 max-w-full items-center">
-            {SERIES_TABS.map((tab) => {
-              const isSelected = filter === tab;
-              const count = categoryCounts[tab] || 0;
-              return (
-                <button
-                  key={tab}
-                  onClick={() => setFilter(tab)}
-                  className={`font-sans text-[10px] sm:text-[11px] uppercase tracking-wider py-1.5 sm:py-2 px-3 sm:px-3.5 rounded-full border transition-all duration-300 whitespace-nowrap shrink-0 flex items-center gap-1.5 cursor-pointer ${
-                    isSelected
-                      ? 'bg-[#805335] text-white border-[#805335] shadow-xs font-semibold'
-                      : 'bg-white/80 hover:bg-white text-[#5C564E] border-[#9E743B]/20 hover:text-[#211F1D] hover:border-[#9E743B]/40'
-                  }`}
-                >
-                  <span>{tab}</span>
-                  <span
-                    className={`text-[9px] px-1.5 py-0.2 rounded-full font-mono ${
-                      isSelected
-                        ? 'bg-white/20 text-white'
-                        : 'bg-[#9E743B]/10 text-[#805335]'
-                    }`}
-                  >
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
+          {/* Series Filter Tabs with Left/Right Navigation Arrows */}
+          <div className="relative w-full md:flex-1 min-w-0 flex items-center gap-1.5 sm:gap-2">
+            {/* Left Scroll Button */}
+            <button
+              onClick={() => {
+                if (containerRef.current) {
+                  containerRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+                }
+              }}
+              className={`shrink-0 w-8 h-8 rounded-full border border-[#9E743B]/25 bg-white flex items-center justify-center text-[#805335] hover:bg-[#805335] hover:text-white hover:border-[#805335] transition-all duration-300 shadow-2xs cursor-pointer md:flex hidden ${
+                canScrollLeft ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
+              }`}
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            {/* Scrollable Container */}
+            <div
+              ref={containerRef}
+              onMouseDown={handleMouseDown}
+              onMouseLeave={handleMouseLeave}
+              onMouseUp={handleMouseUp}
+              onMouseMove={handleMouseMove}
+              onScroll={checkScroll}
+              className={`overflow-x-auto scrollbar-none py-0.5 -mx-4 px-4 sm:mx-0 sm:px-0 w-full flex-1 min-w-0 select-none ${
+                isDragging ? 'cursor-grabbing' : 'cursor-grab'
+              }`}
+            >
+              <div className="flex gap-1.5 sm:gap-2 items-center min-w-max">
+                {SERIES_TABS.map((tab) => {
+                  const isSelected = filter === tab;
+                  const count = categoryCounts[tab] || 0;
+                  return (
+                    <button
+                      key={tab}
+                      onClick={() => {
+                        if (!hasDragged) {
+                          setFilter(tab);
+                        }
+                      }}
+                      className={`font-sans text-[10px] sm:text-[11px] uppercase tracking-wider py-1.5 sm:py-2 px-3 sm:px-3.5 rounded-full border transition-all duration-300 whitespace-nowrap shrink-0 flex items-center gap-1.5 cursor-pointer ${
+                        isSelected
+                          ? 'bg-[#805335] text-white border-[#805335] shadow-xs font-semibold'
+                          : 'bg-white/80 hover:bg-white text-[#5C564E] border-[#9E743B]/20 hover:text-[#211F1D] hover:border-[#9E743B]/45'
+                      }`}
+                    >
+                      <span>{tab}</span>
+                      <span
+                        className={`text-[9px] px-1.5 py-0.2 rounded-full font-mono ${
+                          isSelected
+                            ? 'bg-white/20 text-white'
+                            : 'bg-[#9E743B]/10 text-[#805335]'
+                        }`}
+                      >
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Right Scroll Button */}
+            <button
+              onClick={() => {
+                if (containerRef.current) {
+                  containerRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+                }
+              }}
+              className={`shrink-0 w-8 h-8 rounded-full border border-[#9E743B]/25 bg-white flex items-center justify-center text-[#805335] hover:bg-[#805335] hover:text-white hover:border-[#805335] transition-all duration-300 shadow-2xs cursor-pointer md:flex hidden ${
+                canScrollRight ? 'opacity-100 scale-100' : 'opacity-0 scale-90 pointer-events-none'
+              }`}
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
 

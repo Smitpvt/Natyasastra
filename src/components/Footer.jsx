@@ -74,9 +74,7 @@ export const Footer = () => {
             </span>
             <div className="flex flex-col gap-3 font-sans text-[13px] text-[#757069]">
               <a href="https://www.instagram.com/natyashastragurukulam/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Instagram</a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">YouTube</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">Twitter / X</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">LinkedIn</a>
+              <a href="https://www.youtube.com/watch?v=2D6bqFiehA8" target="_blank" rel="noopener noreferrer" className="hover:text-accent-bronze transition-colors duration-300">YouTube</a>
             </div>
           </div>
         </div>
