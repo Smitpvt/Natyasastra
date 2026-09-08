@@ -143,12 +143,14 @@ export const Associate = () => {
                 </div>
 
                 <div className="pt-4 border-t border-[#9E743B]/20 text-center">
-                  <Link
-                    to="/contact"
+                  <a
+                    href="/assets/publications/Founding Patron Prospectus.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#6B1D1E] text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#211F1D] transition-colors shadow-md"
                   >
                     Click here for Patron Prospectus →
-                  </Link>
+                  </a>
                 </div>
               </ProspectusFrame>
             </div>
