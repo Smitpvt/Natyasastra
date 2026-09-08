@@ -15,7 +15,7 @@ export const Footer = () => {
               <img
                 src={interimEmblem}
                 alt="Nāṭyaśāstra Gurukulam Emblem"
-                className="h-12 w-auto object-contain"
+                className="h-16 sm:h-20 w-auto object-contain transition-all duration-300"
               />
               <div className="flex flex-col">
                 <span className="font-serif text-[22px] tracking-wide text-[#211F1D] block italic leading-tight">

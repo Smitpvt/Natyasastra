@@ -147,7 +147,7 @@ export const Associate = () => {
                     to="/contact"
                     className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#6B1D1E] text-white font-sans text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[#211F1D] transition-colors shadow-md"
                   >
-                    Enquire for Patron Prospectus →
+                    Click here for Patron Prospectus →
                   </Link>
                 </div>
               </ProspectusFrame>

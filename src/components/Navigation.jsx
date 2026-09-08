@@ -59,7 +59,7 @@ export const Navigation = () => {
               <img
                 src={interimEmblem}
                 alt="Nāṭyaśāstra Gurukulam Emblem"
-                className="h-10 sm:h-11 w-auto object-contain"
+                className="h-14 sm:h-16 md:h-[68px] w-auto object-contain transition-all duration-300"
               />
               <div className="flex flex-col leading-tight">
                 <span className={`font-serif text-[16px] xs:text-[18px] md:text-[21px] font-medium tracking-[0.03em] transition-colors duration-500 ${

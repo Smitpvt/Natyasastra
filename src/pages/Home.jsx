@@ -11,13 +11,13 @@ import { useSEO } from '../hooks/useSEO';
 export const Home = () => {
   useSEO({
     title: 'Custodians of Rasa, Rhythm & Dhārmic Responsibility',
-    description: 'Nāṭyaśāstra Gurukulam is an institution dedicated to the study, practice, and somatic reconstruction of classical Indian performing arts, civilisational statecraft, and aesthetic leadership.',
+    description: 'A living institution dedicated to the study, practice, and renewal of Nāṭya as a civilisational knowledge system.',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       'name': 'Nāṭyaśāstra Gurukulam',
       'alternateName': 'Natyasastra Gurukulam',
-      'description': 'An institution dedicated to the study, practice, and somatic reconstruction of classical Indian performing arts and aesthetic leadership.',
+      'description': 'A living institution dedicated to the study, practice, and renewal of Nāṭya as a civilisational knowledge system.',
       'url': typeof window !== 'undefined' ? window.location.origin : '',
       'logo': typeof window !== 'undefined' ? `${window.location.origin}/favicon.png` : '',
       'foundingDate': '2025-11-23',
